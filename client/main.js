@@ -76,7 +76,7 @@ main = (function(main, global) {
     );
 
     main.chat.mainChat = new main.chat.GitterChat({
-      room: 'freecodecamp/freecodecamp',
+      room: 'analyticsdojo/analyticsdojo',
       activationElement: false,
       targetElement: $('#chat-embed-main')
     });
@@ -90,7 +90,7 @@ main = (function(main, global) {
 
       $('#chat-embed-main > .gitter-chat-embed-action-bar').prepend(
         '<div class="chat-embed-main-title">' +
-          '<span>Free Code Camp\'s Main Chat</span>' +
+          '<span>Analytics Dojo\'s Main Chat</span>' +
         '</div>'
       );
     });
