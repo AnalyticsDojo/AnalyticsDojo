@@ -96,7 +96,7 @@ main = (function(main, global) {
     });
 
 
-    $('#nav-chat-btn').on('click', showMainChat);
+    $('#nav-chat-btn').on('click', toggleMainChat);
 
     function showMainChat() {
       if (!main.chat.isOpen) {
@@ -106,10 +106,10 @@ main = (function(main, global) {
 
     function collapseMainChat() {
       $('#chat-embed-main').addClass('is-collapsed');
+      document.activeElement.blur();
     }
 
-    // keyboard shortcuts: open main chat
-    Mousetrap.bind('g c', function() {
+    function toggleMainChat() {
       var isCollapsed = $('#chat-embed-main').hasClass('is-collapsed');
 
       if (isCollapsed) {
@@ -117,7 +117,10 @@ main = (function(main, global) {
       } else {
         collapseMainChat();
       }
-    });
+    }
+
+    // keyboard shortcuts: open main chat
+    Mousetrap.bind('g c', toggleMainChat);
   });
 
   return main;
@@ -337,6 +340,7 @@ $(document).ready(function() {
   }
 
   if (String(window.location).match(/\/map$/ig)) {
+    $('body>.flashMessage').find('.alert').css('display', 'none');
     $('.map-fixed-header').css('top', '50px');
   }
 
@@ -344,7 +348,7 @@ $(document).ready(function() {
   var mapFilter = $('#map-filter');
   var mapShowAll = $('#showAll');
 
-  $('#nav-map-btn').on('click', showMap);
+  $('#nav-map-btn').on('click', toggleMap);
 
   $('.map-aside-action-collapse').on('click', collapseMap);
 
@@ -360,6 +364,48 @@ $(document).ready(function() {
 
   function collapseMap() {
     $('.map-aside').addClass('is-collapsed');
+    document.activeElement.blur();
+  }
+
+  function toggleMap() {
+    var isCollapsed = $('.map-aside').hasClass('is-collapsed');
+
+    if (isCollapsed) {
+      showMap();
+    } else {
+      collapseMap();
+    }
+  }
+
+  $('#nav-wiki-btn').on('click', toggleWiki);
+
+  $('.wiki-aside-action-collapse').on('click', collapseWiki);
+
+  function showWiki() {
+    if (!main.isWikiAsideLoad) {
+      var lang = window.location.toString().match(/\/\w{2}\//);
+      lang = (lang) ? lang[0] : '/en/';
+      var wikiURL = 'http://freecodecamp.github.io/wiki' + lang;
+      var wikiAside = $('<iframe>');
+      wikiAside.attr('src', wikiURL);
+      $('.wiki-aside').append(wikiAside);
+      main.isWikiAsideLoad = true;
+    }
+    $('.wiki-aside').removeClass('is-collapsed');
+  }
+
+  function collapseWiki() {
+    $('.wiki-aside').addClass('is-collapsed');
+    document.activeElement.blur();
+  }
+
+  function toggleWiki() {
+    var isCollapsed = $('.wiki-aside').hasClass('is-collapsed');
+    if (isCollapsed) {
+      showWiki();
+    } else {
+      collapseWiki();
+    }
   }
 
   $('#accordion').on('show.bs.collapse', function(e) {
@@ -480,13 +526,5 @@ $(document).ready(function() {
   window.Mousetrap.bind('esc', clearMapFilter);
 
   // keyboard shortcuts: open map
-  window.Mousetrap.bind('g m', function() {
-    var isCollapsed = $('.map-aside').hasClass('is-collapsed');
-
-    if (isCollapsed) {
-      showMap();
-    } else {
-      collapseMap();
-    }
-  });
+  window.Mousetrap.bind('g m', toggleMap);
 });

@@ -3,25 +3,27 @@ nav.navbar.navbar-default.navbar-fixed-top.nav-height
         button.hamburger.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
             .col-xs-12
                 span.hamburger-text Menu
-        a.navbar-brand(href='/')
+         a.navbar-brand(href='/')
             img.img-responsive.nav-logo(src='/images/dojo.png', alt='learn analytics at the analytics dojo')
         a.navbar-brand(href="/") Analytics Dojo
     .collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right.hamburger-dropdown
             li.hidden-xs
-                a#nav-map-btn(href='#' onclick='return false') Lessons
+                a#nav-map-btn(href='#' onclick='return false') Map
             li.visible-xs
-                a(href='/map') Lessons
+                a(href='/map') Map
             li.hidden-xs
                 a#nav-chat-btn(href='#' onclick="return false") Chat
             li.visible-xs
                 a(href="//gitter.im/analyticsdojo/analyticsdojo" target="_blank") Chat
-            li
-                a(href='/stories') Students
-            li
-                a(href='/news') News
+            li.hidden-xs
+                a#nav-wiki-btn(href='#' onclick='return false') Wiki
+            li.visible-xs
+                a(href='/wiki', target='_blank') Wiki
             li
                 a(href='/about') About
+            li
+                a(href='/shop') Shop
             if !user
                 li
                     a(href='/login') Sign in
