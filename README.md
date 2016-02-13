@@ -7,11 +7,10 @@ Welcome to the AnalyticsDojo open source codebase and curriculum!
 
 AnalyticsDojo is a data science community where you learn to data science and work on real projects.
 
-You start by working through our self-paced, browser-based full stack data science curriculum.
+You start by working through our self-paced, browser-based data science curriculum.
 
-We are still in the process of building out the curriculum.  It is an exciting time. 
+**We are still in the process of building out the curriculum.  It is an exciting time.** 
 
-**We help our campers build job-worthy portfolios of real apps used by real people, while helping nonprofits.**
 
 This code is running live at [AnalyticsDojo](http://www.AnalyticsDojo.com). We also have [Gitter](https://gitter.im/Analyticsdojo/Analyticsdojo).
 
@@ -20,7 +19,7 @@ This code is running live at [AnalyticsDojo](http://www.AnalyticsDojo.com). We a
 Wiki
 ------------
 
-We would love your help expanding our [wiki](https://github.com/freecodecamp/freecodecamp/wiki). Our goal is to become a great resource for people learning to code, building local coding communities, and applying for coding jobs.
+We would love your help expanding our [wiki](https://github.com/jkuruzovoich/analyticsdojo/wiki). Our goal is to become a great resource for people learning data science.
 
 
 Contributing
