@@ -27,10 +27,10 @@ Contributing
 
 We welcome pull requests from collaborators! Please, follow [these steps](CONTRIBUTING.md) to contribute.
 
-Origin of Project
+Support
 ------------
 
-This project was inspired by and forked from the awesome folks over at [Free Code Camp](https://github.com/FreeCodeCamp/FreeCodeCamp), but we aren't associated with that organization. 
+This project was inspired by and forked from the awesome folks over at [Free Code Camp](https://github.com/FreeCodeCamp/FreeCodeCamp), but we aren't associated with that organization. Right now it is supported by [RPI](https://www.rpi.edu), but we are hoping to build a team of supporters from around the world. 
 
 License
 -------
