@@ -13,7 +13,7 @@ export default function about(app) {
   const userCount$ = observeMethod(User, 'count');
 
   function showAbout(req, res, next) {
-    const daysRunning = moment().diff(new Date('10/15/2014'), 'days');
+    const daysRunning = moment().diff(new Date('2/2/2016'), 'days');
 
     userCount$()
       .map(camperCount => numberWithCommas(camperCount))
