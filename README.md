@@ -1,46 +1,37 @@
-![](https://s3.amazonaws.com/freecodecamp/wide-social-banner.png)
 
-[![Throughput Graph](https://graphs.waffle.io/freecodecamp/freecodecamp/throughput.svg)](https://waffle.io/freecodecamp/freecodecamp/metrics)
 
-[![Join the chat at https://gitter.im/freecodecamp/freecodecamp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/freecodecamp/freecodecamp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/Analyticsdojo/Analyticsdojo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Analyticsdojo/Analyticsdojo)
 
-Welcome to Free Code Camp's open source codebase and curriculum!
+Welcome to the AnalyticsDojo open source codebase and curriculum!
 =======================
 
-Free Code Camp is an open-source community where you learn to code and help nonprofits.
+AnalyticsDojo is a data science community where you learn to data science and work on real projects.
 
-You start by working through our self-paced, browser-based full stack JavaScript curriculum.
+You start by working through our self-paced, browser-based full stack data science curriculum.
 
-After you complete the first 400 hours worth of challenges (which involves building 10 single-page apps), you'll earn your Front End Development Certification.
-
-After you complete the second 400 hours worth of challenges (which involves building and deploying 5 full stack apps), you'll earn your Full Stack Development Certification.
-
-Then we'll pair you with another camper, an agile project manager, and a stakeholder from a nonprofit organization. Together, you'll plan and build an app that helps that nonprofit carry out its mission more effectively.
+We are still in the process of building out the curriculum.  It is an exciting time. 
 
 **We help our campers build job-worthy portfolios of real apps used by real people, while helping nonprofits.**
 
-This code is running live at [FreeCodeCamp.com](http://www.FreeCodeCamp.com). We also have [Gitter](https://gitter.im/FreeCodeCamp/FreeCodeCamp), a [Medium publication](http://medium.freecodecamp.com), and even a [Twitch.tv channel](http://twitch.tv/freecodecamp).
+This code is running live at [AnalyticsDojo](http://www.AnalyticsDojo.com). We also have [Gitter](https://gitter.im/Analyticsdojo/Analyticsdojo).
 
-[Join our community here](http://www.freecodecamp.com/signin).
+[Join our community here](http://www.AnalyticsDojo.com).
 
 Wiki
 ------------
 
 We would love your help expanding our [wiki](https://github.com/freecodecamp/freecodecamp/wiki). Our goal is to become a great resource for people learning to code, building local coding communities, and applying for coding jobs.
 
-Found a bug?
-------------
-
-Do not file an issue until you have followed these steps:
-
-1. Read [Help I've Found a Bug](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Help-I've-Found-a-Bug) wiki page and follow the instructions there.
-2. Asked for confirmation in the appropriate [Help Room](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Help-Rooms)
-3. Please *do not* open an issue without a 3rd party confirmation of your problem.
 
 Contributing
 ------------
 
-We welcome pull requests from Free Code Camp campers (our students) and seasoned JavaScript developers alike! Please, follow [these steps](CONTRIBUTING.md) to contribute.
+We welcome pull requests from collaborators! Please, follow [these steps](CONTRIBUTING.md) to contribute.
+
+Origin of Project
+------------
+
+This project was inspired by and forked from the awesome folks over at [Free Code Camp](https://github.com/FreeCodeCamp/FreeCodeCamp), but we aren't associated with that organization. 
 
 License
 -------
