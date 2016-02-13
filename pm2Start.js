@@ -72,7 +72,7 @@ if (transportOptions.auth.user && mailReceiver) {
 
       transporter.sendMail({
         to: mailReceiver,
-        from: 'team@freecodecamp.com',
+        from: 'team@analyticsdojo.com',
         subject: 'Server exception',
         text: compiled({ name: name, text: text, stack: stack })
       });

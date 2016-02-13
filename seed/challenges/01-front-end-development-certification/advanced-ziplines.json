@@ -35,7 +35,7 @@
         "<span class='text-info'>Historia de usuario opcional:</span> Puedo limpiar la pantalla con un botón de borrar.",
         "<span class='text-info'>Historia de usuario opcional:</span> Puedo concatenar continuamente varias operaciones hasta que pulse el botón de igual, y la calculadora me mostrará la respuesta correcta.",
         "Recuerda utilizar <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/How-to-get-help-when-you-get-stuck' target='_blank'>Read-Search-Ask</a> si te sientes atascado.",
-        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Free Code Camp de tu compañero.",
+        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Analytics Dojo de tu compañero.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el link de tu proyecto en CodePen. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto del tweet</a>"
       ],
       "isRequired": true
@@ -84,7 +84,7 @@
         "<span class='text-info'>Historia de usuario:</span> Como usuario, puedo reiniciar el reloj para comenzar mi siguiente pomodoro.",
         "<span class='text-info'>Historia de usuario opcional:</span> Como usuario, puedo personalizar la longitud de cada pomodoro.",
         "Recuerda utilizar <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/How-to-get-help-when-you-get-stuck' target='_blank'>Read-Search-Ask</a> si te sientes atascado.",
-        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Free Code Camp de tu compañero.",
+        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Analytics Dojo de tu compañero.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el link de tu proyecto en CodePen. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto del tweet</a>"
       ],
       "isRequired": true,
@@ -122,7 +122,7 @@
         "<span class='text-info'>Historia de usuario opcional:</span> Como usuario, mi juego se reiniciará tan pronto como se termine, de tal forma que pueda jugar de nuevo.",
         "<span class='text-info'>Historia de usuario opcional:</span> Como usuario, puedo elegir si quiero jugar como X o como O.",
         "Recuerda utilizar <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/How-to-get-help-when-you-get-stuck' target='_blank'>Read-Search-Ask</a> si te sientes atascado.",
-        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Free Code Camp de tu compañero.",
+        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Analytics Dojo de tu compañero.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el link de tu proyecto en CodePen. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto del tweet</a>"
       ],
       "isRequired": true
@@ -171,7 +171,7 @@
         "<span class='text-info'>Historia de usuario opcional:</span> Como usuario, puedo ganar el juego si completo 20 pasos correctos. Se me notifica sobre mi victoria, tras lo cual el juego se reinicia.",
         "<span class='text-info'>Pista:</span> Aquí hay algunos mp3s que puedes utilizar para tus botones: <code>https://s3.amazonaws.com/freecodecamp/simonSound1.mp3</code>, <code>https://s3.amazonaws.com/freecodecamp/simonSound2.mp3</code>, <code>https://s3.amazonaws.com/freecodecamp/simonSound3.mp3</code>, <code>https://s3.amazonaws.com/freecodecamp/simonSound4.mp3</code>.",
         "Recuerda utilizar <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/How-to-get-help-when-you-get-stuck' target='_blank'>Read-Search-Ask</a> si te sientes atascado.",
-        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Free Code Camp de tu compañero.",
+        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Analytics Dojo de tu compañero.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el link de tu proyecto en CodePen. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto del tweet</a>"
       ],
       "isRequired": true

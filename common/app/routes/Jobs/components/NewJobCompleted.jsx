@@ -20,7 +20,7 @@ export default React.createClass({
               mdOffset={ 3 }>
               We’ll review your listing and email you when it’s live.
               <br />
-              Thank you for listing this job with Free Code Camp.
+              Thank you for listing this job with Analytics Dojo.
             </Col>
           </Row>
           <div className='spacer' />

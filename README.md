@@ -4,10 +4,10 @@
 
 [![Join the chat at https://gitter.im/freecodecamp/freecodecamp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/freecodecamp/freecodecamp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Welcome to Free Code Camp's open source codebase and curriculum!
+Welcome to Analytics Dojo's open source codebase and curriculum!
 =======================
 
-Free Code Camp is an open-source community where you learn to code and help nonprofits.
+Analytics Dojo is an open-source community where you learn to code and help nonprofits.
 
 You start by working through our self-paced, browser-based full stack JavaScript curriculum.
 
@@ -19,9 +19,9 @@ Then we'll pair you with another camper, an agile project manager, and a stakeho
 
 **We help our campers build job-worthy portfolios of real apps used by real people, while helping nonprofits.**
 
-This code is running live at [FreeCodeCamp.com](http://www.FreeCodeCamp.com). We also have [Gitter](https://gitter.im/FreeCodeCamp/FreeCodeCamp), a [Medium publication](http://medium.freecodecamp.com), and even a [Twitch.tv channel](http://twitch.tv/freecodecamp).
+This code is running live at [analyticsdojo.com](http://www.analyticsdojo.com). We also have [Gitter](https://gitter.im/FreeCodeCamp/FreeCodeCamp), a [Medium publication](http://medium.analyticsdojo.com), and even a [Twitch.tv channel](http://twitch.tv/freecodecamp).
 
-[Join our community here](http://www.freecodecamp.com/signin).
+[Join our community here](http://www.analyticsdojo.com/signin).
 
 Wiki
 ------------
@@ -40,14 +40,14 @@ Do not file an issue until you have followed these steps:
 Contributing
 ------------
 
-We welcome pull requests from Free Code Camp campers (our students) and seasoned JavaScript developers alike! Please, follow [these steps](CONTRIBUTING.md) to contribute.
+We welcome pull requests from Analytics Dojo campers (our students) and seasoned JavaScript developers alike! Please, follow [these steps](CONTRIBUTING.md) to contribute.
 
 License
 -------
 
 The BSD-3-Clause
 
-Copyright (c) 2016, Free Code Camp
+Copyright (c) 2016, Analytics Dojo
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -56,6 +56,6 @@ Redistribution and use in source and binary forms, with or without modification,
 
 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
-3. Neither the name of Free Code Camp nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+3. Neither the name of Analytics Dojo nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY FREE CODE CAMP AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

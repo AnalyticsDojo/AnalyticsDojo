@@ -1011,7 +1011,7 @@
       "releasedOn": "January 1, 2016",
       "challengeSeed": [
         "// Example",
-        "var ourName = \"Free Code Camp\";",
+        "var ourName = \"Analytics Dojo\";",
         "var ourStr = \"Hello, our name is \" + ourName + \", how are you?\";",
         "",
         "// Only change code below this line",
@@ -1058,7 +1058,7 @@
       "challengeSeed": [
         "// Example",
         "var anAdjective = \"awesome!\";",
-        "var ourStr = \"Free Code Camp is \";",
+        "var ourStr = \"Analytics Dojo is \";",
         "ourStr += anAdjective;",
         "",
         "// Only change code below this line",
@@ -1084,7 +1084,7 @@
         "})();"
       ],
       "solutions": [
-        "var anAdjective = \"awesome!\";\nvar ourStr = \"Free Code Camp is \";\nourStr += anAdjective;\n\nvar someAdjective = \"neat\";\nvar myStr = \"Learning to code is \";\nmyStr += someAdjective;"
+        "var anAdjective = \"awesome!\";\nvar ourStr = \"Analytics Dojo is \";\nourStr += anAdjective;\n\nvar someAdjective = \"neat\";\nvar myStr = \"Learning to code is \";\nmyStr += someAdjective;"
       ],
       "tests": [
         "assert(typeof someAdjective !== 'undefined' && someAdjective.length > 2, 'message: <code>someAdjective</code> should be set to a string at least 3 characters long');",
@@ -3240,7 +3240,7 @@
         "The above outputs \"Hello\" to the console, returns \"World\", but <code>\"byebye\"</code> is never output, because the function exits at the <code>return</code> statement.",
         "<h4>Instructions</h4>",
         "Modify the function <code>abTest</code> so that if <code>a</code> or <code>b</code> are less than <code>0</code> the function will immediately exit with a value of <code>undefined</code>.",
-        "<strong>Hint</strong><br>Remember that <a href='http://www.freecodecamp.com/challenges/understanding-uninitialized-variables' target='_blank'><code>undefined</code> is a keyword</a>, not a string."
+        "<strong>Hint</strong><br>Remember that <a href='http://www.analyticsdojo.com/challenges/understanding-uninitialized-variables' target='_blank'><code>undefined</code> is a keyword</a>, not a string."
       ],
       "releasedOn": "January 1, 2016",
       "challengeSeed": [
@@ -3529,7 +3529,7 @@
         "  \"name\": \"Coder\",",
         "  \"legs\": 4,",
         "  \"tails\": 1,",
-        "  \"friends\": [\"Free Code Camp Campers\"]",
+        "  \"friends\": [\"Analytics Dojo Campers\"]",
         "};",
         "",
         "// Only change code below this line.",
@@ -3540,7 +3540,7 @@
         "(function(z){return z;})(myDog);"
       ],
       "solutions": [
-        "var myDog = {\n  \"name\": \"Coder\",\n  \"legs\": 4,\n  \"tails\": 1,\n  \"friends\": [\"Free Code Camp Campers\"]\n};\nmyDog.name = \"Happy Coder\";"
+        "var myDog = {\n  \"name\": \"Coder\",\n  \"legs\": 4,\n  \"tails\": 1,\n  \"friends\": [\"Analytics Dojo Campers\"]\n};\nmyDog.name = \"Happy Coder\";"
       ],
       "tests": [
         "assert(/happy coder/gi.test(myDog.name), 'message: Update <code>myDog</code>&apos;s <code>\"name\"</code> property to equal \"Happy Coder\".');",
@@ -3593,7 +3593,7 @@
         "  \"name\": \"Happy Coder\",",
         "  \"legs\": 4,",
         "  \"tails\": 1,",
-        "  \"friends\": [\"Free Code Camp Campers\"]",
+        "  \"friends\": [\"Analytics Dojo Campers\"]",
         "};",
         "",
         "// Only change code below this line.",
@@ -3603,7 +3603,7 @@
         "(function(z){return z;})(myDog);"
       ],
       "solutions": [
-        "var myDog = {\n  \"name\": \"Happy Coder\",\n  \"legs\": 4,\n  \"tails\": 1,\n  \"friends\": [\"Free Code Camp Campers\"]\n};\nmyDog.bark = \"Woof Woof\";"
+        "var myDog = {\n  \"name\": \"Happy Coder\",\n  \"legs\": 4,\n  \"tails\": 1,\n  \"friends\": [\"Analytics Dojo Campers\"]\n};\nmyDog.bark = \"Woof Woof\";"
       ],
       "tests": [
         "assert(myDog.bark !== undefined, 'message: Add the property <code>\"bark\"</code> to <code>myDog</code>.');",
@@ -3646,7 +3646,7 @@
         "  \"name\": \"Happy Coder\",",
         "  \"legs\": 4,",
         "  \"tails\": 1,",
-        "  \"friends\": [\"Free Code Camp Campers\"],",
+        "  \"friends\": [\"Analytics Dojo Campers\"],",
         "  \"bark\": \"woof\"",
         "};",
         "",
@@ -3658,7 +3658,7 @@
         "(function(z){return z;})(myDog);"
       ],
       "solutions": [
-        "var ourDog = {\n  \"name\": \"Camper\",\n  \"legs\": 4,\n  \"tails\": 1,\n  \"friends\": [\"everything!\"],\n  \"bark\": \"bow-wow\"\n};\n\nvar myDog = {\n  \"name\": \"Happy Coder\",\n  \"legs\": 4,\n  \"tails\": 1,\n  \"friends\": [\"Free Code Camp Campers\"],\n  \"bark\": \"woof\"\n};\n\ndelete myDog.tails;"
+        "var ourDog = {\n  \"name\": \"Camper\",\n  \"legs\": 4,\n  \"tails\": 1,\n  \"friends\": [\"everything!\"],\n  \"bark\": \"bow-wow\"\n};\n\nvar myDog = {\n  \"name\": \"Happy Coder\",\n  \"legs\": 4,\n  \"tails\": 1,\n  \"friends\": [\"Analytics Dojo Campers\"],\n  \"bark\": \"woof\"\n};\n\ndelete myDog.tails;"
       ],
       "tests": [
         "assert(myDog.tails === undefined, 'message: Delete the property <code>\"tails\"</code> from <code>myDog</code>.');",
@@ -4763,7 +4763,7 @@
         "<div>",
         " <div class = \"container inset\">",
         "   <div class = \"header inset\">",
-        "     <img src=\"https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg.gz\" alt=\"learn to code javascript at Free Code Camp logo\" class=\"img-responsive nav-logo\">",
+        "     <img src=\"https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg.gz\" alt=\"learn to code javascript at Analytics Dojo logo\" class=\"img-responsive nav-logo\">",
         "     <h2>FCC Slot Machine</h2>",
         "   </div>",
         "   <div class = \"slots inset\">",
@@ -4937,7 +4937,7 @@
         "<div>",
         " <div class = \"container inset\">",
         "   <div class = \"header inset\">",
-        "     <img src=\"https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg.gz\" alt=\"learn to code javascript at Free Code Camp logo\" class=\"img-responsive nav-logo\">",
+        "     <img src=\"https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg.gz\" alt=\"learn to code javascript at Analytics Dojo logo\" class=\"img-responsive nav-logo\">",
         "     <h2>FCC Slot Machine</h2>",
         "   </div>",
         "   <div class = \"slots inset\">",
@@ -5115,7 +5115,7 @@
         "<div>",
         " <div class = \"container inset\">",
         "   <div class = \"header inset\">",
-        "     <img src=\"https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg.gz\" alt=\"learn to code javascript at Free Code Camp logo\" class=\"img-responsive nav-logo\">",
+        "     <img src=\"https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg.gz\" alt=\"learn to code javascript at Analytics Dojo logo\" class=\"img-responsive nav-logo\">",
         "     <h2>FCC Slot Machine</h2>",
         "   </div>",
         "   <div class = \"slots inset\">",
@@ -5291,7 +5291,7 @@
         "<div>",
         " <div class = 'container inset'>",
         "   <div class = 'header inset'>",
-        "     <img src='https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg.gz' alt='learn to code javascript at Free Code Camp logo' class='img-responsive nav-logo'>",
+        "     <img src='https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg.gz' alt='learn to code javascript at Analytics Dojo logo' class='img-responsive nav-logo'>",
         "     <h2>FCC Slot Machine</h2>",
         "   </div>",
         "   <div class = 'slots inset'>",

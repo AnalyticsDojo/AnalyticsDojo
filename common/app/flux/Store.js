@@ -2,7 +2,7 @@ import { Store } from 'thundercats';
 
 const { createRegistrar, setter, fromMany } = Store;
 const initValue = {
-  title: 'Learn To Code | Free Code Camp',
+  title: 'Learn To Code | Analytics Dojo',
   username: null,
   picture: null,
   points: 0,

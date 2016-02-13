@@ -119,7 +119,7 @@ module.exports = function(app) {
         res.render('feed', {
           title: 'FreeCodeCamp Camper News RSS Feed',
           description: 'RSS Feed for FreeCodeCamp Top 100 Hot Camper News',
-          url: 'http://www.freecodecamp.com/news',
+          url: 'http://www.analyticsdojo.com/news',
           FeedPosts: data
         });
       },

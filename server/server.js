@@ -103,7 +103,7 @@ app.start = _.once(function() {
       app.get('env')
     );
     if (isBeta) {
-      console.log('Free Code Camp is in beta mode');
+      console.log('Analytics Dojo is in beta mode');
     }
   });
 });

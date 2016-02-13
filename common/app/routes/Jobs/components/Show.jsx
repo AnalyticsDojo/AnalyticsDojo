@@ -36,11 +36,11 @@ function generateMessage(
     return 'Must be signed in to apply';
   }
   if (isFrontEndCertReq && !isFrontEndCert) {
-    return 'This employer requires Free Code Camp’s Front ' +
+    return 'This employer requires Analytics Dojo’s Front ' +
       'End Development Certification in order to apply';
   }
   if (isBackEndCertReq && !isBackEndCert) {
-    return 'This employer requires Free Code Camp’s Back ' +
+    return 'This employer requires Analytics Dojo’s Back ' +
       'End Development Certification in order to apply';
   }
   if (isFrontEndCertReq && isFrontEndCertReq) {

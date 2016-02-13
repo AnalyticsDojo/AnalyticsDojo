@@ -9,7 +9,7 @@
   {
     "camper": "adventurebear",
     "name": "Coding Bootcamp Cost Calculator",
-    "url": "http://www.freecodecamp.com/coding-bootcamp-cost-calculator",
+    "url": "http://www.analyticsdojo.com/coding-bootcamp-cost-calculator",
     "description": "This d3.js-powered coding bootcamp cost calculator takes into account tuition, financing, lost wages and cost of living.",
     "image": "https://qph.is.quoracdn.net/main-qimg-670d6a0c5b01f74138e777732994240f?convert_to_webp=true"
   },
@@ -36,7 +36,7 @@
   },
   {
     "camper": "storbeck",
-    "name": "Free Code Camp Event Zipline: Recipe Box",
+    "name": "Analytics Dojo Event Zipline: Recipe Box",
     "url": "http://codepen.io/GeoffStorbeck/full/bVKyzd/",
     "description": "Try to reverse engineer this Recipe Box as an optional Zipline challenge.",
     "image": "http://i.imgur.com/5o0bwVQ.png"
@@ -50,7 +50,7 @@
   },
   {
     "camper": "roelver",
-    "name": "Free Code Camp Top 100 Campers",
+    "name": "Analytics Dojo Top 100 Campers",
     "url": "http://fcctop100.herokuapp.com/",
     "description": "This leaderboard tracks the campers who have been most active (completing challenges, helping other campers) in the past 30 days.",
     "image": "http://i.imgur.com/4CrQfFi.png"

@@ -124,7 +124,7 @@ module.exports = function(User) {
       url = `http://${host}:${port}/reset-password?access_token=${token}`;
     } else {
       url =
-        `http://freecodecamp.com/reset-password?access_token=${token}`;
+        `http://analyticsdojo.com/reset-password?access_token=${token}`;
     }
 
     // the email of the requested user
@@ -134,12 +134,12 @@ module.exports = function(User) {
     // requires AccessToken.belongsTo(User)
     var mailOptions = {
       to: info.email,
-      from: 'Team@freecodecamp.com',
+      from: 'Team@analyticsdojo.com',
       subject: 'Password Reset Request',
       text: `
         Hello,\n\n
         This email is confirming that you requested to
-        reset your password for your Free Code Camp account.
+        reset your password for your AnalyticsDojo account.
         This is your email: ${ info.email }.
         Go to ${ url } to reset your password.
         \n

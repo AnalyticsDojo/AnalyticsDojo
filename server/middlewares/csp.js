@@ -66,7 +66,8 @@ export default function csp() {
         '*.twitter.com',
         '*.ghbtns.com',
         '*.freecatphotoapp.com',
-        'freecodecamp.github.io'        
+        'rpi-analytics.github.io',
+        'analyticsdojo.github.io'
       ].concat(trusted)
     },
     // set to true if you only want to report errors

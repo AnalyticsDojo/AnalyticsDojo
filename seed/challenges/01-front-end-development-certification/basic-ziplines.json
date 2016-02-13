@@ -125,9 +125,9 @@
         "<span class='text-info'>Historia de usuario:</span> Como usuario, puedo navegar las publicaciones recientes de Camper News.",
         "<span class='text-info'>Historia de usuario:</span> Como usuario, puedo pulsar en una publicación y ser llevado al URL original de la historia.",
         "<span class='text-info'>Historia de usuario opcional:</span> Como usuario, puedo ver cuántos votos tiene cada historia.",
-        "<span class='text-info'>Pista:</span> Este es el endpoint del API de Noticias calientes de Camper News: <code>http://www.freecodecamp.com/news/hot</code>.",
+        "<span class='text-info'>Pista:</span> Este es el endpoint del API de Noticias calientes de Camper News: <code>http://www.analyticsdojo.com/news/hot</code>.",
         "Recuerda utilizar <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/How-to-get-help-when-you-get-stuck' target='_blank'>Read-Search-Ask</a> si te sientes atascado.",
-        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Free Code Camp de tu compañero.",
+        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Analytics Dojo de tu compañero.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el link de tu proyecto en CodePen. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto del tweet</a>"
       ],
       "isRequired": true
@@ -190,7 +190,7 @@
         "Hay varias buenas plantillas, pero para este desafío, tendrás que construir la página web de tu portafolio completamente por tu cuenta. Usar Bootstrap hará el trabajo mucho más fácil para ti.",
         "Ten en mente que CodePen.io ignora la función Window.open(), así que si quieres abrir alguna ventana usando jQuery, necesitarás utilizar como objetivo un elemento de ancla invisible como el siguiente: <code>&lt;a target='_blank'&gt;</a></code>.",
         "Recuerda utilizar <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/How-to-get-help-when-you-get-stuck' target='_blank'>Read-Search-Ask</a> si te sientes atascado.",
-        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Free Code Camp de tu compañero.",
+        "Cuando hayas terminado, pulsa el botón de \"I've completed this challenge\" e incluye un link a tu CodePen. Si programaste en pareja, debes incluir también el nombre de usuario de Analytics Dojo de tu compañero.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el link de tu proyecto en CodePen. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto del tweet</a>"
       ],
       "isRequired": true,

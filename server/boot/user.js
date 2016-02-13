@@ -195,7 +195,7 @@ module.exports = function(app) {
       return res.redirect('/');
     }
     res.render('account/signin', {
-      title: 'Sign in to Free Code Camp using a Social Media Account'
+      title: 'Sign in to Analytics Dojo using a Social Media Account'
     });
   }
 
@@ -209,7 +209,7 @@ module.exports = function(app) {
       return res.redirect('/');
     }
     res.render('account/email-signin', {
-      title: 'Sign in to Free Code Camp using your Email Address'
+      title: 'Sign in to Analytics Dojo using your Email Address'
     });
   }
 
@@ -218,7 +218,7 @@ module.exports = function(app) {
       return res.redirect('/');
     }
     res.render('account/email-signup', {
-      title: 'Sign up for Free Code Camp using your Email Address'
+      title: 'Sign up for Analytics Dojo using your Email Address'
     });
   }
 
@@ -344,7 +344,7 @@ module.exports = function(app) {
               msg: dedent`
                 Upon review, this account has been flagged for academic
                 dishonesty. If you’re the owner of this account contact
-                team@freecodecamp.com for details.
+                team@analyticsdojo.com for details.
               `
             });
             return res.redirect(`/${user.username}`);

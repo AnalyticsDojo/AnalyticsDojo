@@ -7,7 +7,7 @@ export default Actions({
   refs: { displayName: 'AppActions' },
 
   setTitle(title = 'Learn To Code') {
-    return { title: title + ' | Free Code Camp' };
+    return { title: title + ' | Analytics Dojo' };
   },
 
   getUser() {

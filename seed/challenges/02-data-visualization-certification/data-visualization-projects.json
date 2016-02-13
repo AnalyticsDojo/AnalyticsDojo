@@ -130,7 +130,7 @@
         "<strong>User Story:</strong> I can see the relationship between the campers and the domains they're posting.",
         "<strong>User Story:</strong> I can tell approximately many times campers have linked to a specific domain from it's node size.",
         "<strong>User Story:</strong> I can tell approximately how many times a specific camper has posted a link from their node's size.",
-        "<strong>Hint:</strong> Here's the Camper News Hot Stories API endpoint: <code>http://www.freecodecamp.com/news/hot</code>.",
+        "<strong>Hint:</strong> Here's the Camper News Hot Stories API endpoint: <code>http://www.analyticsdojo.com/news/hot</code>.",
         "Remember to use <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/How-to-get-help-when-you-get-stuck' target='_blank'>Read-Search-Ask</a> if you get stuck.",
         "When you are finished, click the \"I've completed this challenge\" button and include a link to your CodePen. ",
         "You can get feedback on your project from fellow campers by sharing it in our <a href='//gitter.im/freecodecamp/codereview' target='_blank'>Code Review Chatroom</a>. You can also share it on Twitter and your city's Campsite (on Facebook)."
@@ -153,7 +153,7 @@
         "<strong>Historia de usuario:</strong> Puedo ver la relación entre los campistas y los dominios que publican.",
         "<strong>Historia de usuario:</strong> Puedo conocer aproximadamente cuántas veces los campistas han enlazado un dominio en particular a partir del tamaño del nodo respectivo.",
         "<strong>Historia de usuario:</strong> Puedo conocer aproximadamente cuántas veces un campista específico ha publicado un enlace a partir del tamaño de su nodo.",
-        "<strong>Pista:</strong> La siguiente es la ruta del API de noticias de Camper News: <code>http://www.freecodecamp.com/news/hot</code>.",
+        "<strong>Pista:</strong> La siguiente es la ruta del API de noticias de Camper News: <code>http://www.analyticsdojo.com/news/hot</code>.",
         "Recuerda utilizar <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/How-to-get-help-when-you-get-stuck' target='_blank'>Read-Search-Ask</a> si te sientes atascado.",
         "Cuando termines, haz clic en el botón de \"I've completed this challenge\" e incluye el vínculo de tu proyecto en CodePen. ",
         "Puedes obtener retroalimentación acerca de tu proyecto de parte de tus compañeros campistas compartiéndolo en nuestro <a href='//gitter.im/freecodecamp/codereview' target='_blank'>Cuarto de revisión de código</a>. También puedes compartirlo en Twitter y en el campamento de tu ciudad (en Facebook)."

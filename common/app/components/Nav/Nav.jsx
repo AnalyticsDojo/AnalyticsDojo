@@ -16,7 +16,7 @@ const fCClogo = '/images/dojo.png';
 const logoElement = (
   <a href='/'>
     <img
-      alt='learn to code javascript at Free Code Camp logo'
+      alt='learn to code javascript at Analytics Dojo logo'
       className='img-responsive nav-logo'
       src={ fCClogo } />
   </a>

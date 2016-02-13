@@ -1,7 +1,7 @@
-extends ../layout-wide
+extends ../layout-wide-nofooter
 block content
     iframe#wikiFrame(frameborder='no')
     script.
         var lang = window.location.toString().match(/\/\w{2}\//);
         lang = (lang) ? lang[0] : '/en/';
-        $('#wikiFrame').attr('src','http://freecodecamp.github.io/wiki' + lang);
+        $('#wikiFrame').attr('src','http://rpi-analytics.github.io/wiki' + lang);

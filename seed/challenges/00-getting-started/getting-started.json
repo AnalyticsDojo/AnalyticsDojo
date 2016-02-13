@@ -1,17 +1,17 @@
 {
-  "name": "Join the Free Code Camp Community",
+  "name": "Join the Analytics Dojo Community",
   "order": 1,
   "time": "15 minutes",
   "helpRoom": "Help",
   "challenges": [
     {
       "id": "560add10cb82ac38a17513be",
-      "title": "Learn how Free Code Camp Works",
+      "title": "Learn how Analytics Dojo Works",
       "description": [
         [
           "http://i.imgur.com/6ibIavQ.jpg",
-          "A picture of Free Code Camp's 4 benefits: Get connected, Learn JavaScript, Build your Portfolio, Help nonprofits",
-          "Welcome to Free Code Camp. We're an open source community of busy people who learn to code and help nonprofits.",
+          "A picture of Analytics Dojo's 4 benefits: Get connected, Learn JavaScript, Build your Portfolio, Help nonprofits",
+          "Welcome to Analytics Dojo. We're an open source community of busy people who learn to code and help nonprofits.",
           ""
         ],
         [
@@ -28,8 +28,8 @@
         ],
         [
           "http://i.imgur.com/WD3STY6.jpg",
-          "Photos of three campers who've gotten jobs after learning to code at Free Code Camp.",
-          "Free Code Camp is a proven path to your first coding job. In fact, no one has actually completed our entire program, because campers get jobs before they're able to.",
+          "Photos of three campers who've gotten jobs after learning to code at Analytics Dojo.",
+          "Analytics Dojo is a proven path to your first coding job. In fact, no one has actually completed our entire program, because campers get jobs before they're able to.",
           ""
         ],
         [
@@ -40,14 +40,14 @@
         ],
         [
           "http://i.imgur.com/UVB9hxp.jpg",
-          "An image of a camper at a cafe building projects on Free Code Camp.",
+          "An image of a camper at a cafe building projects on Analytics Dojo.",
           "We believe humans learn best by doing. So you'll spend most of your time actually building projects. We'll give you a list of specifications (agile user stories), and you'll figure out how to build apps that fulfill those specifications.",
           ""
         ],
         [
           "http://i.imgur.com/pbW7K5S.jpg",
           "An image of showing our front end, back end, and data visualization certifications (400 hours each), our nonprofit projects (800 hours), and interview prep (80 hours) for a total of 2,080 hours of coding experience.",
-          "Our curriculum is divided into 4 certifications. These certifications are standardized, and instantly verifiable by your freelance clients and future employers. Like everything else at Free Code Camp, these certifications are free. We recommend doing them in order, but you are free to jump around. The first three certifications take 400 hours each, and the final certification takes 800 hours, and involves building real-life projects for nonprofits.",
+          "Our curriculum is divided into 4 certifications. These certifications are standardized, and instantly verifiable by your freelance clients and future employers. Like everything else at Analytics Dojo, these certifications are free. We recommend doing them in order, but you are free to jump around. The first three certifications take 400 hours each, and the final certification takes 800 hours, and involves building real-life projects for nonprofits.",
           ""
         ],
         [
@@ -77,7 +77,7 @@
         [
           "http://i.imgur.com/PDGQ9ZM.jpg",
           "An image of campers building projects together in a cafe in Seoul.",
-          "If you complete all 2,080 hours worth of challenges and projects, you'll earn our Full Stack Development Certification. We'll offer you free coding interview practice. We even offer a job board where employers specifically hire campers who've earned Free Code Camp certifications.",
+          "If you complete all 2,080 hours worth of challenges and projects, you'll earn our Full Stack Development Certification. We'll offer you free coding interview practice. We even offer a job board where employers specifically hire campers who've earned Analytics Dojo certifications.",
           ""
         ]
       ],
@@ -85,12 +85,12 @@
       "tests": [],
       "type": "Waypoint",
       "challengeType": 7,
-      "nameEs": "Aprende como funciona Free Code Camp",
+      "nameEs": "Aprende como funciona Analytics Dojo",
       "descriptionEs": [
         [
           "http://i.imgur.com/6ibIavQ.jpg",
-          "Una imagen de los 4 beneficios de Free Code Camp: Conéctate, Aprende JavaScript, Construye tu  Portafolio, Ayuda organizaciones sin ánimo de lucro",
-          "Bienvenido a Free Code Camp. Somos una comunidad de código abierto formada por personas ocupadas quienes aprenden a programar y ayudan a organizaciones sin ánimo de lucro.",
+          "Una imagen de los 4 beneficios de Analytics Dojo: Conéctate, Aprende JavaScript, Construye tu  Portafolio, Ayuda organizaciones sin ánimo de lucro",
+          "Bienvenido a Analytics Dojo. Somos una comunidad de código abierto formada por personas ocupadas quienes aprenden a programar y ayudan a organizaciones sin ánimo de lucro.",
           ""
         ],
         [
@@ -107,8 +107,8 @@
         ],
         [
           "http://i.imgur.com/WD3STY6.jpg",
-          "Fotos de tres campistas quienes obtuvieron trabajos después de aprender a programar en Free Code Camp.",
-          "Free Code Camp es un camino probado para que obtengas tu primer trabajo de programación. De hecho, nadie actualmente ha completado nuestro programa entero, porque los campistas obtienen trabajos antes de poder hacerlo.",
+          "Fotos de tres campistas quienes obtuvieron trabajos después de aprender a programar en Analytics Dojo.",
+          "Analytics Dojo es un camino probado para que obtengas tu primer trabajo de programación. De hecho, nadie actualmente ha completado nuestro programa entero, porque los campistas obtienen trabajos antes de poder hacerlo.",
           ""
         ],
         [
@@ -119,14 +119,14 @@
         ],
         [
           "http://i.imgur.com/UVB9hxp.jpg",
-          "Una foto de un campista en un café construyendo proyectos con Free Code Camp.",
+          "Una foto de un campista en un café construyendo proyectos con Analytics Dojo.",
           "Creemos que los humanos aprender mejor haciendo.  Así que en realidad emplearás la mayoría de tu tiempo construyendo proyectos.  Te daremos una lista de especificaciones (historias de usuario ágiles), y te las ingeniarás para construir aplicaciones que cumplan esas especificaciones.",
           ""
         ],
          [
           "http://i.imgur.com/pbW7K5S.jpgk",
           "Una imagen de los tiempos de nuestras certificaciones para desarrollo de interfaces, desarrollo al lado del servidor y visualización de datos (400 horas cada uno), para nuestros proyectos sin ánimo de lucro (800 horas) y preparación para entrevistas (80 horas) que dan un total de 2,080 horas e experiencia programando.",
-          "Nuestro currículo se divide en 4 certificaciones.  Estas certificaciones están estandarizadas, y son verificables al instante por sus clientes como trabajador independiente y por sus futuros empleadores.  Tal como todo lo demás en Free Code Camp, estas certificaciones son gratuitas.  Recomendamos hacerlas en orden, pero usted es libre de saltar de una a otra.  Las primeras tres certificaciones requieren 400 horas cada una, y la certificación final requiere 800 horas, e involucra construir proyectos de la vida real para organizaciones sin ánimo de lucro.",
+          "Nuestro currículo se divide en 4 certificaciones.  Estas certificaciones están estandarizadas, y son verificables al instante por sus clientes como trabajador independiente y por sus futuros empleadores.  Tal como todo lo demás en Analytics Dojo, estas certificaciones son gratuitas.  Recomendamos hacerlas en orden, pero usted es libre de saltar de una a otra.  Las primeras tres certificaciones requieren 400 horas cada una, y la certificación final requiere 800 horas, e involucra construir proyectos de la vida real para organizaciones sin ánimo de lucro.",
           ""
         ],
         [
@@ -135,7 +135,7 @@
           "Para obtener nuestra certificación verificada de Desarrollo de Interfaces, construirás 10 proyectos usando HTML, CSS, jQuery y JavaScript.",
           ""
         ],
- 
+
         [
           "http://i.imgur.com/Et3iD74.jpg",
           "Una imagen de nuestro Certificado de Visualización de Datos",
@@ -157,7 +157,7 @@
         [
           "http://i.imgur.com/PDGQ9ZM.jpg",
           "Una imagen de nuestros campistas construyendo proyectos juntos en un café en Seoul.",
-          "Si completas todas las 2,080 horas de desafíos y proyectos, obtendrás un Certificado de Desarrollo de Pila Completa.  Te ofreceremos gratuitamente una práctica en entrevistas para desarrolladores. Incluso ofrecemos un directorio de trabajos donde los empleadores contratan específicamente campistas que han recibido certificaciones de Free Code Camp.",
+          "Si completas todas las 2,080 horas de desafíos y proyectos, obtendrás un Certificado de Desarrollo de Pila Completa.  Te ofreceremos gratuitamente una práctica en entrevistas para desarrolladores. Incluso ofrecemos un directorio de trabajos donde los empleadores contratan específicamente campistas que han recibido certificaciones de Analytics Dojo.",
           ""
         ]
       ]
@@ -169,7 +169,7 @@
         [
           "http://i.imgur.com/EAR7Lvh.jpg",
           "A screenshot of our one of our Gitter chat rooms.",
-          "Now let's join Free Code Camp's chat rooms. You can come here any time of day to hang out, ask questions, or find another camper to pair program with. First you'll need a GitHub account.",
+          "Now let's join Analytics Dojo's chat rooms. You can come here any time of day to hang out, ask questions, or find another camper to pair program with. First you'll need a GitHub account.",
           ""
         ],
         [
@@ -187,13 +187,13 @@
         [
           "http://i.imgur.com/pYk0wOk.gif",
           "A gif showing how you can star a GitHub repo.",
-          "Open Free Code Camp's open-source repository. This is where our volunteer team collaborates on building Free Code Camp. You can \"star\" our repository. \"Starring\" is the GitHub equivalent of \"liking\" something.",
+          "Open Analytics Dojo's open-source repository. This is where our volunteer team collaborates on building Analytics Dojo. You can \"star\" our repository. \"Starring\" is the GitHub equivalent of \"liking\" something.",
           "https://github.com/freecodecamp/freecodecamp"
         ],
         [
           "http://i.imgur.com/zwYPeQT.gif",
           "A gif showing you how to click the link below to go to our chat room and click the \"sign in with GitHub\" button. Then you can click into the text input field and type a message to your fellow campers.",
-          "Now that you have a GitHub account, you can join our main chat room by logging in with GitHub. Introduce yourself by saying \"Hello world!\". Tell your fellow campers how you found Free Code Camp. Also tell us why you want to learn to code.",
+          "Now that you have a GitHub account, you can join our main chat room by logging in with GitHub. Introduce yourself by saying \"Hello world!\". Tell your fellow campers how you found Analytics Dojo. Also tell us why you want to learn to code.",
           "https://gitter.im/FreeCodeCamp/FreeCodeCamp"
         ],
         [
@@ -230,7 +230,7 @@
         [
           "http://i.imgur.com/EAR7Lvh.jpg",
           "Una imagen de una de nuestras salas de chat en Gitter.",
-          "Ahora únete a las salas de chat de Free Code Camp. Puedes venir aquí en cualquier momento para charlar, hacer preguntas, o encontrar otro campista para programar juntos. Primero necesitarás una cuenta de GitHub.",
+          "Ahora únete a las salas de chat de Analytics Dojo. Puedes venir aquí en cualquier momento para charlar, hacer preguntas, o encontrar otro campista para programar juntos. Primero necesitarás una cuenta de GitHub.",
           ""
         ],
         [
@@ -248,14 +248,14 @@
         [
           "http://i.imgur.com/pYk0wOk.gif",
           "Un gif mostrándote como puedes dar una estrella a un repositorio de GitHub.",
-          "Ve al repositorio de código libre de Free Code Camp y dale una \"estrella\". Las \"estrellas\" son el equivalente en GitHub de los \"me gusta\".",
-          "Si quieres, ve al repositorio de código libre de Free Code Camp y dale una \"estrella\". Las \"estrellas\" son el equivalente en GitHub de los \"me gusta\".",
+          "Ve al repositorio de código libre de Analytics Dojo y dale una \"estrella\". Las \"estrellas\" son el equivalente en GitHub de los \"me gusta\".",
+          "Si quieres, ve al repositorio de código libre de Analytics Dojo y dale una \"estrella\". Las \"estrellas\" son el equivalente en GitHub de los \"me gusta\".",
           "https://github.com/freecodecamp/freecodecamp"
         ],
         [
           "http://i.imgur.com/zwYPeQT.gif",
           "Un gif mostrándote como pulsar en el enlace inferior para ir a nuestra sala de chat y pulsar en el botón de \"iniciar sesión con GitHub\". Entonces puedes pulsar en el próximo campo de texto y escribir un mensaje a tus compañeros campistas.",
-          "Ahora que tienes una cuenta de GitHub, puedes unirte a nuestro chat principal al iniciar sesión con GitHub. Preséntate diciendo \"Hello world!\". Cuéntales a los tus compañeros campistas como encontraste Free Code Camp. Además cuéntanos porque deseas aprender a programar.",
+          "Ahora que tienes una cuenta de GitHub, puedes unirte a nuestro chat principal al iniciar sesión con GitHub. Preséntate diciendo \"Hello world!\". Cuéntales a los tus compañeros campistas como encontraste Analytics Dojo. Además cuéntanos porque deseas aprender a programar.",
           "https://gitter.im/FreeCodeCamp/FreeCodeCamp"
         ],
         [
@@ -291,7 +291,7 @@
         [
           "http://i.imgur.com/tP2ccTE.gif",
           "A gif showing how you can click your profile image in your upper right hand corner to your code portfolio and connect GitHub.",
-          "Check out your code portfolio. Click your picture in your upper right hand corner. To activate your code portfolio, you'll need to link your GitHub account with Free Code Camp. Your code portfolio shows your progress and how many Brownie Points you have. You can get Brownie Points by completing challenges and by helping other campers in our chat rooms. If you get Brownie Points on several days in a row, you'll get a streak.",
+          "Check out your code portfolio. Click your picture in your upper right hand corner. To activate your code portfolio, you'll need to link your GitHub account with Analytics Dojo. Your code portfolio shows your progress and how many Brownie Points you have. You can get Brownie Points by completing challenges and by helping other campers in our chat rooms. If you get Brownie Points on several days in a row, you'll get a streak.",
           ""
         ]
       ],
@@ -304,7 +304,7 @@
         [
           "http://i.imgur.com/tP2ccTE.gif",
           "Un gif mostrándote como puedes pulsar en tu imagen de perfil en la esquina superior derecha conectar tu portafolio y GitHub.",
-          "Dale un vistazo de tu portafolio de código. Pulsa en tu imagen en la esquina superior derecha. Para activar tu portafolio de código, necesitaras conectar tu cuenta de GitHub con Free Code Camp. Tu portafolio de código muestra tu progreso y cuantos Puntos Cafés tienes. Puedes obtener Puntos Cafés completando desafíos y ayudando a otros campistas en nuestras salas de chat. Si obtienes Puntos Cafés varios días consecutivos, obtendrás una racha.",
+          "Dale un vistazo de tu portafolio de código. Pulsa en tu imagen en la esquina superior derecha. Para activar tu portafolio de código, necesitaras conectar tu cuenta de GitHub con Analytics Dojo. Tu portafolio de código muestra tu progreso y cuantos Puntos Cafés tienes. Puedes obtener Puntos Cafés completando desafíos y ayudando a otros campistas en nuestras salas de chat. Si obtienes Puntos Cafés varios días consecutivos, obtendrás una racha.",
           ""
         ]
       ]

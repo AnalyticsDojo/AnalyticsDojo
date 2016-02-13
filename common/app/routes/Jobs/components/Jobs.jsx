@@ -98,7 +98,7 @@ export default contain(
                   <img
                     alt={`
                       a photo of Michael Gai, who recently hired a software
-                      engineer through Free Code Camp
+                      engineer through Analytics Dojo
                     `}
                     className='img-responsive testimonial-image-jobs img-center'
                     src='http://i.imgur.com/tGcAA8H.jpg' />
@@ -108,8 +108,8 @@ export default contain(
                   xs={ 8 }>
                     <blockquote>
                       <p>
-                        We hired our last developer out of Free Code Camp
-                        and couldn't be happier.  Free Code Camp is now
+                        We hired our last developer out of Analytics Dojo
+                        and couldn't be happier.  Analytics Dojo is now
                         our go-to way to bring on pre-screened candidates
                         who are enthusiastic about learning quickly and
                         becoming immediately productive in their new career.

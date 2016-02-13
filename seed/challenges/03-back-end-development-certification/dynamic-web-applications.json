@@ -9,7 +9,7 @@
       "title": "Build a Voting App",
       "description": [
         "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='https://fcc-voting-arthow4n.herokuapp.com/' target='_blank'>https://fcc-voting-arthow4n.herokuapp.com/</a> and deploy it to Heroku.",
-        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Here are the specific user stories you should implement for this project:",
         "<strong>User Story:</strong> As an authenticated user, I can keep my polls and come back later to access them.",
         "<strong>User Story:</strong> As an authenticated user, I can share my polls with my friends.",
@@ -31,7 +31,7 @@
       "nameEs": "Crea una aplicación de votaciones",
       "descriptionEs": [
         "<span class='text-info'>Objetivo:</span> Construye una aplicación de pila completa (full stack) en JavaScript que mediante ingeniería inversa replique el siguiente proyecto: <a href='https://fcc-voting-arthow4n.herokuapp.com/' target='_blank'>https://fcc-voting-arthow4n.herokuapp.com/</a> y despliégala en Heroku.",
-        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Mientras construyes tu aplicación, debes consignar frecuentemente los cambios a tu código. Puedes hacerlo ejecutando <code>git commit -am \"un mensaje\"</code>. Ten en cuenta que debes reemplazar \"tu mensaje\" con un breve recuento de los cambios que le hiciste a tu código.",
         "Puedes empujar estos nuevos cambios consignados a GitHub ejecutando <code>git push origin master</code>, y a Heroku ejecutando <code>grunt --force && grunt buildcontrol:heroku</code>.",
         "Estas son las Historias de usuario que debes satisfacer para este Basejump:",
@@ -43,7 +43,7 @@
         "<span class='text-info'>Historia de usuario opcional:</span> Como un usuario autenticado o no autenticado, puedo ver y votar en las votaciones de otros.",
         "<span class='text-info'>Historia de usuario opcional:</span> Como un usuario autenticado o no autenticado, puedo ver los resultados de las votaciones por medio de un gráfico. (Esto podría implementarse utilizando Chart.js o Google Charts.)",
         "<span class='text-info'>Historia de usuario opcional:</span> Como un usuario autenticado, si no me gustan las opciones en una votación, puedo crear una nueva opción.",
-        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Free Code Camp también para que ambos reciban el crédito por completarlo.",
+        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Analytics Dojo también para que ambos reciban el crédito por completarlo.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el enlace de tu proyecto. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto de tu tweet</a>"
       ],
       "isRequired": true
@@ -53,7 +53,7 @@
       "title": "Build a Nightlife Coordination App",
       "description": [
         "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='http://whatsgoinontonight.herokuapp.com/' target='_blank'>http://whatsgoinontonight.herokuapp.com/</a> and deploy it to Heroku.",
-        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Here are the specific user stories you should implement for this project:",
         "<strong>User Story:</strong> As an unauthenticated user, I can view all bars in my area.",
         "<strong>User Story:</strong> As an authenticated user, I can add myself to a bar to indicate I am going there tonight.",
@@ -72,7 +72,7 @@
       "nameEs": "Crea una aplicación de coordinación de vida nocturna",
       "descriptionEs": [
         "<span class='text-info'>Objetivo:</span> Construye una aplicación de pila completa (full stack) en JavaScript que mediante ingeniería inversa replique el siguiente proyecto: <a href='http://whatsgoinontonight.herokuapp.com/' target='_blank'>http://whatsgoinontonight.herokuapp.com/</a> y despliégala en Heroku.",
-        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Mientras construyes tu aplicación, debes consignar frecuentemente los cambios a tu código. Puedes hacerlo ejecutando <code>git commit -am \"un mensaje\"</code>. Ten en cuenta que debes reemplazar \"tu mensaje\" con un breve recuento de los cambios que le hiciste a tu código.",
         "Puedes empujar estos nuevos cambios consignados a GitHub ejecutando <code>git push origin master</code>, y a Heroku ejecutando <code>grunt --force && grunt buildcontrol:heroku</code>.",
         "Estas son las Historias de usuario que debes satisfacer para este Basejump:",
@@ -81,7 +81,7 @@
         "<span class='text-info'>Historia de usuario:</span> Como un usuario autenticado, puedo removerme de un bar si ya no pienso ir allí.",
         "<span class='text-info'>Historia de usuario opcional:</span> Como un usuario no autenticado, cuando accedo a mi cuenta no debo tener la necesidad de buscar de nuevo.",
         "<span class='text-info'>Pista:</span> Prueba utilizar el <a href='https://www.yelp.com/developers/documentation/v2/overview' target='_blank'>API de Yelp</a> para encontrar lugares en las ciudades donde tus usuarios buscan. Si utilizas el API de Yelp, asegúrate de mencionarlo en tu aplicación.",
-        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Free Code Camp también para que ambos reciban el crédito por completarlo.",
+        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Analytics Dojo también para que ambos reciban el crédito por completarlo.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el enlace de tu proyecto. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto de tu tweet</a>"
       ],
       "isRequired": true
@@ -91,7 +91,7 @@
       "title": "Chart the Stock Market",
       "description": [
         "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='http://watchstocks.herokuapp.com/' target='_blank'>http://watchstocks.herokuapp.com/</a> and deploy it to Heroku.",
-        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Here are the specific user stories you should implement for this project:",
         "<strong>User Story:</strong> I can view a graph displaying the recent trend lines for each added stock.",
         "<strong>User Story:</strong> I can add new stocks by their symbol name.",
@@ -109,7 +109,7 @@
       "nameEs": "Grafica el mercado de acciones",
       "descriptionEs": [
         "<span class='text-info'>Objetivo:</span> Crea una aplicación de pila completa (full stack) en JavaScript que mediante ingeniería inversa replique el siguiente proyecto: <a href='http://watchstocks.herokuapp.com/' target='_blank'>http://watchstocks.herokuapp.com/</a> y despliégalo en Heroku.",
-        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Mientras construyes tu aplicación, debes consignar frecuentemente los cambios a tu código. Puedes hacerlo ejecutando <code>git commit -am \"un mensaje\"</code>. Ten en cuenta que debes reemplazar \"tu mensaje\" con un breve recuento de los cambios que le hiciste a tu código.",
         "Puedes empujar estos nuevos cambios consignados a GitHub ejecutando <code>git push origin master</code>, y a Heroku ejecutando <code>grunt --force && grunt buildcontrol:heroku</code>.",
         "Estas son las Historias de usuario que debes satisfacer para este Basejump:",
@@ -117,7 +117,7 @@
         "<span class='text-info'>Historia de usuario:</span> Como usuario, puedo agregar nuevas acciones por su símbolo.",
         "<span class='text-info'>Historia de usuario:</span> Como usuario, puedo remover acciones.",
         "<span class='text-info'>Historia de usuario opcional:</span> Como usuario, puedo ver cambios en tiempo real cuando algún otro usuario agrega o remueve una acción.",
-        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Free Code Camp también para que ambos reciban el crédito por completarlo.",
+        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Analytics Dojo también para que ambos reciban el crédito por completarlo.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el enlace de tu proyecto. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto de tu tweet</a>"
       ],
       "isRequired": true
@@ -127,7 +127,7 @@
       "title": "Manage a Book Trading Club",
       "description": [
         "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='http://bookjump.herokuapp.com/' target='_blank'>http://bookjump.herokuapp.com/</a> and deploy it to Heroku.",
-        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Here are the specific user stories you should implement for this project:",
         "<strong>User Story:</strong> I can view all books posted by every user.",
         "<strong>User Story:</strong> I can add a new book.",
@@ -145,7 +145,7 @@
       "nameEs": "Administra un club de intercambio de libros",
       "descriptionEs": [
         "<span class='text-info'>Objetivo:</span> Crea una aplicación de pila completa (full stack) en JavaScript que mediante ingeniería inversa replique el siguiente proyecto: <a href='http://bookjump.herokuapp.com/' target='_blank'>http://bookjump.herokuapp.com/</a> y despliégalo en Heroku.",
-        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Mientras construyes tu aplicación, debes consignar frecuentemente los cambios a tu código. Puedes hacerlo ejecutando <code>git commit -am \"un mensaje\"</code>. Ten en cuenta que debes reemplazar \"tu mensaje\" con un breve recuento de los cambios que le hiciste a tu código.",
         "Puedes empujar estos nuevos cambios consignados a GitHub ejecutando <code>git push origin master</code>, y a Heroku ejecutando <code>grunt --force && grunt buildcontrol:heroku</code>.",
         "Estas son las Historias de usuario que debes satisfacer para este Basejump:",
@@ -153,7 +153,7 @@
         "<span class='text-info'>Historia de usuario:</span> Como un usuario autenticado, puedo agregar un nuevo libro.",
         "<span class='text-info'>Historia de usuario:</span> Como un usuario autenticado, puedo actualizar mi configuración para que almacene mi nombre completo, ciudad y Estado.",
         "<span class='text-info'>Historia de usuario opcional:</span> Como un usuario autenticado, puedo proponer un intercambio y esperar a que algún otro usuario acepte el trato.",
-        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Free Code Camp también para que ambos reciban el crédito por completarlo.",
+        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Analytics Dojo también para que ambos reciban el crédito por completarlo.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el enlace de tu proyecto. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto de tu tweet</a>"
       ],
       "isRequired": true
@@ -163,7 +163,7 @@
       "title": "Build a Pinterest Clone",
       "description": [
         "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='http://pintech.herokuapp.com/' target='_blank'>http://pintech.herokuapp.com/</a> and deploy it to Heroku.",
-        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Here are the specific user stories you should implement for this project:",
         "<strong>User Story:</strong> As an unauthenticated user, I can login with Twitter.",
         "<strong>User Story:</strong> As an authenticated user, I can link to images.",
@@ -184,7 +184,7 @@
       "nameEs": "Crea un clon de Pinterest",
       "descriptionEs": [
         "<span class='text-info'>Objetivo:</span> Crea una aplicación de pila completa (full stack) en JavaScript que mediante ingeniería inversa replique el siguiente proyecto: <a href='http://pintech.herokuapp.com/' target='_blank'>http://pintech.herokuapp.com/</a> y despliégalo en Heroku.",
-        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
+        "Ten en cuenta que para cada Basejump, debes crear un nuevo repositorio en GitHub y un nuevo proyecto en Heroku. Si no puedes recordar cómo hacerlo, visita de nuevo <a href='/challenges/get-set-for-our-back-end-development-projects'>http://analyticsdojo.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Mientras construyes tu aplicación, debes consignar frecuentemente los cambios a tu código. Puedes hacerlo ejecutando <code>git commit -am \"un mensaje\"</code>. Ten en cuenta que debes reemplazar \"tu mensaje\" con un breve recuento de los cambios que le hiciste a tu código.",
         "Puedes empujar estos nuevos cambios consignados a GitHub ejecutando <code>git push origin master</code>, y a Heroku ejecutando <code>grunt --force && grunt buildcontrol:heroku</code>.",
         "Estas son las Historias de usuario que debes satisfacer para este Basejump:",
@@ -195,7 +195,7 @@
         "<span class='text-info'>Historia de usuario:</span> Como usuario no autenticado, puedo navegar los muros de imágenes de otros usuarios.",
         "<span class='text-info'>Historia de usuario opcional:</span> Como usuario autenticado, si agrego una imagen corrupta, será reemplazada por una imagen predeterminada. (Puedes utilizar la detección de imágenes corruptas de jQuery)",
         "<span class='text-info'>Pista:</span> <a href='http://masonry.desandro.com/' target='_blank'>Masonry.js</a> es una librería que permite crear cuadrículas de imágenes al estilo de Pinterest.",
-        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Free Code Camp también para que ambos reciban el crédito por completarlo.",
+        "Una vez hayas terminado de implementar estas historias de usuario, pulsa el botón de \"I've completed this challenge\" e incluye las URLs de tu repositorio GitHub y de tu aplicación corriendo en Heroku. Si programaste en pareja, agrega su nombre de usuario de Analytics Dojo también para que ambos reciban el crédito por completarlo.",
         "Si quieres retroalimentación inmediata de parte de tus compañeros campistas, pulsa este botón y pega el enlace de tu proyecto. <br><br><a class='btn btn-primary btn-block' href='https://twitter.com/intent/tweet?text=Check%20out%20the%20project%20I%20just%20built%20with%20%40FreeCodeCamp:%20PASTE_YOUR_CODEPEN_URL_HERE%20%0A%20%23LearnToCode%20%23JavaScript' target='_blank'>Pulsa aquí y agrega tu link en el texto de tu tweet</a>"
       ],
       "isRequired": true

@@ -656,7 +656,7 @@ module.exports = function(app) {
         superBlocks => {
           res.render('map/show', {
             superBlocks,
-            title: 'A Map to Learn to Code and Become a Software Engineer',
+            title: 'A Path to Become a Data Scientist',
             showAside
           });
         },

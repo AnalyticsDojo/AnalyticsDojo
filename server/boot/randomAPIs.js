@@ -45,7 +45,7 @@ module.exports = function(app) {
   app.use(router);
 
   function sitemap(req, res, next) {
-    var appUrl = 'http://www.freecodecamp.com';
+    var appUrl = 'http://www.analyticsdojo.com';
     var now = moment(new Date()).format('YYYY-MM-DD');
 
     // TODO(berks): refactor async to rx
@@ -162,7 +162,7 @@ module.exports = function(app) {
 
   function showLabs(req, res) {
     res.render('resources/labs', {
-      title: 'Projects Built by Free Code Camp Software Engineers',
+      title: 'Projects Built by Analytics Dojo Software Engineers',
       projects: labs
     });
   }
@@ -193,7 +193,7 @@ module.exports = function(app) {
 
   function showTestimonials(req, res) {
     res.render('resources/stories', {
-      title: 'Testimonials from Happy Free Code Camp Students ' +
+      title: 'Testimonials from Happy Analytics Dojo Students ' +
         'who got Software Engineer Jobs',
       stories: testimonials.slice(0, 72),
       moreStories: true
@@ -202,7 +202,7 @@ module.exports = function(app) {
 
   function showAllTestimonials(req, res) {
     res.render('resources/stories', {
-      title: 'Testimonials from Happy Free Code Camp Students ' +
+      title: 'Testimonials from Happy Analytics Dojo Students ' +
         'who got Software Engineer Jobs',
       stories: testimonials,
       moreStories: false
@@ -211,7 +211,7 @@ module.exports = function(app) {
 
   function showShop(req, res) {
     res.render('resources/shop', {
-      title: 'Support Free Code Camp by Buying t-shirts, ' +
+      title: 'Support Analytics Dojo by Buying t-shirts, ' +
         'stickers, and other goodies'
     });
   }
@@ -283,7 +283,7 @@ module.exports = function(app) {
 
   function getStarted(req, res) {
     res.render('resources/get-started', {
-      title: 'How to get started with Free Code Camp'
+      title: 'How to get started with Analytics Dojo'
     });
   }
 

@@ -6,6 +6,6 @@ module.exports = function(app) {
   app.use(router);
 
   function showWiki(req, res) {
-    res.render('wiki/show', { title: 'Wiki | Free Code Camp' });
+    res.render('wiki/show', { title: 'Wiki | Analytics Dojo' });
   }
 };

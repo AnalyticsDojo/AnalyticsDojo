@@ -66,18 +66,18 @@ module.exports = function(app) {
     var mailOptions = {
       type: 'email',
       to: user.email,
-      from: 'Team@freecodecamp.com',
-      subject: 'Welcome to Free Code Camp!',
+      from: 'Team@analyticsdojo.com',
+      subject: 'Welcome to AnalyticsDojo!',
       redirect: '/',
       text: [
-        'Greetings from San Francisco!\n\n',
+        'Greetings from Upstate New York!\n\n',
         'Thank you for joining our community.\n',
         'Feel free to email us at this address if you have ',
-        'any questions about Free Code Camp.\n',
+        'any questions about AnalyticsDojo.\n',
         'And if you have a moment, check out our blog: ',
-        'medium.freecodecamp.com.\n\n',
+        'medium.analyticsdojo.com.\n\n',
         'Good luck with the challenges!\n\n',
-        '- the Free Code Camp Team'
+        '- the AnalyticsDojo Team'
       ].join('')
     };
 
@@ -88,7 +88,7 @@ module.exports = function(app) {
         if (err) { return next(err); }
 
         req.flash('success', {
-          msg: [ "Welcome to Free Code Camp! We've created your account." ]
+          msg: [ "Welcome to AnalyticsDojo! We've created your account." ]
         });
         res.redirect(redirect);
       });

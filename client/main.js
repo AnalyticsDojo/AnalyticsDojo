@@ -385,7 +385,7 @@ $(document).ready(function() {
     if (!main.isWikiAsideLoad) {
       var lang = window.location.toString().match(/\/\w{2}\//);
       lang = (lang) ? lang[0] : '/en/';
-      var wikiURL = 'http://freecodecamp.github.io/wiki' + lang;
+      var wikiURL = 'http://rpi-analytics.github.io/wiki' + lang;
       var wikiAside = $('<iframe>');
       wikiAside.attr('src', wikiURL);
       $('.wiki-aside').append(wikiAside);
@@ -411,13 +411,13 @@ $(document).ready(function() {
   $('#accordion').on('show.bs.collapse', function(e) {
     expandCaret(e.target);
     if ($('a[data-toggle=collapse]').length === $('.fa-caret-down').length) {
-      mapShowAll.text('Collapse all challenges');
+      mapShowAll.text('Collapse all lessons');
       mapShowAll.addClass('active');
     }
   }).on('hide.bs.collapse', function(e) {
     collapseCaret(e.target);
     if ($('a[data-toggle=collapse]').length === $('.fa-caret-right').length) {
-      mapShowAll.text('Expand all challenges');
+      mapShowAll.text('Expand all lessons');
       mapShowAll.removeClass('active');
     }
   });
@@ -429,13 +429,13 @@ $(document).ready(function() {
       function(i, div) {
         expandBlock(div);
       });
-      mapShowAll.text('Collapse all challenges');
+      mapShowAll.text('Collapse all lessons');
       return mapShowAll.addClass('active');
     } else {
       $.each($('.map-collapse.in'), function(i, div) {
         collapseBlock(div);
       });
-      mapShowAll.text('Expand all challenges');
+      mapShowAll.text('Expand all lessons');
       return mapShowAll.removeClass('active');
     }
   });

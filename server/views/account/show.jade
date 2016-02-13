@@ -58,7 +58,7 @@ block content
                 .spacer
                   h4
                     | This camper has committed to giving $#{pledge.amount} to
-                    a(href='#{pledge.donateUrl}?ref=freecodecamp.com' target='_blank')  #{pledge.displayName}
+                    a(href='#{pledge.donateUrl}?ref=analyticsdojo.com' target='_blank')  #{pledge.displayName}
                     |  each month until they have completed their #{pledge.goal}.
                 .spacer
             .row
@@ -194,10 +194,10 @@ block content
         hr
         .col-xs-12
             a.btn.btn-lg.btn-block.btn-primary.btn-link-social(href='/logout')
-                | Sign me out of Free Code Camp
+                | Sign me out of Analytics Dojo
         .col-xs-12
-            a.btn.btn-lg.btn-block.btn-primary.btn-link-social(href='mailto:team@freecodecamp.com')
-                | Email us at team@freecodecamp.com
+            a.btn.btn-lg.btn-block.btn-primary.btn-link-social(href='mailto:team@analyticsdojo.com')
+                | Email us at team@analyticsdojo.com
         if (!user.isLocked)
             .col-xs-12
                 a.btn.btn-lg.btn-block.btn-primary.btn-link-social(href='/toggle-lockdown-mode')
@@ -215,7 +215,7 @@ block content
                 | Edit my pledge
         .col-xs-12
             a.btn.btn-lg.btn-block.btn-danger.btn-link-social.confirm-deletion
-                | Delete my Free Code Camp account
+                | Delete my Analytics Dojo account
             script.
                 $('.confirm-deletion').on("click", function () {
                     $('#modal-dialog').modal('show');
@@ -230,7 +230,7 @@ block content
                         p This will really delete all your data, including all your progress, news stories and brownie points.
                         p We won't be able to recover any of it for you later, even if you change your mind.
                         p If there's something we could do better, send us an email instead and we'll do our best: &thinsp;
-                            a(href="mailto:team@freecodecamp.com") team@freecodecamp.com
+                            a(href="mailto:team@analyticsdojo.com") team@analyticsdojo.com
                             | .
                     .modal-footer
                         a.btn.btn-success.btn-block(href='#', data-dismiss='modal', aria-hidden='true')

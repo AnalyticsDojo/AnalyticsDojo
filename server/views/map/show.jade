@@ -1,18 +1,19 @@
 extends ../layout-wide
 block content
         .text-center.map-fixed-header
-            p Challenges required for certifications are marked with a *
+            br
+            p
             .row.map-buttons
-                button.center-block.btn.btn-block.btn-primary.active#showAll Collapse all challenges
+                button.center-block.btn.btn-block.btn-primary.active#showAll Collapse all lessons
             .row.map-buttons
                 .input-group
-                    input#map-filter.form-control(type="text" placeholder="Type a challenge name" autocomplete="off" value="")
+                    input#map-filter.form-control(type="text" placeholder="Type a topic" autocomplete="off" value="")
                     span.input-group-addon
                        i.fa.fa-search
             hr
             include ../partials/flash
         #accordion.map-accordion
-          #noneFound No results found. Happy Coding!
+          #noneFound No results found. Try again!
           for superBlock, index in superBlocks
               h2
                 a(data-toggle='collapse', data-parent='#accordion', href='#collapse'+superBlock.name.split(' ').join('-'))
