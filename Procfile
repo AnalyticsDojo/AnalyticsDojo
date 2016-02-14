@@ -1,1 +1,1 @@
-web: node pm2Start
+web: ./node_modules/.bin/babel-node server/server.js
