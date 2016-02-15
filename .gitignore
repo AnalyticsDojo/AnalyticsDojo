@@ -28,7 +28,7 @@ main.css
 bundle.js
 coverage
 .remote-sync.json
-
+herokuconfig.sh
 server/*.bundle.js
 public/js/bundle*
 
