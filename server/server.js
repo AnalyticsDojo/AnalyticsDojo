@@ -1,4 +1,8 @@
-require('dotenv').load();
+var OnHeroku=process.env.ONHEROKU;
+
+if(!OnHeroku){
+    require('dotenv').load();
+}
 var pmx = require('pmx');
 pmx.init();
 
@@ -18,6 +22,7 @@ var generateKey =
   require('loopback-component-passport/lib/models/utils').generateKey;
 
 var isBeta = !!process.env.BETA;
+
 var app = loopback();
 
 expressState.extend(app);
