@@ -22,7 +22,8 @@
     "lint-json": "npm run lint-server && npm run lint-challenges && npm run lint-resources && npm run lint-utils",
     "test-challenges": "babel-node seed/test-challenges.js | tap-spec",
     "pretest": "npm run lint",
-    "test": "npm run test-challenges"
+    "test": "npm run test-challenges",
+    "preinstall": "npm i -g pm2"
   },
   "engines": {
     "node": "5.5.0"
