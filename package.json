@@ -22,8 +22,7 @@
     "lint-json": "npm run lint-server && npm run lint-challenges && npm run lint-resources && npm run lint-utils",
     "test-challenges": "babel-node seed/test-challenges.js | tap-spec",
     "pretest": "npm run lint",
-    "test": "npm run test-challenges",
-    "postinstall": "node ./node_modules/bower/bin/bower install && bower cache clean && bower install && gulp build -p"
+    "test": "npm run test-challenges"
   },
   "engines": {
     "node": "5.5.0"
