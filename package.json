@@ -23,7 +23,7 @@
     "test-challenges": "babel-node seed/test-challenges.js | tap-spec",
     "pretest": "npm run lint",
     "test": "npm run test-challenges",
-    "postinstall": "bower cache clean && bower install && gulp build -p"
+    "postinstall": "node ./node_modules/bower/bin/bower install && bower cache clean && bower install && gulp build -p"
   },
   "engines": {
     "node": "5.5.0"
@@ -43,6 +43,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.3.0",
     "body-parser": "^1.13.2",
+    "bower": "^1.7.7",
     "chai-jquery": "^2.0.0",
     "cheerio": "~0.20.0",
     "classnames": "^2.1.2",
