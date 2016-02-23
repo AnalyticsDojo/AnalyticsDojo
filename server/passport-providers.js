@@ -13,7 +13,7 @@ module.exports = {
     session: true,
     failureFlash: true
   },
-  'facebook-login': {
+  /*'facebook-login': {
     provider: 'facebook',
     module: 'passport-facebook',
     clientID: process.env.FACEBOOK_ID,
@@ -131,6 +131,7 @@ module.exports = {
     link: true,
     failureFlash: true
   },
+  */
   'github-login': {
     provider: 'github',
     authScheme: 'oauth2',
