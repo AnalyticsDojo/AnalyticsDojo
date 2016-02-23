@@ -52,3 +52,8 @@ public/js/faux*
 public/css/main*
 
 server/rev-manifest.json
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
