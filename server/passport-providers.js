@@ -13,7 +13,7 @@ module.exports = {
     session: true,
     failureFlash: true
   },
-  /*'facebook-login': {
+  'facebook-login': {
     provider: 'facebook',
     module: 'passport-facebook',
     clientID: process.env.FACEBOOK_ID,
@@ -69,6 +69,7 @@ module.exports = {
     link: true,
     failureFlash: true
   },
+    /*
   'twitter-login': {
     provider: 'twitter',
     authScheme: 'oauth',
@@ -95,7 +96,7 @@ module.exports = {
     consumerSecret: process.env.TWITTER_SECRET,
     link: true,
     failureFlash: true
-  },
+  },*/
   'linkedin-login': {
     provider: 'linkedin',
     authScheme: 'oauth2',
@@ -131,7 +132,7 @@ module.exports = {
     link: true,
     failureFlash: true
   },
-  */
+
   'github-login': {
     provider: 'github',
     authScheme: 'oauth2',
