@@ -19,6 +19,9 @@ tmp
 
 npm-debug.log
 node_modules
+node_modules
+.gitignore
+.elasticbeanstalk/
 .idea
 *.iml
 .DS_Store
