@@ -69,7 +69,6 @@ module.exports = {
     link: true,
     failureFlash: true
   },
-    /*
   'twitter-login': {
     provider: 'twitter',
     authScheme: 'oauth',
@@ -96,7 +95,7 @@ module.exports = {
     consumerSecret: process.env.TWITTER_SECRET,
     link: true,
     failureFlash: true
-  },*/
+  },
   'linkedin-login': {
     provider: 'linkedin',
     authScheme: 'oauth2',
