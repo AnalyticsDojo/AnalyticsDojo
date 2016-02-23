@@ -10,7 +10,7 @@
     "create-rev": "node -e \"console.log('\\n\\ncreating manifest\\n\\n'); require('fs').writeFileSync('server/rev-manifest.json', '{}');\"",
     "build": "NODE_ENV=production gulp build -p",
     "build-assets": "NODE_ENV=production gulp build -p",
-    "prestart": "bower cache clean && bower install && gulp build -p",
+    "postinstall": "bower cache clean && bower install && gulp build -p",
     "start": "node server/production-start.js",
     "startdev": "babel-node server/server.js",
     "prestart-production": "bower cache clean && bower install && gulp build -p",
