@@ -1,7 +1,7 @@
 import { defaultProfileImage } from '../../common/utils/constantStrings.json';
 
 const message =
-  'Learn to Code and Help Nonprofits';
+  'Learn to Data Science Step by Step';
 
 module.exports = function(app) {
   var router = app.loopback.Router();
