@@ -142,6 +142,7 @@
     "sort-keys": "^1.1.1",
     "stampit": "^2.1.1",
     "store": "https://github.com/berkeleytrue/store.js.git#feature/noop-server",
+    "tap-spec": "^4.1.1",
     "thundercats": "^3.1.0",
     "thundercats-react": "~0.5.1",
     "uglify-js": "^2.5.0",
