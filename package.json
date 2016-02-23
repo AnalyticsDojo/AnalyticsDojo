@@ -46,6 +46,7 @@
     "babel-register": "^6.3.0",
     "body-parser": "^1.13.2",
     "bower": "^1.7.7",
+    "browser-sync": "^2.9.12",
     "chai-jquery": "^2.0.0",
     "cheerio": "~0.20.0",
     "classnames": "^2.1.2",
