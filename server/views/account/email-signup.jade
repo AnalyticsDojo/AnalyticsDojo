@@ -8,7 +8,7 @@ block content
             .col-sm-6.col-sm-offset-3
               input(type='hidden', name='_csrf', value=_csrf)
               .form-group
-                  input.input-lg.form-control(type='email', name='email', id='email', placeholder='email', autofocus, required, autocomplete="off")
+                  input.input-lg.form-control(type='email', name='email', id='email', placeholder='email', autofocus, required, autocomplete="off", data-error="That email is invalid")
               .form-group
                   input.input-lg.form-control(type='password', name='password', id='password', placeholder='password', required, pattern=".{8,50}", title="Must be at least 8 characters and no longer than 50 characters.")
               .form-group
