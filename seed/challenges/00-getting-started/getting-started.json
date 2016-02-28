@@ -9,16 +9,20 @@
       "title": "Learn how Analytics Dojo Works",
       "description": [
         [
-          "http://i.imgur.com/6ibIavQ.jpg",
-          "A picture of Analytics Dojo's 4 benefits: Get connected, Learn JavaScript, Build your Portfolio, Help nonprofits",
+          "http://s3.amazonaws.com/analyticsdojo/ad1.png",
+          "A picture of Analytics Dojo's 4 benefits, joining a community and learning ",
           "Welcome to Analytics Dojo. We're an open source community of busy people who learn to code and help nonprofits.",
-          ""
+          "",
+          "Jason Kuruzovich",
+          "http://s3.amazonaws.com/analyticsdojo/ad1.png"
         ],
         [
-          "http://i.imgur.com/Elb3dfj.jpg",
+          "http://i.imgur.com/LnreS3r.png",
           "A screenshot of some of our campers coding together in Toronto.",
           "<bold>Learning to code is hard.</bold> To succeed, you'll need lots of practice and support. That's why we've created a rigorous curriculum and supportive community.",
-          ""
+          "",
+          "Jason Kuruzovich",
+          "http://s3.amazonaws.com/analyticsdojo/ad1.png"
         ],
         [
           "http://i.imgur.com/D7Y5luw.jpg",
@@ -86,81 +90,7 @@
       "type": "Waypoint",
       "challengeType": 7,
       "nameEs": "Aprende como funciona Analytics Dojo",
-      "descriptionEs": [
-        [
-          "http://i.imgur.com/6ibIavQ.jpg",
-          "Una imagen de los 4 beneficios de Analytics Dojo: Conéctate, Aprende JavaScript, Construye tu  Portafolio, Ayuda organizaciones sin ánimo de lucro",
-          "Bienvenido a Analytics Dojo. Somos una comunidad de código abierto formada por personas ocupadas quienes aprenden a programar y ayudan a organizaciones sin ánimo de lucro.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/Elb3dfj.jpg",
-          "Una imagen de algunos de nuestros campistas programando juntos en Toronto.",
-          "<bold>Aprender a programar es difícil.</bold> Para tener éxito, necesitarás mucha práctica y apoyo. Por eso es que hemos creado un riguroso currículo y una comunidad de apoyo.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/D7Y5luw.jpg",
-          "Una gráfica del crecimiento de trabajos en comparación con los graduados en un pregrado de ciencias de la computación. Hay 1.4 millones de empleos y solo 400 mil personas para ocuparlos.",
-          "Actualmente, hay miles de trabajos de programación sin ocupar, y la demanda de programadores crece cada año.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/WD3STY6.jpg",
-          "Fotos de tres campistas quienes obtuvieron trabajos después de aprender a programar en Analytics Dojo.",
-          "Analytics Dojo es un camino probado para que obtengas tu primer trabajo de programación. De hecho, nadie actualmente ha completado nuestro programa entero, porque los campistas obtienen trabajos antes de poder hacerlo.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/vLNso6h.jpg",
-          "Una ilustración mostrando que aprenderás HTML5, CSS3, JavaScript, Bases de Datos, Git, Node.js, react y D3.",
-          "Tenemos cientos de desafíos de programación opcionales que te enseñarán las tecnologías fundamentales para el desarrollo web como HTML5, Node.js y bases de datos.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/UVB9hxp.jpg",
-          "Una foto de un campista en un café construyendo proyectos con Analytics Dojo.",
-          "Creemos que los humanos aprender mejor haciendo.  Así que en realidad emplearás la mayoría de tu tiempo construyendo proyectos.  Te daremos una lista de especificaciones (historias de usuario ágiles), y te las ingeniarás para construir aplicaciones que cumplan esas especificaciones.",
-          ""
-        ],
-         [
-          "http://i.imgur.com/pbW7K5S.jpgk",
-          "Una imagen de los tiempos de nuestras certificaciones para desarrollo de interfaces, desarrollo al lado del servidor y visualización de datos (400 horas cada uno), para nuestros proyectos sin ánimo de lucro (800 horas) y preparación para entrevistas (80 horas) que dan un total de 2,080 horas e experiencia programando.",
-          "Nuestro currículo se divide en 4 certificaciones.  Estas certificaciones están estandarizadas, y son verificables al instante por sus clientes como trabajador independiente y por sus futuros empleadores.  Tal como todo lo demás en Analytics Dojo, estas certificaciones son gratuitas.  Recomendamos hacerlas en orden, pero usted es libre de saltar de una a otra.  Las primeras tres certificaciones requieren 400 horas cada una, y la certificación final requiere 800 horas, e involucra construir proyectos de la vida real para organizaciones sin ánimo de lucro.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/k8btNUB.jpg",
-          "Una imagen de nuestro Certificado de Desarrollo de Interfaces",
-          "Para obtener nuestra certificación verificada de Desarrollo de Interfaces, construirás 10 proyectos usando HTML, CSS, jQuery y JavaScript.",
-          ""
-        ],
-
-        [
-          "http://i.imgur.com/Et3iD74.jpg",
-          "Una imagen de nuestro Certificado de Visualización de Datos",
-          "Para obtener nuestra certificación en Visualización de Datos, construirás 10 proyectos usando React, Sass y D3.js.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/8v3t84p.jpg",
-          "Una imagen de nuestro Certificado de Desarrollo al Lado del Servidor",
-          "Para obtener nuestro Certificado de Desarrollo al Lado del Servidor, construirás 10 proyectos empleando Node.js, Express y MongoDB. Usarás Git y Heroku para desplegarlos en la nube.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/yXyxbDd.jpg",
-          "Una imagen de nuestro directorio de organizaciones sin ánimo de lucro.",
-          "Después de completar todos los tres certificados, harás equipo con otro campista y usarás metodologías de desarrollo ágil para construir dos proyectos de la vida real para organizaciones sin ánimo de lucro. También añadirás funcionalidad a dos proyectos de fuentes legadas de organizaciones sin ánimo de lucro.  Cuando termines esto, tendrás un portafolio de aplicaciones reales que la gente usa a diario. ",
-          ""
-        ],
-        [
-          "http://i.imgur.com/PDGQ9ZM.jpg",
-          "Una imagen de nuestros campistas construyendo proyectos juntos en un café en Seoul.",
-          "Si completas todas las 2,080 horas de desafíos y proyectos, obtendrás un Certificado de Desarrollo de Pila Completa.  Te ofreceremos gratuitamente una práctica en entrevistas para desarrolladores. Incluso ofrecemos un directorio de trabajos donde los empleadores contratan específicamente campistas que han recibido certificaciones de Analytics Dojo.",
-          ""
-        ]
-      ]
+      "descriptionEs": []
     },
     {
       "id": "560add37cb82ac38a17513bf",
@@ -225,64 +155,8 @@
       "tests": [],
       "type": "Waypoint",
       "challengeType": 7,
-      "nameEs": "Crea una Cuenta de GitHub y Únete a nuestras Salas de Chat",
-      "descriptionEs": [
-        [
-          "http://i.imgur.com/EAR7Lvh.jpg",
-          "Una imagen de una de nuestras salas de chat en Gitter.",
-          "Ahora únete a las salas de chat de Analytics Dojo. Puedes venir aquí en cualquier momento para charlar, hacer preguntas, o encontrar otro campista para programar juntos. Primero necesitarás una cuenta de GitHub.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/FEImaEN.gif",
-          "Una imagen mostrándote como pulsar en el enlace inferior para ir a GitHub, llenar los campos necesarios y enviarlos.",
-          "Crea una cuenta en GitHub. Asegúrate de usar tu dirección de correo real - GitHub mantendrá esto en privado.",
-          "https://github.com/join"
-        ],
-        [
-          "http://i.imgur.com/ALN6zPK.gif",
-          "Un gif mostrándote como pulsar en la imagen de perfil en la esquina superior derecha de GitHub. Sube una foto tuya o continuaras usando la imagen de píxeles generada automáticamente. Entonces llena los campos restantes y haz clic en enviar.",
-          "En la esquina superior derecha pulsa sobre la imagen de píxeles, entonces selecciona configuraciones. Sube una imagen tuya. Una foto de tu cara es mejor. Así es como tus compañeros campistas te verán en nuestras salas de chat, así que toma tu mejor ángulo. Puedes añadir tu ciudad y tu nombre si lo deseas.",
-          "https://github.com/settings/profile"
-        ],
-        [
-          "http://i.imgur.com/pYk0wOk.gif",
-          "Un gif mostrándote como puedes dar una estrella a un repositorio de GitHub.",
-          "Ve al repositorio de código libre de Analytics Dojo y dale una \"estrella\". Las \"estrellas\" son el equivalente en GitHub de los \"me gusta\".",
-          "Si quieres, ve al repositorio de código libre de Analytics Dojo y dale una \"estrella\". Las \"estrellas\" son el equivalente en GitHub de los \"me gusta\".",
-          "https://github.com/freecodecamp/freecodecamp"
-        ],
-        [
-          "http://i.imgur.com/zwYPeQT.gif",
-          "Un gif mostrándote como pulsar en el enlace inferior para ir a nuestra sala de chat y pulsar en el botón de \"iniciar sesión con GitHub\". Entonces puedes pulsar en el próximo campo de texto y escribir un mensaje a tus compañeros campistas.",
-          "Ahora que tienes una cuenta de GitHub, puedes unirte a nuestro chat principal al iniciar sesión con GitHub. Preséntate diciendo \"Hello world!\". Cuéntales a los tus compañeros campistas como encontraste Analytics Dojo. Además cuéntanos porque deseas aprender a programar.",
-          "https://gitter.im/FreeCodeCamp/FreeCodeCamp"
-        ],
-        [
-          "http://i.imgur.com/Ecs5XAd.gif",
-          "Un gif mostrándote como puedes pulsar en el botón de configuraciones en la esquina superior derecha y modificar tus configuraciones de notificaciones.",
-          "Nuestras salas de chat son extremadamente activas. Deberías cambiar tus configuraciones para ser notificado únicamente si alguien te menciona.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/T0bGJPe.gif",
-          "Un gif mostrándote como puedes pulsar en la imagen de perfil de un usuario para iniciar una conversación privada con ese usuario.",
-          "Por favor nota que todas nuestras salas de chat son visibles para el público. Si necesitas compartir información privada, como una dirección de correo o un número de teléfono, hazlo en un mensaje privado.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/vDTMJSh.gif",
-          "Un gif mostrándote que puedes cambiar entre desafíos y nuestras salas de chat.",
-          "Mantén nuestra sala de chat abierta mientras trabajas en nuestros desafíos. De esta manera, puedes pedir ayuda si quedas atascado. Además puedes socializar con otros campistas cuando quieras tomar un descanso.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/WvQvNGN.gif",
-          "Un gif mostrándote como puedes pulsar abajo para descargar una aplicación de chat nativa para tu computadora.",
-          "También puedes descargar la aplicación de chat para tu computadora o teléfono móvil.",
-          "https://gitter.im/apps"
-        ]
-      ]
+      "nameEs": "",
+      "descriptionEs": []
     },
     {
       "id": "560add56cb82ac38a17513c0",
@@ -299,15 +173,8 @@
       "tests": [],
       "type": "Waypoint",
       "challengeType": 7,
-      "nameEs": "Configura tu portafolio de código",
-      "descriptionEs": [
-        [
-          "http://i.imgur.com/tP2ccTE.gif",
-          "Un gif mostrándote como puedes pulsar en tu imagen de perfil en la esquina superior derecha conectar tu portafolio y GitHub.",
-          "Dale un vistazo de tu portafolio de código. Pulsa en tu imagen en la esquina superior derecha. Para activar tu portafolio de código, necesitaras conectar tu cuenta de GitHub con Analytics Dojo. Tu portafolio de código muestra tu progreso y cuantos Puntos Cafés tienes. Puedes obtener Puntos Cafés completando desafíos y ayudando a otros campistas en nuestras salas de chat. Si obtienes Puntos Cafés varios días consecutivos, obtendrás una racha.",
-          ""
-        ]
-      ]
+      "nameEs": "",
+      "descriptionEs": []
     },
     {
       "id": "560add71cb82ac38a17513c2",
@@ -331,20 +198,7 @@
       "type": "Waypoint",
       "challengeType": 7,
       "nameEs": "Únete a un Campamento en Tu Ciudad",
-      "descriptionEs": [
-        [
-          "http://i.imgur.com/NAOFJWN.jpg",
-          "Una imagen de algunos de nuestros campistas compartiendo en un café local. 3 hombres y 3 mujeres están sentados alrededor de una mesa con portátiles afuera, y están sonriendo y programando.",
-          "Nuestros Campamentos te ayudan a programar con otros campistas en tu ciudad. Puedes coordinar grupos de estudio o atender eventos de programación locales juntos.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/fTFMjwf.gif",
-          "Un gif mostrándote como puedes pulsar en el enlace inferior, encontrar tu ciudad en la lista de Campamentos, entonces haz clic en el enlace de Facebook para tu ciudad y unirte al grupo de Facebook de tu ciudad.",
-          "Encuentra tu ciudad en esta lista y haz clic en esta. Esto te llevara al grupo de Facebook del Campamento de tu ciudad. Da clic en el botón de \"Unirse al grupo\" para unirte a el grupo. Alguien del mismo campamento debería aprobarte en breve. Si tu ciudad no esta en esta lista, ve al final del articulo de la wiki para ver instrucciones de como crear un campamento para tu ciudad.",
-          "https://github.com/FreeCodeCamp/freecodecamp/wiki/List-of-Free-Code-Camp-city-based-Campsites"
-        ]
-      ]
+      "descriptionEs": []
     },
     {
       "id": "560add8ccb82ac38a17513c4",
@@ -403,57 +257,8 @@
       "tests": [],
       "type": "Waypoint",
       "challengeType": 7,
-      "nameEs": "Aprende que hacer si te quedas atascado",
-      "descriptionEs": [
-        [
-          "http://i.imgur.com/lzKvwU2.jpg",
-          "El texto \"Programar es difícil.\"",
-          "Programar es difícil. Quedarás atascado. Incluso programadores experimentados quedan atascados. La clave es saber como desatascarse.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/sfsidp6.jpg",
-          "El texto \"Volverse bueno programando requiere tiempo.\"",
-          "Volverse bueno programando requiere tiempo. No esperarías derrotar a un maestro del ajedrez después de jugar por 3 meses. No esperes crear el próximo Facebook después de programar 3 meses.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/EoTfOyC.jpg",
-          "Una imagen de algunos de nuestros campistas programando juntos en Montreal.",
-          "Sigue practicando programación cada día y sal con otras personas que programen, y te volverás un programador listo para un trabajo.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/EWWZBag.jpg",
-          "Una imagen con el texto \"1. Lee el error 2. Busca en Google 3. Pide ayuda.",
-          "En cualquier momento en el que te quedes atascado o no sepas que hacer a continuación: Lee-Busca-Pregunta.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/99BfAcK.jpg",
-          "Una imagen mostrando la documentación de jQuery",
-          "Primero, lee la documentación o el mensaje de error. Una habilidad clave que los buenos programadores poseen es el poder interpretar y seguir instrucciones.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/GxvrsFb.gif",
-          "Un gif mostrándote como hacer una búsqueda avanzada en Google. Primero, escribimos la consulta \"jquery no corre cuando mi página carga\". Entonces damos clic en el botón de herramientas y cambiamos la selección de \"En cualquier momento\" a \"en el último año\". Entonces hacemos clic en un resultado o leemos a través del artículo y encontramos nuestra respuesta.",
-          "Si eso no ayudo, busca en Google. Realizar buenas búsquedas en Google requiere mucha práctica. Cuando buscas en Google, usualmente querrás incluir el lenguaje o entorno (framework) que estás usando. También querrás limitar los resultados a un período reciente.",
-          ""
-        ],
-        [
-          "http://i.imgur.com/LZYU7p2.gif",
-          "Un gif mostrándonos como seguir el enlace inferior para ir a nuestra sala de chat de ayuda y preguntar \"jquery no corre cuando mi página carga\".",
-          "Si eso no te ayudó, pregúntale a tus amigos. Si tienes problemas, puedes preguntar a tus compañeros campistas en nuestra sala de chat.",
-          "https://gitter.im/FreeCodeCamp/Help"
-        ],
-        [
-          "http://i.imgur.com/ZRgXraT.gif",
-          "Un gif mostrándonos nuestro mapa de desafíos.",
-          "Ahora estas listo para empezar a programar. El botón de  \"Mapa\" en tu esquina superior derecha te mostrará nuestro mapa de desafíos. Te recomendaos que completes los desafíos de arriba hacía abajo, a un ritmo sostenible. Nuestra comunidad de código abierto esta constantemente mejorando nuestros desafíos, así que no te sorprendas si cambian o se mueven alrededor. No te preocupes por volver hacia atrás - solo continúa avanzando. Siempre puedes ir a tu desafío más reciente pulsando el botón de \"Aprender\".",
-          ""
-        ]
-      ]
+      "nameEs": "",
+      "descriptionEs": []
     }
   ]
 }

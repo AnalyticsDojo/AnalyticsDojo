@@ -6,6 +6,8 @@ block content
                 .challenge-step(class=index !== 0 ? 'hidden': '')
                     a(href=step[0] data-lightbox='img-enlarge')
                         img.gif-block.img-center.img-responsive(src='#{step[0]}' alt='#{step[1]}')
+                    if step[4]
+                        h5 Credit: #[a(href=step[5]) #{step[4]}]
                     .row
                         .spacer
                         .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
@@ -26,6 +28,7 @@ block content
                             .btn.btn-primary.col-sm-4.col-xs-12.challenge-step-btn-next.btn-lg(id='#{index}' class=step[3] && !isCompleted ? 'disabled' : '') Go to my next step
                     .clearfix
     .spacer
+
     #challenge-step-modal.modal(tabindex='-1')
         .modal-dialog.animated.fadeIn.fast-animation
             .modal-content
