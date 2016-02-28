@@ -126,7 +126,6 @@
     "rev-del": "^1.0.5",
     "rx": "^4.0.0",
     "sanitize-html": "^1.11.1",
-    "sort-keys": "^1.1.1",
     "stampit": "^2.1.1",
     "store": "https://github.com/berkeleytrue/store.js.git#feature/noop-server",
     "tap-spec": "^4.1.1",
