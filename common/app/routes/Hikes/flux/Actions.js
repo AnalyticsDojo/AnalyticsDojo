@@ -257,7 +257,7 @@ export default Actions({
     // challenge completed
     let update$;
     if (isSignedIn) {
-      const body = { id, name, challengeType };
+      const body = { id, name, challengeType: +challengeType };
       update$ = this.postJSON$('/completed-challenge', body)
         // if post fails, will retry once
         .retry(3)
@@ -305,7 +305,7 @@ export default Actions({
           },
           toast: {
             title: 'Congratulations!',
-            message: 'Hike completed.' + (isSignedIn ? ' Saving...' : ''),
+            message: 'Challenge completed.' + (isSignedIn ? ' Saving...' : ''),
             id: state.toast && state.toast.id ?
               state.toast.id + 1 :
               1,

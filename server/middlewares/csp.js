@@ -67,7 +67,8 @@ export default function csp() {
         '*.ghbtns.com',
         '*.freecatphotoapp.com',
         'rpi-analytics.github.io',
-        'analyticsdojo.github.io'
+        'analyticsdojo.github.io',
+        'freecodecamp.github.io'
       ].concat(trusted)
     },
     // set to true if you only want to report errors

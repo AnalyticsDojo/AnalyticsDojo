@@ -13,7 +13,14 @@ block content
                     span.tag Population:&#9;
                     span.text-primary #{camperCount}
                     | campers
-
+                li
+                    span.tag Completed:&#9;
+                    span.text-primary #{globalCompletedCount}
+                    | challenges
+                li.nowrap
+                    span.tag Donated:&#9;
+                    span.text-primary $800,000
+                    | in pro-bono code
     .spacer
     .row
         .col-xs-12.col-sm-10.col-sm-offset-1.col-md-6.col-md-offset-3
@@ -27,9 +34,11 @@ block content
                         a(href='//medium.com/analytics-dojo', target='_blank') Our Medium Publication
                 tr
                     td.text-center
-                        i.fa.fa-github
+                        i.fa.fa-twitch
                     td
                         a(href="//github.com/rpi-analytics", target='_blank') Our GitHub Repository
+
+
                 tr
                     td.text-center
                         i.fa.fa-reddit
@@ -37,20 +46,23 @@ block content
                         a(href="//www.reddit.com/r/rpi", target='_blank') RPI Subreddit
                 tr
                     td.text-center
-                        i.fa.fa-linkedin
+                        i.fa.fa-github
                     td
+
                         a(href="//www.linkedin.com/edu/rensselaer-polytechnic-institute-19005", target='_blank') Our LinkedIn University Page
                 tr
                     td.text-center
-                        i.fa.fa-twitter
+                        i.fa.fa-linkedin
                     td
+
                         a(href="//twitter.com/analyticsdojo", target='_blank') Our Twitter Feed
-                tr
+	             tr
                     td.text-center
                         i.fa.fa-facebook
                     td
+
                         a(href="//www.facebook.com/AnalyticsDojo/") Our Facebook Page
-                tr
+             tr
                     td.text-center
                         i.fa.fa-lock
                     td
@@ -62,6 +74,11 @@ block content
                         a(href="/code-of-conduct") Our code of conduct
                 tr
                     td.text-center
+                        i.fa.fa-university
+                    td
+                        a(href="/academic-honesty") Our academic honesty policy
+                tr
+                    td.text-center
                         i.fa.fa-book
                     td
                         a(href="/terms") Our terms of service
@@ -69,6 +86,7 @@ block content
                     td.text-center
                         i.fa.fa-comment
                     td
+
                         a(href="/stories") Stories from students.
     .spacer
     .row
@@ -123,7 +141,7 @@ block content
             h2.text-center Whom to contact for what
             table.table.table-stripe
                 tr
-                    td Support 
+                    td Support
                     td
                         a(href='mailto:team@analyticsdojo.com') team@analyticsdojo.com
                 tr

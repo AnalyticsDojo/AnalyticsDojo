@@ -33,10 +33,14 @@ module.exports = function(app) {
   router.get('/labs', showLabs);
   router.get('/stories', showTestimonials);
   router.get('/shop', showShop);
+  router.get('/shop/cancel-stickers', cancelStickers);
+  router.get('/shop/confirm-stickers', confirmStickers);
   router.get('/all-stories', showAllTestimonials);
   router.get('/terms', terms);
   router.get('/privacy', privacy);
   router.get('/code-of-conduct', codeOfConduct);
+  router.get('/academic-honesty', academicHonesty);
+
   router.get(
     '/the-fastest-web-page-on-the-internet',
     theFastestWebPageOnTheInternet
@@ -175,13 +179,19 @@ module.exports = function(app) {
 
   function privacy(req, res) {
       res.render('resources/privacy', {
-          title: 'Privacy'
+          title: 'Privacy policy'
       });
   }
 
   function codeOfConduct(req, res) {
       res.render('resources/code-of-conduct', {
           title: 'Code of Conduct'
+      });
+  }
+
+  function academicHonesty(req, res) {
+      res.render('resources/academic-honesty', {
+          title: 'Academic Honesty policy'
       });
   }
 
@@ -216,6 +226,17 @@ module.exports = function(app) {
     });
   }
 
+  function confirmStickers(req, res) {
+      req.flash('success', { msg: 'Thank you for supporting our community! You should receive your stickers in the ' +
+        'mail soon!'});
+      res.redirect('/shop');
+  }
+
+  function cancelStickers(req, res) {
+      req.flash('info', { msg: 'You\'ve cancelled your purchase of our stickers. You can '
+        + 'support our community any time by buying some.'});
+      res.redirect('/shop');
+  }
   function submitCatPhoto(req, res) {
     res.send('Submitted!');
   }

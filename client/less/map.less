@@ -11,16 +11,18 @@
     bottom: 0;
     right: 0;
 
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
-
     background-color: @body-bg;
     border-left: 1px solid #ddd;
     box-shadow: -12px 0 18px 0 rgba(50, 50, 50, 0.1);
 
     transition: transform 0.3s cubic-bezier(0.16, 0.22, 0.22, 1.7);
 
-    &.is-collapsed {
+    &.is-collapsed:not(.is-loading) {
+      -webkit-transform: translateX(110%);
       transform: translateX(110%);
     }
 
@@ -38,23 +40,27 @@
 
       background-color: @body-bg;
     }
-
-    & > iframe {
-      flex: 1;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      overflow: scroll;
+    .iframeWrapper {
+      height:100%;
+      width:100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
+      iframe {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
     }
 }
 
 .map-aside-action-bar {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
 
+    display: -webkit-flex;
     display: flex;
     justify-content: flex-end;
 
@@ -127,6 +133,7 @@
   .fa {
     position:absolute;
     top:50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     right:10px;
   }
@@ -185,7 +192,7 @@
           margin-left:30px;
       }
     }
-  }  
+  }
 
   .challengeBlockDescription {
       margin:0;
@@ -244,6 +251,7 @@
 }
 
 .map-aside-action-item {
+    display: -webkit-flex;
     display: flex;
     /* main axis */
     justify-content: center;
