@@ -5,7 +5,7 @@ let trusted = [
 ];
 
 if (process.env.NODE_ENV !== 'production') {
-  trusted.push('ws://localhost:3001');
+  trusted.push('ws://localhost:3000');
 }
 
 export default function csp() {
@@ -41,6 +41,7 @@ export default function csp() {
         'https://*.cloudflare.com'
       ].concat(trusted),
       fontSrc: [
+        'font-src data',
         '*.cloudflare.com',
         'https://*.cloudflare.com',
         '*.bootstrapcdn.com',
