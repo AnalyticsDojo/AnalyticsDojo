@@ -58,7 +58,6 @@ body.full-screen-body-background {
   background-color: @body-bg;
 }
 
-
 body.top-and-bottom-margins {
   padding-top: 80px;
   margin-bottom: 60px;
@@ -168,6 +167,10 @@ ul {
 
 .positive-15 {
   margin-top: 15px;
+}
+
+.positive-20 {
+  margin-top: 20px;
 }
 
 .positive-15-bottom {
@@ -301,7 +304,7 @@ ul {
   border: none;
   line-height: 1;
   @media (min-width: 767px) {
-    padding-left: 30px;
+    padding-left: 15px;
     padding-right: 30px;
   }
 }
@@ -496,6 +499,22 @@ thead {
   }
 }
 
+a[href="/email-signup"], a[href="/email-signin"] {
+  &.btn-social.btn-lg > :first-child {
+    line-height:43px;
+    font-size:26px;
+  }
+}
+
+form.update-email .btn{
+  margin:0;
+  width:40%;
+  display:inline-block;
+  &:last-child {
+    float:right;
+  }
+}
+
 .public-profile-img {
   height: 200px;
   width: 200px;
@@ -675,7 +694,7 @@ thead {
 
 
 /**
- * Bonfire styling
+ * Challenge styling
  */
 
 form.code span {
@@ -833,72 +852,12 @@ div.CodeMirror-scroll {
   padding: 15px 0 15px 0;
 }
 
-.img-news {
-  width: 50px;
-  height: 50px;
-}
-
-.url-preview {
-  max-width: 250px;
-  max-height: 250px;
-}
-
 //.media ~ .media .media-body-wrapper:nth-child(odd) {
 //  background-color: #e5e5e5;
 //}
 
-.news-box {
-  @media (min-width: 768px) {
-    margin-top: -40px;
-  }
-  @media (max-width: 767px) {
-    padding: 5px;
-    border-color: @brand-info;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 5px;
-    width: 100%;
-    float: left;
-  }
-}
-
-.news-box-search {
-  @media (min-width: 768px) {
-    margin-top: -30px;
-    padding-bottom: 20px;
-  }
-  @media (max-width: 767px) {
-    padding: 5px;
-    border-color: @brand-info;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 5px;
-    width: 100%;
-    float: left;
-  }
-}
-
-.story-headline {
-  font-size: 20px;
-  margin-left: 14px;
-  margin-top: -5px;
-}
-
 .landing-heading {
   font-size: 50px !important;
-}
-
-.mobile-story-headline {
-  font-size: 20px;
-}
-
-.story-byline {
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-.media-stories {
-  margin-left: 20px;
 }
 
 hr {
@@ -983,7 +942,7 @@ hr {
 }
 
 code {
-  padding: 0;
+  padding: 1px 5px;
 }
 
 @media only screen and (min-width: 993px) {
@@ -1128,6 +1087,79 @@ code {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+}
+
+.night {
+  background-color: @night-body-bg;
+  color: @night-text-color;
+  .btn-group,
+  .text-success,
+  .challenge-list-header,
+  .fcc-footer {
+    background-color: @night-body-bg;
+  }
+  hr {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #CCC;
+    &:hover {
+      background-color: #666;
+    }
+  }
+  a, .input-group-addon, .challenge-instructions a, .challenge-instructions #MDN-links a {
+    color: #CCC;
+  }
+  .fa-github-square {
+    color: @brand-primary;
+    &:hover {
+      color: #CCC;
+    }
+  }
+  .black-text {
+    color:#111;
+  }
+  code {
+    background-color: #999;
+    color: @brand-primary;
+  }
+  .fcc-footer {
+    a {
+      &hover {
+        background-color: @night-body-bg;
+      }
+    }
+  }
+  .btn-primary {
+    background-color: @brand-primary;
+    border-color: #292929;
+    color:#CCC;
+    transition: color 0.2s, background-color 0.2s;
+    &:hover {
+      background-color: #ABABAB!important;
+      color: @night-body-bg!important;
+    }
+  }
+  //** Profile's activity board
+  .cal-heatmap-container {
+    background-color: @night-body-bg;
+  }
+  .graph-rect {
+    fill: @night-text-color !important
+  }
+  //** Profile's odd rows
+  .table-striped > tbody > tr:nth-child(odd) {
+    background-color: @gray;
+  }
+  .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-color: @night-text-color;
+  }
+}
+
+// make btn-default hover more visible
+.btn-default:active,
+.btn-default:hover {
+    background-color: @brand-primary;
 }
 
 @import "chat.less";

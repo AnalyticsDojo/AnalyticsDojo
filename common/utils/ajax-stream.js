@@ -19,7 +19,7 @@
 import debugFactory from 'debug';
 import { Observable, AnonymousObservable, helpers } from 'rx';
 
-const debug = debugFactory('freecc:ajax$');
+const debug = debugFactory('fcc:ajax$');
 const root = typeof window !== 'undefined' ? window : {};
 
 // Gets the proper XMLHttpRequest for support for older IE
@@ -274,7 +274,7 @@ export function postJSON$(url, body) {
     responseType: 'json',
     headers: {
       'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      Accept: 'application/json'
     }
   })
     .map(({ response }) => response);
@@ -303,7 +303,7 @@ export function getJSON$(url) {
     responseType: 'json',
     headers: {
       'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      Accept: 'application/json'
     }
   }).map(({ response }) => response);
 }

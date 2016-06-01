@@ -43,7 +43,7 @@ var links = {
 
   // ======== STRING METHODS
   "String.charAt()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt",
-  "String.charCodeAt()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt",
+  "String.prototype.charCodeAt()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt",
   "String.concat()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat",
   "String.indexOf()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf",
   "String.fromCharCode()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode",
@@ -78,6 +78,9 @@ var links = {
   "Array.sort()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort",
   "Array.splice()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice",
   "Array.toString()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString",
+
+  // ======== STATEMENTS AND DECLARATIONS
+  "Switch Statement": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch",
 
   // ======== MATH METHODS
   "Math.max()": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max",

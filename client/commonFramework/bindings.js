@@ -2,7 +2,8 @@ window.common = (function(global) {
   const {
     $,
     Rx: { Observable },
-    common = { init: [] }
+    common = { init: [] },
+    Mousetrap
   } = global;
 
   common.ctrlEnterClickHandler = function ctrlEnterClickHandler(e) {
@@ -40,6 +41,11 @@ window.common = (function(global) {
         'keydown',
         common.ctrlEnterClickHandler
       );
+    });
+
+    // set focus keybind
+    Mousetrap.bind(['command+shift+e', 'ctrl+shift+e'], () => {
+        common.editor.focus();
     });
 
     // video checklist binding
@@ -144,6 +150,11 @@ window.common = (function(global) {
       window.ga('send', 'event', 'Challenge', 'load', common.gaName);
     }
 
+    $('.modal').on('show.bs.modal', function() {
+      $('.gitter-chat-embed, .wiki-aside, .map-aside')
+        .addClass('is-collapsed');
+    });
+
     $('#complete-courseware-dialog').on('hidden.bs.modal', function() {
       if (common.editor.focus) {
         common.editor.focus();
@@ -170,10 +181,19 @@ window.common = (function(global) {
       $('#complete-courseware-dialog').modal('show');
     });
 
+    $('#show-solution').on('click', function() {
+      $('#complete-courseware-dialog').modal('hide');
+      $('#nav-wiki-btn').click();
+    });
+
+    $('#challenge-help-btn').on('click', function() {
+      $('.wiki-aside, .map-aside, #chat-embed-main').addClass('is-collapsed');
+    });
+
     $('#help-ive-found-a-bug-wiki-article').on('click', function() {
       window.open(
         'https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/' +
-          "Help-I've-Found-a-Bug",
+          'FreeCodeCamp-Report-Bugs',
         '_blank'
       );
     });

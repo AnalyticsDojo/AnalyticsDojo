@@ -19,7 +19,7 @@ import {
   calcLongestStreak
 } from '../utils/user-stats';
 
-const debug = debugFactory('freecc:boot:user');
+const debug = debugFactory('fcc:boot:user');
 const sendNonUserToMap = ifNoUserRedirectTo('/map');
 const certIds = {
   [certTypes.frontEnd]: frontEndChallengeId,
@@ -35,7 +35,7 @@ const certViews = {
 };
 
 const certText = {
-  [certTypes.fronEnd]: 'Front End certified',
+  [certTypes.frontEnd]: 'Front End certified',
   [certTypes.dataVis]: 'Data Vis Certified',
   [certTypes.backEnd]: 'Back End Certified',
   [certTypes.fullStack]: 'Full Stack Certified'
@@ -148,10 +148,27 @@ module.exports = function(app) {
   router.post('/reset-password', postReset);
   router.get('/email-signup', getEmailSignup);
   router.get('/email-signin', getEmailSignin);
+  router.get('/deprecated-signin', getDepSignin);
+  router.get('/update-email', getUpdateEmail);
   router.get(
     '/toggle-lockdown-mode',
     sendNonUserToMap,
     toggleLockdownMode
+  );
+  router.get(
+    '/toggle-announcement-email-mode',
+    sendNonUserToMap,
+    toggleReceivesAnnouncementEmails
+  );
+  router.get(
+    '/toggle-notification-email-mode',
+    sendNonUserToMap,
+    toggleReceivesNotificationEmails
+  );
+  router.get(
+    '/toggle-quincy-email-mode',
+    sendNonUserToMap,
+    toggleReceivesQuincyEmails
   );
   router.post(
     '/account/delete',
@@ -162,6 +179,11 @@ module.exports = function(app) {
     '/account',
     sendNonUserToMap,
     getAccount
+  );
+  router.get(
+    '/settings',
+    sendNonUserToMap,
+    getSettings
   );
   router.get('/vote1', vote1);
   router.get('/vote2', vote2);
@@ -195,8 +217,13 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect('/');
     }
+<<<<<<< HEAD
     res.render('account/signin', {
       title: 'Sign in to Analytics Dojo using a Social Media Account'
+=======
+    return res.render('account/signin', {
+      title: 'Sign in to Free Code Camp using a Social Media Account'
+>>>>>>> FreeCodeCamp/staging
     });
   }
 
@@ -205,12 +232,36 @@ module.exports = function(app) {
     res.redirect('/');
   }
 
+
+  function getDepSignin(req, res) {
+    if (req.user) {
+      return res.redirect('/');
+    }
+    return res.render('account/deprecated-signin', {
+      title: 'Sign in to Free Code Camp using a Deprecated Login'
+    });
+  }
+
+  function getUpdateEmail(req, res) {
+    if (!req.user) {
+      return res.redirect('/');
+    }
+    return res.render('account/update-email', {
+      title: 'Update your Email'
+    });
+  }
+
   function getEmailSignin(req, res) {
     if (req.user) {
       return res.redirect('/');
     }
+<<<<<<< HEAD
     res.render('account/email-signin', {
       title: 'Sign in to Analytics Dojo using your Email Address'
+=======
+    return res.render('account/email-signin', {
+      title: 'Sign in to Free Code Camp using your Email Address'
+>>>>>>> FreeCodeCamp/staging
     });
   }
 
@@ -218,14 +269,25 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect('/');
     }
+<<<<<<< HEAD
     res.render('account/email-signup', {
       title: 'Sign up for Analytics Dojo using your Email Address'
+=======
+    return res.render('account/email-signup', {
+      title: 'Sign up for Free Code Camp using your Email Address'
+>>>>>>> FreeCodeCamp/staging
     });
   }
 
   function getAccount(req, res) {
     const { username } = req.user;
     return res.redirect('/' + username);
+  }
+
+  function getSettings(req, res) {
+    res.render('account/settings', {
+        title: 'Settings'
+    });
   }
 
   function returnUser(req, res, next) {
@@ -286,6 +348,16 @@ module.exports = function(app) {
             return data;
           }, {});
 
+        if (userPortfolio.isCheater) {
+          req.flash('errors', {
+            msg: dedent`
+              Upon review, this account has been flagged for academic
+              dishonesty. If you’re the owner of this account contact
+              team@freecodecamp.com for details.
+            `
+          });
+        }
+
         return buildDisplayChallenges(userPortfolio.challengeMap, timezone)
           .map(displayChallenges => ({
             ...userPortfolio,
@@ -326,7 +398,7 @@ module.exports = function(app) {
         user => {
           if (!user) {
             req.flash('errors', {
-              msg: `We couldn't find the user with the username ${username}`
+              msg: `We couldn't find a user with the username ${username}`
             });
             return res.redirect('/');
           }
@@ -341,6 +413,7 @@ module.exports = function(app) {
           }
 
           if (user.isCheater) {
+<<<<<<< HEAD
             req.flash('errors', {
               msg: dedent`
                 Upon review, this account has been flagged for academic
@@ -348,6 +421,8 @@ module.exports = function(app) {
                 team@analyticsdojo.com for details.
               `
             });
+=======
+>>>>>>> FreeCodeCamp/staging
             return res.redirect(`/${user.username}`);
           }
 
@@ -387,49 +462,74 @@ module.exports = function(app) {
           req.flash('errors', {
             msg: `Looks like user ${username} is not ${certText[certType]}`
           });
-          res.redirect('back');
+          return res.redirect('back');
         },
         next
       );
   }
 
   function toggleLockdownMode(req, res, next) {
-    if (req.user.isLocked === true) {
-      req.user.isLocked = false;
-      return req.user.save(function(err) {
-        if (err) { return next(err); }
+    const { user } = req;
+    user.update$({ isLocked: !user.isLocked })
+      .subscribe(
+        () => {
+          req.flash('info', {
+            msg: 'We\'ve successfully updated your Privacy preferences.'
+          });
+          return res.redirect('/settings');
+        },
+        next
+      );
+  }
 
-        req.flash('success', {
-          msg: dedent`
-            Other people can now view all your challenge solutions.
-            You can change this back at any time in the "Manage My Account"
-            section at the bottom of this page.
-          `
-        });
-        res.redirect('/' + req.user.username);
-      });
-    }
-    req.user.isLocked = true;
-    return req.user.save(function(err) {
-      if (err) { return next(err); }
+  function toggleReceivesAnnouncementEmails(req, res, next) {
+    const { user } = req;
+    return user.update$({ sendMonthlyEmail: !user.sendMonthlyEmail })
+      .subscribe(
+        () => {
+          req.flash('info', {
+            msg: 'We\'ve successfully updated your Email preferences.'
+          });
+          return res.redirect('/settings');
+        },
+        next
+      );
+  }
 
-      req.flash('success', {
-        msg: dedent`
-          All your challenge solutions are now hidden from other people.
-          You can change this back at any time in the "Manage My Account"
-          section at the bottom of this page.
-        `
-      });
-      res.redirect('/' + req.user.username);
-    });
+  function toggleReceivesQuincyEmails(req, res, next) {
+    const { user } = req;
+    return user.update$({ sendQuincyEmail: !user.sendQuincyEmail })
+      .subscribe(
+        () => {
+          req.flash('info', {
+            msg: 'We\'ve successfully updated your Email preferences.'
+          });
+          return res.redirect('/settings');
+        },
+        next
+      );
+  }
+
+  function toggleReceivesNotificationEmails(req, res, next) {
+    const { user } = req;
+    return user.update$({ sendNotificationEmail: !user.sendNotificationEmail })
+      .subscribe(
+        () => {
+          req.flash('info', {
+            msg: 'We\'ve successfully updated your Email preferences.'
+          });
+          return res.redirect('/settings');
+        },
+        next
+      );
   }
 
   function postDeleteAccount(req, res, next) {
     User.destroyById(req.user.id, function(err) {
       if (err) { return next(err); }
       req.logout();
-      req.flash('info', { msg: 'Your account has been deleted.' });
-      res.redirect('/');
+      req.flash('info', { msg: 'You\'ve successfully deleted your account.' });
+      return res.redirect('/');
     });
   }
 
@@ -438,7 +538,7 @@ module.exports = function(app) {
       req.flash('errors', { msg: 'access token invalid' });
       return res.render('account/forgot');
     }
-    res.render('account/reset', {
+    return res.render('account/reset', {
       title: 'Reset your Password',
       accessToken: req.accessToken.id
     });
@@ -453,14 +553,14 @@ module.exports = function(app) {
       return res.redirect('back');
     }
 
-    User.findById(req.accessToken.userId, function(err, user) {
+    return User.findById(req.accessToken.userId, function(err, user) {
       if (err) { return next(err); }
-      user.updateAttribute('password', password, function(err) {
-      if (err) { return next(err); }
+      return user.updateAttribute('password', password, function(err) {
+        if (err) { return next(err); }
 
         debug('password reset processed successfully');
-        req.flash('info', { msg: 'password reset processed successfully' });
-        res.redirect('/');
+        req.flash('info', { msg: 'You\'ve successfully reset your password.' });
+        return res.redirect('/');
       });
     });
   }
@@ -469,12 +569,13 @@ module.exports = function(app) {
     if (req.isAuthenticated()) {
       return res.redirect('/');
     }
-    res.render('account/forgot', {
+    return res.render('account/forgot', {
       title: 'Forgot Password'
     });
   }
 
   function postForgot(req, res) {
+    req.validate('email', 'Email format is not valid').isEmail();
     const errors = req.validationErrors();
     const email = req.body.email.toLowerCase();
 
@@ -483,7 +584,7 @@ module.exports = function(app) {
       return res.redirect('/forgot');
     }
 
-    User.resetPassword({
+    return User.resetPassword({
       email: email
     }, function(err) {
       if (err) {
@@ -496,7 +597,7 @@ module.exports = function(app) {
         email +
         ' with further instructions.'
       });
-      res.render('account/forgot');
+      return res.render('account/forgot');
     });
   }
 
@@ -507,7 +608,7 @@ module.exports = function(app) {
         if (err) { return next(err); }
 
         req.flash('success', { msg: 'Thanks for voting!' });
-        res.redirect('/map');
+        return res.redirect('/map');
       });
     } else {
       req.flash('error', { msg: 'You must be signed in to vote.' });
@@ -522,7 +623,7 @@ module.exports = function(app) {
         if (err) { return next(err); }
 
         req.flash('success', { msg: 'Thanks for voting!' });
-        res.redirect('/map');
+        return res.redirect('/map');
       });
     } else {
       req.flash('error', {msg: 'You must be signed in to vote.'});

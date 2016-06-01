@@ -1,90 +1,15 @@
-var Rx = require('rx'),
-    assign = require('object.assign'),
-    sanitizeHtml = require('sanitize-html'),
-    moment = require('moment'),
-    debug = require('debug')('freecc:cntr:story'),
-    utils = require('../utils'),
-    observeMethod = require('../utils/rx').observeMethod,
-    saveUser = require('../utils/rx').saveUser,
-    saveInstance = require('../utils/rx').saveInstance,
-    validator = require('validator');
-
-import {
-  ifNoUser401,
-  ifNoUserRedirectTo
-} from '../utils/middleware';
-
-const foundationDate = 1413298800000;
-const time48Hours = 172800000;
-
-const unDasherize = utils.unDasherize;
-const dasherize = utils.dasherize;
-const getURLTitle = utils.getURLTitle;
-const sendNonUserToNews = ifNoUserRedirectTo('/news');
-
-function hotRank(timeValue, rank) {
-  /*
-  * Hotness ranking algorithm: http://amix.dk/blog/post/19588
-  * tMS = postedOnDate - foundationTime;
-  * Ranking...
-  * f(ts, 1, rank) = log(10)z + (ts)/45000;
-  */
-  var z = Math.log(rank) / Math.log(10);
-  var hotness = z + (timeValue / time48Hours);
-  return hotness;
-}
-
-function sortByRank(a, b) {
-  return hotRank(b.timePosted - foundationDate, b.rank) -
-    hotRank(a.timePosted - foundationDate, a.rank);
-}
-
-function cleanData(data, opts) {
-  var options = assign(
-    {},
-    {
-      allowedTags: [],
-      allowedAttributes: []
-    },
-    opts || {}
-  );
-  return sanitizeHtml(data, options).replace(/&quot;;/g, '"');
-}
-
 module.exports = function(app) {
-  var router = app.loopback.Router();
-  var User = app.models.User;
-  var findUserById = observeMethod(User, 'findById');
+  const router = app.loopback.Router();
 
-  var Story = app.models.Story;
-  var findStory = observeMethod(Story, 'find');
-  var findOneStory = observeMethod(Story, 'findOne');
-  var findStoryById = observeMethod(Story, 'findById');
-  var countStories = observeMethod(Story, 'count');
+  const redirectToReddit = (req, res) =>
+    res.redirect('https://www.reddit.com/r/FreeCodeCamp/');
 
-  router.post('/news/userstories', userStories);
-  router.get('/news/hot', hotJSON);
-  router.get('/news/feed', RSSFeed);
-  router.get('/stories/hotStories', hotJSON);
-  router.get(
-    '/stories/submit',
-    sendNonUserToNews,
-    submitNew
-  );
-  router.get(
-    '/stories/submit/new-story',
-    sendNonUserToNews,
-    preSubmit
-  );
-  router.post('/stories/preliminary', ifNoUser401, newStory);
-  router.post('/stories/', ifNoUser401, storySubmission);
-  router.get('/news/', hot);
-  router.post('/stories/search', getStories);
-  router.get('/news/:storyName', returnIndividualStory);
-  router.post('/stories/upvote/', ifNoUser401, upvote);
-  router.get('/stories/:storyName', redirectToNews);
+  router.get('/news', redirectToReddit);
+  router.get('/news/:storyName', redirectToReddit);
+  router.get('/stories/:storyName', redirectToReddit);
 
   app.use(router);
+<<<<<<< HEAD
 
   function redirectToNews(req, res) {
     var url = req.originalUrl.replace(/^\/stories/, '/news');
@@ -472,4 +397,6 @@ module.exports = function(app) {
         next
       );
   }
+=======
+>>>>>>> FreeCodeCamp/staging
 };

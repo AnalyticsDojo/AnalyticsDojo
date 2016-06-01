@@ -92,12 +92,6 @@
     "twitter": {
       "type": "string"
     },
-    "facebook": {
-      "type": "string"
-    },
-    "google": {
-      "type": "string"
-    },
     "currentStreak": {
       "type": "number",
       "default": 0
@@ -107,6 +101,14 @@
       "default": 0
     },
     "sendMonthlyEmail": {
+      "type": "boolean",
+      "default": true
+    },
+    "sendNotificationEmail": {
+      "type": "boolean",
+      "default": true
+    },
+    "sendQuincyEmail": {
       "type": "boolean",
       "default": true
     },
@@ -186,6 +188,10 @@
     },
     "timezone": {
       "type": "string"
+    },
+    "theme": {
+      "type": "string",
+      "default": "default"
     }
   },
   "validations": [],
@@ -233,6 +239,20 @@
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "giveBrowniePoints"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "updateEmail"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "updateTheme"
     }
   ],
   "methods": []

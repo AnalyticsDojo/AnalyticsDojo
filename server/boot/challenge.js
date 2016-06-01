@@ -26,7 +26,7 @@ import badIdMap from '../utils/bad-id-map';
 
 const isDev = process.env.NODE_ENV !== 'production';
 const isBeta = !!process.env.BETA;
-const log = debug('freecc:challenges');
+const log = debug('fcc:challenges');
 const challengesRegex = /^(bonfire|waypoint|zipline|basejump|checkpoint)/i;
 const challengeView = {
   0: 'challenges/showHTML',
@@ -120,6 +120,7 @@ function shouldShowNew(element, block) {
     }, 0);
     return newCount / block.length * 100 === 100;
   }
+  return null;
 }
 
 // meant to be used with a filter method
@@ -141,7 +142,7 @@ function getRenderData$(user, challenge$, origChallengeName, solution) {
 
   return challenge$
     .map(challenge => challenge.toJSON())
-    .filter((challenge) => {
+    .filter(challenge => {
       return shouldNotFilterComingSoon(challenge) &&
         challenge.type !== 'hike' &&
         testChallengeName.test(challenge.name);
@@ -430,7 +431,7 @@ module.exports = function(app) {
       challengeId = badIdMap[challengeId];
     }
 
-    if (!isMongoId(challengeId)) {
+    if (!isMongoId('' + challengeId)) {
       challengeId = null;
     }
 
@@ -455,7 +456,7 @@ module.exports = function(app) {
       challengeId = badIdMap[challengeId];
     }
 
-    if (!isMongoId(challengeId)) {
+    if (!isMongoId('' + challengeId)) {
       challengeId = null;
     }
 
@@ -473,12 +474,7 @@ module.exports = function(app) {
           return Observable.just()
             .doOnCompleted(() => {
               req.flash('info', {
-                msg: dedent`
-                  Once you have completed all of our challenges, you should
-                  join our <a href="https://gitter.im/freecodecamp/HalfWayClub"
-                  target="_blank">Half Way Club</a> and start getting
-                  ready for our nonprofit projects.
-                `.split('\n').join(' ')
+                msg: 'You\'ve completed the last challenge!'
               });
               return res.redirect('/map');
             });
@@ -499,8 +495,17 @@ module.exports = function(app) {
   function showChallenge(req, res, next) {
     const solution = req.query.solution;
     const challengeName = req.params.challengeName.replace(challengesRegex, '');
+    const { user } = req;
 
-    getRenderData$(req.user, challenge$, challengeName, solution)
+    Observable.defer(() => {
+      if (user && user.getChallengeMap$) {
+        return user.getChallengeMap$().map(user);
+      }
+      return Observable.just(null);
+    })
+      .flatMap(user => {
+        return getRenderData$(user, challenge$, challengeName, solution);
+      })
       .subscribe(
         ({ type, redirectUrl, message, data }) => {
           if (message) {
@@ -514,9 +519,10 @@ module.exports = function(app) {
           }
           var view = challengeView[data.challengeType];
           if (data.id) {
-            res.cookie('currentChallengeId', data.id);
+            res.cookie('currentChallengeId', data.id, {
+              expires: new Date(2147483647000)});
           }
-          res.render(view, data);
+          return res.render(view, data);
         },
         next,
         function() {}
@@ -524,15 +530,13 @@ module.exports = function(app) {
   }
 
   function completedChallenge(req, res, next) {
-    req.checkBody('id', 'id must be a ObjectId').isMongoId();
-
+    req.checkBody('id', 'id must be an ObjectId').isMongoId();
     req.checkBody('name', 'name must be at least 3 characters')
       .isString()
       .isLength({ min: 3 });
-
     req.checkBody('challengeType', 'challengeType must be an integer')
-      .isNumber()
-      .isInt();
+      .isNumber();
+
     const type = accepts(req).type('html', 'json', 'text');
 
     const errors = req.validationErrors(true);
@@ -546,48 +550,46 @@ module.exports = function(app) {
       return res.sendStatus(403);
     }
 
-    const completedDate = Date.now();
-    const {
-      id,
-      name,
-      challengeType,
-      solution,
-      timezone
-    } = req.body;
+    return req.user.getChallengeMap$()
+      .flatMap(() => {
+        const completedDate = Date.now();
+        const {
+          id,
+          name,
+          challengeType,
+          solution,
+          timezone
+        } = req.body;
 
-    const { alreadyCompleted, updateData } = buildUserUpdate(
-      req.user,
-      id,
-      {
-        id,
-        challengeType,
-        solution,
-        name,
-        completedDate
-      },
-      timezone
-    );
+        const { alreadyCompleted, updateData } = buildUserUpdate(
+          req.user,
+          id,
+          {
+            id,
+            challengeType,
+            solution,
+            name,
+            completedDate
+          },
+          timezone
+        );
 
-    const user = req.user;
-    const points = alreadyCompleted ?
-      user.progressTimestamps.length :
-      user.progressTimestamps.length + 1;
+        const user = req.user;
+        const points = alreadyCompleted ? user.points : user.points + 1;
 
-    return user.update$(updateData)
-      .doOnNext(({ count }) => log('%s documents updated', count))
-      .subscribe(
-        () => {},
-        next,
-        function() {
-          if (type === 'json') {
-            return res.json({
-              points,
-              alreadyCompleted
-            });
-          }
-          res.sendStatus(200);
-        }
-      );
+        return user.update$(updateData)
+          .doOnNext(({ count }) => log('%s documents updated', count))
+          .map(() => {
+            if (type === 'json') {
+              return res.json({
+                points,
+                alreadyCompleted
+              });
+            }
+            return res.sendStatus(200);
+          });
+      })
+      .subscribe(() => {}, next);
   }
 
   function completedZiplineOrBasejump(req, res, next) {
@@ -597,8 +599,7 @@ module.exports = function(app) {
       .isString()
       .isLength({ min: 3 });
     req.checkBody('challengeType', 'must be a number')
-      .isNumber()
-      .isInt();
+      .isNumber();
     req.checkBody('solution', 'solution must be a url').isURL();
 
     const errors = req.validationErrors(true);
@@ -636,31 +637,36 @@ module.exports = function(app) {
     }
 
 
-    const {
-      alreadyCompleted,
-      updateData
-    } = buildUserUpdate(req.user, completedChallenge.id, completedChallenge);
+    return user.getChallengeMap$()
+      .flatMap(() => {
+        const {
+          alreadyCompleted,
+          updateData
+        } = buildUserUpdate(user, completedChallenge.id, completedChallenge);
 
-    return user.update$(updateData)
-      .doOnNext(({ count }) => log('%s documents updated', count))
-      .doOnNext(() => {
-        if (type === 'json') {
-          return res.send({
-            alreadyCompleted,
-            points: alreadyCompleted ?
-              user.progressTimestamps.length :
-              user.progressTimestamps.length + 1
+        return user.update$(updateData)
+          .doOnNext(({ count }) => log('%s documents updated', count))
+          .doOnNext(() => {
+            if (type === 'json') {
+              return res.send({
+                alreadyCompleted,
+                points: alreadyCompleted ? user.points : user.points + 1
+              });
+            }
+            return res.status(200).send(true);
           });
-        }
-        res.status(200).send(true);
       })
       .subscribe(() => {}, next);
   }
 
-  function showMap(showAside, { user = {} }, res, next) {
-    const { challengeMap = {} } = user;
-
-    return getSuperBlocks$(challenge$, challengeMap)
+  function showMap(showAside, { user }, res, next) {
+    return Observable.defer(() => {
+      if (user && typeof user.getChallengeMap$ === 'function') {
+        return user.getChallengeMap$();
+      }
+      return Observable.just({});
+    })
+      .flatMap(challengeMap => getSuperBlocks$(challenge$, challengeMap))
       .subscribe(
         superBlocks => {
           res.render('map/show', {

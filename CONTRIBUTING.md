@@ -1,18 +1,38 @@
 # Contributor's Guide
 
-## I want to help!
-We welcome pull requests from Analytics Dojo campers (our students) and seasoned JavaScript developers alike! Follow these steps to contribute:
+## Table of Contents
 
+- [I want to help!](#i-want-to-help)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Linting Setup](#linting-setup)
+- [Found a bug?](#found-a-bug)
+- [Creating Pull Requests](#creating-pull-requests)
+- [Common Steps](#common-steps)
+- [Next Steps](#next-steps)
+
+## I want to help!
+<<<<<<< HEAD
+We welcome pull requests from Analytics Dojo campers (our students) and seasoned JavaScript developers alike! Follow these steps to contribute:
+=======
+>>>>>>> FreeCodeCamp/staging
+
+We welcome pull requests from Free Code Camp campers (our students) and seasoned JavaScript developers alike! Follow these steps to contribute:
 
 1.  Find an issue that needs assistance by searching for the [Help Wanted](https://github.com/FreeCodeCamp/FreeCodeCamp/labels/help%20wanted) tag.
-2.  Let us know you are working on it, by posting a comment on the issue.
+2.  Let us know you are working on it by posting a comment on the issue.
 3.  Feel free to ask for help in our [Help Contributors](https://gitter.im/FreeCodeCamp/HelpContributors) Gitter room.
 
 If you've found a bug that is not on the board, [follow these steps](#found-a-bug).
 
 ## Contribution Guidelines
 
+<<<<<<< HEAD
 1.  Fork the project: [How To Fork And Maintain a Local Instance of Analytics Dojo](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-To-Fork-And-Maintain-a-Local-Instance-of-Free-Code-Camp)
+=======
+1.  Fork the project: [How To Fork And Maintain a Local Instance of Free Code Camp](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/FreeCodeCamp-Fork-Local)
+>>>>>>> FreeCodeCamp/staging
 2.  Create a branch specific to the issue or feature you are working on. Push your work to that branch. ([Need help with branching?](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches))
 3.  Name the branch something like `fix/xxx` or `feature/xxx` where `xxx` is a short description of the changes or feature you are attempting to add. For example `fix/email-login` would be a branch where I fix something specific to email login.
 4. [Set up Linting](#linting-setup) to run as you make changes.
@@ -20,15 +40,18 @@ If you've found a bug that is not on the board, [follow these steps](#found-a-bu
 5.  Squash your Commits. Ref: [rebasing](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/git-rebase)
 6.  Submit a [pull request](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Pull-Request-Contribute) from your branch to Analytics Dojo's `staging` branch.  [Travis CI](https://travis-ci.org/FreeCodeCamp/FreeCodeCamp) will then take your code and run `npm test`.  Make sure this passes, then we'll do a quick code review and give you feedback, then iterate from there.
 
+## Prerequisites
 
-Prerequisites
--------------
+| Prerequisite | Version |
+|--------------|---------|
+| [MongoDB](http://www.mongodb.org/downloads) | `~ ^3` |
+| [Node.js](http://nodejs.org) | `~ ^4` |
+| npm | `~ ^2` |
 
-- [MongoDB](http://www.mongodb.org/downloads)
-- [Node.js](http://nodejs.org)
+> _Updating to the latest releases is recomended_.
 
-Getting Started
----------------
+## Getting Started
+
 Note: If this is your first time working with a node-gyp dependent module, please follow the [node-gyp installation guide](https://github.com/nodejs/node-gyp#installation) to ensure a working npm build.
 
 The easiest way to get started is to clone the repository:
@@ -83,15 +106,19 @@ Now navigate to your browser and open http://localhost:3001
 If the app loads, congratulations - you're all set. Otherwise, let us know by opening a GitHub issue and with your error.
 
 ## Linting Setup
+<<<<<<< HEAD
 You should have [ESLint running in your editor](http://eslint.org/docs/user-guide/integrations.html), and it will highlight anything doesn't conform to [Analytics Dojo's JavaScript Style Guide](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Free-Code-Camp-JavaScript-Style-Guide) (you can find a summary of those rules [here](https://github.com/FreeCodeCamp/FreeCodeCamp/blob/staging/.eslintrc). Please do not ignore any linting errors, as they are meant to **help** you and to ensure a clean and simple code base. Make sure none of your JavaScript is longer than 80 characters per line.  The reason we enforce this is because one of our dependent NPM modules, [jsonlint](https://github.com/zaach/jsonlint), does not fully support wildcard paths in Windows.
+=======
+
+You should have [ESLint running in your editor](http://eslint.org/docs/user-guide/integrations.html), and it will highlight anything doesn't conform to [Free Code Camp's JavaScript Style Guide](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Free-Code-Camp-JavaScript-Style-Guide) (you can find a summary of those rules [here](https://github.com/FreeCodeCamp/FreeCodeCamp/blob/staging/.eslintrc). Please do not ignore any linting errors, as they are meant to **help** you and to ensure a clean and simple code base. Make sure none of your JavaScript is longer than 80 characters per line.  The reason we enforce this is because one of our dependent NPM modules, [jsonlint](https://github.com/zaach/jsonlint), does not fully support wildcard paths in Windows.
+>>>>>>> FreeCodeCamp/staging
 
 ## Found a bug?
 Do not file an issue until you have followed these steps:
 
-1. Read [Help I've Found a Bug](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Help-I've-Found-a-Bug) wiki page and follow the instructions there.
+1. Read [Help I've Found a Bug](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/FreeCodeCamp-Report-Bugs) wiki page and follow the instructions there.
 2. Asked for confirmation in the appropriate [Help Room](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Help-Rooms)
 3. Please *do not* open an issue without a 3rd party confirmation of your problem.
-
 
 ## Creating Pull Requests
 **What is a Pull Request?**
@@ -107,15 +134,20 @@ Analytics Dojo Issue Mods and staff are on hand to assist with Pull Request rela
 There are two methods of creating a Pull for Analytics Dojo:
 
 - Editing files via the GitHub Interface
-- Editing files on a local clone  
+- Editing files on a local clone
 
-**Important: ALWAYS EDIT ON A BRANCH**  
+**Important: ALWAYS EDIT ON A BRANCH**
 Take away only one thing from this document, it should be this: Never, **EVER** make edits to the `staging` branch. ALWAYS make a new branch BEFORE you edit files. This is critical, because if your PR is not accepted, your copy of staging will be forever sullied and the only way to fix it is to delete your fork and re-fork.
 
+<<<<<<< HEAD
 _**Method 1: Editing via your Local Fork (Recommended)**_  
 This is the recommended method. Read about How to Setup and Maintain a Local Instance of Analytics Dojo.
+=======
+_**Method 1: Editing via your Local Fork (Recommended)**_
+This is the recommended method. Read about How to Setup and Maintain a Local Instance of Free Code Camp.
+>>>>>>> FreeCodeCamp/staging
 
-1. Perform the maintenance step of rebasing `staging`.  
+1. Perform the maintenance step of rebasing `staging`.
 2. Ensure you are on the `staging` branch using `git status`:
 
 ```bash
@@ -127,7 +159,7 @@ nothing to commit, working directory clean
 ```
 
 3. If you are not on staging or your working directory is not clean, resolve any outstanding files/commits and checkout staging `git checkout staging`
-4. Create a branch off of `staging` with git: `git checkout -B branch/name-here`  
+4. Create a branch off of `staging` with git: `git checkout -B branch/name-here`
 **Note:** Branch naming is important. Use a name like `fix/short-fix-description` or `feature/short-feature-description`. Review the [Contribution Guidelines](#contribution-guidelines) for more detail.
 5. Edit your file(s) locally with the editor of your choice
 6. Check your `git status` to see unstaged files.
@@ -137,21 +169,26 @@ nothing to commit, working directory clean
 10. Push your commits to your GitHub Fork: `git push -u origin branch/name-here`
 11. Go to [Common Steps](#common-steps)
 
-_**Method 2: Editing via the GitHub Interface**_  
+_**Method 2: Editing via the GitHub Interface**_
 
-Note: Editing via the GitHub Interface is not recommended, since it is not possible to update your fork via GitHub's interface without deleting and recreating your fork.  
+Note: Editing via the GitHub Interface is not recommended, since it is not possible to update your fork via GitHub's interface without deleting and recreating your fork.
 
 Read the [Wiki article](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-To-Create-A-Pull-Request-for-Free-Code-Camp#editing-via-the-github-interface) for further information
 
 ## Common Steps
-1. Once the edits have been committed, you will be prompted to create a pull request on your fork's Github Page.
+1. Once the edits have been committed, you will be prompted to create a pull request on your fork's GitHub Page.
 2. By default, all pull requests should be against the FCC main repo, `staging` branch.
+<<<<<<< HEAD
 3. Submit a [pull request](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Pull-Request-Contribute) from your branch to Analytics Dojo's `staging` branch.
 3. The title (also called the subject) of your PR should be descriptive of your changes and succinctly indicates what is being fixed.  
+=======
+3. Submit a [pull request](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Pull-Request-Contribute) from your branch to Free Code Camp's `staging` branch.
+3. The title (also called the subject) of your PR should be descriptive of your changes and succinctly indicates what is being fixed.
+>>>>>>> FreeCodeCamp/staging
    - **Do not add the issue number in the PR title**.
    - Examples: `Add Test Cases to Bonfire Drop It` `Correct typo in Waypoint Size Your Images`
 4. In the body of your PR include a more detailed summary of the changes you made and why.
-   - If the PR is meant to fix an existing bug/issue, then, at the end of your PR's commit message, append the keyword `closes` and #xxxx (where xxxx is the issue number). Example: `closes #1337`.  
+   - If the PR is meant to fix an existing bug/issue, then, at the end of your PR's description, append the keyword `closes` and #xxxx (where xxxx is the issue number). Example: `closes #1337`.
    This tells GitHub to close the existing issue, if the PR is merged.
 5. Indicate if you have tested on a local copy of the site or not.
 
@@ -159,7 +196,7 @@ Read the [Wiki article](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-To
 
 **If your PR is accepted**
 
-Once your PR is accepted, you may delete the branch you created to submit it. This keeps your working fork clean.  
+Once your PR is accepted, you may delete the branch you created to submit it. This keeps your working fork clean.
 
 You can do this with a press of a button on the GitHub PR interface. You can delete the local copy of the branch with: `git branch -D branch/to-delete-name`
 
@@ -173,9 +210,10 @@ If you have a local copy of the repo, you can make the requested changes and ame
 
 Be sure to post in the PR conversation that you have made the requested changes.
 
-##Other resources
-- [Searching for Your Issue on Github](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Searching-for-Your-Issue-on-Github)
-- [Creating a New Github Issue](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Creating-a-New-Github-Issue)
+## Other resources
+
+- [Searching for Your Issue on GitHub](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Searching-for-Your-Issue-on-GitHub)
+- [Creating a New GitHub Issue](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Creating-a-New-GitHub-Issue)
 - [Select Issues for Contributing Using Labels](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Select-Issues-for-Contributing-Using-Labels)
 - [How to clone the FreeCodeCamp website on a Windows pc](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-to-clone-the-FreeCodeCamp-website-on-a-Windows-pc)
 - [How to log in to your local FCC site - using GitHub](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-To-Log-In-To-Your-Local-FCC-Site)

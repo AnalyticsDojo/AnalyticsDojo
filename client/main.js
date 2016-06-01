@@ -93,10 +93,15 @@ main = (function(main, global) {
           '<span>Analytics Dojo\'s Main Chat</span>' +
         '</div>'
       );
+      return null;
     });
 
 
-    $('#nav-chat-btn').on('click', toggleMainChat);
+    $('#nav-chat-btn').on('click', function(event) {
+      if (!(event.ctrlKey || event.metaKey)) {
+          toggleMainChat();
+      }
+  });
 
     function showMainChat() {
       if (!main.chat.isOpen) {
@@ -160,6 +165,7 @@ main.setMapShare = function setMapShare(id) {
 
 $(document).ready(function() {
 
+  const { Observable } = window.Rx;
   var CSRF_HEADER = 'X-CSRF-Token';
 
   var setCSRFToken = function(securityToken) {
@@ -180,74 +186,6 @@ $(document).ready(function() {
         'https://s3.amazonaws.com/freecodecamp/camper-image-placeholder.png'
       );
   });
-
-  function upvoteHandler(e) {
-    e.preventDefault();
-    var upvoteBtn = this;
-    var id = upvoteBtn.id;
-    var upVotes = $(upvoteBtn).data().upVotes;
-    var username = typeof username !== 'undefined' ? username : '';
-    var alreadyUpvoted = false;
-    for (var i = 0; i < upVotes.length; i++) {
-      if (upVotes[i].upVotedBy === username) {
-        alreadyUpvoted = true;
-        break;
-      }
-    }
-    if (!alreadyUpvoted) {
-      $.post('/stories/upvote', { id: id })
-        .fail(function() {
-          $(upvoteBtn).bind('click', upvoteHandler);
-        })
-        .done(function(data) {
-          $(upvoteBtn)
-            .text('Upvoted!')
-            .addClass('disabled');
-
-          $('#storyRank').text(data.rank + ' points');
-        });
-    }
-  }
-
-  $('#story-list').on('click', 'button.btn-upvote', upvoteHandler);
-
-  var storySubmitButtonHandler = function storySubmitButtonHandler() {
-
-    if (!$('#story-submission-form')[0].checkValidity()) {
-      return null;
-    }
-
-    var link = $('#story-url').val();
-    var headline = $('#story-title').val();
-    var description = $('#description-box').val();
-    var data = {
-      data: {
-        link: link,
-        headline: headline,
-        timePosted: Date.now(),
-        description: description,
-        storyMetaDescription: main.storyMetaDescription,
-        rank: 1,
-        image: main.storyImage
-      }
-    };
-
-    $('#story-submit').unbind('click');
-    $.post('/stories/', data)
-      .fail(function() {
-        $('#story-submit').bind('click', storySubmitButtonHandler);
-      })
-      .done(function({ storyLink, isBanned }) {
-        if (isBanned) {
-          window.location = '/news';
-          return null;
-        }
-        window.location = '/stories/' + storyLink;
-      });
-  };
-
-  $('#story-submit').on('click', storySubmitButtonHandler);
-
 
   // map sharing
   var alreadyShared = main.getMapShares();
@@ -296,12 +234,12 @@ $(document).ready(function() {
   }
 
   function expandBlock(item) {
-    $(item).addClass('in').css('height', '100%');
+    $(item).addClass('in').css('height', 'auto');
     expandCaret(item);
   }
 
   function collapseBlock(item) {
-    $(item).removeClass('in').css('height', '100%');
+    $(item).removeClass('in').css('height', 'auto');
     collapseCaret(item);
   }
 
@@ -348,18 +286,22 @@ $(document).ready(function() {
   var mapFilter = $('#map-filter');
   var mapShowAll = $('#showAll');
 
-  $('#nav-map-btn').on('click', toggleMap);
+  $('#nav-map-btn').on('click', function(event) {
+      if (!(event.ctrlKey || event.metaKey)) {
+          toggleMap();
+      }
+  });
 
   $('.map-aside-action-collapse').on('click', collapseMap);
 
   function showMap() {
     if (!main.isMapAsideLoad) {
-      var mapAside = $('<iframe>');
+      var mapAside = $('<iframe id = "map-aside-frame" >');
       mapAside.attr({
         src: '/map-aside',
-        scrolling: 'yes'
+        frameBorder: '0'
       });
-      $('.map-aside .iframeWrapper').append(mapAside);
+      $('.map-aside').append(mapAside);
       main.isMapAsideLoad = true;
     }
     $('.map-aside').removeClass('is-collapsed');
@@ -379,7 +321,11 @@ $(document).ready(function() {
     }
   }
 
-  $('#nav-wiki-btn').on('click', toggleWiki);
+  $('#nav-wiki-btn').on('click', function(event) {
+      if (!(event.ctrlKey || event.metaKey)) {
+          toggleWiki();
+      }
+  });
 
   $('.wiki-aside-action-collapse').on('click', collapseWiki);
 
@@ -387,13 +333,17 @@ $(document).ready(function() {
     if (!main.isWikiAsideLoad) {
       var lang = window.location.toString().match(/\/\w{2}\//);
       lang = (lang) ? lang[0] : '/en/';
+<<<<<<< HEAD
       var wikiURL = 'http://rpi-analytics.github.io/wiki' + lang;
+=======
+      var wikiURL = '//freecodecamp.github.io/wiki' + lang;
+>>>>>>> FreeCodeCamp/staging
       var wikiAside = $('<iframe>');
       wikiAside.attr({
         src: wikiURL,
-        scrolling: 'yes'
+        frameBorder: '0'
       });
-      $('.wiki-aside .iframeWrapper').append(wikiAside);
+      $('.wiki-aside').append(wikiAside);
       main.isWikiAsideLoad = true;
     }
     $('.wiki-aside').removeClass('is-collapsed');
@@ -448,7 +398,8 @@ $(document).ready(function() {
   // Map live filter
   mapFilter.on('keyup', () => {
     if (mapFilter.val().length > 0) {
-      var regex = new RegExp(mapFilter.val().replace(/ /g, '.'), 'i');
+      var regexString = mapFilter.val().replace(/ /g, '.');
+      var regex = new RegExp(regexString.split('').join('.*'), 'i');
 
       // Hide/unhide challenges that match the regex
       $('.challenge-title').each((index, title) => {
@@ -532,4 +483,126 @@ $(document).ready(function() {
 
   // keyboard shortcuts: open map
   window.Mousetrap.bind('g m', toggleMap);
+
+  function addAlert(message = '', type = 'alert-info') {
+    return $('.flashMessage').append($(`
+      <div class='alert ${type}'>
+        <button class='close' type='button', data-dismiss='alert'>
+          <span class='ion-close-circled' />
+        </Button>
+        <div>${message}</div>
+      </div>
+    `));
+  }
+
+  function toggleNightMode() {
+    if (!main.userId) {
+      return addAlert('You must be logged in to use our themes.');
+    }
+    const iframe$ = document.getElementById('map-aside-frame');
+    const body$ = $('body');
+    if (iframe$) {
+      iframe$.src = iframe$.src;
+    }
+    body$.hide();
+    let updateThemeTo;
+    if (body$.hasClass('night')) {
+      body$.removeClass('night');
+      updateThemeTo = 'default';
+    } else {
+      body$.addClass('night');
+      updateThemeTo = 'night';
+    }
+    body$.fadeIn('100');
+    const options = {
+      url: `/api/users/${main.userId}/update-theme`,
+      type: 'POST',
+      data: { theme: updateThemeTo },
+      dataType: 'json'
+    };
+    return $.ajax(options)
+      .success(() => console.log('theme updated successfully'))
+      .fail(err => {
+        let message;
+        try {
+          message = JSON.parse(err.responseText).error.message;
+        } catch (error) {
+          return null;
+        }
+        if (!message) {
+          return null;
+        }
+        return addAlert(message);
+      });
+  }
+
+  Observable.merge(
+    Observable.fromEvent($('#night-mode'), 'click'),
+    Observable.create(observer => {
+      window.Mousetrap.bind('g t n', () => observer.onNext());
+    })
+  )
+    .debounce(500)
+    .subscribe(toggleNightMode, err => console.error(err));
+
+  // Hot Keys
+  window.Mousetrap.bind('g n n', () => {
+    // Next Challenge
+    window.location = '/challenges/next-challenge';
+  });
+  window.Mousetrap.bind('g n a', () => {
+    // Account
+    window.location = '/account';
+  });
+  window.Mousetrap.bind('g n m', () => {
+    // Map
+    window.location = '/map';
+  });
+  window.Mousetrap.bind('g n w', () => {
+    // Wiki
+    window.location = '/wiki';
+  });
+  window.Mousetrap.bind('g n a', () => {
+    // About
+    window.location = '/about';
+  });
+  window.Mousetrap.bind('g n s', () => {
+    // Shop
+    window.location = '/shop';
+  });
+  window.Mousetrap.bind('g n o', () => {
+    // Settings
+    window.location = '/settings';
+  });
+  window.Mousetrap.bind('g n r', () => {
+    // Repo
+    window.location = 'https://github.com/freecodecamp/freecodecamp/';
+  });
+
+  (function getFlyer() {
+    const flyerKey = '__flyerId__';
+    $.ajax({
+      url: '/api/flyers/findOne',
+      method: 'GET',
+      dataType: 'JSON',
+      data: { filter: { order: 'id DESC' } }
+    })
+    // log error
+    .fail(err => console.error(err))
+    .done(flyer => {
+      const lastFlyerId = localStorage.getItem(flyerKey);
+      if (
+        !flyer ||
+        !flyer.isActive ||
+        lastFlyerId === flyer.id
+      ) {
+        return;
+      }
+      $('#dismiss-bill').on('click', () => {
+        localStorage.setItem(flyerKey, flyer.id);
+      });
+      $('#bill-content').html(flyer.message);
+      $('#bill-board').fadeIn();
+    });
+  }());
 });
