@@ -14,17 +14,13 @@ var _ = require('lodash'),
     path = require('path'),
     setupPassport = require('./component-passport');
 
-<<<<<<< HEAD
+
 var setProfileFromGithub = require('./utils/auth').setProfileFromGithub;
 var getSocialProvider = require('./utils/auth').getSocialProvider;
 var getUsernameFromProvider = require('./utils/auth').getUsernameFromProvider;
 var generateKey =
   require('loopback-component-passport/lib/models/utils').generateKey;
 
-var isBeta = !!process.env.BETA;
-
-=======
->>>>>>> FreeCodeCamp/staging
 var app = loopback();
 var isBeta = !!process.env.BETA;
 

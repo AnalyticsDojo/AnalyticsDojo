@@ -1,19 +1,15 @@
 {
-  "name": "analyticsdojo",
+  "name": "freecodecamp",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jkuruzovich/AnalyticsDojo"
+    "url": "https://github.com/freecodecamp/freecodecamp.git"
   },
   "scripts": {
     "only-once": "npm run create-rev && echo '\n\nseeding database\n\n' && node seed && echo '\n\nSeeding Completed\n\n'",
-    "bower": "node node_modules/bower/bin/bower cache clean && node node_modules/bower/bin/bower install",
     "create-rev": "node -e \"console.log('\\n\\ncreating manifest\\n\\n'); require('fs').writeFileSync('server/rev-manifest.json', '{}');\"",
     "build": "NODE_ENV=production gulp build -p",
-    "build-assets": "NODE_ENV=production gulp build -p",
-    "postinstall": "node node_modules/gulp/bin/gulp build -p",
-    "start": "node server/production-start.js",
-    "startdev": "babel-node server/server.js",
+    "start": "babel-node server/server.js",
     "prestart-production": "bower cache clean && bower install && gulp build -p",
     "start-production": "node pm2Start",
     "lint": "npm run lint-js && npm run lint-json",
@@ -27,15 +23,11 @@
     "pretest": "npm run lint",
     "test": "npm run test-challenges"
   },
-  "engines": {
-    "node": "5.5.0"
-  },
   "license": "(BSD-3-Clause AND CC-BY-SA-4.0)",
   "dependencies": {
     "accepts": "^1.3.0",
     "adler32": "~0.1.7",
     "async": "^1.5.0",
-    "aws-sdk": "^2.2.37",
     "babel-cli": "^6.3.17",
     "babel-core": "^6.3.26",
     "babel-eslint": "^6.0.0",
@@ -46,19 +38,13 @@
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.3.0",
     "body-parser": "^1.13.2",
-    "bower": "^1.7.7",
-    "browser-sync": "^2.9.12",
-    "chai-jquery": "^2.0.0",
     "cheerio": "~0.20.0",
     "classnames": "^2.1.2",
     "compression": "^1.6.0",
     "connect-mongo": "~1.2.0",
     "cookie-parser": "^1.4.0",
-<<<<<<< HEAD
-=======
     "csurf": "^1.8.3",
     "debug": "^2.2.0",
->>>>>>> FreeCodeCamp/staging
     "dedent": "~0.6.0",
     "dotenv": "^2.0.0",
     "emmet-codemirror": "^1.2.5",
@@ -76,12 +62,7 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.1",
     "gulp-concat": "^2.6.0",
-<<<<<<< HEAD
-    "gulp-cssnano": "^2.1.1",
-    "gulp-eslint": "^1.1.0",
-=======
     "gulp-eslint": "^2.0.0",
->>>>>>> FreeCodeCamp/staging
     "gulp-jsonlint": "^1.1.0",
     "gulp-less": "^3.0.3",
     "gulp-nodemon": "^2.0.3",
@@ -90,15 +71,9 @@
     "gulp-reduce-file": "0.0.1",
     "gulp-rev": "^7.0.0",
     "gulp-rev-replace": "~0.4.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-tape": "0.0.7",
     "gulp-uglify": "^1.5.1",
-<<<<<<< HEAD
-    "helmet": "^1.1.0",
-=======
     "gulp-util": "^3.0.6",
     "helmet": "^2.0.0",
->>>>>>> FreeCodeCamp/staging
     "helmet-csp": "^1.0.3",
     "history": "^2.0.0",
     "jade": "^1.11.0",
@@ -129,8 +104,7 @@
     "passport-local": "^1.0.0",
     "passport-oauth": "^1.0.0",
     "passport-twitter": "^1.0.3",
-    "pm2": "^1.0.0",
-    "pmx": "~0.5.5",
+    "pmx": "~0.6.2",
     "react": "^15.0.2",
     "react-bootstrap": "~0.29.4",
     "react-dom": "^15.0.2",
@@ -150,14 +124,9 @@
     "rev-del": "^1.0.5",
     "rx": "^4.0.0",
     "sanitize-html": "^1.11.1",
+    "sort-keys": "^1.1.1",
     "stampit": "^2.1.1",
     "store": "https://github.com/berkeleytrue/store.js.git#feature/noop-server",
-<<<<<<< HEAD
-    "tap-spec": "^4.1.1",
-    "thundercats": "^3.1.0",
-    "thundercats-react": "~0.5.1",
-=======
->>>>>>> FreeCodeCamp/staging
     "url-regex": "^3.0.0",
     "validator": "^5.0.0",
     "webpack": "^1.9.12",
@@ -166,11 +135,6 @@
     "yargs": "^4.1.0"
   },
   "devDependencies": {
-    "blessed": "~0.1.81",
-    "bower-main-files": "~0.0.4",
-    "chai": "^3.4.0",
-    "envify": "^3.4.0",
-    "istanbul": "~0.4.0",
     "browser-sync": "^2.9.12",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-tape": "0.0.9",
@@ -178,6 +142,7 @@
     "loopback-component-explorer": "^2.1.1",
     "loopback-testing": "^1.1.0",
     "sinon": "^1.17.3",
+    "tap-spec": "^4.1.1",
     "tape": "^4.2.2"
   }
 }

@@ -217,13 +217,8 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect('/');
     }
-<<<<<<< HEAD
-    res.render('account/signin', {
+      return res.render('account/signin', {
       title: 'Sign in to Analytics Dojo using a Social Media Account'
-=======
-    return res.render('account/signin', {
-      title: 'Sign in to Free Code Camp using a Social Media Account'
->>>>>>> FreeCodeCamp/staging
     });
   }
 
@@ -255,13 +250,9 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect('/');
     }
-<<<<<<< HEAD
-    res.render('account/email-signin', {
-      title: 'Sign in to Analytics Dojo using your Email Address'
-=======
+
     return res.render('account/email-signin', {
-      title: 'Sign in to Free Code Camp using your Email Address'
->>>>>>> FreeCodeCamp/staging
+      title: 'Sign in to Analytics Dojo using your Email Address'
     });
   }
 
@@ -269,13 +260,9 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect('/');
     }
-<<<<<<< HEAD
-    res.render('account/email-signup', {
-      title: 'Sign up for Analytics Dojo using your Email Address'
-=======
+
     return res.render('account/email-signup', {
-      title: 'Sign up for Free Code Camp using your Email Address'
->>>>>>> FreeCodeCamp/staging
+      title: 'Sign up for Analytics Dojo using your Email Address'
     });
   }
 
@@ -413,16 +400,7 @@ module.exports = function(app) {
           }
 
           if (user.isCheater) {
-<<<<<<< HEAD
-            req.flash('errors', {
-              msg: dedent`
-                Upon review, this account has been flagged for academic
-                dishonesty. If you’re the owner of this account contact
-                team@analyticsdojo.com for details.
-              `
-            });
-=======
->>>>>>> FreeCodeCamp/staging
+              
             return res.redirect(`/${user.username}`);
           }
 

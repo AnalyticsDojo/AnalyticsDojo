@@ -6,16 +6,13 @@ module.exports = function(app) {
   app.use(router);
 
   function showWiki(req, res) {
-<<<<<<< HEAD
-    res.render('wiki/show', { title: 'Wiki | Analytics Dojo' });
-=======
+      
     res.render(
       'wiki/show',
       {
-        title: 'Wiki | Free Code Camp',
+        title: 'Wiki | Analytics Dojo',
         path: req.path.replace(/^\/wiki/, '')
       }
     );
->>>>>>> FreeCodeCamp/staging
   }
 };

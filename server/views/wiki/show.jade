@@ -1,13 +1,5 @@
 extends ../layout-wide-nofooter
 block content
-<<<<<<< HEAD
-  .iframeWrapper
-    iframe#wikiFrame(frameborder='no')
-    script.
-        var lang = window.location.toString().match(/\/\w{2}\//);
-        lang = (lang) ? lang[0] : '/en/';
-        $('#wikiFrame').attr('src','http://rpi-analytics.github.io/wiki' + lang);
-=======
   iframe#wikiFrame(frameborder='no')
   script.
     var wikiUrl = '//freecodecamp.github.io/wiki';
@@ -29,4 +21,4 @@ block content
       history.replaceState(history.state, null, e.data);
       return null;
     });
->>>>>>> FreeCodeCamp/staging
+

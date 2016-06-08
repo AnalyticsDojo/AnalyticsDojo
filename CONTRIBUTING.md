@@ -13,26 +13,16 @@
 - [Next Steps](#next-steps)
 
 ## I want to help!
-<<<<<<< HEAD
-We welcome pull requests from Analytics Dojo campers (our students) and seasoned JavaScript developers alike! Follow these steps to contribute:
+
+We welcome pull requests from Analytics Dojo campers (our students) and seasoned JavaScript developers alike! 
 =======
->>>>>>> FreeCodeCamp/staging
-
-We welcome pull requests from Free Code Camp campers (our students) and seasoned JavaScript developers alike! Follow these steps to contribute:
-
-1.  Find an issue that needs assistance by searching for the [Help Wanted](https://github.com/FreeCodeCamp/FreeCodeCamp/labels/help%20wanted) tag.
-2.  Let us know you are working on it by posting a comment on the issue.
-3.  Feel free to ask for help in our [Help Contributors](https://gitter.im/FreeCodeCamp/HelpContributors) Gitter room.
 
 If you've found a bug that is not on the board, [follow these steps](#found-a-bug).
 
 ## Contribution Guidelines
 
-<<<<<<< HEAD
+
 1.  Fork the project: [How To Fork And Maintain a Local Instance of Analytics Dojo](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-To-Fork-And-Maintain-a-Local-Instance-of-Free-Code-Camp)
-=======
-1.  Fork the project: [How To Fork And Maintain a Local Instance of Free Code Camp](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/FreeCodeCamp-Fork-Local)
->>>>>>> FreeCodeCamp/staging
 2.  Create a branch specific to the issue or feature you are working on. Push your work to that branch. ([Need help with branching?](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches))
 3.  Name the branch something like `fix/xxx` or `feature/xxx` where `xxx` is a short description of the changes or feature you are attempting to add. For example `fix/email-login` would be a branch where I fix something specific to email login.
 4. [Set up Linting](#linting-setup) to run as you make changes.
@@ -106,12 +96,7 @@ Now navigate to your browser and open http://localhost:3001
 If the app loads, congratulations - you're all set. Otherwise, let us know by opening a GitHub issue and with your error.
 
 ## Linting Setup
-<<<<<<< HEAD
-You should have [ESLint running in your editor](http://eslint.org/docs/user-guide/integrations.html), and it will highlight anything doesn't conform to [Analytics Dojo's JavaScript Style Guide](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Free-Code-Camp-JavaScript-Style-Guide) (you can find a summary of those rules [here](https://github.com/FreeCodeCamp/FreeCodeCamp/blob/staging/.eslintrc). Please do not ignore any linting errors, as they are meant to **help** you and to ensure a clean and simple code base. Make sure none of your JavaScript is longer than 80 characters per line.  The reason we enforce this is because one of our dependent NPM modules, [jsonlint](https://github.com/zaach/jsonlint), does not fully support wildcard paths in Windows.
-=======
-
 You should have [ESLint running in your editor](http://eslint.org/docs/user-guide/integrations.html), and it will highlight anything doesn't conform to [Free Code Camp's JavaScript Style Guide](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Free-Code-Camp-JavaScript-Style-Guide) (you can find a summary of those rules [here](https://github.com/FreeCodeCamp/FreeCodeCamp/blob/staging/.eslintrc). Please do not ignore any linting errors, as they are meant to **help** you and to ensure a clean and simple code base. Make sure none of your JavaScript is longer than 80 characters per line.  The reason we enforce this is because one of our dependent NPM modules, [jsonlint](https://github.com/zaach/jsonlint), does not fully support wildcard paths in Windows.
->>>>>>> FreeCodeCamp/staging
 
 ## Found a bug?
 Do not file an issue until you have followed these steps:
@@ -139,13 +124,9 @@ There are two methods of creating a Pull for Analytics Dojo:
 **Important: ALWAYS EDIT ON A BRANCH**
 Take away only one thing from this document, it should be this: Never, **EVER** make edits to the `staging` branch. ALWAYS make a new branch BEFORE you edit files. This is critical, because if your PR is not accepted, your copy of staging will be forever sullied and the only way to fix it is to delete your fork and re-fork.
 
-<<<<<<< HEAD
-_**Method 1: Editing via your Local Fork (Recommended)**_  
-This is the recommended method. Read about How to Setup and Maintain a Local Instance of Analytics Dojo.
-=======
 _**Method 1: Editing via your Local Fork (Recommended)**_
 This is the recommended method. Read about How to Setup and Maintain a Local Instance of Free Code Camp.
->>>>>>> FreeCodeCamp/staging
+
 
 1. Perform the maintenance step of rebasing `staging`.
 2. Ensure you are on the `staging` branch using `git status`:
@@ -178,13 +159,10 @@ Read the [Wiki article](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-To
 ## Common Steps
 1. Once the edits have been committed, you will be prompted to create a pull request on your fork's GitHub Page.
 2. By default, all pull requests should be against the FCC main repo, `staging` branch.
-<<<<<<< HEAD
+
 3. Submit a [pull request](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Pull-Request-Contribute) from your branch to Analytics Dojo's `staging` branch.
 3. The title (also called the subject) of your PR should be descriptive of your changes and succinctly indicates what is being fixed.  
-=======
-3. Submit a [pull request](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Pull-Request-Contribute) from your branch to Free Code Camp's `staging` branch.
-3. The title (also called the subject) of your PR should be descriptive of your changes and succinctly indicates what is being fixed.
->>>>>>> FreeCodeCamp/staging
+
    - **Do not add the issue number in the PR title**.
    - Examples: `Add Test Cases to Bonfire Drop It` `Correct typo in Waypoint Size Your Images`
 4. In the body of your PR include a more detailed summary of the changes you made and why.

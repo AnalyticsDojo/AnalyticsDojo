@@ -333,11 +333,7 @@ $(document).ready(function() {
     if (!main.isWikiAsideLoad) {
       var lang = window.location.toString().match(/\/\w{2}\//);
       lang = (lang) ? lang[0] : '/en/';
-<<<<<<< HEAD
       var wikiURL = 'http://rpi-analytics.github.io/wiki' + lang;
-=======
-      var wikiURL = '//freecodecamp.github.io/wiki' + lang;
->>>>>>> FreeCodeCamp/staging
       var wikiAside = $('<iframe>');
       wikiAside.attr({
         src: wikiURL,
