@@ -150,7 +150,7 @@ var paths = {
     ],
 
     challenges: [
-        'seed/challenges/*/*.json'
+        'seed/adchallenges/*/*.json'
     ]
 };
 
