@@ -20,7 +20,6 @@ tmp
 npm-debug.log
 node_modules
 node_modules
-.gitignore
 .elasticbeanstalk/
 .idea
 *.iml
@@ -49,53 +48,11 @@ public/js/vendor*
 public/js/faux*
 public/css/main*
 
-server/rev-manifest.json
+
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-seed/challenges/01-front-end-development-certification/advanced-bonfires.json
 
-seed/challenges/04-video-challenges/dom.json
-
-seed/challenges/01-front-end-development-certification/advanced-ziplines.json
-
-seed/challenges/01-front-end-development-certification/basic-bonfires.json
-
-seed/challenges/01-front-end-development-certification/basic-javascript.json
-
-seed/challenges/01-front-end-development-certification/basic-ziplines.json
-
-seed/challenges/01-front-end-development-certification/bootstrap.json
-
-seed/challenges/01-front-end-development-certification/front-end-development-certificate.json
-
-seed/challenges/01-front-end-development-certification/gear-up-for-success.json
-
-seed/challenges/01-front-end-development-certification/html5-and-css.json
-
-seed/challenges/01-front-end-development-certification/intermediate-bonfires.json
-
-seed/challenges/01-front-end-development-certification/intermediate-ziplines.json
-
-seed/challenges/01-front-end-development-certification/jquery.json
-
-seed/challenges/01-front-end-development-certification/json-apis-and-ajax.json
-
-seed/challenges/01-front-end-development-certification/object-oriented-and-functional-programming.json
-
-seed/challenges/01-why-analytics/why-analytics.json
-
-seed/challenges/01-why-analytics/why-analytics.json
-
-seed/challenges/01-why-analytics/why-analytics.json
-
-seed/challenges/04-video-challenges/bigonotation.json
-
-seed/challenges/04-video-challenges/jslingo.json
-
-seed/challenges/04-video-challenges/chromedevtools.json
-
-seed/challenges/01-why-analytics/why-analytics.json
