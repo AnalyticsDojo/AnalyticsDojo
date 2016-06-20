@@ -39,20 +39,6 @@ public/js/bundle*
 
 !server/manifests/README.md
 
-public/js/main*
-public/js/commonFramework*
-public/js/sandbox*
-public/js/iFrameScripts*
-public/js/plugin*
-public/js/vendor*
-public/js/faux*
-public/css/main*
 
-
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
 
 
