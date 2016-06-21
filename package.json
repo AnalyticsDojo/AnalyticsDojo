@@ -38,6 +38,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.3.0",
     "body-parser": "^1.13.2",
+    "bower": "^1.7.9",
     "cheerio": "~0.20.0",
     "classnames": "^2.1.2",
     "compression": "^1.6.0",
