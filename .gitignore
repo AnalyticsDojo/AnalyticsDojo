@@ -9,7 +9,7 @@ lib-cov
 *.swp
 .floo
 .flooignore
-builtAssets/
+
 pm2.js
 *.env
 pids
@@ -26,12 +26,11 @@ node_modules
 .DS_Store
 Thumbs.db
 main.css
-bundle.js
+
 coverage
 .remote-sync.json
 herokuconfig.sh
-server/*.bundle.js
-public/js/bundle*
+
 
 *.map
 
