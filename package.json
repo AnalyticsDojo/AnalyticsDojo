@@ -39,7 +39,6 @@
     "babel-register": "^6.3.0",
     "body-parser": "^1.13.2",
     "bower": "^1.7.9",
-    "browser-sync": "^2.13.0",
     "cheerio": "~0.20.0",
     "classnames": "^2.1.2",
     "compression": "^1.6.0",
@@ -136,7 +135,16 @@
     "webpack": "^1.9.12",
     "webpack-stream": "^3.1.0",
     "xss-filters": "^1.2.6",
-    "yargs": "^4.1.0"
+    "yargs": "^4.1.0",
+    "browser-sync": "^2.9.12",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tape": "0.0.9",
+    "jsonlint": "^1.6.2",
+    "loopback-component-explorer": "^2.1.1",
+    "loopback-testing": "^1.1.0",
+    "sinon": "^1.17.3",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.2.2"
   },
   "devDependencies": {
     "browser-sync": "^2.9.12",
