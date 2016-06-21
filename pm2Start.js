@@ -1,16 +1,26 @@
 var pm2 = require('pm2');
+var nodemailer = require('nodemailer');
 
 var MACHINE_NAME = 'hk1';
-var PRIVATE_KEY  = '5el5wxzt95kom5u';   // Keymetrics Private key
-var PUBLIC_KEY   = 'g89yg9i785kw55d';   // Keymetrics Public  key
+var PRIVATE_KEY  = process.env.KISS_PRIVATE_KEY;   // Keymetrics Private key
+var PUBLIC_KEY   = process.env.KISS_PUBLIC_KEY;   // Keymetrics Public  key
 
 var instances = process.env.WEB_CONCURRENCY || -1; // Set by Heroku or -1 to scale to max cpu core -1
 var maxMemory = process.env.WEB_MEMORY      || 512;// " " "
+var transportOptions = {
+    type: 'smtp',
+    service: 'SES',
+    auth: {
+        user: process.env.SES_USER || false,
+        pass: process.env.SES_PASSWORD
+    }
+};
+var mailReceiver = process.env.MAIL_RECEIVER || false;
 
 pm2.connect(function() {
     pm2.start({
         script    : 'server/production-start.js',
-        name      : 'production-app',     // ----> THESE ATTRIBUTES ARE OPTIONAL:
+        name      : 'AnalyticsDojo',     // ----> THESE ATTRIBUTES ARE OPTIONAL:
         exec_mode : 'cluster',            // ----> https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#schema
         instances : instances,
         max_memory_restart : maxMemory + 'M',   // Auto restart if process taking more than XXmo
@@ -39,3 +49,45 @@ pm2.connect(function() {
         });
     });
 });
+
+if (transportOptions.auth.user && mailReceiver) {
+    console.log('setting up mailer');
+    var transporter = nodemailer.createTransport(transportOptions);
+    var compiled = _.template(
+        'An error has occurred on server ' +
+        '<% name %>\n' +
+        'Stack Trace:\n\n\n<%= stack %>\n\n\n' +
+        'Context:\n\n<%= text %>'
+    );
+
+    pm2.launchBus(function(err, bus) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log('event bus connected');
+
+        bus.on('process:exception', function(data) {
+            var text;
+            var stack;
+            var name;
+            try {
+                data.date = moment(data.at || new Date())
+                    .tz('America/Los_Angeles')
+                    .format('MMMM Do YYYY, h:mm:ss a z');
+
+                text = JSON.stringify(data, null, 2);
+                stack = data.data.stack;
+                name = data.process.name;
+            } catch (e) {
+                return e;
+            }
+
+            transporter.sendMail({
+                to: mailReceiver,
+                from: 'team@analyticsdojo.com',
+                subject: 'Server exception',
+                text: compiled({ name: name, text: text, stack: stack })
+            });
+        });
+    });
+}
