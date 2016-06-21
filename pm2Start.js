@@ -5,7 +5,7 @@ var maxMemory = process.env.WEB_MEMORY || 512;    // " " "
 
 pm2.connect(function() {
     pm2.start({
-        script    : 'server.js',
+        script    : 'server/production-start.js',
         name      : 'production-app',     // ----> THESE ATTRIBUTES ARE OPTIONAL:
         exec_mode : 'cluster',            // ----> https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#schema
         instances : instances,
@@ -18,7 +18,7 @@ pm2.connect(function() {
         if (err) return console.error('Error while launching applications', err.stack || err);
         console.log('PM2 and application has been succesfully started');
 
-        // Display logs in standard output 
+        // Display logs in standard output
         pm2.launchBus(function(err, bus) {
             console.log('[PM2] Log streaming started');
 
