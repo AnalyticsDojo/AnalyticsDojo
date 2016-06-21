@@ -1,7 +1,11 @@
 var pm2 = require('pm2');
 
+var MACHINE_NAME = 'hk1';
+var PRIVATE_KEY  = '5el5wxzt95kom5u';   // Keymetrics Private key
+var PUBLIC_KEY   = 'g89yg9i785kw55d';   // Keymetrics Public  key
+
 var instances = process.env.WEB_CONCURRENCY || -1; // Set by Heroku or -1 to scale to max cpu core -1
-var maxMemory = process.env.WEB_MEMORY || 512;    // " " "
+var maxMemory = process.env.WEB_MEMORY      || 512;// " " "
 
 pm2.connect(function() {
     pm2.start({
@@ -14,22 +18,24 @@ pm2.connect(function() {
             "NODE_ENV": "production",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
         },
-    }, function(err) {
-        if (err) return console.error('Error while launching applications', err.stack || err);
-        console.log('PM2 and application has been succesfully started');
+        post_update: ["npm install"]       // Commands to execute once we do a pull from Keymetrics
+    }, function() {
+        pm2.interact(PRIVATE_KEY, PUBLIC_KEY, MACHINE_NAME, function() {
 
-        // Display logs in standard output
-        pm2.launchBus(function(err, bus) {
-            console.log('[PM2] Log streaming started');
+            // Display logs in standard output
+            pm2.launchBus(function(err, bus) {
+                console.log('[PM2] Log streaming started');
 
-            bus.on('log:out', function(packet) {
-                console.log('[App:%s] %s', packet.process.name, packet.data);
+                bus.on('log:out', function(packet) {
+                    console.log('[App:%s] %s', packet.process.name, packet.data);
+                });
+
+                bus.on('log:err', function(packet) {
+                    console.error('[App:%s][Err] %s', packet.process.name, packet.data);
+                });
             });
 
-            bus.on('log:err', function(packet) {
-                console.error('[App:%s][Err] %s', packet.process.name, packet.data);
-            });
+
         });
-
     });
 });
