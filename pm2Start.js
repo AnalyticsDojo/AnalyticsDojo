@@ -1,4 +1,4 @@
-require('dotenv').load();
+
 var pm2 = require('pm2');
 var nodemailer = require('nodemailer');
 var moment = require('moment-timezone');
