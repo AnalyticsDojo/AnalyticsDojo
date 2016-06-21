@@ -9,10 +9,10 @@ var serverName = process.env.SERVER_NAME || 'server';
 var maxMemory = process.env.MAX_MEMORY || '390M';
 var transportOptions = {
   type: 'smtp',
-  service: 'Mandrill',
+  service: 'SES',
   auth: {
-    user: process.env.MANDRILL_USER || false,
-    pass: process.env.MANDRILL_PASSWORD
+    user: process.env.SES_USER || false,
+    pass: process.env.SES_PASSWORD
   }
 };
 

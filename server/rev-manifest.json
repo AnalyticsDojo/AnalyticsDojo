@@ -1,10 +1,10 @@
 {
-  "bundle.js": "bundle-d8d4db6e55.js",
-  "commonFramework.js": "commonFramework-eb9abb37e6.js",
-  "iFrameScripts.js": "iFrameScripts-40fbbe6a21.js",
-  "main.css": "main-b2042f68f7.css",
-  "main.js": "main-29c637ef52.js",
-  "plugin.js": "plugin-fca1cae78d.js",
-  "vendor-challenges.js": "vendor-challenges-e075d0fdbe.js",
-  "vendor-main.js": "vendor-main-5c8e733cae.js"
+  "bundle.js": "bundle-0168d57b95.js",
+  "commonFramework.js": "commonFramework-3c69f6b830.js",
+  "iFrameScripts.js": "iFrameScripts-08bc15b460.js",
+  "main.css": "main-388604b303.css",
+  "main.js": "main-9cdb59d0fb.js",
+  "plugin.js": "plugin-391e2b7d3d.js",
+  "vendor-challenges.js": "vendor-challenges-806df13cbb.js",
+  "vendor-main.js": "vendor-main-10efee8868.js"
 }

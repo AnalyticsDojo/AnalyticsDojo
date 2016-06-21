@@ -1,4 +1,4 @@
-OnHeroku
+
 var OnHeroku=process.env.ONHEROKU;
 
 if(!OnHeroku){
