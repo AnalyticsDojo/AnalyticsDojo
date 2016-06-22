@@ -1,5 +1,7 @@
 var pm2 = require('pm2');
 var nodemailer = require('nodemailer');
+var moment = require('moment-timezone')
+var _ = require('lodash');
 
 var MACHINE_NAME = 'hk1';
 var PRIVATE_KEY  = process.env.KISS_PRIVATE_KEY;   // Keymetrics Private key
@@ -9,12 +11,13 @@ var instances = process.env.WEB_CONCURRENCY || -1; // Set by Heroku or -1 to sca
 var maxMemory = process.env.WEB_MEMORY      || 512;// " " "
 var transportOptions = {
     type: 'smtp',
-    service: 'SES',
+    service: 'SendGrid',
     auth: {
-        user: process.env.SES_USER || false,
-        pass: process.env.SES_PASSWORD
+        api_user: process.env.SENDGRID_USERNAME || false,
+        api_key: process.env.SENDGRID_PASSWORD
+        }
     }
-};
+
 var mailReceiver = process.env.MAIL_RECEIVER || false;
 
 pm2.connect(function() {

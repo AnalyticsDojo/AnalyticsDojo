@@ -13,10 +13,11 @@ module.exports = {
     key: process.env.BLOGGER_KEY
   },
 
-  mandrill: {
-    user: process.env.MANDRILL_USER,
-    password: process.env.MANDRILL_PASSWORD
+  sendgrid: {
+    user: process.env.SENDGRID_USER,
+    password: process.env.SENDGRID_PASSWORD
   },
+
 
   facebook: {
     clientID: process.env.FACEBOOK_ID,
