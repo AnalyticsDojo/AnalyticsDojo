@@ -13,7 +13,7 @@ var transportOptions = {
     type: 'smtp',
     service: 'SendGrid',
     auth: {
-        api_user: process.env.SENDGRID_USERNAME || false,
+        api_user: process.env.SENDGRID_USER || false,
         api_key: process.env.SENDGRID_PASSWORD
         }
     }
