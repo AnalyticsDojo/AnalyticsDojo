@@ -1,7 +1,8 @@
 window.common = (function({ $, common = { init: [] }}) {
 
-  common.displayTestResults = function displayTestResults(data = []) {
+  common.displayTestResults = function displayTestResults(data = [], down) {
     $('#testSuite').children().remove();
+    $('#testSuite').fadeIn('slow');
     data.forEach(({ err = false, text = '' }) => {
       var iconClass = err ?
         '"ion-close-circled big-error-icon"' :
@@ -20,7 +21,11 @@ window.common = (function({ $, common = { init: [] }}) {
       `)
         .appendTo($('#testSuite'));
     });
-
+    if (down) {
+        $('#scroll-locker').animate(
+            { scrollTop: $(document).height() }, 'slow'
+        );
+    }
     return data;
   };
 

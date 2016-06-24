@@ -33,7 +33,7 @@
       "MDNlinks": [
         "Math.max()",
         "Math.min()",
-        "Array.reduce()"
+        "Array.prototype.reduce()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -82,10 +82,10 @@
       "type": "bonfire",
       "MDNlinks": [
         "Comparison Operators",
-        "Array.slice()",
-        "Array.filter()",
-        "Array.indexOf()",
-        "Array.concat()"
+        "Array.prototype.slice()",
+        "Array.prototype.filter()",
+        "Array.prototype.indexOf()",
+        "Array.prototype.concat()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -148,9 +148,9 @@
       "type": "bonfire",
       "MDNlinks": [
         "Roman Numerals",
-        "Array.splice()",
-        "Array.indexOf()",
-        "Array.join()"
+        "Array.prototype.splice()",
+        "Array.prototype.indexOf()",
+        "Array.prototype.join()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -169,14 +169,14 @@
     },
     {
       "id": "a8e512fbe388ac2f9198f0fa",
-      "title": "Where art thou",
+      "title": "Wherefore art thou",
       "description": [
         "Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs (second argument). Each property and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.",
         "For example, if the first argument is <code>[{ first: \"Romeo\", last: \"Montague\" }, { first: \"Mercutio\", last: null }, { first: \"Tybalt\", last: \"Capulet\" }]</code>, and the second argument is <code>{ last: \"Capulet\" }</code>, then you must return the third object from the array (the first argument), because it contains the property and its value, that was passed on as the second argument.",
         "Remember to use <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/FreeCodeCamp-Get-Help' target='_blank'>Read-Search-Ask</a> if you get stuck. Write your own code."
       ],
       "challengeSeed": [
-        "function whereAreYou(collection, source) {",
+        "function whatIsInAName(collection, source) {",
         "  // What's in a name?",
         "  var arr = [];",
         "  // Only change code below this line",
@@ -186,21 +186,21 @@
         "  return arr;",
         "}",
         "",
-        "whereAreYou([{ first: \"Romeo\", last: \"Montague\" }, { first: \"Mercutio\", last: null }, { first: \"Tybalt\", last: \"Capulet\" }], { last: \"Capulet\" });"
+        "whatIsInAName([{ first: \"Romeo\", last: \"Montague\" }, { first: \"Mercutio\", last: null }, { first: \"Tybalt\", last: \"Capulet\" }], { last: \"Capulet\" });"
       ],
       "solutions": [
-        "function whereAreYou(collection, source) {\n  var arr = [];\n  var keys = Object.keys(source);\n  collection.forEach(function(e) {\n    if(keys.every(function(key) {return e[key] === source[key];})) {\n      arr.push(e);  \n    }\n  });\n  return arr;\n}"
+        "function whatIsInAName(collection, source) {\n  var arr = [];\n  var keys = Object.keys(source);\n  collection.forEach(function(e) {\n    if(keys.every(function(key) {return e[key] === source[key];})) {\n      arr.push(e);  \n    }\n  });\n  return arr;\n}"
       ],
       "tests": [
-        "assert.deepEqual(whereAreYou([{ first: \"Romeo\", last: \"Montague\" }, { first: \"Mercutio\", last: null }, { first: \"Tybalt\", last: \"Capulet\" }], { last: \"Capulet\" }), [{ first: \"Tybalt\", last: \"Capulet\" }], 'message: <code>whereAreYou([{ first: \"Romeo\", last: \"Montague\" }, { first: \"Mercutio\", last: null }, { first: \"Tybalt\", last: \"Capulet\" }], { last: \"Capulet\" })</code> should return <code>[{ first: \"Tybalt\", last: \"Capulet\" }]</code>.');",
-        "assert.deepEqual(whereAreYou([{ \"a\": 1 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2 }], { \"a\": 1 }), [{ \"a\": 1 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2 }], 'message: <code>whereAreYou([{ \"a\": 1 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2 }], { \"a\": 1 })</code> should return <code>[{ \"a\": 1 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2 }]</code>.');",
-        "assert.deepEqual(whereAreYou([{ \"a\": 1, \"b\": 2 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], { \"a\": 1, \"b\": 2 }), [{ \"a\": 1, \"b\": 2 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], 'message: <code>whereAreYou([{ \"a\": 1, \"b\": 2 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], { \"a\": 1, \"b\": 2 })</code> should return <code>[{ \"a\": 1, \"b\": 2 }, { \"a\": 1, \"b\": 2, \"c\": 2 }]</code>.');",
-        "assert.deepEqual(whereAreYou([{ \"a\": 1, \"b\": 2 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], { \"a\": 1, \"c\": 2 }), [{ \"a\": 1, \"b\": 2, \"c\": 2 }], 'message: <code>whereAreYou([{ \"a\": 1, \"b\": 2 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], { \"a\": 1, \"c\": 2 })</code> should return <code>[{ \"a\": 1, \"b\": 2, \"c\": 2 }]</code>.');"
+        "assert.deepEqual(whatIsInAName([{ first: \"Romeo\", last: \"Montague\" }, { first: \"Mercutio\", last: null }, { first: \"Tybalt\", last: \"Capulet\" }], { last: \"Capulet\" }), [{ first: \"Tybalt\", last: \"Capulet\" }], 'message: <code>whatIsInAName([{ first: \"Romeo\", last: \"Montague\" }, { first: \"Mercutio\", last: null }, { first: \"Tybalt\", last: \"Capulet\" }], { last: \"Capulet\" })</code> should return <code>[{ first: \"Tybalt\", last: \"Capulet\" }]</code>.');",
+        "assert.deepEqual(whatIsInAName([{ \"a\": 1 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2 }], { \"a\": 1 }), [{ \"a\": 1 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2 }], 'message: <code>whatIsInAName([{ \"a\": 1 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2 }], { \"a\": 1 })</code> should return <code>[{ \"a\": 1 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2 }]</code>.');",
+        "assert.deepEqual(whatIsInAName([{ \"a\": 1, \"b\": 2 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], { \"a\": 1, \"b\": 2 }), [{ \"a\": 1, \"b\": 2 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], 'message: <code>whatIsInAName([{ \"a\": 1, \"b\": 2 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], { \"a\": 1, \"b\": 2 })</code> should return <code>[{ \"a\": 1, \"b\": 2 }, { \"a\": 1, \"b\": 2, \"c\": 2 }]</code>.');",
+        "assert.deepEqual(whatIsInAName([{ \"a\": 1, \"b\": 2 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], { \"a\": 1, \"c\": 2 }), [{ \"a\": 1, \"b\": 2, \"c\": 2 }], 'message: <code>whatIsInAName([{ \"a\": 1, \"b\": 2 }, { \"a\": 1 }, { \"a\": 1, \"b\": 2, \"c\": 2 }], { \"a\": 1, \"c\": 2 })</code> should return <code>[{ \"a\": 1, \"b\": 2, \"c\": 2 }]</code>.');"
       ],
       "type": "bonfire",
       "MDNlinks": [
         "Global Object",
-        "Object.hasOwnProperty()",
+        "Object.prototype.hasOwnProperty()",
         "Object.keys()"
       ],
       "isRequired": true,
@@ -248,9 +248,9 @@
       ],
       "type": "bonfire",
       "MDNlinks": [
-        "Array.splice()",
-        "String.replace()",
-        "Array.join()"
+        "Array.prototype.splice()",
+        "String.prototype.replace()",
+        "Array.prototype.join()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -301,11 +301,11 @@
       ],
       "type": "bonfire",
       "MDNlinks": [
-        "Array.indexOf()",
-        "Array.push()",
-        "Array.join()",
-        "String.substr()",
-        "String.split()"
+        "Array.prototype.indexOf()",
+        "Array.prototype.push()",
+        "Array.prototype.join()",
+        "String.prototype.substr()",
+        "String.prototype.split()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -352,8 +352,8 @@
       ],
       "type": "bonfire",
       "MDNlinks": [
-        "Array.push()",
-        "String.split()"
+        "Array.prototype.push()",
+        "String.prototype.split()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -499,7 +499,7 @@
       "type": "bonfire",
       "MDNlinks": [
         "Arguments object",
-        "Array.reduce()"
+        "Array.prototype.reduce()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -551,7 +551,7 @@
       "MDNlinks": [
         "RegExp",
         "HTML Entities",
-        "String.replace()"
+        "String.prototype.replace()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -595,7 +595,7 @@
       "type": "bonfire",
       "MDNlinks": [
         "RegExp",
-        "String.replace()"
+        "String.prototype.replace()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -685,7 +685,7 @@
       "type": "bonfire",
       "MDNlinks": [
         "For Loops",
-        "Array.push()"
+        "Array.prototype.push()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -775,7 +775,7 @@
       ],
       "type": "bonfire",
       "MDNlinks": [
-        "Array.filter()"
+        "Array.prototype.filter()"
       ],
       "isRequired": true,
       "challengeType": 5,
@@ -821,8 +821,8 @@
       "type": "bonfire",
       "MDNlinks": [
         "Arguments object",
-        "Array.shift()",
-        "Array.slice()"
+        "Array.prototype.shift()",
+        "Array.prototype.slice()"
       ],
       "isRequired": true,
       "challengeType": 5,

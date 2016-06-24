@@ -19,6 +19,8 @@ import {
   calcLongestStreak
 } from '../utils/user-stats';
 
+import { flashIfNotVerified } from '../utils/middleware';
+
 const debug = debugFactory('fcc:boot:user');
 const sendNonUserToMap = ifNoUserRedirectTo('/map');
 const certIds = {
@@ -183,10 +185,11 @@ module.exports = function(app) {
   router.get(
     '/settings',
     sendNonUserToMap,
+    flashIfNotVerified,
     getSettings
   );
-  router.get('/vote1', vote1);
-  router.get('/vote2', vote2);
+  // router.get('/vote1', vote1);
+  // router.get('/vote2', vote2);
 
   // Ensure these are the last routes!
   router.get(
@@ -432,7 +435,7 @@ module.exports = function(app) {
               certViews[certType],
               {
                 username: user.username,
-                date: moment(new Date(completedDate)).format('MMMM, Do YYYY'),
+                date: moment(new Date(completedDate)).format('MMMM D, YYYY'),
                 name: user.name
               }
             );
@@ -579,33 +582,33 @@ module.exports = function(app) {
     });
   }
 
-  function vote1(req, res, next) {
-    if (req.user) {
-      req.user.tshirtVote = 1;
-      req.user.save(function(err) {
-        if (err) { return next(err); }
-
-        req.flash('success', { msg: 'Thanks for voting!' });
-        return res.redirect('/map');
-      });
-    } else {
-      req.flash('error', { msg: 'You must be signed in to vote.' });
-      res.redirect('/map');
-    }
-  }
-
-  function vote2(req, res, next) {
-    if (req.user) {
-      req.user.tshirtVote = 2;
-      req.user.save(function(err) {
-        if (err) { return next(err); }
-
-        req.flash('success', { msg: 'Thanks for voting!' });
-        return res.redirect('/map');
-      });
-    } else {
-      req.flash('error', {msg: 'You must be signed in to vote.'});
-      res.redirect('/map');
-    }
-  }
+  // function vote1(req, res, next) {
+  //   if (req.user) {
+  //     req.user.tshirtVote = 1;
+  //     req.user.save(function(err) {
+  //       if (err) { return next(err); }
+  //
+  //       req.flash('success', { msg: 'Thanks for voting!' });
+  //       return res.redirect('/map');
+  //     });
+  //   } else {
+  //     req.flash('error', { msg: 'You must be signed in to vote.' });
+  //     res.redirect('/map');
+  //   }
+  // }
+  //
+  // function vote2(req, res, next) {
+  //   if (req.user) {
+  //     req.user.tshirtVote = 2;
+  //     req.user.save(function(err) {
+  //       if (err) { return next(err); }
+  //
+  //       req.flash('success', { msg: 'Thanks for voting!' });
+  //       return res.redirect('/map');
+  //     });
+  //   } else {
+  //     req.flash('error', {msg: 'You must be signed in to vote.'});
+  //     res.redirect('/map');
+  //   }
+  // }
 };

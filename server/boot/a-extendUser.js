@@ -1,8 +1,10 @@
 import { Observable } from 'rx';
 import debugFactory from 'debug';
 import { isEmail } from 'validator';
+import path from 'path';
 
 const debug = debugFactory('fcc:user:remote');
+const isDev = process.env.NODE_ENV !== 'production';
 
 function destroyAllRelated(id, Model) {
   return Observable.fromNodeCallback(
@@ -15,7 +17,6 @@ module.exports = function(app) {
   var User = app.models.User;
   var UserIdentity = app.models.UserIdentity;
   var UserCredential = app.models.UserCredential;
-  var Email = app.models.Email;
   User.observe('before delete', function(ctx, next) {
     debug('removing user', ctx.where);
     var id = ctx.where && ctx.where.id ? ctx.where.id : null;
@@ -52,6 +53,11 @@ module.exports = function(app) {
   User.beforeRemote('create', function(ctx, user, next) {
     var body = ctx.req.body;
     if (body) {
+      // this is workaround for preventing a server crash
+      // refer strongloop/loopback/#1364
+      if (body.password === '') {
+        body.password = null;
+      }
       body.emailVerified = false;
     }
     next();
@@ -69,31 +75,30 @@ module.exports = function(app) {
       type: 'email',
       to: user.email,
       from: 'Team@analyticsdojo.com',
-      subject: 'Welcome to AnalyticsDojo!',
-      redirect: '/',
-      text: [
-        'Greetings from Upstate New York!\n\n',
-        'Thank you for joining our community.\n',
-        'Feel free to email us at this address if you have ',
-        'any questions about AnalyticsDojo.\n',
-        'And if you have a moment, check out our blog: ',
-        'medium.analyticsdojo.com.\n\n',
-        'Good luck with the challenges!\n\n',
-        '- the AnalyticsDojo Team'
-      ].join('')
+      subject: 'Welcome to Free Code Camp!',
+      protocol: isDev ? null : 'https',
+      host: isDev ? 'localhost' : 'freecodecamp.com',
+      port: isDev ? null : 443,
+      template: path.join(
+        __dirname,
+        '..',
+        'views',
+        'emails',
+        'a-extend-user-welcome.ejs'
+      ),
+      redirect: '/email-signin'
     };
 
     debug('sending welcome email');
-    return Email.send(mailOptions, function(err) {
+    return user.verify(mailOptions, function(err) {
       if (err) { return next(err); }
-      return req.logIn(user, function(err) {
-        if (err) { return next(err); }
-
-        req.flash('success', {
-          msg: [ "Welcome to AnalyticsDojo! We've created your account." ]
-        });
-        return res.redirect(redirect);
+      req.flash('success', {
+        msg: [ 'Congratulations ! We\'ve created your account. ',
+               'Please check your email. We sent you a link that you can ',
+               'click to verify your email address and then login.'
+             ].join('')
       });
+      return res.redirect(redirect);
     });
   });
 };

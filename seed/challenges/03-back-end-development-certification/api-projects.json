@@ -58,8 +58,8 @@
         ],
         [
           "//i.imgur.com/2a20Vah.gif",
-          "A gif showing you how to start mongoDB in c9.io's terminal.",
-          "In your terminal, start MongoDB by entering:<br><br><code>mongod --smallfiles</code>",
+          "A gif showing you how to install MongoDB and start it in c9.io's terminal.",
+          "In your terminal, install MongoDB by entering: <br><br><code>sudo apt-get install mongodb-org</code><br><br> then start MongoDB by entering:<br><br><code>mongod --smallfiles</code>",
           ""
         ],
         [
@@ -151,7 +151,7 @@
         [
           "//i.imgur.com/2a20Vah.gif",
           "Una imagen gif que te muestra cómo iniciar mongoDB en la terminal de c9.io.",
-          "En tu terminal, inicia MongoDB con el siguiente comando: <code>mongod --smallfiles</code>",
+          "En tu terminal, instala MongoDB usando el siguiente comando: <br><br><code>sudo apt-get install mongodb-org</code><br><br>. Inicia MongoDB con el siguiente comando: <code>mongod --smallfiles</code>",
           ""
         ],
         [
@@ -319,7 +319,7 @@
       "id": "bd7158d8c443edefaeb5bd0f",
       "title": "File Metadata Microservice",
       "description": [
-        "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='https://cryptic-ridge-9197.herokuapp.com/' target='_blank'>https://cryptic-ridge-9197.herokuapp.com/</a> and deploy it to Heroku.",
+        "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='https://aryanj-file-size.herokuapp.com/' target='_blank'>https://aryanj-file-size.herokuapp.com/</a> and deploy it to Heroku.",
         "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-back-end-development-projects'>https://freecodecamp.com/challenges/get-set-for-our-back-end-development-projects</a>.",
         "Here are the specific user stories you should implement for this project:",
         "<strong>User Story:</strong> I can submit a FormData object that includes a file upload.",

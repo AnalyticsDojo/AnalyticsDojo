@@ -6,17 +6,8 @@ var _ = require('lodash');
 
 var instances = process.env.INSTANCES || 1;
 var serverName = process.env.SERVER_NAME || 'server';
-var maxMemory = process.env.MAX_MEMORY || '370M';
-var transportOptions = {
-  type: 'smtp',
-  service: 'SES',
-  auth: {
-    user: process.env.SES_USER || false,
-    pass: process.env.SES_PASSWORD
-  }
-};
 
-var mailReceiver = process.env.MAIL_RECEIVER || false;
+var maxMemory = process.env.MAX_MEMORY || '390M';
 
 pm2.connect(function() {
   pm2.start({
@@ -36,7 +27,6 @@ pm2.connect(function() {
     pm2.disconnect();
   });
 });
-
 
 if (transportOptions.auth.user && mailReceiver) {
   console.log('setting up mailer');
@@ -79,3 +69,4 @@ if (transportOptions.auth.user && mailReceiver) {
     });
   });
 }
+
