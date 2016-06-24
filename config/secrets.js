@@ -11,13 +11,12 @@ module.exports = {
 
   blogger: {
     key: process.env.BLOGGER_KEY
+  }, 
+    
+  ses: {
+    user: process.env.SES_USER,
+    password: process.env.SES_PASSWORD
   },
-
-  sendgrid: {
-    user: process.env.SENDGRID_USER,
-    password: process.env.SENDGRID_PASSWORD
-  },
-
 
   facebook: {
     clientID: process.env.FACEBOOK_ID,

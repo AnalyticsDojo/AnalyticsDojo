@@ -11,13 +11,12 @@ var instances = process.env.WEB_CONCURRENCY || -1; // Set by Heroku or -1 to sca
 var maxMemory = process.env.WEB_MEMORY      || 512;// " " "
 var transportOptions = {
     type: 'smtp',
-    service: 'SendGrid',
+    service: 'SES',
     auth: {
-        api_user: process.env.SENDGRID_USER || false,
-        api_key: process.env.SENDGRID_PASSWORD
+        user: process.env.SES_USERNAME || false,
+        password: process.env.SES_PASSWORD
         }
-    }
-
+}
 var mailReceiver = process.env.MAIL_RECEIVER || false;
 
 pm2.connect(function() {
