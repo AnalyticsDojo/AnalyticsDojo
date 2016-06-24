@@ -3,11 +3,6 @@ module.exports = {
   db: process.env.MONGODB || process.env.MONGOHQ_URL,
 
   sessionSecret: process.env.SESSION_SECRET,
-    
-  ses: {
-    user: process.env.SES_USER,
-    password: process.env.SES_PASSWORD
-  },
 
   facebook: {
     clientID: process.env.FACEBOOK_ID,
