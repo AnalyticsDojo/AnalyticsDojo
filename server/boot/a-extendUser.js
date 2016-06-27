@@ -76,9 +76,9 @@ module.exports = function(app) {
       to: user.email,
       from: 'Team@analyticsdojo.com',
       subject: 'Welcome to the Analytics Dojo!',
-      protocol: isDev ? null : 'https',
+      protocol: isDev ? null : 'http',
       host: isDev ? 'localhost' : 'analyticsdojo.com',
-      port: isDev ? null : 443,
+      port: isDev ? null : 80,
       template: path.join(
         __dirname,
         '..',
