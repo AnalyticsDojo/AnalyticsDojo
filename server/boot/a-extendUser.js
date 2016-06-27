@@ -75,9 +75,9 @@ module.exports = function(app) {
       type: 'email',
       to: user.email,
       from: 'Team@analyticsdojo.com',
-      subject: 'Welcome to Free Code Camp!',
+      subject: 'Welcome to the Analytics Dojo!',
       protocol: isDev ? null : 'https',
-      host: isDev ? 'localhost' : 'freecodecamp.com',
+      host: isDev ? 'localhost' : 'analyticsdojo.com',
       port: isDev ? null : 443,
       template: path.join(
         __dirname,

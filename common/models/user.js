@@ -386,10 +386,10 @@ module.exports = function(User) {
           var mailOptions = {
             type: 'email',
             to: email,
-            from: 'Team@freecodecamp.com',
+            from: 'Team@analyticsdojo.com',
             subject: 'Welcome to Free Code Camp!',
             protocol: isDev ? null : 'https',
-            host: isDev ? 'localhost' : 'freecodecamp.com',
+            host: isDev ? 'localhost' : 'analyticsdojo.com',
             port: isDev ? null : 443,
             template: path.join(
               __dirname,

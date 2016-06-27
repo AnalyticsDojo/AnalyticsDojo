@@ -2,7 +2,7 @@ import path from 'path';
 import { Observable } from 'rx';
 import adler32 from 'adler32';
 
-const basePath = process.cwd() + '/seed/adchallenges/';
+const basePath = process.cwd() + '/seed/challenges/';
 
 export default function getFromDisk$(challenge) {
   if (challenge && !challenge.fileName) {

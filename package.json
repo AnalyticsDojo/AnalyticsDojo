@@ -12,7 +12,7 @@
     "start": "node server/production-start.js",
     "start-production": "node pm2StartAD.js",
     "lint": "npm run lint-js && npm run lint-json",
-    "lint-challenges": "jsonlint -q seed/adchallenges/**/*.json",
+    "lint-challenges": "jsonlint -q seed/challenges/**/*.json",
     "lint-server": "jsonlint -q server/*.json",
     "lint-resources": "jsonlint -q server/resources/*.json",
     "lint-utils": "jsonlint -q server/utils/*.json",
