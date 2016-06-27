@@ -389,7 +389,7 @@ module.exports = function(User) {
             from: 'Team@analyticsdojo.com',
             subject: 'Welcome to Free Code Camp!',
             protocol: isDev ? null : 'http',
-            host: isDev ? 'localhost' : 'analyticsdojo.com',
+            host: isDev ? 'localhost' : 'www.analyticsdojo.com',
             port: isDev ? null : 80,
             template: path.join(
               __dirname,
