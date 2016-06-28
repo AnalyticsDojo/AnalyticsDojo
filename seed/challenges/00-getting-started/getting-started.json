@@ -5,14 +5,6 @@
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "5758e1abed26e22027aff652",
-      "title": "Getting Started ",
-      "description": [],
-      "challengeSeed": [],
-      "tests": [],
-      "challengeType": 7
-    },
-    {
       "id": "560add37cb82ac38a17513bf",
       "title": "Create a GitHub Account and Join our Chat Rooms",
       "description": [
