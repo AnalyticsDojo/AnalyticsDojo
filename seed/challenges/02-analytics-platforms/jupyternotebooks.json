@@ -1,11 +1,11 @@
 {
-  "name": "Data Munging",
-  "order": 2,
+  "name": "Data Analytics with Jupyter Notebooks",
+  "order": 3,
   "time": "0 hours",
   "isComingSoon": true,
   "challenges": [
     {
-      "id": "bd7128d8c441eddfbeb5bdd3",
+      "id": "bd7128d8c441eddfbeb5ffs3",
       "title": "Data Munging",
       "description": [],
       "challengeSeed": [],

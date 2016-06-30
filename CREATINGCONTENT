@@ -1,0 +1,97 @@
+# Contributor's Guide - Content Creation
+
+## Table of Contents
+
+- [Overview of Lesson Structure!](#overview-lesson)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Linting Setup](#linting-setup)
+- [Found a bug?](#found-a-bug)
+- [Creating Pull Requests](#creating-pull-requests)
+- [Common Steps](#common-steps)
+- [Next Steps](#next-steps)
+
+
+
+There are a number of different fields in a JSON data structure.
+
+The *name* is the name that will be used on the title.
+The *order* is the order relevant to the structuring of the program.
+The *time* just lists how long the lessons will take.
+The *helpRoom* is the specific help room for this info.
+The *isComingSoon* is either true or could be deleted.
+
+
+```{markdown}
+{
+  "name": "Data Munging",
+  "order": 2,
+  "time": "0 hours",
+  "helpRoom": "Help",
+  "isComingSoon": true,
+  "challenges": [
+    {
+      "id": "bd7128d8c441eddfbeb5bdd3",
+      "title": "Data Munging",
+      "description": [],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    }
+  ]
+}
+```
+
+The *challenges* and *type* is a bit more complex.  Before getting into the overall structure of each challenge, there are a number of
+different challenge types. The challenge types are as follows.
+
+Basic PPT style analysis is similar to type 7 and will be commonly used.
+Type 2 is al
+
+  html: 0, 'challenges/showHTML', (Not relevant)
+  js: 1,   'challenges/showJS',   (Not relevant)
+  video: 2,
+  zipline: 3,    'challenges/showZiplineOrBasejump',  Enter a published notebook.
+  basejump: 4,   'challenges/showZiplineOrBasejump',
+  bonfire: 5, This is a javascript based analysis that won't be relevant.
+  hikes: 6, This is a simple list of information followed by a quiz.
+  **step: 7,**
+  waypoint: 0
+
+
+
+Challenge Type 7 is the first type, were just a click will get you through.  If you add a link, they have to click on the link.  There is a photo or a slide used to generate.
+
+
+  4: 'challenges/showZiplineOrBasejump',
+  This has a link to a video. A variety of steps and takes as an entry a
+  github repository and a url.  Not sure what the URL would do.
+
+  5: 'challenges/showBonfire',
+         (This seems to be some javascript)
+**  7: 'challenges/showStep'
+        (1) Image file
+        (2) Text description of the image
+        (3) Content to be distplayed
+        (4) **
+
+  6: Simple list of information
+
+
+
+
+
+
+
+
+
+
+This is an image.
+"http://i.imgur.com/Elb3dfj.jpg",
+          "A screenshot of some of our campers coding together in Toronto.",
+          "<bold>Learning to code is hard.</bold> To succeed, you'll need lots of practice and support. That's why we've created a rigorous curriculum and supportive community.",
+          ""
+
+
