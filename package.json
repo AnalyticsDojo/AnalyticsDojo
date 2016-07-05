@@ -1,9 +1,9 @@
 {
-  "name": "freecodecamp",
+  "name": "analyticsdojo",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/freecodecamp/freecodecamp.git"
+    "url": "https://github.com/analyticsdojo/analyticsdojo.git"
   },
   "scripts": {
     "only-once": "npm run create-rev && echo '\n\nseeding database\n\n' && node seed && echo '\n\nSeeding Completed\n\n'",

@@ -1,7 +1,6 @@
+var OnHeroku = process.env.ONHEROKU;
 
-var OnHeroku=process.env.ONHEROKU;
-
-if(!OnHeroku){
+if (!OnHeroku) {
     require('dotenv').load();
 }
 var pmx = require('pmx');
@@ -15,11 +14,12 @@ var _ = require('lodash'),
     setupPassport = require('./component-passport');
 
 
-var setProfileFromGithub = require('./utils/auth').setProfileFromGithub;
-var getSocialProvider = require('./utils/auth').getSocialProvider;
-var getUsernameFromProvider = require('./utils/auth').getUsernameFromProvider;
-var generateKey =
-  require('loopback-component-passport/lib/models/utils').generateKey;
+// var setProfileFromGithub = require('./utils/auth').setProfileFromGithub;
+// var getSocialProvider = require('./utils/auth').getSocialProvider;
+// var getUsernameFromProvider =
+// require('./utils/auth').getUsernameFromProvider;
+// var generateKey =
+//  require('loopback-component-passport/lib/models/utils').generateKey;
 
 var app = loopback();
 var isBeta = !!process.env.BETA;

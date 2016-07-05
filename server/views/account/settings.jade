@@ -63,7 +63,7 @@ block content
                 .col-xs-9
                   p.large-p Send me announcement emails
                     br
-                    | (we'll send you these every Thursday)
+                    | (related to the AnalyticsDojo)
                 if (user.sendMonthlyEmail)
                   .col-xs-3
                     a.btn.btn-lg.btn-primary.btn-block.active.positive-20(href='/toggle-announcement-email-mode') On
@@ -75,7 +75,7 @@ block content
                 .col-xs-9
                   p.large-p Send me notification emails
                     br
-                    | (these will pertain to your account)
+                    | (related to your account)
                 if (user.sendNotificationEmail)
                   .col-xs-3
                     a.btn.btn-lg.btn-primary.btn-block.active.positive-20(href='/toggle-notification-email-mode') On
@@ -85,9 +85,9 @@ block content
 
               .row
                 .col-xs-9
-                  p.large-p Send me Quincy's weekly email
+                  p.large-p Send me weekly data science updates
                     br
-                    | (with new articles every Tuesday)
+                    | (related to life as a data scientist)
                 if (user.sendQuincyEmail)
                   .col-xs-3
                     a.btn.btn-lg.btn-primary.btn-block.active.positive-20(href='/toggle-quincy-email-mode') On

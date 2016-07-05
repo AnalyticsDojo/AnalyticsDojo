@@ -1,33 +1,33 @@
 {
   "name": "Join the Analytics Dojo Community",
-  "order": 1,
+  "order": 2,
   "time": "15 minutes",
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "560add10cb82ac38a17513be",
-      "title": "Learn how the Analytics Dojo works",
+      "id": "560add10ag82ac40a18392be",
+      "title": "Choose and Setup an Analytics Platform",
       "description": [
         [
           "//i.imgur.com/LnreS3r.png",
-          "A picture of Analytics's Dojo 4 benefits. Join a community, work on data challenges, build a portfolio, work with companies.",
-          "Welcome to the Analytics Dojo. We're an open source community of people learning how to use data.",
+          "A picture of an analytics platform",
+          "You have begun your journey. Unlike a lot of <i>learn to code</i> sites that use in-browser tutorials, the AnalyticsDojo uses the same the same tools you are likely to use in a production environment.  This means that before we can get started, we have to go through a bit of setup of an analytics platform. An <i>analytics platform</i> is an environment in which you can execute programs, store data, and even create production web services or Application Programming Interfaces (APIs) that enable your application to be deployted to a production environment.",
           "",
           "This image adopted from FreeCodeCamp.com.",
           "http://freecodecamp.com"
         ],
         [
           "//i.imgur.com/WfiL6gn.jpg",
-          "An image of the data scientist unicorn.",
-          "The data scientist has been described as the <a href='http://bit.ly/sexy299'>sexiest job of the 21stcentry</a>, and people with the broad range of skills to truely be a data scientist have been called <i>unicorns</i>. Why? There are such a combination of diverse range of knowledge, techniques, & technologies to truely be a data scientist is extremely rare. If if you don't get your <i>unicorns</i> card, data science skills can be extremely <a href='http://bit.ly/unicorn298'>valuable</a> skill for your career. ",
+          "An image of a Jupyter Notebook",
+          "All of the work that we are going to be doing will utilize Jupyter notebooks. Jupyter notebooks are a flexible computing enviroment that was origionally based on iPython notebooks.  The Jupyter team has done an amazing job bringing the notebook computing enviroment to a wide <a href='https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages'>variety of languages including R, Python, Scala, and even SAS.</a>",
           "",
-          "By Special Collections, University of Houston Libraries [CC0], via Wikimedia Commons",
-          "http://digital.lib.uh.edu/u?/p15195coll18,33"
+          "",
+          ""
         ],
         [
           "//i.imgur.com/EMmq1DK.jpg",
-          "An image of the data scientist unicorn.",
-          "Learning data science doesn't have to be about starting a new career.  According to a <a href = 'http://bit.ly/corptraining76'>recent survey by Forbes</a>, 63% of the companies surveyed have developed formal or informal corporate training programs in analytics. As noted in the article, the advantage of getting current employees familiar with data science is that they '<i>already know the business</i>'.",
+          "An image several different analytics platforms.",
+          "Currently there a wide variety of online platforms to do analytics using Jupyter notebooks. It is emerging as a powerful standand to do data science.  However, we want to focus our resources those platforms that are currently easy for beginners to get started.  You only need one platform, and we suggest becoming an expert in one. However,   ",
           "",
           "By Raysonho @ Open Grid Scheduler / Grid Engine (Own work) [CC0], via Wikimedia Commons",
           "https://commons.wikimedia.org/wiki/File%3AIBMComputerTrainingWorkshop.JPG"

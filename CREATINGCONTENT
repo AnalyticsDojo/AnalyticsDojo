@@ -72,10 +72,13 @@ Challenge Type 7 is the first type, were just a click will get you through.  If 
   5: 'challenges/showBonfire',
          (This seems to be some javascript)
 **  7: 'challenges/showStep'
-        (1) Image file
-        (2) Text description of the image
-        (3) Content to be distplayed
-        (4) **
+        (0) Image file
+        (1) Text description of the image
+        (2) Content to be distplayed
+        (3) Link to continue...sometimes they have to click link to continue. (Optional)
+        (4) Credit to this person (Optional)
+        (5) Link will be opened in a new window. Required if (4).
+
 
   6: Simple list of information
 
