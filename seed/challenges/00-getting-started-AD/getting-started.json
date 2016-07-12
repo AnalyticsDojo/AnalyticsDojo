@@ -139,7 +139,7 @@
       "title": "Learn What to Do If You Get Stuck",
       "description": [
         [
-          "//http://imgur.com/hLBZQSP",
+          "//i.imgur.com/hLBZQSP.jpg",
           "The text \"Data Science is hard.\"",
           "Data science and analytics is hard and requires a broad array of skills. You will get stuck. Everyone gets stuck. The key is knowing how to get unstuck.",
           ""
@@ -157,10 +157,12 @@
           ""
         ],
         [
-          "//i.imgur.com/ZRgXraT.gif",
-          "A gif showing us scrolling through our challenge map.",
-          "Now you're ready to start learning data science. The \"Lessons\" will show you the variety of ways of getting started learning data science. We recommend that you complete these from top to bottom, at a sustainable pace. Our open source community is constantly improving our challenges, so don't be surprised if they change or move around.",
-          ""
+          "//i.imgur.com/nfw3AAt.png",
+          "A diagram showing the CRISP Model for data mining",
+          "Now you're ready to start learning data science. The \"Lessons\" will show you the variety of ways of getting started learning data science. We will use the Cross Industry Standard Process for Data Mining (CRISP) model to provide a guide. This breaks down analytics into manageable steps. ",
+          "",
+          "By Kenneth Jensen (Own work) [CC BY-SA 3.0], via Wikimedia Commons",
+          "https://commons.wikimedia.org/wiki/File%3ACRISP-DM_Process_Diagram.png"
         ]
       ],
       "challengeSeed": [],

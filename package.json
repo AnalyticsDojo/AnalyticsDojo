@@ -22,7 +22,8 @@
     "pretest": "npm run lint",
     "test": "npm run test-challenges",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "heroku-postbuild": "NODE_ENV=production gulp build -p"
   },
   "license": "(BSD-3-Clause AND CC-BY-SA-4.0)",
   "dependencies": {
