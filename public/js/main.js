@@ -163,7 +163,7 @@ $(document).ready(function () {
   setCSRFToken($('meta[name="csrf-token"]').attr('content'));
 
   $('img').error(function () {
-    $(this).unbind('error').attr('src', 'https://s3.amazonaws.com/freecodecamp/camper-image-placeholder.png');
+    $(this).unbind('error').attr('src', 'https://s3.amazonaws.com/analyticsdojo/placeholder.png');
   });
 
   // map sharing
