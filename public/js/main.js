@@ -1,1 +1,579 @@
-"use strict";var main=window.main||{};main.mapShareKey="map-shares",main.ga=window.ga||function(){},main=function(e,a){var n=a.Mousetrap;return((window.gitter={}).chat={}).options={disableDefaultChat:!0},e.chat={},e.chat.isOpen=!1,e.chat.createHelpChat=function(){throw new Error("Sidecar chat has not initialized")},document.addEventListener("gitter-sidecar-ready",function(a){function t(){e.chat.isOpen||e.chat.mainChat.toggleChat(!0)}function i(){$("#chat-embed-main").addClass("is-collapsed"),document.activeElement.blur()}function o(){var e=$("#chat-embed-main").hasClass("is-collapsed");e?t():i()}e.chat.GitterChat=a.detail.Chat,e.chat.createHelpChat=function(a,n,t){t=a.replace(/([A-Z])/g," $1").replace("Java Script","JavaScript"),$("body").append('<aside id="chat-embed-help" class="gitter-chat-embed is-collapsed" />'),e.chat.helpChat=new e.chat.GitterChat({room:"freecodecamp/"+a,activationElement:!1,targetElement:$("#chat-embed-help")}),$(n).on("click",function(){var a=!$(this).hasClass("active");e.chat.helpChat.toggleChat(a),a&&$(n).addClass("active")});var i=!1;$("#chat-embed-help").on("gitter-chat-toggle",function(e){var a=!!e.originalEvent.detail.state;return i||(i=!0,$("#chat-embed-help > .gitter-chat-embed-action-bar").prepend('<div class="chat-embed-main-title"><span>'+t+"</span></div>")),a?$(n).addClass("active"):$(n).removeClass("active")})},$("body").append('<aside id="chat-embed-main" class="gitter-chat-embed is-collapsed" />'),e.chat.mainChat=new e.chat.GitterChat({room:"analyticsdojo/analyticsdojo",activationElement:!1,targetElement:$("#chat-embed-main")});var s=!1;$("#chat-embed-main").on("gitter-chat-toggle",function(){return s?null:(s=!0,$("#chat-embed-main > .gitter-chat-embed-action-bar").prepend('<div class="chat-embed-main-title"><span>Analytics Dojo\'s Main Chat</span></div>'),null)}),$("#nav-chat-btn").on("click",function(e){e.ctrlKey||e.metaKey||o(),window.ga("send","event","NAV","NAV-CHAT","Nav Chat Button Clicked")}),n.bind("g c",o)}),e}(main,window);var lastCompleted="undefined"!=typeof lastCompleted?lastCompleted:"";main.getMapShares=function(){var e=JSON.parse(localStorage.getItem(main.mapShareKey)||"[]");return e&&Array.isArray(e)||(localStorage.setItem(main.mapShareKey,JSON.stringify([])),e=[]),e},main.setMapShare=function(e){var a=main.getMapShares(),n=!1;return a.forEach(function(a){a===e&&(n=!0)}),n||a.push(e),localStorage.setItem(main.mapShareKey,JSON.stringify(a)),a},$(document).ready(function(){function e(e){$(e).prev().find(".fa-caret-right").removeClass("fa-caret-right").addClass("fa-caret-down")}function a(e){$(e).prev().find(".fa-caret-down").removeClass("fa-caret-down").addClass("fa-caret-right")}function n(a){$(a).addClass("in").css("height","auto"),e(a)}function t(e){$(e).removeClass("in").css("height","auto"),a(e)}function i(){if(!main.isMapAsideLoad){var e=$('<iframe id = "map-aside-frame" >');e.attr({src:"/map-aside",frameBorder:"0"}),$(".map-aside").append(e),main.isMapAsideLoad=!0}$(".map-aside").removeClass("is-collapsed")}function o(){$(".map-aside").addClass("is-collapsed"),document.activeElement.blur()}function s(){var e=$(".map-aside").hasClass("is-collapsed");e?i():o()}function d(){if(!window.common)return!1;var e=window.common.challengeType,a=window.common.dashedName,n="";return"0"===e||"1"===e?(n="challenge-",n+a):"5"===e&&(n="algorithm-",n+a)}function c(){if(!main.isWikiAsideLoad){var e="//freecodecamp.github.io/wiki/en/",a=window.location.toString().match(/\/\w{2}\//);a=a?a[0]:"/en/";var n=d();n?e=e+n+"/":"/en/"!==a&&(e=e.substr(0,e.length-4)+a);var t=$("<iframe>");t.attr({src:e,frameBorder:"0"}),$(".wiki-aside").append(t),main.isWikiAsideLoad=!0}$(".wiki-aside").removeClass("is-collapsed")}function l(){$(".wiki-aside").addClass("is-collapsed"),document.activeElement.blur()}function r(){var e=$(".wiki-aside").hasClass("is-collapsed");e?c():l()}function h(){k.val(""),k.next().children().removeClass("fa-times").addClass("fa-search"),k.next().removeClass("filled"),$(".map-accordion").find(".hidden").removeClass("hidden"),$("#noneFound").hide()}function m(){var e=arguments.length<=0||void 0===arguments[0]?"":arguments[0],a=arguments.length<=1||void 0===arguments[1]?"alert-info":arguments[1];return $(".flashMessage").append($("\n      <div class='alert "+a+"'>\n        <button class='close' type='button', data-dismiss='alert'>\n          <span class='ion-close-circled' />\n        </Button>\n        <div>"+e+"</div>\n      </div>\n    "))}function p(){if(!main.userId)return m("You must be logged in to use our themes.");var e=document.getElementById("map-aside-frame"),a=$("body");e&&(e.src=e.src),a.hide();var n=void 0;a.hasClass("night")?(a.removeClass("night"),n="default"):(a.addClass("night"),n="night"),a.fadeIn("100");var t={url:"/api/users/"+main.userId+"/update-theme",type:"POST",data:{theme:n},dataType:"json"};return $.ajax(t).success(function(){return console.log("theme updated successfully")}).fail(function(e){var a=void 0;try{a=JSON.parse(e.responseText).error.message}catch(n){return null}return a?m(a):null})}var u=window.Rx.Observable,f="X-CSRF-Token",g=function(e){jQuery.ajaxPrefilter(function(a,n,t){t.crossDomain||t.setRequestHeader(f,e)})};g($('meta[name="csrf-token"]').attr("content")),$("img").error(function(){$(this).unbind("error").attr("src","https://s3.amazonaws.com/freecodecamp/camper-image-placeholder.png")});var v=main.getMapShares();lastCompleted&&v.indexOf(lastCompleted)===-1&&$('div[id="'+lastCompleted+'"]').parent().parent().removeClass("hidden"),$(".map-challenge-block-share").on("click",function(e){e.preventDefault();var a=$(this).children().attr("id"),n=a.replace(/\s/,"%20"),t="undefined"!=typeof window.username?window.username:"",i="https://www.facebook.com/dialog/feed?app_id=1644598365767721&display=page&caption=I%20just%20completed%20the%20"+n+"%20section%20on%20Free%20Code%20Camp%2E&link=http%3A%2F%2Ffreecodecamp%2Ecom%2F"+t+"&redirect_uri=http%3A%2F%2Ffreecodecamp%2Ecom%2Fmap";main.setMapShare(a),window.ga("send","event","FB_LINK","SHARE","Facebook map share"),window.location.href=i}),$.each($(".sr-only"),function(e,a){" Complete"===$(a).text()&&$(a).parents("p").addClass("manip-hidden")}),$.each($(".map-collapse"),function(e,a){$(a).find(".manip-hidden").length===$(a).find("p").length&&(t(a),$(a).prev("h3").addClass("faded"),$(a).prev("h2").addClass("faded"))});var w,C,b=localStorage.getItem("currentDashedName"),y=$("p.padded-ionic-icon a");!b&&$(".sr-only").length&&(y=$(".sr-only")),C=y.filter(function(){return b?$(this).attr("href").match(b):" Complete"===$(this).text()}),C.length&&(C=C[C.length-1],w=$(C).offset().top-380,$("html, body, .map-accordion").scrollTop(w)),String(window.location).match(/\/map$/gi)&&($("body>.flashMessage").find(".alert").css("display","none"),$(".map-fixed-header").css("top","50px"));var k=$("#map-filter"),S=$("#showAll");$("#nav-map-btn").on("click",function(e){e.ctrlKey||e.metaKey||s()}),$(".map-aside-action-collapse").on("click",o),$("#nav-wiki-btn").on("click",function(e){e.ctrlKey||e.metaKey||r()}),$(".wiki-aside-action-collapse").on("click",l),$("#accordion").on("show.bs.collapse",function(a){e(a.target),$("a[data-toggle=collapse]").length===$(".fa-caret-down").length&&(S.text("Collapse all lessons"),S.addClass("active"))}).on("hide.bs.collapse",function(e){a(e.target),$("a[data-toggle=collapse]").length===$(".fa-caret-right").length&&(S.text("Expand all lessons"),S.removeClass("active"))}),S.on("click",function(){var e=S.hasClass("active");return e?($.each($(".map-collapse.in"),function(e,a){t(a)}),S.text("Expand all lessons"),S.removeClass("active")):($.each($('.map-collapse:not(".in")'),function(e,a){n(a)}),S.text("Collapse all lessons"),S.addClass("active"))}),k.on("keyup",function(){if(k.val().length>0){var e=k.val().replace(/ /g,"."),a=new RegExp(e.split("").join(".*"),"i");$(".challenge-title").each(function(e,t){a.test($(t).attr("name"))?(n($(t).closest(".chapterBlock")),n($(t).closest(".certBlock")),$(t).removeClass("hidden")):$(t).addClass("hidden")}),$.each($(".chapterBlock"),function(e,a){$(a).find(".hidden").length===$(a).find("p").length?($(a).addClass("hidden"),$(a).prev("h3").addClass("hidden")):($(a).removeClass("hidden"),$(a).prev("h3").removeClass("hidden"))}),$.each($(".certBlock"),function(e,a){$(a).children("#nested").children("h3.hidden").length===$(a).children("#nested").children("h3").length?$(a).prev("h2").addClass("hidden"):$(a).prev("h2").removeClass("hidden")}),k.next().children().hasClass("fa-search")&&(k.next().children().removeClass("fa-search").addClass("fa-times"),k.next().addClass("filled"),$("html, body, .map-accordion").scrollTop(0))}else h();$.find(".certBlock").length===$(".map-accordion").children(".hidden").length?$("#noneFound").show():$("#noneFound").hide()}),k.focus(),$(".map-buttons .input-group-addon").on("click",h),k.on("keydown",function(e){27===e.keyCode&&(e.preventDefault(),h())}),window.Mousetrap.bind("esc",h),window.Mousetrap.bind("g m",s),u.merge(u.fromEvent($("#night-mode"),"click"),u.create(function(e){window.Mousetrap.bind("g t n",function(){return e.onNext()})})).debounce(500).subscribe(p,function(e){return console.error(e)}),window.Mousetrap.bind("g n n",function(){window.location="/challenges/next-challenge"}),window.Mousetrap.bind("g n a",function(){window.location="/account"}),window.Mousetrap.bind("g n m",function(){window.location="/map"}),window.Mousetrap.bind("g n w",function(){window.location="/wiki"}),window.Mousetrap.bind("g n a",function(){window.location="/about"}),window.Mousetrap.bind("g n s",function(){window.location="/shop"}),window.Mousetrap.bind("g n o",function(){window.location="/settings"}),window.Mousetrap.bind("g n r",function(){window.location="https://github.com/freecodecamp/freecodecamp/"}),function(){var e="__flyerId__";$.ajax({url:"/api/flyers/findOne",method:"GET",dataType:"JSON",data:{filter:{order:"id DESC"}}}).fail(function(e){return console.error(e)}).done(function(a){var n=localStorage.getItem(e);a&&a.isActive&&n!==a.id&&($("#dismiss-bill").on("click",function(){localStorage.setItem(e,a.id)}),$("#bill-content").html(a.message),$("#bill-board").fadeIn())})}()});
+'use strict';
+
+var main = window.main || {};
+
+main.mapShareKey = 'map-shares';
+
+main.ga = window.ga || function () {};
+
+main = function (main, global) {
+  var Mousetrap = global.Mousetrap;
+
+  // should be set before gitter script loads
+
+  ((window.gitter = {}).chat = {}).options = {
+    disableDefaultChat: true
+  };
+  // wait for sidecar to load
+
+  main.chat = {};
+  main.chat.isOpen = false;
+  main.chat.createHelpChat = function createHelpChat() {
+    throw new Error('Sidecar chat has not initialized');
+  };
+
+  document.addEventListener('gitter-sidecar-ready', function (e) {
+    main.chat.GitterChat = e.detail.Chat;
+
+    main.chat.createHelpChat = function (room, helpChatBtnClass, roomTitle) {
+      // room is always in PascalCase
+      roomTitle = room.replace(/([A-Z])/g, ' $1').replace('Java Script', 'JavaScript');
+
+      $('body').append('<aside id="chat-embed-help" class="gitter-chat-embed is-collapsed" />');
+
+      main.chat.helpChat = new main.chat.GitterChat({
+        room: 'freecodecamp/' + room,
+        activationElement: false,
+        targetElement: $('#chat-embed-help')
+      });
+
+      $(helpChatBtnClass).on('click', function () {
+        // is button already pressed?
+        // no? open chat
+        // yes? close chat
+        var shouldChatBeOpen = !$(this).hasClass('active');
+        main.chat.helpChat.toggleChat(shouldChatBeOpen);
+        if (shouldChatBeOpen) {
+          $(helpChatBtnClass).addClass('active');
+        }
+      });
+
+      var helpTitleAdd = false;
+      $('#chat-embed-help').on('gitter-chat-toggle', function (e) {
+        var shouldButtonBePressed = !!e.originalEvent.detail.state;
+
+        if (!helpTitleAdd) {
+          helpTitleAdd = true;
+          $('#chat-embed-help > .gitter-chat-embed-action-bar').prepend('<div class="chat-embed-main-title">' + '<span>' + roomTitle + '</span>' + '</div>');
+        }
+
+        if (shouldButtonBePressed) {
+          return $(helpChatBtnClass).addClass('active');
+        }
+        return $(helpChatBtnClass).removeClass('active');
+      });
+    };
+
+    $('body').append('<aside id="chat-embed-main" class="gitter-chat-embed is-collapsed" />');
+
+    main.chat.mainChat = new main.chat.GitterChat({
+      room: 'analyticsdojo/analyticsdojo',
+      activationElement: false,
+      targetElement: $('#chat-embed-main')
+    });
+
+    var mainChatTitleAdded = false;
+    $('#chat-embed-main').on('gitter-chat-toggle', function () {
+      if (mainChatTitleAdded) {
+        return null;
+      }
+      mainChatTitleAdded = true;
+
+      $('#chat-embed-main > .gitter-chat-embed-action-bar').prepend('<div class="chat-embed-main-title">' + '<span>Analytics Dojo\'s Main Chat</span>' + '</div>');
+      return null;
+    });
+
+    $('#nav-chat-btn').on('click', function (event) {
+      if (!(event.ctrlKey || event.metaKey)) {
+        toggleMainChat();
+      }
+      window.ga('send', 'event', 'NAV', 'NAV-CHAT', 'Nav Chat Button Clicked');
+    });
+
+    function showMainChat() {
+      if (!main.chat.isOpen) {
+        main.chat.mainChat.toggleChat(true);
+      }
+    }
+
+    function collapseMainChat() {
+      $('#chat-embed-main').addClass('is-collapsed');
+      document.activeElement.blur();
+    }
+
+    function toggleMainChat() {
+      var isCollapsed = $('#chat-embed-main').hasClass('is-collapsed');
+
+      if (isCollapsed) {
+        showMainChat();
+      } else {
+        collapseMainChat();
+      }
+    }
+
+    // keyboard shortcuts: open main chat
+    Mousetrap.bind('g c', toggleMainChat);
+  });
+
+  return main;
+}(main, window);
+
+var lastCompleted = typeof lastCompleted !== 'undefined' ? lastCompleted : '';
+
+main.getMapShares = function getMapShares() {
+  var alreadyShared = JSON.parse(localStorage.getItem(main.mapShareKey) || '[]');
+
+  if (!alreadyShared || !Array.isArray(alreadyShared)) {
+    localStorage.setItem(main.mapShareKey, JSON.stringify([]));
+    alreadyShared = [];
+  }
+  return alreadyShared;
+};
+
+main.setMapShare = function setMapShare(id) {
+  var alreadyShared = main.getMapShares();
+  var found = false;
+  alreadyShared.forEach(function (_id) {
+    if (_id === id) {
+      found = true;
+    }
+  });
+  if (!found) {
+    alreadyShared.push(id);
+  }
+  localStorage.setItem(main.mapShareKey, JSON.stringify(alreadyShared));
+  return alreadyShared;
+};
+
+$(document).ready(function () {
+  var Observable = window.Rx.Observable;
+
+  var CSRF_HEADER = 'X-CSRF-Token';
+
+  var setCSRFToken = function setCSRFToken(securityToken) {
+    jQuery.ajaxPrefilter(function (options, _, xhr) {
+      if (!xhr.crossDomain) {
+        xhr.setRequestHeader(CSRF_HEADER, securityToken);
+      }
+    });
+  };
+
+  setCSRFToken($('meta[name="csrf-token"]').attr('content'));
+
+  $('img').error(function () {
+    $(this).unbind('error').attr('src', 'https://s3.amazonaws.com/freecodecamp/camper-image-placeholder.png');
+  });
+
+  // map sharing
+  var alreadyShared = main.getMapShares();
+
+  if (lastCompleted && alreadyShared.indexOf(lastCompleted) === -1) {
+    $('div[id="' + lastCompleted + '"]').parent().parent().removeClass('hidden');
+  }
+
+  // on map view
+  $('.map-challenge-block-share').on('click', function (e) {
+    e.preventDefault();
+    var challengeBlockName = $(this).children().attr('id');
+    var challengeBlockEscapedName = challengeBlockName.replace(/\s/, '%20');
+    var username = typeof window.username !== 'undefined' ? window.username : '';
+
+    var link = 'https://www.facebook.com/dialog/feed?' + 'app_id=1644598365767721' + '&display=page&' + 'caption=I%20just%20completed%20the%20' + challengeBlockEscapedName + '%20section%20on%20Free%20Code%20Camp%2E' + '&link=http%3A%2F%2Ffreecodecamp%2Ecom%2F' + username + '&redirect_uri=http%3A%2F%2Ffreecodecamp%2Ecom%2Fmap';
+
+    main.setMapShare(challengeBlockName);
+    window.ga('send', 'event', 'FB_LINK', 'SHARE', 'Facebook map share');
+    window.location.href = link;
+  });
+
+  function expandCaret(item) {
+    $(item).prev().find('.fa-caret-right').removeClass('fa-caret-right').addClass('fa-caret-down');
+  }
+
+  function collapseCaret(item) {
+    $(item).prev().find('.fa-caret-down').removeClass('fa-caret-down').addClass('fa-caret-right');
+  }
+
+  function expandBlock(item) {
+    $(item).addClass('in').css('height', 'auto');
+    expandCaret(item);
+  }
+
+  function collapseBlock(item) {
+    $(item).removeClass('in').css('height', 'auto');
+    collapseCaret(item);
+  }
+
+  $.each($('.sr-only'), function (i, span) {
+    if ($(span).text() === ' Complete') {
+      $(span).parents('p').addClass('manip-hidden');
+    }
+  });
+
+  $.each($('.map-collapse'), function (i, div) {
+    if ($(div).find('.manip-hidden').length === $(div).find('p').length) {
+      collapseBlock(div);
+      $(div).prev('h3').addClass('faded');
+      $(div).prev('h2').addClass('faded');
+    }
+  });
+
+  var scrollTo,
+      dashedName = localStorage.getItem('currentDashedName'),
+      elemsToSearch = $('p.padded-ionic-icon a'),
+      currOrLastChallenge;
+  if (!dashedName && $('.sr-only').length) {
+    elemsToSearch = $('.sr-only');
+  }
+
+  currOrLastChallenge = elemsToSearch.filter(function () {
+    if (dashedName) {
+      return $(this).attr('href').match(dashedName);
+    }
+    return $(this).text() === ' Complete';
+  });
+
+  if (currOrLastChallenge.length) {
+    currOrLastChallenge = currOrLastChallenge[currOrLastChallenge.length - 1];
+    scrollTo = $(currOrLastChallenge).offset().top - 380;
+    $('html, body, .map-accordion').scrollTop(scrollTo);
+  }
+
+  if (String(window.location).match(/\/map$/ig)) {
+    $('body>.flashMessage').find('.alert').css('display', 'none');
+    $('.map-fixed-header').css('top', '50px');
+  }
+
+  // map global selectors
+  var mapFilter = $('#map-filter');
+  var mapShowAll = $('#showAll');
+
+  $('#nav-map-btn').on('click', function (event) {
+    if (!(event.ctrlKey || event.metaKey)) {
+      toggleMap();
+    }
+  });
+
+  $('.map-aside-action-collapse').on('click', collapseMap);
+
+  function showMap() {
+    if (!main.isMapAsideLoad) {
+      var mapAside = $('<iframe id = "map-aside-frame" >');
+      mapAside.attr({
+        src: '/map-aside',
+        frameBorder: '0'
+      });
+      $('.map-aside').append(mapAside);
+      main.isMapAsideLoad = true;
+    }
+    $('.map-aside').removeClass('is-collapsed');
+  }
+
+  function collapseMap() {
+    $('.map-aside').addClass('is-collapsed');
+    document.activeElement.blur();
+  }
+
+  function toggleMap() {
+    var isCollapsed = $('.map-aside').hasClass('is-collapsed');
+    if (isCollapsed) {
+      showMap();
+    } else {
+      collapseMap();
+    }
+  }
+
+  $('#nav-wiki-btn').on('click', function (event) {
+    if (!(event.ctrlKey || event.metaKey)) {
+      toggleWiki();
+    }
+  });
+
+  $('.wiki-aside-action-collapse').on('click', collapseWiki);
+
+  function getWikiPath() {
+    if (!window.common) {
+      return false;
+    }
+    var challengeType = window.common.challengeType;
+    var dashedName = window.common.dashedName;
+    var prefix = '';
+    // Get wiki prefix depending on type of challenge
+    // Type 0, 1 typically have solutions on the wiki prefixed with 'challenge-'
+    // Type 5 typically has a solution on the wiki prefixed with algorithm-'
+    if (challengeType === '0' || challengeType === '1') {
+      prefix = 'challenge-';
+      return prefix + dashedName;
+    }
+    if (challengeType === '5') {
+      prefix = 'algorithm-';
+      return prefix + dashedName;
+    }
+    return false;
+  }
+
+  function showWiki() {
+    if (!main.isWikiAsideLoad) {
+      var wikiURL = '//freecodecamp.github.io/wiki/en/';
+      var lang = window.location.toString().match(/\/\w{2}\//);
+      lang = lang ? lang[0] : '/en/';
+      var wikiPath = getWikiPath();
+      if (wikiPath) {
+        wikiURL = wikiURL + wikiPath + '/';
+      } else if (lang !== '/en/') {
+        // Strip default '/en/' language ending and add the user's language
+        wikiURL = wikiURL.substr(0, wikiURL.length - 4) + lang;
+      }
+
+      var wikiAside = $('<iframe>');
+      wikiAside.attr({
+        src: wikiURL,
+        frameBorder: '0'
+      });
+      $('.wiki-aside').append(wikiAside);
+      main.isWikiAsideLoad = true;
+    }
+    $('.wiki-aside').removeClass('is-collapsed');
+  }
+
+  function collapseWiki() {
+    $('.wiki-aside').addClass('is-collapsed');
+    document.activeElement.blur();
+  }
+
+  function toggleWiki() {
+    var isCollapsed = $('.wiki-aside').hasClass('is-collapsed');
+    if (isCollapsed) {
+      showWiki();
+    } else {
+      collapseWiki();
+    }
+  }
+
+  $('#accordion').on('show.bs.collapse', function (e) {
+    expandCaret(e.target);
+    if ($('a[data-toggle=collapse]').length === $('.fa-caret-down').length) {
+      mapShowAll.text('Collapse all lessons');
+      mapShowAll.addClass('active');
+    }
+  }).on('hide.bs.collapse', function (e) {
+    collapseCaret(e.target);
+    if ($('a[data-toggle=collapse]').length === $('.fa-caret-right').length) {
+      mapShowAll.text('Expand all lessons');
+      mapShowAll.removeClass('active');
+    }
+  });
+
+  mapShowAll.on('click', function () {
+    var mapExpanded = mapShowAll.hasClass('active');
+    if (!mapExpanded) {
+      $.each($('.map-collapse:not(".in")'), function (i, div) {
+        expandBlock(div);
+      });
+      mapShowAll.text('Collapse all lessons');
+      return mapShowAll.addClass('active');
+    } else {
+      $.each($('.map-collapse.in'), function (i, div) {
+        collapseBlock(div);
+      });
+      mapShowAll.text('Expand all lessons');
+      return mapShowAll.removeClass('active');
+    }
+  });
+
+  // Map live filter
+  mapFilter.on('keyup', function () {
+    if (mapFilter.val().length > 0) {
+      var regexString = mapFilter.val().replace(/ /g, '.');
+      var regex = new RegExp(regexString.split('').join('.*'), 'i');
+
+      // Hide/unhide challenges that match the regex
+      $('.challenge-title').each(function (index, title) {
+        if (regex.test($(title).attr('name'))) {
+          expandBlock($(title).closest('.chapterBlock'));
+          expandBlock($(title).closest('.certBlock'));
+          $(title).removeClass('hidden');
+        } else {
+          $(title).addClass('hidden');
+        }
+      });
+
+      // Hide/unhide blocks with no matches
+      $.each($('.chapterBlock'), function (i, div) {
+        if ($(div).find('.hidden').length === $(div).find('p').length) {
+          $(div).addClass('hidden');
+          $(div).prev('h3').addClass('hidden');
+        } else {
+          $(div).removeClass('hidden');
+          $(div).prev('h3').removeClass('hidden');
+        }
+      });
+
+      // Hide/unhide superblocks with no matches
+      $.each($('.certBlock'), function (i, div) {
+        if ($(div).children('#nested').children('h3.hidden').length === $(div).children('#nested').children('h3').length) {
+          $(div).prev('h2').addClass('hidden');
+        } else {
+          $(div).prev('h2').removeClass('hidden');
+        }
+      });
+
+      // Display "Clear Filter" element
+      if (mapFilter.next().children().hasClass('fa-search')) {
+        mapFilter.next().children().removeClass('fa-search').addClass('fa-times');
+        mapFilter.next().addClass('filled');
+        // Scroll to the top of the page
+        $('html, body, .map-accordion').scrollTop(0);
+      }
+    } else {
+      clearMapFilter();
+    }
+
+    // Display not found if everything is hidden
+    if ($.find('.certBlock').length === $('.map-accordion').children('.hidden').length) {
+      $('#noneFound').show();
+    } else {
+      $('#noneFound').hide();
+    }
+  });
+
+  // Give focus to the search box by default
+  mapFilter.focus();
+
+  // Clicking the search button or x clears the map
+  $('.map-buttons .input-group-addon').on('click', clearMapFilter);
+
+  function clearMapFilter() {
+    mapFilter.val('');
+    mapFilter.next().children().removeClass('fa-times').addClass('fa-search');
+    mapFilter.next().removeClass('filled');
+    $('.map-accordion').find('.hidden').removeClass('hidden');
+    $('#noneFound').hide();
+  }
+
+  // Clear the search on escape key
+  mapFilter.on('keydown', function (e) {
+    if (e.keyCode === 27) {
+      e.preventDefault();
+      clearMapFilter();
+    }
+  });
+
+  window.Mousetrap.bind('esc', clearMapFilter);
+
+  // keyboard shortcuts: open map
+  window.Mousetrap.bind('g m', toggleMap);
+
+  function addAlert() {
+    var message = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+    var type = arguments.length <= 1 || arguments[1] === undefined ? 'alert-info' : arguments[1];
+
+    return $('.flashMessage').append($('\n      <div class=\'alert ' + type + '\'>\n        <button class=\'close\' type=\'button\', data-dismiss=\'alert\'>\n          <span class=\'ion-close-circled\' />\n        </Button>\n        <div>' + message + '</div>\n      </div>\n    '));
+  }
+
+  function toggleNightMode() {
+    if (!main.userId) {
+      return addAlert('You must be logged in to use our themes.');
+    }
+    var iframe$ = document.getElementById('map-aside-frame');
+    var body$ = $('body');
+    if (iframe$) {
+      iframe$.src = iframe$.src;
+    }
+    body$.hide();
+    var updateThemeTo = void 0;
+    if (body$.hasClass('night')) {
+      body$.removeClass('night');
+      updateThemeTo = 'default';
+    } else {
+      body$.addClass('night');
+      updateThemeTo = 'night';
+    }
+    body$.fadeIn('100');
+    var options = {
+      url: '/api/users/' + main.userId + '/update-theme',
+      type: 'POST',
+      data: { theme: updateThemeTo },
+      dataType: 'json'
+    };
+    return $.ajax(options).success(function () {
+      return console.log('theme updated successfully');
+    }).fail(function (err) {
+      var message = void 0;
+      try {
+        message = JSON.parse(err.responseText).error.message;
+      } catch (error) {
+        return null;
+      }
+      if (!message) {
+        return null;
+      }
+      return addAlert(message);
+    });
+  }
+
+  Observable.merge(Observable.fromEvent($('#night-mode'), 'click'), Observable.create(function (observer) {
+    window.Mousetrap.bind('g t n', function () {
+      return observer.onNext();
+    });
+  })).debounce(500).subscribe(toggleNightMode, function (err) {
+    return console.error(err);
+  });
+
+  // Hot Keys
+  window.Mousetrap.bind('g n n', function () {
+    // Next Challenge
+    window.location = '/challenges/next-challenge';
+  });
+  window.Mousetrap.bind('g n a', function () {
+    // Account
+    window.location = '/account';
+  });
+  window.Mousetrap.bind('g n m', function () {
+    // Map
+    window.location = '/map';
+  });
+  window.Mousetrap.bind('g n w', function () {
+    // Wiki
+    window.location = '/wiki';
+  });
+  window.Mousetrap.bind('g n a', function () {
+    // About
+    window.location = '/about';
+  });
+  window.Mousetrap.bind('g n s', function () {
+    // Shop
+    window.location = '/shop';
+  });
+  window.Mousetrap.bind('g n o', function () {
+    // Settings
+    window.location = '/settings';
+  });
+  window.Mousetrap.bind('g n r', function () {
+    // Repo
+    window.location = 'https://github.com/freecodecamp/freecodecamp/';
+  });
+
+  (function getFlyer() {
+    var flyerKey = '__flyerId__';
+    $.ajax({
+      url: '/api/flyers/findOne',
+      method: 'GET',
+      dataType: 'JSON',
+      data: { filter: { order: 'id DESC' } }
+    })
+    // log error
+    .fail(function (err) {
+      return console.error(err);
+    }).done(function (flyer) {
+      var lastFlyerId = localStorage.getItem(flyerKey);
+      if (!flyer || !flyer.isActive || lastFlyerId === flyer.id) {
+        return;
+      }
+      $('#dismiss-bill').on('click', function () {
+        localStorage.setItem(flyerKey, flyer.id);
+      });
+      $('#bill-content').html(flyer.message);
+      $('#bill-board').fadeIn();
+    });
+  })();
+});
