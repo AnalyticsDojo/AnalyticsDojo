@@ -71,7 +71,7 @@
           "Github is a tremendous resource for a data scientist to share resources and code. The first thing we are going to do is to create a GitHub ID. You can then use this Github ID to sign in to the AnalyticsDojo (if you haven't already created an ID."
         ],
         [
-          "//i.imgur.com/NHWgyHa.gif?1",
+          "//i.imgur.com/NHWgyHa.gif",
           "A gif showing you to click the link below to go to GitHub. Fill in the necessary fields and click submit.",
           "Create an account with GitHub. Be sure to use your real email address - GitHub will keep this private.",
           "https://github.com/join"
@@ -120,14 +120,33 @@
     },
     {
       "id": "560add56cb82ac38a17513c0",
-      "title": "Configure your Github account.",
+      "title": "Configure your Github account and download Github Desktop.",
       "description": [
         [
           "//i.imgur.com/tP2ccTE.gif",
           "A gif showing how you can click your profile image in your upper right hand corner to your code portfolio and connect GitHub.",
           "Check out your code portfolio. Click your picture in your upper right hand corner. To activate your code portfolio, you'll need to link your GitHub account with Analytics Dojo. Your code portfolio shows your progress and how many Brownie Points you have. You can get Brownie Points by completing challenges and by helping other campers in our chat rooms. If you get Brownie Points on several days in a row, you'll get a streak.",
           ""
+        ],
+        [
+          "//i.imgur.com/oZTMUGj.png",
+          "An image of the download screen for .",
+          "If you aren't a comand line guru, the Github Desktop application (available for OS X and Windows) can make downloading and even commiting to Github repositories extremely easy. ",
+          ""
+        ],
+        [
+          "//http://i.imgur.com/5Xf5WMn.gif",
+          "A Gif of the process of cloneing the AnalyticsDojo github repository.",
+          "Once you have downloaded GitHub Desktop, the next step is to download the Docker images and and materials used in the AnalyticsDojo. <br> <br> To clone the repository, just follow the .gif image above.  First you click on the link to the repository for the <a href='https://github.com/AnalyticsDojo/materials'>Analyticsdojo/Materials</a>. Then You select <i>Download Zip</i> and then <i>Open in Desktop</i>. Once in Desktop, you will be able to right click on the repository to see it on GitHub, open a terminal, or open the file browser.",
+          "https://github.com/AnalyticsDojo/materials"
+        ],
+        [
+          "//i.imgur.com/2tTQhue.gif",
+          "A gif showing pulling the most recent changes.",
+          "The materials for the AnalyticsDojo are constantly being updated, and it is a good practice to update those materials frequently. Luckily, with the GitHub desktop app, keeping the latest code is relatively easy.  Just select the AnalyticsDojo/materials repository (that is the name for the folder where our code is kept) and then press the ",
+          ""
         ]
+
       ],
       "challengeSeed": [],
       "tests": [],

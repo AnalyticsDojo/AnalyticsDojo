@@ -32,6 +32,9 @@ module.exports = function(app) {
   router.get('/about', function(req, res) {
     res.redirect(301, '/map');
   });
+  router.get('/resources', function(req, res) {
+    res.redirect(301, '/map');
+  });
 
   app.use(router);
 };

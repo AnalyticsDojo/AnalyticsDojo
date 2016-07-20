@@ -26,12 +26,18 @@ export default function csp() {
         '*.jsdelivr.com',
         '*.twimg.com',
         'https://*.twimg.com',
+        'https://*.github.com',
+        'https://*.gist.github.com',
+        '*.github.com',
         '*.youtube.com',
         '*.ytimg.com'
       ].concat(trusted),
       styleSrc: [
         "'unsafe-inline'",
         '*.gstatic.com',
+        'https://*.github.com',
+        'https://*.gist.github.com',
+        '*.github.com',
         '*.googleapis.com',
         '*.bootstrapcdn.com',
         'https://*.bootstrapcdn.com',
@@ -43,9 +49,13 @@ export default function csp() {
         '*.cloudflare.com',
         'https://*.cloudflare.com',
         '*.bootstrapcdn.com',
+        'https://*.github.com',
+        'https://*.gist.github.com',
+        '*.github.com',
         '*.googleapis.com',
         '*.gstatic.com',
-        'https://*.bootstrapcdn.com'
+        'https://*.bootstrapcdn.com',
+        '*.optimizely.com'
       ].concat(trusted),
       imgSrc: [
         // allow all input since we have user submitted images for
@@ -62,12 +72,16 @@ export default function csp() {
         '*.gitter.im',
         '*.gitter.im https:',
         '*.youtube.com',
+        'https://*.github.com',
+        'https://*.gist.github.com',
+        '*.github.com',
         '*.twitter.com',
         '*.ghbtns.com',
         '*.freecatphotoapp.com',
         'rpi-analytics.github.io',
         'analyticsdojo.github.io',
-        'freecodecamp.github.io'
+        'freecodecamp.github.io',
+        '*.optimizely.com'
       ].concat(trusted)
     },
     // set to true if you only want to report errors

@@ -27,6 +27,7 @@ module.exports = function(app) {
   router.get('/all-stories', showAllTestimonials);
   router.get('/terms', terms);
   router.get('/privacy', privacy);
+  router.get('/resources', resources);
   router.get('/how-nonprofit-projects-work', howNonprofitProjectsWork);
   router.get('/code-of-conduct', codeOfConduct);
   router.get('/academic-honesty', academicHonesty);
@@ -53,6 +54,12 @@ module.exports = function(app) {
       res.render('resources/privacy', {
           title: 'Privacy policy'
       });
+  }
+
+  function resources(req, res) {
+    res.render('resources/resources', {
+      title: 'Resources'
+    });
   }
 
   function howNonprofitProjectsWork(req, res) {

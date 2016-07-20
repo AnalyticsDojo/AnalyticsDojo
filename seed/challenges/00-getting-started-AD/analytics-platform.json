@@ -9,42 +9,42 @@
       "title": "Choose and Setup an Analytics Platform",
       "description": [
         [
-          "//i.imgur.com/LnreS3r.png",
-          "A picture of an analytics platform",
-          "You have begun your journey. Unlike a lot of <i>learn to code</i> sites that use in-browser tutorials, the AnalyticsDojo uses the same the same tools you are likely to use in a production environment.  This means that before we can get started, we have to go through a bit of setup of an analytics platform. An <i>analytics platform</i> is an environment in which you can execute programs, store data, and even create production web services or Application Programming Interfaces (APIs) that enable your application to be deployted to a production environment.",
-          "",
-          "This image adopted from FreeCodeCamp.com.",
-          "http://freecodecamp.com"
-        ],
-        [
-          "//i.imgur.com/WfiL6gn.jpg",
+          "//i.imgur.com/s4osQ5T.png",
           "An image of a Jupyter Notebook",
-          "All of the work that we are going to be doing will utilize Jupyter notebooks. Jupyter notebooks are a flexible computing enviroment that was origionally based on iPython notebooks.  The Jupyter team has done an amazing job bringing the notebook computing enviroment to a wide <a href='https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages'>variety of languages including R, Python, Scala, and even SAS.</a>",
+          "You have begun your journey, congratulations. Much of the work that we are going to be doing will utilize Jupyter notebooks. Jupyter notebooks are a flexible computing enviroment that was originally based on iPython notebooks.  The Jupyter team has done an amazing job bringing the notebook computing enviroment to a wide <a href='https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages'>variety of languages including R, Python, Scala, and even SAS.</a> <br><br> Click on the link below to go to https://try.jupyter.org and browse some of the cool things that you can do with Jupyter Notebooks. We will be using Jupyter notebooks almost exclusively as a way of learning data science.  They also provide a great way to collaborate and document your processes using markdown.",
+          "https://try.jupyter.org",
+          "",
+          ""
+        ],
+        [
+          "//i.imgur.com/BxNG6Am.jpg",
+          "A picture of various analytics platforms",
+          "Unlike a lot of <i>learn to code</i> sites that use in-browser tutorials, the AnalyticsDojo uses the same the same tools you are likely to use in a production environment.  This means that before we can get started, we have to go through a bit of setup of an analytics platform. <br> <br>An <i>analytics platform</i> is an environment in which you can execute programs, store data, and even create web services or Application Programming Interfaces (APIs) that enable your application to be deployed into the world or even sold on a marketplace. <br> <br>We are going to start with an overview of three different platforms: (1) Docker, (2) DataBricks, and (3) Microsoft Azure. Each of them will have their own strengths and weaknesses. <br> <br> A key to the platforms we are looking at is that they can work with R and Python within a Jupyter Notebook.",
           "",
           "",
           ""
         ],
         [
-          "//i.imgur.com/EMmq1DK.jpg",
-          "An image several different analytics platforms.",
-          "Currently there a wide variety of online platforms to do analytics using Jupyter notebooks. It is emerging as a powerful standand to do data science.  However, we want to focus our resources those platforms that are currently easy for beginners to get started.  You only need one platform, and we suggest becoming an expert in one. However,   ",
+          "//i.imgur.com/XQDBVmU.gif",
+          "Gif of the Microsoft Signup Process",
+          "Microsoft has also developed an incredible platform for data science that works very well with Jupyter Notebooks. If you are just getting started, we suggest that you start here. They also have become a big supporter and player in R-community with their <a href = 'http://bit.ly/revolutionMS2'> purchase of Revolution Analytics</a>. In addition, their free services are quite generous for individuals learning data science. If you don't already have a Microsoft account, you will have to create one first <a href='https://www.microsoft.com/en-us/account'>here</a>.  Then follow the link to the AzureML signup page.",
+          "https://studio.azureml.net",
           "",
-          "By Raysonho @ Open Grid Scheduler / Grid Engine (Own work) [CC0], via Wikimedia Commons",
-          "https://commons.wikimedia.org/wiki/File%3AIBMComputerTrainingWorkshop.JPG"
-        ],
-        [
-          "//i.imgur.com/vBlRCb7.png",
-          "An illustration showing that you will learn Python, R, Statistics, Spark, Visualizations, Databases, Linked Data and Github.",
-          "The AnalyticsDojo will take you through a wide variety of exercises, from the initial data manipulation (often called data munging) through modeling, visualization, and even deployment into applications .",
           ""
         ],
         [
-          "//i.imgur.com/6MmQScx.png",
-          "Text illustrating the top software tools and languages for data science.",
-          "R and Python are now the top two languages for data science.  Why? They each have tremendous ecosystems which support packages that are taylored to data science.  They are also open source and free to get started.  The AnalyticsDojo will provide you with a strong foundation in both R and Python, and the tools that we will adopt frequently support both languages.<br><br> SPARK has seen tremendous growth because it provides an accessible language in which one can access the BIG DATA (i.e., Hadoop) ecosystem-which is also increasingly possible from Python and even R. Tableau is a beautifully designed tool that makes a great first introduction to visualization.  Scikit-learn may seem like a new language, but don't worry...it is just a machine learning library for Python.",
+          "//i.imgur.com/P70wNmS.jpg",
+          "An image of the Docker Logo.",
+          "When learning analytics, a similar computing environment can ensure that associated examples and exercises will work across a population of users-who may be using a wide variety of different types of operating systems. There are some great ways of being able to run R and Python directly on your laptop. Of course you could install R and the iPython notebook directly. For R, <a href='https://www.rstudio.com'>R-Studio</a> is great and for Python <a href='https://anaconda.org'>Anaconda similarly can get you started.</a>  However, often code may function slightly differently on different operating systems and it could be that an example won't work exactly as planned. To get around this, Docker bundles software in a Container that can be rolled out onto different operating systems and even into production. If you don't have a great Internet or will be working a lot offline, you might start with Docker. Otherwise, you might start with one of the preconfigured environments. Feel free to either install Docker now by clicking on the link and following the instructions for your operating system or you can start with one of the cloud environments. ",
+          "https://docs.docker.com/engine/installation/",
           "",
-          "KDnuggets 2016 Software Poll Results",
-          "http://bit.ly/kd2016top"
+          ""
+        ],
+        [
+          "//i.imgur.com/Tpdz5Cu.gif",
+          "Gif of signing up for the DataBricks community edition.",
+          "DataBricks is the company that originated SPARK, one of the biggest players in the Hadoop (big data) ecosystem. They have also offered an easy to use data analytics platform to be able to execute Jupyter notebooks with Python, R, and Scala (which is the language Spark is written in). <br><br> Go ahead now and sign up for the community edition, confirm yoru email, and you will be provided with a link to the DataBricks Platform.",
+          ""
         ],
         [
           "//i.imgur.com/nfw3AAt.png",
@@ -53,6 +53,14 @@
           "",
           "By Kenneth Jensen (Own work) [CC BY-SA 3.0], via Wikimedia Commons",
           "https://commons.wikimedia.org/wiki/File%3ACRISP-DM_Process_Diagram.png"
+        ],
+        [
+          "//i.imgur.com/BxNG6Am.jpg",
+          "A picture of various analytics platforms",
+          "So you've got an account on some really powerful analytics platforms as well as on Github. We have also added resources for each of the platforms on the top right of the screen under <i>Resourcs</i>. <br<br>Next we can exploer some of the cool things you can do with them. ",
+          "",
+          "",
+          ""
         ]
       ],
       "challengeSeed": [],
@@ -60,7 +68,5 @@
       "type": "Waypoint",
       "challengeType": 7
     }
-
-
   ]
 }

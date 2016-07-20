@@ -82,19 +82,18 @@ Challenge Type 7 is the first type, were just a click will get you through.  If 
 
   6: Simple list of information
 
+This is a Gist:
+<script src=\"https://gist.github.com/chaitusb/2d31be471f69d35633eb.js\"></script>
+
+or
+
+<script src='https://gist.github.com/chaitusb/2d31be471f69d35633eb.js'>
+
+
+You can use classes:
+<div class=\"small\">
 
 
 
-
-
-
-
-
-
-This is an image.
-"http://i.imgur.com/Elb3dfj.jpg",
-          "A screenshot of some of our campers coding together in Toronto.",
-          "<bold>Learning to code is hard.</bold> To succeed, you'll need lots of practice and support. That's why we've created a rigorous curriculum and supportive community.",
-          ""
 
 
