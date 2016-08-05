@@ -12,11 +12,7 @@
       "tests": [],
       "type": "hike",
       "challengeType": 6,
-      "translations": {
-        "es": {
-          "title": "Data Visualization"
-        }
-      }
+      "nameEs": "Data Visualization"
     }
   ]
-}
+}    

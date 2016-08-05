@@ -5,7 +5,6 @@ var startTime = Date.now();
 var timeoutHandler;
 // this is where server starts booting up
 var app = require('./server');
-
 console.log('waiting for db to connect');
 
 
@@ -17,7 +16,7 @@ var onConnect = function() {
   app.start();
 };
 
-timeoutHandler = setTimeout(function() {
+var timeoutHandler = setTimeout(function() {
   var message =
     'db did not connect after  ' +
     (Date.now() - startTime) +

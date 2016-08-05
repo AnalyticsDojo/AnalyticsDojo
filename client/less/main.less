@@ -1,9 +1,8 @@
 @import "lib/bootstrap/bootstrap";
 @import "lib/bootstrap-social/bootstrap-social";
 @import "lib/ionicons/ionicons";
-@import "lib/animate";
-@import "lib/bootstrap/variables";
-
+@import "lib/animate.min.less";
+@import "lib/bootstrap/variables.less";
 
 html,body,div,span,a,li,td,th {
   font-family: 'Lato', sans-serif;
@@ -68,15 +67,6 @@ body.no-top-and-bottom-margins {
   margin: 75px 20px 0px 20px;
 }
 
-body.react-layout {
-  margin-top: 75px;
-  margin-bottom: 15px;
-  width: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  min-height: 650px;
-}
-
 h1, h2 {
   font-weight: 400;
 }
@@ -137,7 +127,7 @@ h1, h2, h3, h4, h5, h6, p, li {
   margin-top: 10px;
 }
 
-.large-li > li {
+ul {
   list-style: none;
 }
 
@@ -693,8 +683,40 @@ form.update-email .btn{
   padding-bottom: 117%;
 }
 
+#directions {
+  text-align: left;
+  font-size: 15px;
+}
+
 .graph-rect {
   fill: #ddd !important
+}
+
+
+/**
+ * Challenge styling
+ */
+
+form.code span {
+  font-size: 18px;
+  font-family: "Ubuntu Mono";
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  height: 100%;
+}
+
+.CodeMirror {
+  line-height: 1 !important;
+}
+
+.CodeMirror-linenumber {
+  font-size: 18px;
+  font-family: "Ubuntu Mono";
+}
+
+#mainEditorPanel {
+  height: 100%;
+  width: 99%;
 }
 
 .scroll-locker {
@@ -702,10 +724,21 @@ form.update-email .btn{
   overflow-y: auto;
 }
 
+#mainEditorPanel .panel-body {
+  padding-bottom: 0px;
+}
+
+div.CodeMirror-scroll {
+  padding-bottom: 30px;
+}
+
 .test-vertical-center {
   margin-top: 8px;
 }
 
+.cm-s-monokai.CodeMirror {
+  border-radius: 5px;
+}
 .courseware-height {
   min-height: 650px;
 }
@@ -910,6 +943,18 @@ hr {
 
 code {
   padding: 1px 5px;
+}
+
+@media only screen and (min-width: 993px) {
+  .iframe-scroll {
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .iframe-scroll {
+    height: auto;
+    overflow: auto;
+  }
 }
 
 // Calculator styles
@@ -1133,8 +1178,7 @@ and (max-width : 400px)  {
 
 @import "chat.less";
 @import "jobs.less";
-@import 'code-mirror.less';
 @import "challenge.less";
 @import "toastr.less";
 @import "map.less";
-@import "drawers.less";
+@import "wiki.less";

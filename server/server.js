@@ -4,11 +4,9 @@ if (!OnHeroku) {
     require('dotenv').load();
 }
 var pmx = require('pmx');
-
 pmx.init();
 
 var _ = require('lodash'),
-    Rx = require('rx'),
     loopback = require('loopback'),
     boot = require('loopback-boot'),
     expressState = require('express-state'),
@@ -16,23 +14,12 @@ var _ = require('lodash'),
     setupPassport = require('./component-passport');
 
 
-// polyfill for webpack bundle splitting
-const requireProto = Object.getPrototypeOf(require);
-if (!requireProto.hasOwnProperty('ensure')) {
-  Object.defineProperties(
-    requireProto,
-    {
-      ensure: {
-        value: function ensure(modules, callback) {
-          callback(this);
-        },
-        writable: false,
-        enumarble: false
-      }
-    }
-  );
-}
-Rx.config.longStackSupport = process.env.NODE_DEBUG !== 'production';
+// var setProfileFromGithub = require('./utils/auth').setProfileFromGithub;
+// var getSocialProvider = require('./utils/auth').getSocialProvider;
+// var getUsernameFromProvider =
+// require('./utils/auth').getUsernameFromProvider;
+// var generateKey =
+//  require('loopback-component-passport/lib/models/utils').generateKey;
 
 var app = loopback();
 var isBeta = !!process.env.BETA;

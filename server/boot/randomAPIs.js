@@ -1,53 +1,42 @@
 import request from 'request';
 import constantStrings from '../utils/constantStrings.json';
 import testimonials from '../resources/testimonials.json';
-
-const githubClient = process.env.GITHUB_ID;
-const githubSecret = process.env.GITHUB_SECRET;
+import secrets from '../../config/secrets';
 
 module.exports = function(app) {
   const router = app.loopback.Router();
   const User = app.models.User;
-  const noLangRouter = app.loopback.Router();
-  noLangRouter.get('/api/github', githubCalls);
-  noLangRouter.get('/chat', chat);
-  noLangRouter.get('/twitch', twitch);
-  noLangRouter.get('/unsubscribe/:email', unsubscribeMonthly);
-  noLangRouter.get(
-    '/unsubscribe-notifications/:email',
-    unsubscribeNotifications
-  );
-  noLangRouter.get('/unsubscribe-quincy/:email', unsubscribeQuincy);
-  noLangRouter.get('/submit-cat-photo', submitCatPhoto);
-  noLangRouter.get(
-    '/the-fastest-web-page-on-the-internet',
-    theFastestWebPageOnTheInternet
-  );
-  noLangRouter.get('/shop/cancel-stickers', cancelStickers);
-  noLangRouter.get('/shop/confirm-stickers', confirmStickers);
-
-  router.get('/unsubscribed', unsubscribed);
-  router.get('/nonprofits', nonprofits);
-  router.get('/nonprofits-form', nonprofitsForm);
+  router.get('/api/github', githubCalls);
+  router.get('/chat', chat);
+  router.get('/coding-bootcamp-cost-calculator', bootcampCalculator);
+  router.get('/twitch', twitch);
   router.get('/pmi-acp-agile-project-managers', agileProjectManagers);
   router.get('/pmi-acp-agile-project-managers-form', agileProjectManagersForm);
-  router.get('/coding-bootcamp-cost-calculator', bootcampCalculator);
+  router.get('/nonprofits', nonprofits);
+  router.get('/nonprofits-form', nonprofitsForm);
+  router.get('/unsubscribe/:email', unsubscribeMonthly);
+  router.get('/unsubscribe-notifications/:email', unsubscribeNotifications);
+  router.get('/unsubscribe-quincy/:email', unsubscribeQuincy);
+  router.get('/unsubscribed', unsubscribed);
+  router.get('/get-started', getStarted);
+  router.get('/submit-cat-photo', submitCatPhoto);
   router.get('/stories', showTestimonials);
   router.get('/shop', showShop);
+  router.get('/shop/cancel-stickers', cancelStickers);
+  router.get('/shop/confirm-stickers', confirmStickers);
   router.get('/all-stories', showAllTestimonials);
   router.get('/terms', terms);
   router.get('/privacy', privacy);
   router.get('/resources', resources);
   router.get('/how-nonprofit-projects-work', howNonprofitProjectsWork);
-  router.get(
-      '/software-resources-for-nonprofits',
-      softwareResourcesForNonprofits
-  );
   router.get('/code-of-conduct', codeOfConduct);
   router.get('/academic-honesty', academicHonesty);
+  router.get(
+    '/the-fastest-web-page-on-the-internet',
+    theFastestWebPageOnTheInternet
+  );
 
-  app.use(noLangRouter);
-  app.use('/:lang', router);
+  app.use(router);
 
 
   function chat(req, res) {
@@ -77,12 +66,6 @@ module.exports = function(app) {
       res.render('resources/how-nonprofit-projects-work', {
           title: 'How our nonprofit projects work'
       });
-  }
-
-  function softwareResourcesForNonprofits(req, res) {
-    res.render('resources/software-resources-for-nonprofits', {
-      title: 'Software Resources for Nonprofits'
-    });
   }
 
   function codeOfConduct(req, res) {
@@ -257,7 +240,7 @@ module.exports = function(app) {
       title: 'You have been unsubscribed'
     });
   }
-  
+
   function getStarted(req, res) {
     res.render('resources/get-started', {
       title: 'How to get started with Analytics Dojo'
@@ -275,9 +258,9 @@ module.exports = function(app) {
       [
         'https://api.github.com/repos/freecodecamp/',
         'freecodecamp/pulls?client_id=',
-        githubClient,
+        secrets.github.clientID,
         '&client_secret=',
-        githubSecret
+        secrets.github.clientSecret
       ].join(''),
       githubHeaders,
       function(err, status1, pulls) {
@@ -290,9 +273,9 @@ module.exports = function(app) {
           [
             'https://api.github.com/repos/freecodecamp/',
             'freecodecamp/issues?client_id=',
-            githubClient,
+            secrets.github.clientID,
             '&client_secret=',
-            githubSecret
+            secrets.github.clientSecret
           ].join(''),
           githubHeaders,
           function(err, status2, issues) {

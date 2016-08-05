@@ -2,8 +2,8 @@
   "name": "user",
   "base": "User",
   "strict": true,
-  "idInjection": true,
   "emailVerificationRequired": false,
+  "idInjection": true,
   "trackChanges": false,
   "properties": {
     "email": {
@@ -28,13 +28,13 @@
     },
     "isBanned": {
       "type": "boolean",
-      "description": "User is banned from posting to camper news",
-      "default": false
+      "default": false,
+      "description": "User is banned from posting to camper news"
     },
     "isCheater": {
       "type": "boolean",
-      "description": "Users who are confirmed to break academic honesty policy are marked as cheaters",
-      "default": false
+      "default": false,
+      "description": "Users who are confirmed to break academic honesty policy are marked as cheaters"
     },
     "isGithubCool": {
       "type": "boolean",
@@ -58,13 +58,13 @@
     },
     "username": {
       "type": "string",
+      "require": true,
       "index": {
         "mongodb": {
           "unique": true,
           "background": true
         }
-      },
-      "require": true
+      }
     },
     "bio": {
       "type": "string",
@@ -117,51 +117,51 @@
     },
     "isLocked": {
       "type": "boolean",
-      "description": "Campers profile does not show challenges/certificates to the public",
-      "default": false
+      "default": false,
+      "description": "Campers profile does not show challenges/certificates to the public"
     },
     "currentChallenge": {
       "type": {}
     },
     "isUniqMigrated": {
       "type": "boolean",
-      "description": "Campers completedChallenges array is free of duplicates",
-      "default": false
+      "default": false,
+      "description": "Campers completedChallenges array is free of duplicates"
     },
     "isHonest": {
       "type": "boolean",
-      "description": "Camper has signed academic honesty policy",
-      "default": false
+      "default": false,
+      "description": "Camper has signed academic honesty policy"
     },
     "isFrontEndCert": {
       "type": "boolean",
-      "description": "Camper is front end certified",
-      "defaut": false
+      "defaut": false,
+      "description": "Camper is front end certified"
     },
     "isDataVisCert": {
       "type": "boolean",
-      "description": "Camper is data visualization certified",
-      "defaut": false
+      "defaut": false,
+      "description": "Camper is data visualization certified"
     },
     "isBackEndCert": {
       "type": "boolean",
-      "description": "Campers is back end certified",
-      "default": false
+      "default": false,
+      "description": "Campers is back end certified"
     },
     "isFullStackCert": {
       "type": "boolean",
-      "description": "Campers is full stack certified",
-      "default": false
+      "default": false,
+      "description": "Campers is full stack certified"
     },
     "isChallengeMapMigrated": {
       "type": "boolean",
-      "description": "Migrate completedChallenges array to challenge map",
-      "default": false
+      "default": false,
+      "description": "Migrate completedChallenges array to challenge map"
     },
     "challengeMap": {
       "type": "object",
-      "description": "A map by id of all the user completed challenges",
-      "default": {}
+      "default": {},
+      "description": "A map by id of all the user completed challenges"
     },
     "completedChallenges": {
       "type": [
@@ -195,11 +195,6 @@
     "theme": {
       "type": "string",
       "default": "default"
-    },
-    "languageTag": {
-      "type": "string",
-      "description": "A IETF language tag",
-      "default": "en"
     }
   },
   "validations": [],
@@ -261,14 +256,7 @@
       "principalId": "$owner",
       "permission": "ALLOW",
       "property": "updateTheme"
-    },
-    {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$owner",
-      "permission": "ALLOW",
-      "property": "updateLanguage"
     }
   ],
-  "methods": {}
+  "methods": []
 }

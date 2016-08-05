@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import ReactDOM from 'react-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import {
   Col,
@@ -11,7 +10,6 @@ import {
 
 import navLinks from './links.json';
 import FCCNavItem from './NavItem.jsx';
-import AvatarNavItem from './Avatar-Nav-Item.jsx';
 
 const fCClogo = '/images/dojo.png';
 
@@ -20,8 +18,7 @@ const logoElement = (
     <img
       alt='learn to code javascript at Analytics Dojo logo'
       className='img-responsive nav-logo'
-      src={ fCClogo }
-    />
+      src={ fCClogo } />
   </a>
 );
 
@@ -31,36 +28,17 @@ const toggleButtonChild = (
   </Col>
 );
 
-function handleNavLinkEvent(content) {
-  this.props.trackEvent({
-    category: 'Nav',
-    action: 'clicked',
-    label: `${content} link`
-  });
-}
-
 export default class extends React.Component {
-  constructor(...props) {
-    super(...props);
-    this.handleMapClickOnMap = this.handleMapClickOnMap.bind(this);
-    navLinks.forEach(({ content }) => {
-      this[`handle${content}Click`] = handleNavLinkEvent.bind(this, content);
-    });
-  }
   static displayName = 'Nav';
+
   static propTypes = {
     points: PropTypes.number,
     picture: PropTypes.string,
     signedIn: PropTypes.bool,
-    username: PropTypes.string,
-    isOnMap: PropTypes.bool,
-    updateNavHeight: PropTypes.func,
-    toggleMapDrawer: PropTypes.func,
-    toggleMainChat: PropTypes.func,
-    shouldShowSignIn: PropTypes.bool,
-    trackEvent: PropTypes.func.isRequired
+    username: PropTypes.string
   };
 
+<<<<<<< HEAD
   componentDidMount() {
     const navBar = ReactDOM.findDOMNode(this);
     this.props.updateNavHeight(navBar.clientHeight);
@@ -134,19 +112,18 @@ export default class extends React.Component {
     );
   }
 
+=======
+>>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
   renderLinks() {
     return navLinks.map(({ content, link, react, target }, index) => {
       if (react) {
         return (
           <LinkContainer
-            eventKey={ index + 2 }
+            eventKey={ index + 1 }
             key={ content }
-            onClick={ this[`handle${content}Click`] }
-            to={ link }
-            >
+            to={ link }>
             <NavItem
-              target={ target || null }
-              >
+              target={ target || null }>
               { content }
             </NavItem>
           </LinkContainer>
@@ -157,45 +134,44 @@ export default class extends React.Component {
           eventKey={ index + 1 }
           href={ link }
           key={ content }
-          onClick={ this[`handle${content}Click`] }
-          target={ target || null }
-          >
+          target={ target || null }>
           { content }
         </NavItem>
       );
     });
   }
 
-  renderPoints(username, points, shouldShowSignIn) {
-    if (!username || !shouldShowSignIn) {
+  renderPoints(username, points) {
+    if (!username) {
       return null;
     }
     return (
-      <LinkContainer
-        eventKey={ navLinks.length + 1 }
-        key='points'
-        to='/settings'
-        >
-        <FCCNavItem className='brownie-points-nav'>
-          [ { points } ]
-        </FCCNavItem>
-      </LinkContainer>
+      <FCCNavItem
+        className='brownie-points-nav'
+        href={ '/' + username }>
+        [ { points } ]
+      </FCCNavItem>
     );
   }
 
-  renderSignIn(username, picture, shouldShowSignIn) {
-    if (!shouldShowSignIn) {
-      return null;
-    }
+  renderSignin(username, picture) {
     if (username) {
-      return <AvatarNavItem picture={ picture } />;
+      return (
+        <li
+          className='hidden-xs hidden-sm avatar'
+          eventKey={ 2 }>
+          <a href={ '/' + username }>
+            <img
+              className='profile-picture float-right'
+              src={ picture } />
+          </a>
+        </li>
+      );
     } else {
       return (
         <NavItem
           eventKey={ 2 }
-          href='/signin'
-          key='signin'
-          >
+          href='/signin'>
           Sign In
         </NavItem>
       );
@@ -203,34 +179,22 @@ export default class extends React.Component {
   }
 
   render() {
-    const {
-      username,
-      points,
-      picture,
-      isOnMap,
-      toggleMapDrawer,
-      toggleMainChat,
-      shouldShowSignIn
-    } = this.props;
+    const { username, points, picture } = this.props;
 
     return (
       <Navbar
         className='nav-height'
-        fixedTop={ true }
-        >
+        fixedTop={ true }>
         <NavbarBrand>{ logoElement }</NavbarBrand>
         <Navbar.Toggle children={ toggleButtonChild } />
-        <Navbar.Collapse>
+        <Navbar.Collapse eventKey={ 0 }>
           <Nav
             className='hamburger-dropdown'
             navbar={ true }
-            pullRight={ true }
-            >
-            { this.renderMapLink(isOnMap, toggleMapDrawer) }
-            { this.renderChat(toggleMainChat) }
+            pullRight={ true }>
             { this.renderLinks() }
-            { this.renderPoints(username, points, shouldShowSignIn) }
-            { this.renderSignIn(username, picture, shouldShowSignIn) }
+            { this.renderPoints(username, points) }
+            { this.renderSignin(username, picture) }
           </Nav>
         </Navbar.Collapse>
       </Navbar>

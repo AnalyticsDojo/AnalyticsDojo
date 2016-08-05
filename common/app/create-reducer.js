@@ -2,22 +2,18 @@ import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
 import { reducer as app } from './redux';
-import { reducer as toasts } from './toasts/redux';
-import entitiesReducer from './redux/entities-reducer';
+import { reducer as hikesApp } from './routes/Hikes/redux';
 import {
-  reducer as challengesApp,
-  projectNormalizer
-} from './routes/challenges/redux';
-import { reducer as settingsApp } from './routes/settings/redux';
+  reducer as jobsApp,
+  formNormalizer as jobsNormalizer
+} from './routes/Jobs/redux';
 
 export default function createReducer(sideReducers = {}) {
   return combineReducers({
     ...sideReducers,
-    entities: entitiesReducer,
     app,
-    toasts,
-    challengesApp,
-    settingsApp,
-    form: formReducer.normalize({ ...projectNormalizer })
+    hikesApp,
+    jobsApp,
+    form: formReducer.normalize(jobsNormalizer)
   });
 }

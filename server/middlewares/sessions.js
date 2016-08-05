@@ -1,9 +1,8 @@
 import session from 'express-session';
 import MongoStoreFactory from 'connect-mongo';
+import secrets from '../../config/secrets';
 
 const MongoStore = MongoStoreFactory(session);
-const sessionSecret = process.env.SESSION_SECRET;
-const url = process.env.MONGODB || process.env.MONGOHQ_URL;
 
 export default function sessionsMiddleware() {
   return session({
@@ -11,7 +10,7 @@ export default function sessionsMiddleware() {
     cookie: { maxAge: 900 * 24 * 60 * 60 * 1000 },
     resave: true,
     saveUninitialized: true,
-    secret: sessionSecret,
-    store: new MongoStore({ url })
+    secret: secrets.sessionSecret,
+    store: new MongoStore({ url: secrets.db })
   });
 }

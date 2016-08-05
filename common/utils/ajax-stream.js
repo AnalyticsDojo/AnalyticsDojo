@@ -86,6 +86,7 @@ function normalizeAjaxErrorEvent(e, xhr, type) {
 }
 
 /*
+ *
  * Creates an observable for an Ajax request with either a settings object
  * with url, headers, etc or a string for a URL.
  *
@@ -93,17 +94,20 @@ function normalizeAjaxErrorEvent(e, xhr, type) {
  *   source = Rx.DOM.ajax('/products');
  *   source = Rx.DOM.ajax( url: 'products', method: 'GET' });
  *
- * interface Options {
- *   url: String, // URL of the request
- *   body?: Object, // The body of the request
- *   method? = 'GET' : 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
- *   async? = true: Boolean, // Whether the request is async
- *   headers?: Object, // optional headers
- *   crossDomain?: true // if a cross domain request, else false
- * }
+ * @param {Object} settings Can be one of the following:
  *
- * ajax$(url?: String, options: Options) => Observable[XMLHttpRequest]
- */
+ *  A string of the URL to make the Ajax call.
+ *  An object with the following properties
+ *   - url: URL of the request
+ *   - body: The body of the request
+ *   - method: Method of the request, such as GET, POST, PUT, PATCH, DELETE
+ *   - async: Whether the request is async
+ *   - headers: Optional headers
+ *   - crossDomain: true if a cross domain request, else false
+ *
+ * @returns {Observable} An observable sequence containing the XMLHttpRequest.
+*/
+
 export function ajax$(options) {
   var settings = {
     method: 'GET',
@@ -238,8 +242,14 @@ export function ajax$(options) {
   });
 }
 
-// Creates an observable sequence from an Ajax POST Request with the body.
-// post$(url: String, body: Object) => Observable[Any]
+/**
+  * Creates an observable sequence from an Ajax POST Request with the body.
+  *
+  * @param {String} url The URL to POST
+  * @param {Object} body The body to POST
+  * @returns {Observable} The observable sequence which contains the response
+  * from the Ajax POST.
+  */
 export function post$(url, body) {
   try {
     body = JSON.stringify(body);
@@ -250,7 +260,6 @@ export function post$(url, body) {
   return ajax$({ url, body, method: 'POST' });
 }
 
-// postJSON$(url: String, body: Object) => Observable[Object]
 export function postJSON$(url, body) {
   try {
     body = JSON.stringify(body);
@@ -271,8 +280,13 @@ export function postJSON$(url, body) {
     .map(({ response }) => response);
 }
 
-// Creates an observable sequence from an Ajax GET Request with the body.
-// get$(url: String) => Obserable[Any]
+/**
+  * Creates an observable sequence from an Ajax GET Request with the body.
+  *
+  * @param {String} url The URL to GET
+  * @returns {Observable} The observable sequence which
+  * contains the response from the Ajax GET.
+  */
 export function get$(url) {
   return ajax$({ url: url });
 }
@@ -283,7 +297,6 @@ export function get$(url) {
   * @param {String} url The URL to GET
   * @returns {Observable} The observable sequence which contains the parsed JSON
   */
-// getJSON$(url: String) => Observable[Object];
 export function getJSON$(url) {
   return ajax$({
     url: url,

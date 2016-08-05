@@ -1,142 +1,68 @@
 import React, { PropTypes } from 'react';
-import { Button, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { ToastMessage, ToastContainer } from 'react-toastr';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 
-import MapDrawer from './components/Map-Drawer.jsx';
-import {
-  fetchUser,
-  initWindowHeight,
-  updateNavHeight,
-  toggleMapDrawer,
-  toggleMainChat,
-  updateAppLang,
-  trackEvent
-} from './redux/actions';
-
-import { submitChallenge } from './routes/challenges/redux/actions';
+import { fetchUser } from './redux/actions';
+import contain from './utils/professor-x';
 
 import Nav from './components/Nav';
-import Toasts from './toasts/Toasts.jsx';
-import { userSelector } from './redux/selectors';
 
-const bindableActions = {
-  initWindowHeight,
-  updateNavHeight,
-  fetchUser,
-  submitChallenge,
-  toggleMapDrawer,
-  toggleMainChat,
-  updateAppLang,
-  trackEvent
-};
+const toastMessageFactory = React.createFactory(ToastMessage.animation);
 
 const mapStateToProps = createSelector(
-  userSelector,
-  state => state.app.shouldShowSignIn,
-  state => state.app.toast,
-  state => state.app.isMapDrawerOpen,
-  state => state.app.isMapAlreadyLoaded,
-  state => state.challengesApp.toast,
-  (
-    { user: { username, points, picture } },
-    shouldShowSignIn,
-    toast,
-    isMapDrawerOpen,
-    isMapAlreadyLoaded,
-  ) => ({
+  state => state.app,
+  ({
     username,
     points,
     picture,
-    toast,
-    shouldShowSignIn,
-    isMapDrawerOpen,
-    isMapAlreadyLoaded,
-    isSignedIn: !!username
+    toast
+  }) => ({
+    username,
+    points,
+    picture,
+    toast
   })
 );
+
+const fetchContainerOptions = {
+  fetchAction: 'fetchUser',
+  isPrimed({ username }) {
+    return !!username;
+  }
+};
 
 // export plain class for testing
 export class FreeCodeCamp extends React.Component {
   static displayName = 'FreeCodeCamp';
-  static contextTypes = {
-    router: PropTypes.object
-  };
+
   static propTypes = {
     children: PropTypes.node,
     username: PropTypes.string,
-    isSignedIn: PropTypes.bool,
     points: PropTypes.number,
     picture: PropTypes.string,
-    toast: PropTypes.object,
-    updateNavHeight: PropTypes.func,
-    initWindowHeight: PropTypes.func,
-    submitChallenge: PropTypes.func,
-    isMapDrawerOpen: PropTypes.bool,
-    isMapAlreadyLoaded: PropTypes.bool,
-    toggleMapDrawer: PropTypes.func,
-    toggleMainChat: PropTypes.func,
-    fetchUser: PropTypes.func,
-    shouldShowSignIn: PropTypes.bool,
-    params: PropTypes.object,
-    updateAppLang: PropTypes.func.isRequired,
-    trackEvent: PropTypes.func.isRequired
+    toast: PropTypes.object
   };
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.params.lang !== nextProps.params.lang) {
-      this.props.updateAppLang(nextProps.params.lang);
+  componentWillReceiveProps({ toast: nextToast = {} }) {
+    const { toast = {} } = this.props;
+    if (toast.id !== nextToast.id) {
+      this.refs.toaster[nextToast.type || 'success'](
+        nextToast.message,
+        nextToast.title,
+        {
+          closeButton: true,
+          timeOut: 10000
+        }
+      );
     }
-  }
-
-  componentDidMount() {
-    this.props.initWindowHeight();
-    if (!this.props.isSignedIn) {
-      this.props.fetchUser();
-    }
-  }
-
-  renderChallengeComplete() {
-    const { submitChallenge } = this.props;
-    return (
-      <Button
-        block={ true }
-        bsSize='small'
-        bsStyle='primary'
-        className='animated fadeIn'
-        onClick={ submitChallenge }
-        >
-        Submit and go to my next challenge
-      </Button>
-    );
   }
 
   render() {
-    const { router } = this.context;
-    const {
-      username,
-      points,
-      picture,
-      updateNavHeight,
-      isMapDrawerOpen,
-      isMapAlreadyLoaded,
-      toggleMapDrawer,
-      toggleMainChat,
-      shouldShowSignIn,
-      params: { lang },
-      trackEvent
-    } = this.props;
-    const navProps = {
-      isOnMap: router.isActive(`/${lang}/map`),
-      username,
-      points,
-      picture,
-      updateNavHeight,
-      toggleMapDrawer,
-      toggleMainChat,
-      shouldShowSignIn,
-      trackEvent
-    };
+    const { username, points, picture } = this.props;
+    const navProps = { username, points, picture };
 
     return (
       <div>
@@ -144,18 +70,20 @@ export class FreeCodeCamp extends React.Component {
         <Row>
           { this.props.children }
         </Row>
-        <MapDrawer
-          isAlreadyLoaded={ isMapAlreadyLoaded }
-          isOpen={ isMapDrawerOpen }
-          toggleMapDrawer={ toggleMapDrawer }
-        />
-        <Toasts />
+        <ToastContainer
+          className='toast-bottom-right'
+          ref='toaster'
+          toastMessageFactory={ toastMessageFactory } />
       </div>
     );
   }
 }
 
-export default connect(
-  mapStateToProps,
-  bindableActions
-)(FreeCodeCamp);
+const wrapComponent = compose(
+  // connect Component to Redux Store
+  connect(mapStateToProps, { fetchUser }),
+  // handles prefetching data
+  contain(fetchContainerOptions)
+);
+
+export default wrapComponent(FreeCodeCamp);

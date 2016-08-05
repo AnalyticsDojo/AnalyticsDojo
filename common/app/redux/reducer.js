@@ -1,18 +1,6 @@
 import { handleActions } from 'redux-actions';
 import types from './types';
 
-const initialState = {
-  title: 'Learn To Code | Free Code Camp',
-  shouldShowSignIn: false,
-  user: '',
-  lang: '',
-  csrfToken: '',
-  windowHeight: 0,
-  navHeight: 0,
-  isMainChatOpen: false,
-  isHelpChatOpen: false
-};
-
 export default handleActions(
   {
     [types.updateTitle]: (state, { payload = 'Learn To Code' }) => ({
@@ -20,61 +8,29 @@ export default handleActions(
       title: payload + ' | Free Code Camp'
     }),
 
-    [types.updateThisUser]: (state, { payload: user }) => ({
+    [types.makeToast]: (state, { payload: toast }) => ({
       ...state,
-      user,
-      shouldShowSignIn: true
+      toast
     }),
-    [types.updateAppLang]: (state, { payload = 'en' }) =>({
-      ...state,
-      lang: payload
-    }),
-    [types.showSignIn]: state => ({
-      ...state,
-      shouldShowSignIn: true
-    }),
+
+    [types.setUser]: (state, { payload: user }) => ({ ...state, ...user }),
 
     [types.challengeSaved]: (state, { payload: { points = 0 } }) => ({
       ...state,
       points
     }),
-    [types.updateWindowHeight]: (state, { payload: windowHeight }) => ({
+
+    [types.updatePoints]: (state, { payload: points }) => ({
       ...state,
-      windowHeight
-    }),
-    [types.updateNavHeight]: (state, { payload: navHeight }) => ({
-      ...state,
-      navHeight
-    }),
-    [types.toggleMapDrawer]: state => ({
-      ...state,
-      isMapAlreadyLoaded: true,
-      isMapDrawerOpen: !state.isMapDrawerOpen
-    }),
-    [types.closeMapDrawer]: state => ({
-      ...state,
-      isMapDrawerOpen: false
-    }),
-    [types.toggleMainChat]: state => ({
-      ...state,
-      isMainChatOpen: !state.isMainChatOpen
-    }),
-    [types.toggleHelpChat]: state => ({
-      ...state,
-      isHelpChatOpen: !state.isHelpChatOpen
-    }),
-    [types.openHelpChat]: state => ({
-      ...state,
-      isHelpChatOpen: true
-    }),
-    [types.closeHelpChat]: state => ({
-      ...state,
-      isHelpChatOpen: false
-    }),
-    [types.delayedRedirect]: (state, { payload }) => ({
-      ...state,
-      delayedRedirect: payload
+      points
     })
   },
-  initialState
+  {
+    title: 'Learn To Code | Free Code Camp',
+    username: null,
+    picture: null,
+    points: 0,
+    isSignedIn: false,
+    csrfToken: ''
+  }
 );

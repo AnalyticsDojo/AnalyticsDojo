@@ -8,20 +8,18 @@ import {
   dataVisChallengeId,
   backEndChallengeId
 } from '../utils/constantStrings.json';
+
 import certTypes from '../utils/certTypes.json';
-import {
-  ifNoUser401,
-  ifNoUserRedirectTo
-} from '../utils/middleware';
+
+import { ifNoUser401, ifNoUserRedirectTo } from '../utils/middleware';
 import { observeQuery } from '../utils/rx';
 import {
   prepUniqueDays,
   calcCurrentStreak,
   calcLongestStreak
 } from '../utils/user-stats';
-import supportedLanguages from '../../common/utils/supported-languages';
-import createNameIdMap from '../../common/utils/create-name-id-map';
-import { cachedMap } from '../utils/map';
+
+import { flashIfNotVerified } from '../utils/middleware';
 
 const debug = debugFactory('fcc:boot:user');
 const sendNonUserToMap = ifNoUserRedirectTo('/map');
@@ -85,15 +83,12 @@ function getChallengeGroup(challenge) {
   return 'challenges';
 }
 
-// buildDisplayChallenges(
-//   entities: { challenge: Object, challengeIdToName: Object },
-//   challengeMap: Object,
-//   tz: String
-// ) => Observable[{
+// buildDisplayChallenges(challengeMap: Object, tz: String) => Observable[{
 //   algorithms: Array,
 //   projects: Array,
 //   challenges: Array
 // }]
+<<<<<<< HEAD
 function buildDisplayChallenges(
   { challenge: challengeMap = {}, challengeIdToName },
   userChallengeMap = {},
@@ -116,6 +111,24 @@ function buildDisplayChallenges(
       .tz(userChallenge.lastUpdated, timezone)
       .format(dateFormat);
   }
+=======
+function buildDisplayChallenges(challengeMap = {}, timezone) {
+  return Observable.from(Object.keys(challengeMap))
+    .map(challengeId => challengeMap[challengeId])
+    .map(challenge => {
+      let finalChallenge = { ...challenge };
+      if (challenge.completedDate) {
+        finalChallenge.completedDate = moment
+          .tz(challenge.completedDate, timezone)
+          .format(dateFormat);
+      }
+
+      if (challenge.lastUpdated) {
+        finalChallenge.lastUpdated = moment
+          .tz(challenge.lastUpdated, timezone)
+          .format(dateFormat);
+      }
+>>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
 
   return finalChallenge;
 })
@@ -135,11 +148,8 @@ function buildDisplayChallenges(
 }
 
 module.exports = function(app) {
-  const router = app.loopback.Router();
-  const api = app.loopback.Router();
-  const User = app.models.User;
-  const Block = app.models.Block;
-  const map$ = cachedMap(Block);
+  var router = app.loopback.Router();
+  var User = app.models.User;
   function findUserByUsername$(username, fields) {
     return observeQuery(
       User,
@@ -160,56 +170,88 @@ module.exports = function(app) {
   router.get('/signin', getSignin);
   router.get('/signout', signout);
   router.get('/forgot', getForgot);
-  api.post('/forgot', postForgot);
+  router.post('/forgot', postForgot);
   router.get('/reset-password', getReset);
-  api.post('/reset-password', postReset);
+  router.post('/reset-password', postReset);
   router.get('/email-signup', getEmailSignup);
   router.get('/email-signin', getEmailSignin);
   router.get('/deprecated-signin', getDepSignin);
   router.get('/update-email', getUpdateEmail);
-  api.post(
+  router.get(
+    '/toggle-lockdown-mode',
+    sendNonUserToMap,
+    toggleLockdownMode
+  );
+  router.get(
+    '/toggle-announcement-email-mode',
+    sendNonUserToMap,
+    toggleReceivesAnnouncementEmails
+  );
+  router.get(
+    '/toggle-notification-email-mode',
+    sendNonUserToMap,
+    toggleReceivesNotificationEmails
+  );
+  router.get(
+    '/toggle-quincy-email-mode',
+    sendNonUserToMap,
+    toggleReceivesQuincyEmails
+  );
+  router.post(
     '/account/delete',
     ifNoUser401,
     postDeleteAccount
   );
-  api.get(
+  router.get(
     '/account',
     sendNonUserToMap,
     getAccount
   );
+  router.get(
+    '/settings',
+    sendNonUserToMap,
+    flashIfNotVerified,
+    getSettings
+  );
+  // router.get('/vote1', vote1);
+  // router.get('/vote2', vote2);
 
   // Ensure these are the last routes!
-  api.get(
+  router.get(
     '/:username/front-end-certification',
     showCert.bind(null, certTypes.frontEnd)
   );
 
-  api.get(
+  router.get(
     '/:username/data-visualization-certification',
     showCert.bind(null, certTypes.dataVis)
   );
 
-  api.get(
+  router.get(
     '/:username/back-end-certification',
     showCert.bind(null, certTypes.backEnd)
   );
 
-  api.get(
+  router.get(
     '/:username/full-stack-certification',
     (req, res) => res.redirect(req.url.replace('full-stack', 'back-end'))
   );
 
-  router.get('/:username', showUserProfile);
+  router.get('/:username', returnUser);
 
-  app.use('/:lang', router);
-  app.use(api);
+  app.use(router);
 
   function getSignin(req, res) {
     if (req.user) {
       return res.redirect('/');
     }
+<<<<<<< HEAD
     return res.render('account/signin', {
       title: 'Sign in to the Analytics Dojo'
+=======
+      return res.render('account/signin', {
+      title: 'Sign in to Analytics Dojo using a Social Media Account'
+>>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
     });
   }
 
@@ -260,9 +302,15 @@ module.exports = function(app) {
     return res.redirect('/' + username);
   }
 
-  function showUserProfile(req, res, next) {
+  function getSettings(req, res) {
+    res.render('account/settings', {
+        title: 'Settings'
+    });
+  }
+
+  function returnUser(req, res, next) {
     const username = req.params.username.toLowerCase();
-    const { user } = req;
+    const { user, path } = req;
 
     // timezone of signed-in account
     // to show all date related components
@@ -280,6 +328,7 @@ module.exports = function(app) {
     return User.findOne$(query)
         .filter(userPortfolio => {
         if (!userPortfolio) {
+<<<<<<< HEAD
       next();
     }
     return !!userPortfolio;
@@ -318,6 +367,49 @@ module.exports = function(app) {
     if (userPortfolio.isCheater && !user) {
       req.flash('errors', {
         msg: dedent`
+=======
+          req.flash('errors', {
+            msg: `We couldn't find a page for ${ path }`
+          });
+          res.redirect('/');
+        }
+        return !!userPortfolio;
+      })
+      .flatMap(userPortfolio => {
+        userPortfolio = userPortfolio.toJSON();
+
+        const timestamps = userPortfolio
+          .progressTimestamps
+          .map(objOrNum => {
+            return typeof objOrNum === 'number' ?
+              objOrNum :
+              objOrNum.timestamp;
+          });
+
+        const uniqueDays = prepUniqueDays(timestamps, timezone);
+
+        userPortfolio.currentStreak = calcCurrentStreak(uniqueDays, timezone);
+        userPortfolio.longestStreak = calcLongestStreak(uniqueDays, timezone);
+
+        const calender = userPortfolio
+          .progressTimestamps
+          .map((objOrNum) => {
+            return typeof objOrNum === 'number' ?
+              objOrNum :
+              objOrNum.timestamp;
+          })
+          .filter((timestamp) => {
+            return !!timestamp;
+          })
+          .reduce((data, timeStamp) => {
+            data[(timeStamp / 1000)] = 1;
+            return data;
+          }, {});
+
+        if (userPortfolio.isCheater) {
+          req.flash('errors', {
+            msg: dedent`
+>>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
               Upon review, this account has been flagged for academic
               dishonesty. If you’re the owner of this account contact
               team@analyticsdojo.com for details.
@@ -325,6 +417,7 @@ module.exports = function(app) {
       });
     }
 
+<<<<<<< HEAD
     return map$.map(({ entities }) => createNameIdMap(entities))
   .flatMap(entities => buildDisplayChallenges(
       entities,
@@ -349,6 +442,26 @@ module.exports = function(app) {
       () => {},
       next
   );
+=======
+        return buildDisplayChallenges(userPortfolio.challengeMap, timezone)
+          .map(displayChallenges => ({
+            ...userPortfolio,
+            ...displayChallenges,
+            title: 'Camper ' + userPortfolio.username + '\'s Code Portfolio',
+            calender,
+            github: userPortfolio.githubURL,
+            moment,
+            encodeFcc
+          }));
+      })
+      .doOnNext(data => {
+        return res.render('account/show', data);
+      })
+      .subscribe(
+        () => {},
+        next
+      );
+>>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
   }
 
   function showCert(certType, req, res, next) {
@@ -431,6 +544,62 @@ module.exports = function(app) {
   );
   }
 
+  function toggleLockdownMode(req, res, next) {
+    const { user } = req;
+    user.update$({ isLocked: !user.isLocked })
+      .subscribe(
+        () => {
+          req.flash('info', {
+            msg: 'We\'ve successfully updated your Privacy preferences.'
+          });
+          return res.redirect('/settings');
+        },
+        next
+      );
+  }
+
+  function toggleReceivesAnnouncementEmails(req, res, next) {
+    const { user } = req;
+    return user.update$({ sendMonthlyEmail: !user.sendMonthlyEmail })
+      .subscribe(
+        () => {
+          req.flash('info', {
+            msg: 'We\'ve successfully updated your Email preferences.'
+          });
+          return res.redirect('/settings');
+        },
+        next
+      );
+  }
+
+  function toggleReceivesQuincyEmails(req, res, next) {
+    const { user } = req;
+    return user.update$({ sendQuincyEmail: !user.sendQuincyEmail })
+      .subscribe(
+        () => {
+          req.flash('info', {
+            msg: 'We\'ve successfully updated your Email preferences.'
+          });
+          return res.redirect('/settings');
+        },
+        next
+      );
+  }
+
+  function toggleReceivesNotificationEmails(req, res, next) {
+    const { user } = req;
+    return user.update$({ sendNotificationEmail: !user.sendNotificationEmail })
+      .subscribe(
+        () => {
+          req.flash('info', {
+            msg: 'We\'ve successfully updated your Email preferences.'
+          });
+          return res.redirect('/settings');
+        },
+        next
+      );
+  }
+
   function postDeleteAccount(req, res, next) {
     User.destroyById(req.user.id, function(err) {
       if (err) { return next(err); }
@@ -507,4 +676,34 @@ module.exports = function(app) {
       return res.render('account/forgot');
     });
   }
+
+  // function vote1(req, res, next) {
+  //   if (req.user) {
+  //     req.user.tshirtVote = 1;
+  //     req.user.save(function(err) {
+  //       if (err) { return next(err); }
+  //
+  //       req.flash('success', { msg: 'Thanks for voting!' });
+  //       return res.redirect('/map');
+  //     });
+  //   } else {
+  //     req.flash('error', { msg: 'You must be signed in to vote.' });
+  //     res.redirect('/map');
+  //   }
+  // }
+  //
+  // function vote2(req, res, next) {
+  //   if (req.user) {
+  //     req.user.tshirtVote = 2;
+  //     req.user.save(function(err) {
+  //       if (err) { return next(err); }
+  //
+  //       req.flash('success', { msg: 'Thanks for voting!' });
+  //       return res.redirect('/map');
+  //     });
+  //   } else {
+  //     req.flash('error', {msg: 'You must be signed in to vote.'});
+  //     res.redirect('/map');
+  //   }
+  // }
 };

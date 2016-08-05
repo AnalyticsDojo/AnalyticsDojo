@@ -50,7 +50,8 @@ export default React.createClass({
       target,
       children,
       'aria-controls': ariaControls,  // eslint-disable-line react/prop-types
-      className
+      className,
+      ...props
     } = this.props;
 
     const linkClassName = classNames(className, {
@@ -75,14 +76,13 @@ export default React.createClass({
 
     return (
       <li
-        role='presentation'
-        >
+        {...props}
+        role='presentation'>
         <a
           { ...linkProps }
           aria-controls={ ariaControls }
           aria-selected={ active }
-          className={ linkClassName }
-          >
+          className={ linkClassName }>
           { children }
         </a>
       </li>

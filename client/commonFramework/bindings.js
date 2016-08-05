@@ -147,11 +147,11 @@ window.common = (function(global) {
     });
 
     if (common.challengeName) {
-      window.ga('send', 'event', 'Challenge', 'loaded', common.gaName);
+      window.ga('send', 'event', 'Challenge', 'load', common.gaName);
     }
 
     $('.modal').on('show.bs.modal', function() {
-      $('.gitter-chat-embed, .map-aside')
+      $('.gitter-chat-embed, .wiki-aside, .map-aside')
         .addClass('is-collapsed');
     });
 
@@ -183,15 +183,17 @@ window.common = (function(global) {
 
     $('#show-solution').on('click', function() {
       $('#complete-courseware-dialog').modal('hide');
+      $('#nav-wiki-btn').click();
     });
 
     $('#challenge-help-btn').on('click', function() {
-      $('.map-aside, #chat-embed-main').addClass('is-collapsed');
+      $('.wiki-aside, .map-aside, #chat-embed-main').addClass('is-collapsed');
     });
 
     $('#help-ive-found-a-bug-wiki-article').on('click', function() {
       window.open(
-        'http://forum.freecodecamp.com/t/how-to-report-a-bug/19543',
+        'https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/' +
+          'FreeCodeCamp-Report-Bugs',
         '_blank'
       );
     });

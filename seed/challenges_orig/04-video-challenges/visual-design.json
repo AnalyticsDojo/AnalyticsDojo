@@ -12,11 +12,7 @@
       "tests": [],
       "type": "hike",
       "challengeType": 6,
-      "translations": {
-        "es": {
-          "title": "Visual Design"
-        }
-      }
+      "nameEs": "Visual Design"
     }
   ]
-}
+}    

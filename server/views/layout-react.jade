@@ -6,10 +6,8 @@ html(lang='en')
     else
       title Analytics Dojo
     include partials/react-stylesheets
-  body.container.react-layout(style='overflow: hidden')
-    #fcc!= markup
+  body.top-and-bottom-margins(style='overflow: hidden')
+    .container
+      #fcc!= markup
     script!= state
-    script.
-      window.webpackManifest = !{JSON.stringify(chunkManifest || {})};
-    script(src=rev('/js', 'vendor-challenges.js'))
-    script(src=getBundleLocation())
+    script(src=rev('/js', 'bundle.js'))
