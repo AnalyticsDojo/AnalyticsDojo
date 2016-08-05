@@ -1,1 +1,251 @@
-"use strict";var main=window.main||{};main.ga=window.ga||function(){},main=function(e,t){var a=t.Mousetrap;return((window.gitter={}).chat={}).options={disableDefaultChat:!0},e.chat={},e.chat.isOpen=!1,e.chat.createHelpChat=function(){throw new Error("Sidecar chat has not initialized")},document.addEventListener("gitter-sidecar-ready",function(t){function n(){e.chat.isOpen||e.chat.mainChat.toggleChat(!0)}function i(){$("#chat-embed-main").addClass("is-collapsed"),document.activeElement.blur()}function o(){var e=$("#chat-embed-main").hasClass("is-collapsed");e?n():i()}e.chat.GitterChat=t.detail.Chat,e.chat.createHelpChat=function(t,a,n){n=t.replace(/([A-Z])/g," $1").replace("Java Script","JavaScript"),$("body").append('<aside id="chat-embed-help" class="gitter-chat-embed is-collapsed" />'),e.chat.helpChat=new e.chat.GitterChat({room:"freecodecamp/"+t,activationElement:!1,targetElement:$("#chat-embed-help")}),$(a).on("click",function(){var t=!$(this).hasClass("active");e.chat.helpChat.toggleChat(t),t&&$(a).addClass("active")});var i=!1;$("#chat-embed-help").on("gitter-chat-toggle",function(e){var t=!!e.originalEvent.detail.state;return i||(i=!0,$("#chat-embed-help > .gitter-chat-embed-action-bar").prepend('<div class="chat-embed-main-title"><span>'+n+"</span></div>")),t?$(a).addClass("active"):$(a).removeClass("active")})},$("body").append('<aside id="chat-embed-main" class="gitter-chat-embed is-collapsed" />'),e.chat.mainChat=new e.chat.GitterChat({room:"analyticsdojo/analyticsdojo",activationElement:!1,targetElement:$("#chat-embed-main")});var c=!1;$("#chat-embed-main").on("gitter-chat-toggle",function(){return c?null:(c=!0,$("body").hasClass("night")&&$("#chat-embed-main").addClass("night"),$("#chat-embed-main > .gitter-chat-embed-action-bar").prepend('<div class="chat-embed-main-title"><span>Analytics Dojo\'s Main Chat</span></div>'),null)}),$("#nav-chat-btn").on("click",function(e){e.ctrlKey||e.metaKey||o(),window.ga("send","event","Nav","clicked","Nav chat opened")}),a.bind("g c",o)}),e}(main,window),$(document).ready(function(){function e(){var e=arguments.length<=0||void 0===arguments[0]?"":arguments[0],t=arguments.length<=1||void 0===arguments[1]?"alert-info":arguments[1];return $(".flashMessage").append($("\n      <div class='alert "+t+"'>\n        <button class='close' type='button', data-dismiss='alert'>\n          <span class='ion-close-circled' />\n        </Button>\n        <div>"+e+"</div>\n      </div>\n    "))}function t(){if(!main.userId)return e("You must be logged in to use our themes.");var t=document.getElementById("map-aside-frame"),a=$("body");t&&(t.src=t.src),a.hide();var n=void 0;a.hasClass("night")?(a.removeClass("night"),n="default"):(a.addClass("night"),n="night"),a.fadeIn("100");var i={url:"/api/users/"+main.userId+"/update-theme",type:"POST",data:{theme:n},dataType:"json"};return $.ajax(i).success(function(){return console.log("theme updated successfully")}).fail(function(t){var a=void 0;try{a=JSON.parse(t.responseText).error.message}catch(n){return null}return a?e(a):null})}var a=window.Rx.Observable,n="X-CSRF-Token",i=function(e){jQuery.ajaxPrefilter(function(t,a,i){i.crossDomain||i.setRequestHeader(n,e)})};i($('meta[name="csrf-token"]').attr("content")),$("img").error(function(){$(this).unbind("error").attr("src","https://s3.amazonaws.com/analyticsdojo/placeholder.png")}),$.each($(".sr-only"),function(e,t){" Complete"===$(t).text()&&$(t).parents("p").addClass("manip-hidden")}),a.merge(a.fromEvent($("#night-mode"),"click"),a.create(function(e){window.Mousetrap.bind("g t n",function(){return e.onNext()})})).debounce(500).subscribe(t,function(e){return console.error(e)}),window.Mousetrap.bind("g n n",function(){window.location="/challenges/next-challenge"}),window.Mousetrap.bind("g n m",function(){window.location="/map"}),window.Mousetrap.bind("g n a",function(){window.location="/about"}),window.Mousetrap.bind("g n s",function(){window.location="/shop"}),window.Mousetrap.bind("g n o",function(){window.location="/settings"}),window.Mousetrap.bind("g n r",function(){window.location="https://github.com/freecodecamp/freecodecamp/"}),function(){var e="__flyerId__";$.ajax({url:"/api/flyers/findOne",method:"GET",dataType:"JSON",data:{filter:{order:"id DESC"}}}).fail(function(e){return console.error(e)}).done(function(t){var a=localStorage.getItem(e);t&&t.isActive&&a!==t.id&&($("#dismiss-bill").on("click",function(){localStorage.setItem(e,t.id)}),$("#bill-content").html(t.message),$("#bill-board").fadeIn())})}()});
+'use strict';
+
+var main = window.main || {};
+
+main.ga = window.ga || function () {};
+
+main = function (main, global) {
+  var Mousetrap = global.Mousetrap;
+
+  // should be set before gitter script loads
+
+  ((window.gitter = {}).chat = {}).options = {
+    disableDefaultChat: true
+  };
+  // wait for sidecar to load
+
+  main.chat = {};
+  main.chat.isOpen = false;
+  main.chat.createHelpChat = function createHelpChat() {
+    throw new Error('Sidecar chat has not initialized');
+  };
+
+  document.addEventListener('gitter-sidecar-ready', function (e) {
+    main.chat.GitterChat = e.detail.Chat;
+
+    main.chat.createHelpChat = function (room, helpChatBtnClass, roomTitle) {
+      // room is always in PascalCase
+      roomTitle = room.replace(/([A-Z])/g, ' $1').replace('Java Script', 'JavaScript');
+
+      $('body').append('<aside id="chat-embed-help" class="gitter-chat-embed is-collapsed" />');
+
+      main.chat.helpChat = new main.chat.GitterChat({
+        room: 'freecodecamp/' + room,
+        activationElement: false,
+        targetElement: $('#chat-embed-help')
+      });
+
+      $(helpChatBtnClass).on('click', function () {
+        // is button already pressed?
+        // no? open chat
+        // yes? close chat
+        var shouldChatBeOpen = !$(this).hasClass('active');
+        main.chat.helpChat.toggleChat(shouldChatBeOpen);
+        if (shouldChatBeOpen) {
+          $(helpChatBtnClass).addClass('active');
+        }
+      });
+
+      var helpTitleAdd = false;
+      $('#chat-embed-help').on('gitter-chat-toggle', function (e) {
+        var shouldButtonBePressed = !!e.originalEvent.detail.state;
+
+        if (!helpTitleAdd) {
+          helpTitleAdd = true;
+          $('#chat-embed-help > .gitter-chat-embed-action-bar').prepend('<div class="chat-embed-main-title">' + '<span>' + roomTitle + '</span>' + '</div>');
+        }
+
+        if (shouldButtonBePressed) {
+          return $(helpChatBtnClass).addClass('active');
+        }
+        return $(helpChatBtnClass).removeClass('active');
+      });
+    };
+
+    $('body').append('<aside id="chat-embed-main" class="gitter-chat-embed is-collapsed" />');
+
+    main.chat.mainChat = new main.chat.GitterChat({
+      room: 'analyticsdojo/analyticsdojo',
+      activationElement: false,
+      targetElement: $('#chat-embed-main')
+    });
+
+    var mainChatTitleAdded = false;
+    $('#chat-embed-main').on('gitter-chat-toggle', function () {
+      if (mainChatTitleAdded) {
+        return null;
+      }
+      mainChatTitleAdded = true;
+      if ($('body').hasClass('night')) {
+        $('#chat-embed-main').addClass('night');
+      }
+      $('#chat-embed-main > .gitter-chat-embed-action-bar').prepend('<div class="chat-embed-main-title">' + '<span>Analytics Dojo\'s Main Chat</span>' + '</div>');
+      return null;
+    });
+
+    $('#nav-chat-btn').on('click', function (event) {
+      if (!(event.ctrlKey || event.metaKey)) {
+        toggleMainChat();
+      }
+      window.ga('send', 'event', 'Nav', 'clicked', 'Nav chat opened');
+    });
+
+    function showMainChat() {
+      if (!main.chat.isOpen) {
+        main.chat.mainChat.toggleChat(true);
+      }
+    }
+
+    function collapseMainChat() {
+      $('#chat-embed-main').addClass('is-collapsed');
+      document.activeElement.blur();
+    }
+
+    function toggleMainChat() {
+      var isCollapsed = $('#chat-embed-main').hasClass('is-collapsed');
+
+      if (isCollapsed) {
+        showMainChat();
+      } else {
+        collapseMainChat();
+      }
+    }
+
+    // keyboard shortcuts: open main chat
+    Mousetrap.bind('g c', toggleMainChat);
+  });
+
+  return main;
+}(main, window);
+
+$(document).ready(function () {
+  var Observable = window.Rx.Observable;
+
+  var CSRF_HEADER = 'X-CSRF-Token';
+
+  var setCSRFToken = function setCSRFToken(securityToken) {
+    jQuery.ajaxPrefilter(function (options, _, xhr) {
+      if (!xhr.crossDomain) {
+        xhr.setRequestHeader(CSRF_HEADER, securityToken);
+      }
+    });
+  };
+
+  setCSRFToken($('meta[name="csrf-token"]').attr('content'));
+
+  $('img').error(function () {
+    $(this).unbind('error').attr('src', 'https://s3.amazonaws.com/analyticsdojo/placeholder.png');
+  });
+
+  $.each($('.sr-only'), function (i, span) {
+    if ($(span).text() === ' Complete') {
+      $(span).parents('p').addClass('manip-hidden');
+    }
+  });
+
+  function addAlert() {
+    var message = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+    var type = arguments.length <= 1 || arguments[1] === undefined ? 'alert-info' : arguments[1];
+
+    return $('.flashMessage').append($('\n      <div class=\'alert ' + type + '\'>\n        <button class=\'close\' type=\'button\', data-dismiss=\'alert\'>\n          <span class=\'ion-close-circled\' />\n        </Button>\n        <div>' + message + '</div>\n      </div>\n    '));
+  }
+
+  function toggleNightMode() {
+    if (!main.userId) {
+      return addAlert('You must be logged in to use our themes.');
+    }
+    var iframe$ = document.getElementById('map-aside-frame');
+    var body$ = $('body');
+    if (iframe$) {
+      iframe$.src = iframe$.src;
+    }
+    body$.hide();
+    var updateThemeTo = void 0;
+    if (body$.hasClass('night')) {
+      body$.removeClass('night');
+      updateThemeTo = 'default';
+    } else {
+      body$.addClass('night');
+      updateThemeTo = 'night';
+    }
+    body$.fadeIn('100');
+    var options = {
+      url: '/api/users/' + main.userId + '/update-theme',
+      type: 'POST',
+      data: { theme: updateThemeTo },
+      dataType: 'json'
+    };
+    return $.ajax(options).success(function () {
+      return console.log('theme updated successfully');
+    }).fail(function (err) {
+      var message = void 0;
+      try {
+        message = JSON.parse(err.responseText).error.message;
+      } catch (error) {
+        return null;
+      }
+      if (!message) {
+        return null;
+      }
+      return addAlert(message);
+    });
+  }
+
+  Observable.merge(Observable.fromEvent($('#night-mode'), 'click'), Observable.create(function (observer) {
+    window.Mousetrap.bind('g t n', function () {
+      return observer.onNext();
+    });
+  })).debounce(500).subscribe(toggleNightMode, function (err) {
+    return console.error(err);
+  });
+
+  // Hot Keys
+  window.Mousetrap.bind('g n n', function () {
+    // Next Challenge
+    window.location = '/challenges/next-challenge';
+  });
+  window.Mousetrap.bind('g n m', function () {
+    // Map
+    window.location = '/map';
+  });
+  window.Mousetrap.bind('g n a', function () {
+    // About
+    window.location = '/about';
+  });
+  window.Mousetrap.bind('g n s', function () {
+    // Shop
+    window.location = '/shop';
+  });
+  window.Mousetrap.bind('g n o', function () {
+    // Settings
+    window.location = '/settings';
+  });
+  window.Mousetrap.bind('g n r', function () {
+    // Repo
+    window.location = 'https://github.com/freecodecamp/freecodecamp/';
+  });
+
+  (function getFlyer() {
+    var flyerKey = '__flyerId__';
+    $.ajax({
+      url: '/api/flyers/findOne',
+      method: 'GET',
+      dataType: 'JSON',
+      data: { filter: { order: 'id DESC' } }
+    })
+    // log error
+    .fail(function (err) {
+      return console.error(err);
+    }).done(function (flyer) {
+      var lastFlyerId = localStorage.getItem(flyerKey);
+      if (!flyer || !flyer.isActive || lastFlyerId === flyer.id) {
+        return;
+      }
+      $('#dismiss-bill').on('click', function () {
+        localStorage.setItem(flyerKey, flyer.id);
+      });
+      $('#bill-content').html(flyer.message);
+      $('#bill-board').fadeIn();
+    });
+  })();
+});
