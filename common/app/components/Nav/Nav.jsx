@@ -120,7 +120,7 @@ export default class extends React.Component {
     return (
       <NavItem
         eventKey={ 2 }
-        href='//gitter.im/freecodecamp/freecodecamp'
+        href='//gitter.im/analyticsdojo/analyticsdojo'
         onClick={ e => {
           if (!(e.ctrlKey || e.metaKey)) {
             e.preventDefault();
