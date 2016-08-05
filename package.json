@@ -22,7 +22,6 @@
     "pretest": "npm run create-rev && npm run lint",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect",
-    "heroku-postbuild": "NODE_ENV=production gulp build -p",
     "test-challenges": "babel-node seed/test-challenges.js | tap-spec",
     "test-js": "tape -r babel-register 'common/**/*.test.js'",
     "test": "npm run test-js && npm run test-challenges",
