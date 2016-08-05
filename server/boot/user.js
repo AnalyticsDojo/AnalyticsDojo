@@ -88,47 +88,22 @@ function getChallengeGroup(challenge) {
 //   projects: Array,
 //   challenges: Array
 // }]
-<<<<<<< HEAD
-function buildDisplayChallenges(
-  { challenge: challengeMap = {}, challengeIdToName },
-  userChallengeMap = {},
-  timezone
-) {
-  return Observable.from(Object.keys(userChallengeMap))
-      .map(challengeId => userChallengeMap[challengeId])
-.map(userChallenge => {
-    const challengeId = userChallenge.id;
-  const challenge = challengeMap[ challengeIdToName[challengeId] ];
-  let finalChallenge = { ...userChallenge, ...challenge };
-  if (userChallenge.completedDate) {
-    finalChallenge.completedDate = moment
-      .tz(userChallenge.completedDate, timezone)
-      .format(dateFormat);
-  }
-
-  if (userChallenge.lastUpdated) {
-    finalChallenge.lastUpdated = moment
-      .tz(userChallenge.lastUpdated, timezone)
-      .format(dateFormat);
-  }
-=======
 function buildDisplayChallenges(challengeMap = {}, timezone) {
   return Observable.from(Object.keys(challengeMap))
-    .map(challengeId => challengeMap[challengeId])
-    .map(challenge => {
-      let finalChallenge = { ...challenge };
-      if (challenge.completedDate) {
-        finalChallenge.completedDate = moment
-          .tz(challenge.completedDate, timezone)
-          .format(dateFormat);
-      }
+      .map(challengeId => challengeMap[challengeId])
+.map(challenge => {
+    let finalChallenge = { ...challenge };
+  if (challenge.completedDate) {
+    finalChallenge.completedDate = moment
+      .tz(challenge.completedDate, timezone)
+      .format(dateFormat);
+  }
 
-      if (challenge.lastUpdated) {
-        finalChallenge.lastUpdated = moment
-          .tz(challenge.lastUpdated, timezone)
-          .format(dateFormat);
-      }
->>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
+  if (challenge.lastUpdated) {
+    finalChallenge.lastUpdated = moment
+      .tz(challenge.lastUpdated, timezone)
+      .format(dateFormat);
+  }
 
   return finalChallenge;
 })
@@ -245,13 +220,8 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect('/');
     }
-<<<<<<< HEAD
     return res.render('account/signin', {
-      title: 'Sign in to the Analytics Dojo'
-=======
-      return res.render('account/signin', {
       title: 'Sign in to Analytics Dojo using a Social Media Account'
->>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
     });
   }
 
@@ -266,7 +236,7 @@ module.exports = function(app) {
       return res.redirect('/');
     }
     return res.render('account/deprecated-signin', {
-      title: 'Sign in to AnalyticsDojo using a Deprecated Login'
+      title: 'Sign in to Free Code Camp using a Deprecated Login'
     });
   }
 
@@ -283,8 +253,9 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect('/');
     }
+
     return res.render('account/email-signin', {
-      title: 'Sign in to AnalyticsDojo using your Email Address'
+      title: 'Sign in to Analytics Dojo using your Email Address'
     });
   }
 
@@ -292,6 +263,7 @@ module.exports = function(app) {
     if (req.user) {
       return res.redirect('/');
     }
+
     return res.render('account/email-signup', {
       title: 'Sign up for Analytics Dojo using your Email Address'
     });
@@ -304,7 +276,7 @@ module.exports = function(app) {
 
   function getSettings(req, res) {
     res.render('account/settings', {
-        title: 'Settings'
+      title: 'Settings'
     });
   }
 
@@ -328,8 +300,10 @@ module.exports = function(app) {
     return User.findOne$(query)
         .filter(userPortfolio => {
         if (!userPortfolio) {
-<<<<<<< HEAD
-      next();
+      req.flash('errors', {
+        msg: `We couldn't find a page for ${ path }`
+      });
+      res.redirect('/');
     }
     return !!userPortfolio;
   })
@@ -364,52 +338,9 @@ module.exports = function(app) {
     return data;
   }, {});
 
-    if (userPortfolio.isCheater && !user) {
+    if (userPortfolio.isCheater) {
       req.flash('errors', {
         msg: dedent`
-=======
-          req.flash('errors', {
-            msg: `We couldn't find a page for ${ path }`
-          });
-          res.redirect('/');
-        }
-        return !!userPortfolio;
-      })
-      .flatMap(userPortfolio => {
-        userPortfolio = userPortfolio.toJSON();
-
-        const timestamps = userPortfolio
-          .progressTimestamps
-          .map(objOrNum => {
-            return typeof objOrNum === 'number' ?
-              objOrNum :
-              objOrNum.timestamp;
-          });
-
-        const uniqueDays = prepUniqueDays(timestamps, timezone);
-
-        userPortfolio.currentStreak = calcCurrentStreak(uniqueDays, timezone);
-        userPortfolio.longestStreak = calcLongestStreak(uniqueDays, timezone);
-
-        const calender = userPortfolio
-          .progressTimestamps
-          .map((objOrNum) => {
-            return typeof objOrNum === 'number' ?
-              objOrNum :
-              objOrNum.timestamp;
-          })
-          .filter((timestamp) => {
-            return !!timestamp;
-          })
-          .reduce((data, timeStamp) => {
-            data[(timeStamp / 1000)] = 1;
-            return data;
-          }, {});
-
-        if (userPortfolio.isCheater) {
-          req.flash('errors', {
-            msg: dedent`
->>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
               Upon review, this account has been flagged for academic
               dishonesty. If you’re the owner of this account contact
               team@analyticsdojo.com for details.
@@ -417,22 +348,15 @@ module.exports = function(app) {
       });
     }
 
-<<<<<<< HEAD
-    return map$.map(({ entities }) => createNameIdMap(entities))
-  .flatMap(entities => buildDisplayChallenges(
-      entities,
-      userPortfolio.challengeMap,
-      timezone
-    ))
-  .map(displayChallenges => ({
+    return buildDisplayChallenges(userPortfolio.challengeMap, timezone)
+      .map(displayChallenges => ({
       ...userPortfolio,
       ...displayChallenges,
       title: 'Camper ' + userPortfolio.username + '\'s Code Portfolio',
       calender,
       github: userPortfolio.githubURL,
       moment,
-      encodeFcc,
-      supportedLanguages
+      encodeFcc
   }));
   })
   .doOnNext(data => {
@@ -442,26 +366,6 @@ module.exports = function(app) {
       () => {},
       next
   );
-=======
-        return buildDisplayChallenges(userPortfolio.challengeMap, timezone)
-          .map(displayChallenges => ({
-            ...userPortfolio,
-            ...displayChallenges,
-            title: 'Camper ' + userPortfolio.username + '\'s Code Portfolio',
-            calender,
-            github: userPortfolio.githubURL,
-            moment,
-            encodeFcc
-          }));
-      })
-      .doOnNext(data => {
-        return res.render('account/show', data);
-      })
-      .subscribe(
-        () => {},
-        next
-      );
->>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
   }
 
   function showCert(certType, req, res, next) {
@@ -499,6 +403,7 @@ module.exports = function(app) {
     }
 
     if (user.isCheater) {
+
       return res.redirect(`/${user.username}`);
     }
 
@@ -549,55 +454,55 @@ module.exports = function(app) {
     user.update$({ isLocked: !user.isLocked })
       .subscribe(
         () => {
-          req.flash('info', {
-            msg: 'We\'ve successfully updated your Privacy preferences.'
-          });
-          return res.redirect('/settings');
-        },
-        next
-      );
+      req.flash('info', {
+      msg: 'We\'ve successfully updated your Privacy preferences.'
+    });
+    return res.redirect('/settings');
+  },
+    next
+  );
   }
 
   function toggleReceivesAnnouncementEmails(req, res, next) {
     const { user } = req;
     return user.update$({ sendMonthlyEmail: !user.sendMonthlyEmail })
-      .subscribe(
-        () => {
-          req.flash('info', {
-            msg: 'We\'ve successfully updated your Email preferences.'
-          });
-          return res.redirect('/settings');
-        },
-        next
-      );
+        .subscribe(
+          () => {
+        req.flash('info', {
+        msg: 'We\'ve successfully updated your Email preferences.'
+      });
+    return res.redirect('/settings');
+  },
+    next
+  );
   }
 
   function toggleReceivesQuincyEmails(req, res, next) {
     const { user } = req;
     return user.update$({ sendQuincyEmail: !user.sendQuincyEmail })
-      .subscribe(
-        () => {
-          req.flash('info', {
-            msg: 'We\'ve successfully updated your Email preferences.'
-          });
-          return res.redirect('/settings');
-        },
-        next
-      );
+        .subscribe(
+          () => {
+        req.flash('info', {
+        msg: 'We\'ve successfully updated your Email preferences.'
+      });
+    return res.redirect('/settings');
+  },
+    next
+  );
   }
 
   function toggleReceivesNotificationEmails(req, res, next) {
     const { user } = req;
     return user.update$({ sendNotificationEmail: !user.sendNotificationEmail })
-      .subscribe(
-        () => {
-          req.flash('info', {
-            msg: 'We\'ve successfully updated your Email preferences.'
-          });
-          return res.redirect('/settings');
-        },
-        next
-      );
+        .subscribe(
+          () => {
+        req.flash('info', {
+        msg: 'We\'ve successfully updated your Email preferences.'
+      });
+    return res.redirect('/settings');
+  },
+    next
+  );
   }
 
   function postDeleteAccount(req, res, next) {

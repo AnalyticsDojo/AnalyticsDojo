@@ -23,15 +23,7 @@
     "test": "npm run test-challenges",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect",
-<<<<<<< HEAD
-    "test-challenges": "babel-node seed/test-challenges.js | tap-spec",
-    "test-js": "tape -r babel-register 'common/**/*.test.js'",
-    "test": "npm run test-js && npm run test-challenges",
-    "cover": "babel-node ./node_modules/.bin/babel-istanbul cover tape common/**/*.test.js",
-    "coveralls": "npm run cover && istanbul-coveralls"
-=======
     "heroku-postbuild": "NODE_ENV=production gulp build -p"
->>>>>>> parent of 646e5e3... Merge remote-tracking branch 'FreeCodeCamp/staging' into staging
   },
   "license": "(BSD-3-Clause AND CC-BY-SA-4.0)",
   "dependencies": {
@@ -69,23 +61,6 @@
     "express-session": "^1.12.1",
     "express-state": "^1.2.0",
     "express-validator": "^2.18.0",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^6.1.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-dest": "^0.2.3",
-    "gulp-eslint": "^3.0.1",
-    "gulp-if": "^2.0.0",
-    "gulp-jsonlint": "^1.1.0",
-    "gulp-less": "^3.0.3",
-    "gulp-nodemon": "^2.0.3",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-reduce-file": "0.0.1",
-    "gulp-rev": "^7.0.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-tape": "0.0.9",
-    "gulp-uglify": "^1.5.1",
-    "gulp-util": "^3.0.6",
     "fetchr": "~0.5.12",
     "frameguard": "^2.0.0",
     "gulp": "^3.9.0",

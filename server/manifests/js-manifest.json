@@ -1,6 +1,7 @@
 {
-  "frame-runner.js": "frame-runner-eb881f68a3.js",
-  "main.js": "main-cd883588dc.js",
-  "vendor-challenges.js": "vendor-challenges-3efc3b0592.js",
-  "vendor-main.js": "vendor-main-10efee8868.js"
+  "iFrameScripts.js": "iFrameScripts-40fbbe6a21.js",
+  "main.js": "main-c5cf14ba85.js",
+  "plugin.js": "plugin-fca1cae78d.js",
+  "vendor-challenges.js": "vendor-challenges-813412a5de.js",
+  "vendor-main.js": "vendor-main-5c8e733cae.js"
 }
