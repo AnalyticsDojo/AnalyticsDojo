@@ -22,6 +22,7 @@ Wiki
 We would love your help expanding our [wiki](https://github.com/rpi-analytics/wiki). Our goal is to become a great resource for people learning data science.
 
 
+
 Contributing
 ------------
 
@@ -29,10 +30,16 @@ Contributing
 We welcome pull requests from collaborators! Please, follow [these steps](CONTRIBUTING.md) to contribute.
 
 Support
-------------
+=======
+Found a bug?
+
 
 
 This project was inspired by and forked from the awesome folks over at [Free Code Camp](https://github.com/FreeCodeCamp/FreeCodeCamp), but we aren't associated with that organization. Right now it is supported by [RPI](https://www.rpi.edu), but we are hoping to build a team of supporters from around the world. 
+=======
+1. Read the [Help I've Found a Bug](http://forum.freecodecamp.com/t/how-to-report-a-bug/19543) article and follow its instructions.
+2. Ask for confirmation in the appropriate [Help Room](http://forum.freecodecamp.com/t/free-code-camp-official-chat-rooms/19390/2).
+3. Please *do not* open an issue without a 3rd party confirmation of your problem.
 
 
 
@@ -42,6 +49,7 @@ License
 The BSD-3-Clause
 
 Copyright (c) 2016, Free Code Camp
+Copyright (c) 2016, AnalyticsDojo
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
