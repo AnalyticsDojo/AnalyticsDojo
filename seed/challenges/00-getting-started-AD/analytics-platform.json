@@ -1,12 +1,12 @@
 {
-  "name": "Join the Analytics Dojo Community",
+  "name": "Data Analytics Platforms",
   "order": 2,
-  "time": "15 minutes",
+  "time": "20 minutes",
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "560add10ag82ac40a18392be",
-      "title": "Choose and Setup an Analytics Platform",
+      "id": "560add10ag82ac40a18392ge",
+      "title": "Analytics Platform Overview",
       "description": [
         [
           "//i.imgur.com/s4osQ5T.png",
@@ -17,18 +17,18 @@
           ""
         ],
         [
-          "//i.imgur.com/BxNG6Am.jpg",
-          "A picture of various analytics platforms",
-          "Unlike a lot of <i>learn to code</i> sites that use in-browser tutorials, the AnalyticsDojo uses the same the same tools you are likely to use in a production environment.  This means that before we can get started, we have to go through a bit of setup of an analytics platform. <br> <br>An <i>analytics platform</i> is an environment in which you can execute programs, store data, and even create web services or Application Programming Interfaces (APIs) that enable your application to be deployed into the world or even sold on a marketplace. <br> <br>We are going to start with an overview of three different platforms: (1) Docker, (2) DataBricks, and (3) Microsoft Azure. Each of them will have their own strengths and weaknesses. <br> <br> A key to the platforms we are looking at is that they can work with R and Python within a Jupyter Notebook.",
-          "",
+          "//i.imgur.com/s4osQ5T.png",
+          "An image of a Jupyter Notebook",
+          "You have begun your journey, congratulations. Much of the work that we are going to be doing will utilize Jupyter notebooks. Jupyter notebooks are a flexible computing enviroment that was originally based on iPython notebooks.  The Jupyter team has done an amazing job bringing the notebook computing enviroment to a wide <a href='https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages'>variety of languages including R, Python, Scala, and even SAS.</a> <br><br> Click on the link below to go to https://try.jupyter.org and browse some of the cool things that you can do with Jupyter Notebooks. We will be using Jupyter notebooks almost exclusively as a way of learning data science.  They also provide a great way to collaborate and document your processes using markdown.",
+          "https://try.jupyter.org",
           "",
           ""
         ],
         [
-          "//i.imgur.com/XQDBVmU.gif",
-          "Gif of the Microsoft Signup Process",
-          "Microsoft has also developed an incredible platform for data science that works very well with Jupyter Notebooks. If you are just getting started, we suggest that you start here. They also have become a big supporter and player in R-community with their <a href = 'http://bit.ly/revolutionMS2'> purchase of Revolution Analytics</a>. In addition, their free services are quite generous for individuals learning data science. If you don't already have a Microsoft account, you will have to create one first <a href='https://www.microsoft.com/en-us/account'>here</a>.  Then follow the link to the AzureML signup page.",
-          "https://studio.azureml.net",
+          "//i.imgur.com/OI5Sp08.jpg",
+          "A picture of docker and Analytics Dojo",
+          "Unlike a lot of <i>learn to code</i> sites that use in-browser tutorials, the AnalyticsDojo uses the same the same tools you are likely to use in a production environment.  This means that before we can get started, we have to go through a bit of setup of an analytics platform. <br> <br>An <i>analytics platform</i> is an environment in which you can execute programs, store data, and even create web services or Application Programming Interfaces (APIs) that enable your application to be deployed into the world or even sold on a marketplace. <br> <br>We are going to start with an overview of two different platforms: (1) Docker, (2) Microsoft Azure. Each of them will have their own strengths and weaknesses. <br> <br> A key to the platforms we are looking at is that they can work with R and Python within a Jupyter Notebook. While we don't currently incorporate Domino, they have a great blog entry on what a <i>data science platform</i> is all about.",
+          "https://blog.dominodatalab.com/what-is-a-data-science-platform/",
           "",
           ""
         ],
@@ -41,9 +41,11 @@
           ""
         ],
         [
-          "//i.imgur.com/Tpdz5Cu.gif",
-          "Gif of signing up for the DataBricks community edition.",
-          "DataBricks is the company that originated SPARK, one of the biggest players in the Hadoop (big data) ecosystem. They have also offered an easy to use data analytics platform to be able to execute Jupyter notebooks with Python, R, and Scala (which is the language Spark is written in). <br><br> Go ahead now and sign up for the community edition, confirm yoru email, and you will be provided with a link to the DataBricks Platform.",
+          "//i.imgur.com/6mVM2jC.gif",
+          "Gif of the Microsoft Signup Process",
+          "Microsoft has developed an incredible platform for data science that works very well with Jupyter Notebooks. If you are just getting started, we suggest that you start here. They also have become a big supporter and player in R-community with their <a href = 'http://bit.ly/revolutionMS2'> purchase of Revolution Analytics</a>. In addition, their free services are quite generous for individuals learning data science. If you don't already have a Microsoft account, you will have to create one first <a href='https://www.microsoft.com/en-us/account'>here</a>.  Then follow the link to the AzureML signup page.",
+          "https://studio.azureml.net",
+          "",
           ""
         ],
         [
@@ -67,6 +69,73 @@
       "tests": [],
       "type": "Waypoint",
       "challengeType": 7
+    },
+    {
+      "id": "bd711238c221hfdfbeb5bddk",
+      "title": "Docker",
+      "description": [
+        "<b>Before you begin:</b>",
+        "Make sure you have installed <a href='https://www.docker.com/products/docker/'>Docker</a>",
+        "and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
+        "",
+        "Introduction to Docker",
+        "You can always access a command line within the <i>materials</> repository by right clicking on the repository",
+        "from within the Github Desktop application.<br><br>",
+        "To launch a docker container on port 8888 enter the command to launch your notebook.",
+        "<i>docker run -d -p 8888:8888  -e GRANT_SUDO=yes  --name analyticsdojo  -v {enter path to materials directory}/materials/analyticsdojo:/home/jovyan/work jupyter/datascience-notebook start-notebook.sh <i>"
+      ],
+      "challengeSeed": [
+        "dJgRJKGBXfk"
+      ],
+      "tests": [
+        [
+          "Docker containers run only in the cloud.",
+          true,
+          "Azure datasets are included separately."
+        ],
+        [
+          "Docker containers can't share files with the operating system.",
+          false,
+          "Docker containers can share directories."
+        ]
+      ],
+      "type": "hike",
+      "challengeType": 6,
+      "descriptionEs": [
+        ""     ],
+      "titleEs": ""
+    },
+    {
+      "id": "ad7128d8c441hfdfbeb5bddg",
+      "title": "Microsoft Azure",
+      "description": [
+        "<b>Before you begin:</b>",
+        "Make sure you can log into <a href='https://studio.azureml.net'>https://studio.azureml.net</a>",
+        "and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
+        "",
+        "Introduction to Azure shows how to upload data and notebooks",
+        "Login at <a href='https://studio.azureml.net'>https://studio.azureml.net</a> to following along."
+      ],
+      "challengeSeed": [
+        "6XcXJQK7Z-s"
+      ],
+      "tests": [
+        [
+          "Azure datasets are entered directly into notebooks.",
+          false,
+          "Azure datasets are included separately."
+        ],
+        [
+          "You can only access one dataset per notebook.",
+          false,
+          "Notebooks can access multiple datasets."
+        ]
+      ],
+      "type": "hike",
+      "challengeType": 6,
+      "descriptionEs": [
+        ""     ],
+      "titleEs": ""
     }
   ]
 }

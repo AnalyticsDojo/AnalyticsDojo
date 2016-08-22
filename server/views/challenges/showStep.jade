@@ -7,6 +7,7 @@ block content
                 .challenge-step(class=index !== 0 ? 'hidden': '')
                     a(href=step[0] data-lightbox='img-enlarge')
                         img.gif-block.img-center.img-responsive(src='#{step[0]}' alt='#{step[1]}')
+
                     if step[4]
                         h5 Credit: #[a(href=step[5] target='_blank') #{step[4]}]
                     .row

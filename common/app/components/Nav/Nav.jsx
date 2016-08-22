@@ -15,10 +15,16 @@ const fCClogo = '/images/dojo.png';
 
 const logoElement = (
   <a href='/'>
-    <img
-      alt='learn to code javascript at Analytics Dojo logo'
-      className='img-responsive nav-logo'
-      src={ fCClogo } />
+      <img
+        alt='learn to code javascript at Analytics Dojo logo'
+        className='img-responsive nav-logo'
+        src={ fCClogo } />
+</a>
+);
+
+const logoElementb = (
+  <a href='/'>
+    ANALYTICS DOJO
   </a>
 );
 
@@ -109,7 +115,7 @@ export default class extends React.Component {
       <Navbar
         className='nav-height'
         fixedTop={ true }>
-        <NavbarBrand>{ logoElement }</NavbarBrand>
+        <NavbarBrand>{ logoElement}</NavbarBrand>
         <Navbar.Toggle children={ toggleButtonChild } />
         <Navbar.Collapse eventKey={ 0 }>
           <Nav

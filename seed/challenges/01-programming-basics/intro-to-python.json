@@ -1,0 +1,158 @@
+{
+  "name": "Introduction to Python",
+  "order": 2,
+  "time": "20 minutes",
+  "helpRoom": "Help",
+  "challenges": [
+    {
+      "id": "939add10cb82ac38b32513be",
+      "title": "Overview of Intro Lessons",
+      "description": [
+        [
+          "//i.imgur.com/zjKE1RT.jpg",
+          "Overview of Intro to Python",
+          "When learning the basics of Python, we will first develop an understanding of ",
+          "",
+          "",
+          ""
+        ],
+        [
+          "//i.imgur.com/WfiL6gn.jpg",
+          "An image of the data scientist unicorn.",
+          "The data scientist has been described as the <a href='http://bit.ly/sexy299'>sexiest job of the 21stcentry</a>, and people with the broad range of skills to truely be a data scientist have been called <i>unicorns</i>. Why? There are such a combination of diverse range of knowledge, techniques, & technologies to truely be a data scientist is extremely rare. If if you don't get your <i>unicorns</i> card, data science skills can be extremely <a href='http://bit.ly/unicorn298'>valuable</a> skill for your career. ",
+          "",
+          "By Special Collections, University of Houston Libraries [CC0], via Wikimedia Commons",
+          "http://digital.lib.uh.edu/u?/p15195coll18,33"
+        ],
+        [
+          "//i.imgur.com/EMmq1DK.jpg",
+          "An image a classroom.",
+          "Learning data science doesn't have to be about starting a new career.  According to a <a href = 'http://bit.ly/corptraining76'>recent survey by Forbes</a>, 63% of the companies surveyed have developed formal or informal corporate training programs in analytics. As noted in the article, the advantage of getting current employees familiar with data science is that they '<i>already know the business</i>'.",
+          "",
+          "By Raysonho @ Open Grid Scheduler / Grid Engine (Own work) [CC0], via Wikimedia Commons",
+          "https://commons.wikimedia.org/wiki/File%3AIBMComputerTrainingWorkshop.JPG"
+        ],
+        [
+          "//i.imgur.com/vBlRCb7.png",
+          "An illustration showing that you will learn Python, R, Statistics, Spark, Visualizations, Databases, Linked Data and Github.",
+          "The AnalyticsDojo will take you through a wide variety of exercises, from the initial data manipulation (often called data munging) through modeling, visualization, and even deployment into applications .",
+          ""
+        ],
+        [
+          "//i.imgur.com/6MmQScx.png",
+          "Text illustrating the top software tools and languages for data science.",
+          "R and Python are now the top two languages for data science.  Why? They each have tremendous ecosystems which support packages that are taylored to data science.  They are also open source and free to get started.  The AnalyticsDojo will provide you with a strong foundation in both R and Python, and the tools that we will adopt frequently support both languages.<br><br> SPARK has seen tremendous growth because it provides an accessible language in which one can access the BIG DATA (i.e., Hadoop) ecosystem-which is also increasingly possible from Python and even R. Tableau is a beautifully designed tool that makes a great first introduction to visualization.  Scikit-learn may seem like a new language, but don't worry...it is just a machine learning library for Python.",
+          "",
+          "KDnuggets 2016 Software Poll Results",
+          "http://bit.ly/kd2016top"
+        ],
+        [
+          "//i.imgur.com/nfw3AAt.png",
+          "A diagram showing the CRISP Model for data mining",
+          "But whatever the tools you use, it is most important to understand when and why to apply them. While the 'how' can a challenge the when and why will take more time and we hope that by viewing a wide range of technologies and case studies these will become second nature. To frame the processes of addressing a data science problem, we will be using the Cross Industry Standard Process for Data Mining (CRISP) model to provide a guide. This breaks down analytics into manageable steps. For each, we may utilize different tools and technologies. But before we can get started with data science, let's start with some of the technologies we will be using for data science.",
+          "",
+          "By Kenneth Jensen (Own work) [CC BY-SA 3.0], via Wikimedia Commons",
+          "https://commons.wikimedia.org/wiki/File%3ACRISP-DM_Process_Diagram.png"
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "js8128e52g41hfsdseb5bffg",
+      "title": "Overview and Packages",
+      "description": [
+        "<a href='http://nbviewer.jupyter.org/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-overview.ipynb'>Notebook</a>  /  <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-overview.ipynb#/'>Slides</a>  / <a href='https://gallery.cortanaintelligence.com'>Microsoft Cortana Intelligence Gallery (coming soon)</a> <br> In this exercise you are going to go through ",
+        "",
+        "",
+        ""
+      ],
+      "challengeSeed": [
+        "dJgRJKGBXfk"
+      ],
+      "tests": [
+        [
+          "Azure datasets are entered directly into notebooks.",
+          false,
+          "Azure datasets are included separately."
+        ],
+        [
+          "You can only access one dataset per notebook.",
+          false,
+          "Notebooks can access multiple datasets."
+        ]
+      ],
+      "type": "hike",
+      "challengeType": 6,
+      "descriptionEs": [
+        ""     ],
+      "titleEs": ""
+    },
+    {
+      "id": "ks2323e52g41hfsdseb5bffg",
+      "title": "Data Structures",
+      "description": [
+        "<a href='http://nbviewer.jupyter.org/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-datastructures.ipynb'>Notebook</a>  /  <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-datastructures.ipynb#/'>Slides</a>  / <a href='https://gallery.cortanaintelligence.com'>Microsoft Cortana Intelligence Gallery (coming soon)</a>  ",
+        "Make sure you can log into <a href='https://studio.azureml.net'>https://studio.azureml.net</a>",
+        "and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
+        "",
+        "Introduction to Azure shows how to upload data and notebooks",
+        "Login at <a href='https://studio.azureml.net'>https://studio.azureml.net</a> to following along."
+      ],
+      "challengeSeed": [
+        "dJgRJKGBXfk"
+      ],
+      "tests": [
+        [
+          "Azure datasets are entered directly into notebooks.",
+          false,
+          "Azure datasets are included separately."
+        ],
+        [
+          "You can only access one dataset per notebook.",
+          false,
+          "Notebooks can access multiple datasets."
+        ]
+      ],
+      "type": "hike",
+      "challengeType": 6,
+      "descriptionEs": [
+        ""     ],
+      "titleEs": ""
+    },
+    {
+      "id": "lk9383e52g41hfsdseb5bffg",
+      "title": "Intro to Python - Reading Files ",
+      "description": [
+        "<a href='http://nbviewer.jupyter.org/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-files.ipynb'>Notebook</a>  /  <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-files.ipynb#/'>Slides</a>  / <a href='https://gallery.cortanaintelligence.com'>Microsoft Cortana Intelligence Gallery (coming soon)</a>  ",
+        "Make sure you can log into <a href='https://studio.azureml.net'>https://studio.azureml.net</a>",
+        "and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
+        "",
+        "Introduction to Azure shows how to upload data and notebooks",
+        "Login at <a href='https://studio.azureml.net'>https://studio.azureml.net</a> to following along."
+      ],
+      "challengeSeed": [
+        "dJgRJKGBXfk"
+      ],
+      "tests": [
+        [
+          "Azure datasets are entered directly into notebooks.",
+          false,
+          "Azure datasets are included separately."
+        ],
+        [
+          "You can only access one dataset per notebook.",
+          false,
+          "Notebooks can access multiple datasets."
+        ]
+      ],
+      "type": "hike",
+      "challengeType": 6,
+      "descriptionEs": [
+        ""     ],
+      "titleEs": ""
+    }
+  ]
+}

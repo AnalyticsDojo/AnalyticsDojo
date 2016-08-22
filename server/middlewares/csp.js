@@ -30,7 +30,9 @@ export default function csp() {
         'https://*.gist.github.com',
         '*.github.com',
         '*.youtube.com',
-        '*.ytimg.com'
+        '*.ytimg.com',
+        'https://www.youtube.com/',
+        'https://s.ytimg.com'
       ].concat(trusted),
       styleSrc: [
         "'unsafe-inline'",

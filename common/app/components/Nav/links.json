@@ -1,23 +1,15 @@
 [{
-  "content": "Map",
+  "content": "Lessons",
   "link": "/map"
 }, {
   "content": "Chat",
-  "link": "//gitter.im/FreeCodeCamp/FreeCodeCamp",
-  "target": "_blank"
-},{
-  "content": "Wiki",
-  "link": "/wiki",
-  "target": "_blank"
-},{
-  "content": "Forum",
-  "link": "http://forum.freecodecamp.com/",
+  "link": "//gitter.im/Analyticsdojo/Analyticsdojo",
   "target": "_blank"
 },{
   "content": "About",
   "link": "/about"
 },{
-  "content": "Shop",
-  "link": "/shop",
+  "content": "Resources",
+  "link": "/resources",
   "target": "_blank"
 }]

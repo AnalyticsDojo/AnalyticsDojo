@@ -1,0 +1,17 @@
+{
+  "name": "Data Munging",
+  "order": 2,
+  "time": "0 hours",
+  "isComingSoon": true,
+  "challenges": [
+    {
+      "id": "bd7128d8c441eddfbeb5bdd3",
+      "title": "Data Munging",
+      "description": [],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    }
+  ]
+}
