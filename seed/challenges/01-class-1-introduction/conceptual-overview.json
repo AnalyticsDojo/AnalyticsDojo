@@ -1,6 +1,6 @@
 {
-  "name": "Conceptual Overview",
-  "order": 1,
+  "name": "Conceptual Overview (During Class)",
+  "order": 3,
   "time": "20 minutes",
   "helpRoom": "Help",
   "challenges": [
@@ -25,30 +25,13 @@
           ""
         ],
         [
-          "//i.imgur.com/AbjD7vh.jpg",
-          "Packages",
-          "Within both R and Python there are a wide variety of embedded capabilities in the language, but very often you will want to pull in specific capabilites. This is done through <i>packages</i>. Packages and be provided individuals or teams of developers.  Packages have a number of things in common conceptually across R & Python. <br> <br> <i>1. Packages have to be installed once and then loaded into memory each time they are used through two different steps. <br> <br> 2. Both R and Python have package managers to easily fetch packages and install them locally. <br> <br> 3. Packages have versions, and it is possible the reason your code isn't working is that you have a different version of the package. ",
-          "",
-          "",
-          ""
-        ],
-        [
           "//i.imgur.com/DbN59d7.jpg",
           "Everything is an object.",
           "An object is a nontrivial component relevant to understand. When you create any variable, array, dataframe, etc., you have created an object.  But what does that mean? Well, there are a few critical terms that we should be aware of. <br> <br><b>A object is an instance of a class.</b> What is a class then you say.  Well a class is a specific <i>thing</i> that can have both attributes and methods. We can have class types that are a part of the programming language and class types that are utilized via packages. Attributes you can think of as variables or sets of variables while methods you can think of as specific functions.  There is a lot of theoretical aspects of object oriented programming, and we will be introducing these along the way.",
           "",
           "",
           ""
-        ],
-        [
-          "//i.imgur.com/DbN59d7.jpg",
-          "Everything is an object.",
-          "",
-          "",
-          "",
-          ""
         ]
-
       ],
       "challengeSeed": [],
       "tests": [],

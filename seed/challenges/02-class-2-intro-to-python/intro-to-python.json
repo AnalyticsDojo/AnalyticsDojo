@@ -1,0 +1,102 @@
+{
+  "name": "Introduction to Python",
+  "order": 2,
+  "time": "20 minutes",
+  "helpRoom": "Help",
+  "challenges": [
+    {
+      "id": "js8128e52g41hfsdseb5bffg",
+      "title": "Overview and Packages",
+      "description": [
+        "<a href='http://nbviewer.jupyter.org/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-overview.ipynb'>Notebook</a>  /  <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-overview.ipynb#/'>Slides</a>  / <a href='https://gallery.cortanaintelligence.com'>Microsoft Cortana Intelligence Gallery (coming soon)</a> <br> In this exercise you are going to go through ",
+        "",
+        "",
+        ""
+      ],
+      "challengeSeed": [
+        "dJgRJKGBXfk"
+      ],
+      "tests": [
+        [
+          "Azure datasets are entered directly into notebooks.",
+          false,
+          "Azure datasets are included separately."
+        ],
+        [
+          "You can only access one dataset per notebook.",
+          false,
+          "Notebooks can access multiple datasets."
+        ]
+      ],
+      "type": "hike",
+      "challengeType": 6,
+      "descriptionEs": [
+        ""     ],
+      "titleEs": ""
+    },
+    {
+      "id": "ks2323e52g41hfsdseb5bffg",
+      "title": "Data Structures",
+      "description": [
+        "<a href='http://nbviewer.jupyter.org/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-datastructures.ipynb'>Notebook</a>  /  <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-datastructures.ipynb#/'>Slides</a>  / <a href='https://gallery.cortanaintelligence.com'>Microsoft Cortana Intelligence Gallery (coming soon)</a>  ",
+        "Make sure you can log into <a href='https://studio.azureml.net'>https://studio.azureml.net</a>",
+        "and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
+        "",
+        "Introduction to Azure shows how to upload data and notebooks",
+        "Login at <a href='https://studio.azureml.net'>https://studio.azureml.net</a> to following along."
+      ],
+      "challengeSeed": [
+        "dJgRJKGBXfk"
+      ],
+      "tests": [
+        [
+          "Azure datasets are entered directly into notebooks.",
+          false,
+          "Azure datasets are included separately."
+        ],
+        [
+          "You can only access one dataset per notebook.",
+          false,
+          "Notebooks can access multiple datasets."
+        ]
+      ],
+      "type": "hike",
+      "challengeType": 6,
+      "descriptionEs": [
+        ""     ],
+      "titleEs": ""
+    },
+    {
+      "id": "lk9383e52g41hfsdseb5bffg",
+      "title": "Intro to Python - Reading Files ",
+      "description": [
+        "<a href='http://nbviewer.jupyter.org/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-files.ipynb'>Notebook</a>  /  <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/notebooks/2-introduction-python/intro-python-files.ipynb#/'>Slides</a>  / <a href='https://gallery.cortanaintelligence.com'>Microsoft Cortana Intelligence Gallery (coming soon)</a>  ",
+        "Make sure you can log into <a href='https://studio.azureml.net'>https://studio.azureml.net</a>",
+        "and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
+        "",
+        "Introduction to Azure shows how to upload data and notebooks",
+        "Login at <a href='https://studio.azureml.net'>https://studio.azureml.net</a> to following along."
+      ],
+      "challengeSeed": [
+        "dJgRJKGBXfk"
+      ],
+      "tests": [
+        [
+          "Azure datasets are entered directly into notebooks.",
+          false,
+          "Azure datasets are included separately."
+        ],
+        [
+          "You can only access one dataset per notebook.",
+          false,
+          "Notebooks can access multiple datasets."
+        ]
+      ],
+      "type": "hike",
+      "challengeType": 6,
+      "descriptionEs": [
+        ""     ],
+      "titleEs": ""
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
-  "name": "Data Analytics with Jupyter Notebooks",
-  "order": 3,
-  "time": "0 hours",
+  "name": "Introduction to R",
+  "order": 1,
+  "time": "1 hours",
   "isComingSoon": true,
   "challenges": [
     {
-      "id": "bd7128d8c441eddfbeb5ffs3",
-      "title": "Data Munging",
+      "id": "ee7128d8cwwsfddfbeb5bdd3",
+      "title": "Coming Soon",
       "description": [],
       "challengeSeed": [],
       "tests": [],
