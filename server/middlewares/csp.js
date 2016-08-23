@@ -16,6 +16,8 @@ export default function csp() {
         "'unsafe-eval'",
         "'unsafe-inline'",
         '*.google-analytics.com',
+        '*.segment.com',
+        '*.segment.io',
         '*.gstatic.com',
         'https://*.cloudflare.com',
         '*.cloudflare.com',
