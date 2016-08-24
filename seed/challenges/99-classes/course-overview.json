@@ -1,0 +1,260 @@
+{
+  "name": "Technology Fundamentals of Business Analytics",
+  "order": 1,
+  "time": "Semester Long Course",
+  "helpRoom": "RPI",
+  "challenges": [
+    {
+      "id": "000fht10ag82ac40a18392jh",
+      "title": "Course Website and Overview",
+      "description": [
+        [
+          "//i.imgur.com/r2WNYkk.png",
+          "Image of the RPI Lally School of Management Homepage",
+          "Check out the course website <a href='https://jkuruzovich.github.io/tech-fundamentals-analytics/'>here</a>. This class is taught as an introductory course of the RPI MS in Business Analytics. Click on the link below to further explore the program.",
+          "https://lallyschool.rpi.edu/ms-business-analytics",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "001fht10ag82ac40a18392jh",
+      "title": "Class 1: The Rise of Analytics",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/672945f488de09dee47010a6f3f343ba.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "002fht10ag82ac40a18392jh",
+      "title": "Class 2: Introduction to Python",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/6cc69cda7778fa58c66ac3da0bd2ce39.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "003fht10ag82ac40a18392jh",
+      "title": "Class 3: Introduction to Python (continued)",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/f55f10c4e8dee3e137fec4be06c58e91.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "004fht10ag82ac40a18392jh",
+      "title": "Class 4: Introduction to R",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/8190532832731f26252a43abd4a43d7d.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "005fht10ag82ac40a18392jh",
+      "title": "Class 5: Introduction to R (continued)",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/aa5c5dbd1a8030f0795c6155427447a6.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "006ht10ag82ac40a18392jh",
+      "title": "Class 6: Intro to Visualization with R and Python ",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/6072f9b59cda03d5303e31b47553f360.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "007fht10ag82ac40a18392jh",
+      "title": "Class 7: Data Munging",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/c2a8e97cd697abb0c61f34862a9c0a27.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "008fht10ag82ac40a18392jh",
+      "title": "Class 8: Midterm and Intro to Model Evaluation",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/ef2f0c9f56087d13803a6b64f97dcbbe.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "009fht10ag82ac40a18392jh",
+      "title": "Class 9: Introduction to Modeling I",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/bedf36300cec584aec47d3873ec361f8.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "010fht10ag82ac40a18392jh",
+      "title": "Class 10: Introduction to Modeling II",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/65268fc7d45519c828ec4a5ae0ae2a73.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "011fht10ag82ac40a18392jh",
+      "title": "Class 11: Text Mining and Unstructured Data",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/a78ca939dea78fe0893e258178f6d96b.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "012fht10ag82ac40a18392jh",
+      "title": "Class 12: Image Processing",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/9b6a0d89d9edb7bc0f8b243cb5143b84.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    },
+    {
+      "id": "013fht10ag82ac40a18392jh",
+      "title": "Class 13: Introduction to Big Data with Spark",
+      "description": [
+        [
+          "//i.imgur.com/BdjOEGA.png",
+          "Lally School of Management Logo",
+          "<script src='https://gist.github.com/jkuruzovich/936d214689c6077bc11bb35e775afca5.js'></script>",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "type": "Waypoint",
+      "challengeType": 7
+    }
+  ]
+}
