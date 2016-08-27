@@ -12,9 +12,9 @@ nav.navbar.navbar-default.navbar-fixed-top.nav-height
                 a#nav-map-btn(href='/map' onclick='if (!(event.ctrlKey || event.metaKey)) {return false;}') Lessons
             li.visible-xs
                 a(href='/map') Lessons
-            <!--Add Wiki and Forum Later
             li
-                a(href="{process.env.CLIENT_FORUMNAME}" target="_blank") Forum
+                a(href="#{process.env.CLIENT_CHAT}" target="_blank") Chat
+            <!--Add Wiki and Forum Later
             li.hidden-xs
                 a#nav-wiki-btn(href='/wiki' onclick='if (!(event.ctrlKey || event.metaKey)) {return false;}') Wiki
             li.visible-xs
