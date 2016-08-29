@@ -17,17 +17,9 @@
           ""
         ],
         [
-          "//i.imgur.com/s4osQ5T.png",
-          "An image of a Jupyter Notebook",
-          "You have begun your journey, congratulations. Much of the work that we are going to be doing will utilize Jupyter notebooks. Jupyter notebooks are a flexible computing enviroment that was originally based on iPython notebooks.  The Jupyter team has done an amazing job bringing the notebook computing enviroment to a wide <a href='https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages'>variety of languages including R, Python, Scala, and even SAS.</a> <br><br> Click on the link below to go to https://try.jupyter.org and browse some of the cool things that you can do with Jupyter Notebooks. We will be using Jupyter notebooks almost exclusively as a way of learning data science.  They also provide a great way to collaborate and document your processes using markdown.",
-          "https://try.jupyter.org",
-          "",
-          ""
-        ],
-        [
           "//i.imgur.com/OI5Sp08.jpg",
           "A picture of docker and Analytics Dojo",
-          "Unlike a lot of <i>learn to code</i> sites that use in-browser tutorials, the AnalyticsDojo uses the same the same tools you are likely to use in a production environment.  This means that before we can get started, we have to go through a bit of setup of an analytics platform. <br> <br>An <i>analytics platform</i> is an environment in which you can execute programs, store data, and even create web services or Application Programming Interfaces (APIs) that enable your application to be deployed into the world or even sold on a marketplace. <br> <br>We are going to start with an overview of two different platforms: (1) Docker, (2) Microsoft Azure. Each of them will have their own strengths and weaknesses. <br> <br> A key to the platforms we are looking at is that they can work with R and Python within a Jupyter Notebook. While we don't currently incorporate Domino, they have a great blog entry on what a <i>data science platform</i> is all about.",
+          "Unlike a lot of <i>learn to code</i> sites that use in-browser tutorials, the AnalyticsDojo uses the same tools you are likely to use in an enterpirse environment.  This means that before we can get started, we have to go through a bit of setup of an analytics platform. <br> <br>An <i>analytics platform</i> is an environment in which you can execute programs, store data, and even create web services or Application Programming Interfaces (APIs) that enable your application to be deployed into the world or even sold on a marketplace. <br> <br>We are going to start with an overview of two different platforms: (1) Docker, (2) Microsoft Azure. Each of them will have their own strengths and weaknesses. <br> <br> A key to the platforms we are looking at is that they can work with R and Python within a Jupyter Notebook. While we don't currently incorporate Domino, they have a great blog entry on what a <i>data science platform</i> is all about. Click on the link below to read all about it.",
           "https://blog.dominodatalab.com/what-is-a-data-science-platform/",
           "",
           ""
@@ -35,7 +27,7 @@
         [
           "//i.imgur.com/P70wNmS.jpg",
           "An image of the Docker Logo.",
-          "When learning analytics, a similar computing environment can ensure that associated examples and exercises will work across a population of users-who may be using a wide variety of different types of operating systems. There are some great ways of being able to run R and Python directly on your laptop. Of course you could install R and the iPython notebook directly. For R, <a href='https://www.rstudio.com'>R-Studio</a> is great and for Python <a href='https://anaconda.org'>Anaconda similarly can get you started.</a>  However, often code may function slightly differently on different operating systems and it could be that an example won't work exactly as planned. To get around this, Docker bundles software in a Container that can be rolled out onto different operating systems and even into production. If you don't have a great Internet or will be working a lot offline, you might start with Docker. Otherwise, you might start with one of the preconfigured environments. Feel free to either install Docker now by clicking on the link and following the instructions for your operating system or you can start with one of the cloud environments. ",
+          "When learning analytics, a similar computing environment can ensure that associated examples and exercises will work across a population of users-who may be using a wide variety of different types of operating systems. There are some great ways of being able to run R and Python directly on your laptop. Of course you could install R and the iPython notebook directly. For R, <a href='https://www.rstudio.com'>R-Studio</a> is great and for Python <a href='https://anaconda.org'>Anaconda similarly can get you started.</a>  However, often code may function slightly differently on different operating systems and it could be that an example won't work exactly as planned. To get around this, Docker bundles software in a <i>container</i> that can be rolled out onto different operating systems and even into production. If you don't have a great Internet connection or will be working a lot offline, Docker is going to be your primary platform for analytics. Install Docker now by clicking on the link and following the instructions for your operating system.",
           "https://docs.docker.com/engine/installation/",
           "",
           ""
@@ -47,14 +39,6 @@
           "https://studio.azureml.net",
           "",
           ""
-        ],
-        [
-          "//i.imgur.com/nfw3AAt.png",
-          "A diagram showing the CRISP Model for data mining",
-          "But whatever the tools you use, it is most important to understand when and why to apply them. While the 'how' can a challenge the when and why will take more time and we hope that by viewing a wide range of technologies and case studies these will become second nature. To frame the processes of addressing a data science problem, we will be using the Cross Industry Standard Process for Data Mining (CRISP) model to provide a guide. This breaks down analytics into manageable steps. For each, we may utilize different tools and technologies. But before we can get started with data science, let's start with some of the technologies we will be using for data science.",
-          "",
-          "By Kenneth Jensen (Own work) [CC BY-SA 3.0], via Wikimedia Commons",
-          "https://commons.wikimedia.org/wiki/File%3ACRISP-DM_Process_Diagram.png"
         ],
         [
           "//i.imgur.com/BxNG6Am.jpg",
@@ -90,7 +74,7 @@
       "tests": [
         [
           "Docker containers run only in the cloud.",
-          true,
+          false,
           "Azure datasets are included separately."
         ],
         [

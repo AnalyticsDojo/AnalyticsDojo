@@ -11,7 +11,7 @@
         [
           "//i.imgur.com/LnreS3r.png",
           "A picture of Analytics's Dojo 4 benefits. Join a community, work on data challenges, build a portfolio, work with companies.",
-          "Welcome to the Analytics Dojo. We're an open source community of people learning how to use data.",
+          "Welcome to the Analytics Dojo. We're an toolset for people looking to learn analytics both inside and outside of the classroom.",
           "",
           "This image adopted from FreeCodeCamp.com.",
           "http://freecodecamp.com"
@@ -19,7 +19,7 @@
         [
           "//i.imgur.com/WfiL6gn.jpg",
           "An image of the data scientist unicorn.",
-          "The data scientist has been described as the <a href='http://bit.ly/sexy299'>sexiest job of the 21stcentry</a>, and people with the broad range of skills to truely be a data scientist have been called <i>unicorns</i>. Why? There are such a combination of diverse range of knowledge, techniques, & technologies to truely be a data scientist is extremely rare. If if you don't get your <i>unicorns</i> card, data science skills can be extremely <a href='http://bit.ly/unicorn298'>valuable</a> skill for your career. ",
+          "The data scientist has been described as the <a href='http://bit.ly/sexy299'>sexiest job of the 21stcentry</a>, and people with the broad range of skills to truly be a data scientist have been called <i>unicorns</i>. Why? There is such a rare combination of diverse range of knowledge, techniques, & technologies such to truely be an expert in each is extremely rare. Even if you don't get your <i>unicorns</i> card, data science skills can be extremely <a href='http://bit.ly/unicorn298'>valuable</a> skill for your career and for your organization. ",
           "",
           "By Special Collections, University of Houston Libraries [CC0], via Wikimedia Commons",
           "http://digital.lib.uh.edu/u?/p15195coll18,33"
@@ -35,13 +35,13 @@
         [
           "//i.imgur.com/vBlRCb7.png",
           "An illustration showing that you will learn Python, R, Statistics, Spark, Visualizations, Databases, Linked Data and Github.",
-          "The AnalyticsDojo will take you through a wide variety of exercises, from the initial data manipulation (often called data munging) through modeling, visualization, and even deployment into applications .",
+          "The AnalyticsDojo will take you through a wide variety of exercises, from the initial data manipulation (often called data munging) through modeling, visualization, and even deployment into web based data applications. We will introduce you to both traditional and *big data* techniques.",
           ""
         ],
         [
           "//i.imgur.com/6MmQScx.png",
           "Text illustrating the top software tools and languages for data science.",
-          "R and Python are now the top two languages for data science.  Why? They each have tremendous ecosystems which support packages that are taylored to data science.  They are also open source and free to get started.  The AnalyticsDojo will provide you with a strong foundation in both R and Python, and the tools that we will adopt frequently support both languages.<br><br> SPARK has seen tremendous growth because it provides an accessible language in which one can access the BIG DATA (i.e., Hadoop) ecosystem-which is also increasingly possible from Python and even R. Tableau is a beautifully designed tool that makes a great first introduction to visualization.  Scikit-learn may seem like a new language, but don't worry...it is just a machine learning library for Python.",
+          "R and Python are now the top two languages for data science.  Why? They each have tremendous ecosystems which support packages that are tailored to data science.  They are also open source and free to get started.  The AnalyticsDojo will provide you with a strong foundation in both R and Python, and the tools that we will adopt frequently support both languages.<br><br> SPARK has seen tremendous growth because it provides an accessible language in which one can access the *big data* (i.e., Hadoop) ecosystem-which is also increasingly possible from Python and even R. <br><br>Tableau is a beautifully designed tool that makes it possible to create powerful visualization. <br><br>Scikit-learn may seem like a new language, but don't worry...it is just a machine learning library for Python.",
           "",
           "KDnuggets 2016 Software Poll Results",
           "http://bit.ly/kd2016top"
@@ -49,7 +49,7 @@
         [
           "//i.imgur.com/nfw3AAt.png",
           "A diagram showing the CRISP Model for data mining",
-          "But whatever the tools you use, it is most important to understand when and why to apply them. While the 'how' can a challenge the when and why will take more time and we hope that by viewing a wide range of technologies and case studies these will become second nature. To frame the processes of addressing a data science problem, we will be using the Cross Industry Standard Process for Data Mining (CRISP) model to provide a guide. This breaks down analytics into manageable steps. For each, we may utilize different tools and technologies. But before we can get started with data science, let's start with some of the technologies we will be using for data science.",
+          "But whatever the tools you use, it is most important to understand when and why to apply them. While the 'how' can a challenge the when and why will take more time and we hope that by viewing a wide range of case studies. To frame the processes of addressing data science problems, we will be using the Cross Industry Standard Process for Data Mining (CRISP) as a guide. This breaks down analytics into manageable steps. For each, we may utilize different tools and technologies. But before we can get started with data science, let's start with some of the technologies we will be using for data science.",
           "",
           "By Kenneth Jensen (Own work) [CC BY-SA 3.0], via Wikimedia Commons",
           "https://commons.wikimedia.org/wiki/File%3ACRISP-DM_Process_Diagram.png"
@@ -67,7 +67,7 @@
         [
           "//i.imgur.com/tN8GSal.png",
           "A png file showing the github home page.",
-          "Github is a tremendous resource for a data scientist to share resources and code. The first thing we are going to do is to create a GitHub ID. You can then use this Github ID to sign in to the AnalyticsDojo (if you haven't already created an ID."
+          "Github is a tremendous resource for a data scientist to share resources and code. The first thing we are going to do is to create a GitHub ID. You can then use this Github ID to sign in to the AnalyticsDojo (if you haven't already created an ID) as well as an increasing number of web-based applications."
         ],
         [
           "//i.imgur.com/4nCtcml.gif",
@@ -84,19 +84,19 @@
         [
           "//i.imgur.com/VdULD3S.gif",
           "A gif on how to star the open source repository for the analytics dojo.",
-          "Open Analytics Dojo's open-source repository. This is where our volunteer team collaborates on building Analytics Dojo. You can \"star\" our repository. \"Starring\" is the GitHub equivalent of \"liking\" something.",
+          "Open Analytics Dojo's open-source repository. This is where our volunteer team collaborates on building Analytics Dojo. You can 'star' our repository. 'Starring' is the GitHub equivalent of 'liking' something. You can also let us know when there is a bug by creating an <a href='https://github.com/AnalyticsDojo/AnalyticsDojo/issues'>issue</a> on GitHub. That will help us to continually improve the platform.",
           "https://github.com/analyticsdojo/analyticsdojo"
         ],
         [
           "//i.imgur.com/A0ZRCBG.gif",
-          "A gif showing you how to click the link on AnalyticsDojo to go to our chat room and click then \"sign in with GitHub\" button. Then you can click into the text input field and type a message to your fellow campers.",
-          "Now that you have a GitHub account, you can join our Gitter chat room by logging in with GitHub. Introduce yourself by saying \"Hello world! I'm just getting started with the AnalyticsDojo!\" Tell others how you found Analytics Dojo. Also tell us why you want to learn data science.",
+          "A gif showing you how to click the link on AnalyticsDojo to go to our chat room and click then sign in with GitHub button. Then you can click into the text input field and type a message to other students.",
+          "Now that you have a GitHub account, you can join our Gitter chat room by logging in with GitHub. Introduce yourself by saying 'Hello world! I'm just getting started!' or tell everyone something interesting about yourself, such as why  you want to learn data science. An important component of this platform is helping to create communites of individuals interested in data science. ",
           "https://gitter.im/AnalyticsDojo/Analyticsdojo"
         ],
         [
           "//i.imgur.com/TJYc0K6.gif",
           "A gif showing you how you can click the settings button in the upper right hand corner and modify your notification settings.",
-          "You should change your settings so you're only notified if someone mentions you.",
+          "You should change your settings on Gitter so you're only notified if someone mentions you.",
           ""
         ],
         [
@@ -124,25 +124,25 @@
         [
           "//i.imgur.com/tP2ccTE.gif",
           "A gif showing how you can click your profile image in your upper right hand corner to your code portfolio and connect GitHub.",
-          "Check out your code portfolio. Click your picture in your upper right hand corner. To activate your code portfolio, you'll need to link your GitHub account with Analytics Dojo. Your code portfolio shows your progress and how many Brownie Points you have. You can get Brownie Points by completing challenges and by helping other campers in our chat rooms. If you get Brownie Points on several days in a row, you'll get a streak.",
+          "Check out your code portfolio. Click your picture in your upper right hand corner. To activate your code portfolio, you'll need to link your GitHub account with the AnalyticsDojo. Your code portfolio shows your progress.",
           ""
         ],
         [
           "//i.imgur.com/oZTMUGj.png",
           "An image of the download screen for github desktop. .",
-          "If you aren't a comand line guru, the Github Desktop application (available for OS X and Windows) can make downloading and even commiting to Github repositories extremely easy. ",
+          "If you aren't a command line guru, the Github Desktop application (available for OS X and Windows) can make downloading and even commiting to Github repositories extremely easy.",
           ""
         ],
         [
           "//i.imgur.com/Xwi1Fvb.gif",
           "A Gif of the process of cloneing the AnalyticsDojo github repository.",
-          "Once you have downloaded GitHub Desktop, the next step is to download the Docker images and and materials used in the AnalyticsDojo. <br> <br> To clone the repository, just follow the .gif image above.  First you click on the link to the repository for the <a href='https://github.com/AnalyticsDojo/materials'>Analyticsdojo/Materials</a>. Then You select <i>Download Zip</i> and then <i>Open in Desktop</i>. Once in Desktop, you will be able to right click on the repository to see it on GitHub, open a terminal, or open the file browser.",
+          "Once you have downloaded GitHub Desktop, the next step is to download the Docker images and and materials used in the AnalyticsDojo. <br> <br> To clone the repository, just follow the .gif image above.  First you click on the link to the repository for the <a href='https://github.com/AnalyticsDojo/materials'>Analyticsdojo/Materials</a>. Then You select <i>Download Zip</i> and then <i>Open in Desktop</i>. Once in Desktop, you will be able to right click on the repository to see it on GitHub, open a terminal, or open the file browser. If the Open in Desktop doesn't work for you, try rebooting your machine.",
           "https://github.com/AnalyticsDojo/materials"
         ],
         [
           "//i.imgur.com/E9Nqz3a.gif",
           "A gif showing pulling the most recent changes.",
-          "The materials for the AnalyticsDojo are constantly being updated, and it is a good practice to update those materials frequently. Luckily, with the GitHub desktop app, keeping the latest code is relatively easy.  Just select the AnalyticsDojo/materials repository (that is the name for the folder where our code is kept) and then press the ",
+          "The materials for the AnalyticsDojo are constantly being updated, and it is a good practice to update those materials frequently. Luckily, with the GitHub desktop app, keeping the latest code is relatively easy.  Just select the AnalyticsDojo/materials repository (that is the name for the folder where our code is kept) and then press the sync button.",
           ""
         ]
 
@@ -158,26 +158,26 @@
       "description": [
         [
           "//i.imgur.com/hLBZQSP.jpg",
-          "The text \"Data Science is hard.\"",
-          "Data science and analytics is hard and requires a broad array of skills. You will get stuck. Everyone gets stuck. The key is knowing how to get unstuck.",
-          ""
-        ],
-        [
-          "//i.imgur.com/kcCzzpp.png",
-          "The text \"It takes time to get good at data science.\"",
-          "It takes time to get good at data science. It is possible to develop these skills for a lifetime and there is a constant array of tools and techniques that are evolving as the volume of data is expanding",
+          "The text Data Science is hard.",
+          "Data science is hard and requires a broad array of skills. You will get stuck. Everyone gets stuck. The key is knowing how to get unstuck.",
           ""
         ],
         [
           "//i.imgur.com/9jwzzub.png",
-          "An image with the text \"1. Understand why you are doing something. 2. Read the error message. 3. Google the error message. 4. Consider other methods. 5. Ask for help. ",
-          "The most frustrating thing is to struggle through a technical issue and at the end find that the effort was unnecessary. Before wrestling a bear of a technology problem, make sure you know why you are doing it. ",
+          "An image with the text 1. Understand why you are doing something. 2. Read the error message. 3. Google the error message. 4. Consider other methods. 5. Ask for help. ",
+          "The most frustrating thing is to struggle through a technical issue and at the end find that the effort was unnecessary. Before wrestling a bear of a technology problem, make sure you know why you are doing it. <br><br> Second, make sure you read the error message. Many times this will include extremely useful information that will enable you understand and fix the problem. <br><br> Third, Google the issue.  Many times common mistakes will be made by others in the same way that you have. Resources like <a href='http://stackoverflow.com'>stackoverflow</a> have tremendous communities that are extremely helpful in problem solving.<br><br>Finally, ask for help either in the chat room or the forum. ",
+          ""
+        ],
+        [
+          "//i.imgur.com/kcCzzpp.png",
+          "The text 'It takes time to get good at data science.'",
+          "It takes time to get good at data science. It is possible to develop these skills for a lifetime and there is a constant array of tools and techniques that are evolving as the volume of data available for analysis is expanding.",
           ""
         ],
         [
           "//i.imgur.com/nfw3AAt.png",
           "A diagram showing the CRISP Model for data mining",
-          "Now you're ready to start learning data science. The \"Lessons\" will show you the variety of ways of getting started learning data science. We will use the Cross Industry Standard Process for Data Mining (CRISP) model to provide a guide. This breaks down analytics into manageable steps. ",
+          "Now you're ready to start learning data science. The lessons will show you the variety of ways of getting started learning data science. We will use the Cross Industry Standard Process for Data Mining (CRISP) model to provide a guide. This breaks down analytics into manageable steps. ",
           "",
           "By Kenneth Jensen (Own work) [CC BY-SA 3.0], via Wikimedia Commons",
           "https://commons.wikimedia.org/wiki/File%3ACRISP-DM_Process_Diagram.png"
