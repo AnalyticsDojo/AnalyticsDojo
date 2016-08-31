@@ -3,6 +3,7 @@ var OnHeroku = process.env.ONHEROKU;
 if (!OnHeroku) {
     require('dotenv').load();
 }
+require('newrelic');
 var pmx = require('pmx');
 pmx.init();
 

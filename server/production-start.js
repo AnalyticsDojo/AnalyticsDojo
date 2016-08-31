@@ -1,6 +1,7 @@
 // this ensures node understands the future
 require('babel-register');
 
+
 var startTime = Date.now();
 var timeoutHandler;
 // this is where server starts booting up

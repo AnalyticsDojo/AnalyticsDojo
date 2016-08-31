@@ -99,6 +99,7 @@
     "moment-timezone": "^0.5.0",
     "mongodb": "^2.0.33",
     "morgan": "^1.6.1",
+    "newrelic": "^1.30.0",
     "node-uuid": "^1.4.3",
     "nodemailer": "^2.1.0",
     "nodemailer-sendgrid-transport": "^0.2.0",
@@ -136,6 +137,7 @@
     "rx": "^4.0.0",
     "sanitize-html": "^1.11.1",
     "sinon": "^1.17.3",
+    "snyk": "^1.17.0",
     "sort-keys": "^1.1.1",
     "stampit": "^2.1.1",
     "store": "https://github.com/berkeleytrue/store.js.git#feature/noop-server",
@@ -146,8 +148,7 @@
     "webpack": "^1.9.12",
     "webpack-stream": "^3.1.0",
     "xss-filters": "^1.2.6",
-    "yargs": "^4.1.0",
-    "snyk": "^1.17.0"
+    "yargs": "^4.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.9.12",
