@@ -1,11 +1,11 @@
 {
   "name": "Data Analytics Platforms",
-  "order": 2,
-  "time": "20 minutes",
+  "order": 3,
+  "time": "5 minutes",
   "helpRoom": "Help",
   "challenges": [
     {
-      "id": "560add10ag82ac40a18392ge",
+      "id": "57cc9f3524a362c8c8f790ba",
       "title": "Analytics Platform Overview",
       "description": [
         [
@@ -51,75 +51,8 @@
       ],
       "challengeSeed": [],
       "tests": [],
-      "type": "Waypoint",
+      "type": "waypoint",
       "challengeType": 7
-    },
-    {
-      "id": "bd711238c221hfdfbeb5bddk",
-      "title": "Docker",
-      "description": [
-        "<b>Before you begin:</b>",
-        "Make sure you have installed <a href='https://www.docker.com/products/docker/'>Docker</a>",
-        "and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
-        "",
-        "Introduction to Docker",
-        "You can always access a command line within the <i>materials</> repository by right clicking on the repository",
-        "from within the Github Desktop application.<br><br>",
-        "To launch a docker container on port 8888 enter the command to launch your notebook.",
-        "<i>docker run -d -p 8888:8888  -e GRANT_SUDO=yes  --name analyticsdojo  -v {enter path to materials directory}/materials/analyticsdojo:/home/jovyan/work jupyter/datascience-notebook start-notebook.sh <i>"
-      ],
-      "challengeSeed": [
-        "dJgRJKGBXfk"
-      ],
-      "tests": [
-        [
-          "Docker containers run only in the cloud.",
-          false,
-          "Azure datasets are included separately."
-        ],
-        [
-          "Docker containers can't share files with the operating system.",
-          false,
-          "Docker containers can share directories."
-        ]
-      ],
-      "type": "hike",
-      "challengeType": 6,
-      "descriptionEs": [
-        ""     ],
-      "titleEs": ""
-    },
-    {
-      "id": "ad7128d8c441hfdfbeb5bddg",
-      "title": "Microsoft Azure",
-      "description": [
-        "<b>Before you begin:</b>",
-        "Make sure you can log into <a href='https://studio.azureml.net'>https://studio.azureml.net</a>",
-        "and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
-        "",
-        "Introduction to Azure shows how to upload data and notebooks",
-        "Login at <a href='https://studio.azureml.net'>https://studio.azureml.net</a> to following along."
-      ],
-      "challengeSeed": [
-        "6XcXJQK7Z-s"
-      ],
-      "tests": [
-        [
-          "Azure datasets are entered directly into notebooks.",
-          false,
-          "Azure datasets are included separately."
-        ],
-        [
-          "You can only access one dataset per notebook.",
-          false,
-          "Notebooks can access multiple datasets."
-        ]
-      ],
-      "type": "hike",
-      "challengeType": 6,
-      "descriptionEs": [
-        ""     ],
-      "titleEs": ""
     }
   ]
 }

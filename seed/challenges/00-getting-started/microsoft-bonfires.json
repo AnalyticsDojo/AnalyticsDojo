@@ -1,0 +1,24 @@
+{
+  "name": "Microsoft Challenges",
+  "order": 5,
+  "time": "15 minutes",
+  "helpRoom": "Help",
+  "challenges": [
+    {
+      "id": "57cc9f3324a362c8c8f790b8",
+      "title": "Microsoft Azure",
+      "description": [
+        "Make sure you can log into <a href='https://studio.azureml.net'>https://studio.azureml.net</a> and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
+        "Login at <a href='https://studio.azureml.net'>https://studio.azureml.net</a> to following along.",
+        "Upload a copy of the azureml-intro.ipynb notebook that is in the materials/analyticsdojo/classes/01-overview.",
+        "You will see by executing the notebook that you can see a number of embeded datasets as part of your Microsoft Azure workspace. Try to pull one up by adopting the code to assign a dataset to a dataframe and then print out that dataframe. "
+      ],
+      "challengeSeed": [
+        "6XcXJQK7Z-s"
+      ],
+      "tests": [],
+      "type": "waypoint",
+      "challengeType": 2
+    }
+  ]
+}

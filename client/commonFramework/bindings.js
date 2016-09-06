@@ -204,7 +204,7 @@ window.common = (function(global) {
         .split('?')[0]
         .replace(/(#*)$/, '');
       window.open(
-        'https://github.com/FreeCodeCamp/FreeCodeCamp/issues?q=' +
+        'https://github.com/AnalyticsDojo/AnalyticsDojo/issues?q=' +
         'is:issue is:all ' +
         (common.challengeName) +
         ' OR ' +

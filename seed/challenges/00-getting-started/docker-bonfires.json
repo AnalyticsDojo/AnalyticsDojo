@@ -1,0 +1,24 @@
+{
+  "name": "Docker Challenges",
+  "order": 4,
+  "time": "15 minutes",
+  "helpRoom": "Help",
+  "challenges": [
+    {
+      "id": "57cc9f3424a362c8c8f790b9",
+      "title": "Docker",
+      "description": [
+        "Make sure you have installed <a href='https://www.docker.com/products/docker/'>Docker</a> and have downloaded the <a href='https://github.com/AnalyticsDojo/materials'>materials'</a> repository",
+        "You can always access a command line within the materials repository by right clicking on the repository from within the Github Desktop application.",
+        "To launch a docker container on port 8888, follow the instructions in the <a href='https://github.com/AnalyticsDojo/materials/readme'>GitHub readme file</a>",
+        "The thing that trips some people up is correctly specifying the home directory of the repository, as this will differ depending on the operating system."
+      ],
+      "challengeSeed": [
+        "dJgRJKGBXfk"
+      ],
+      "tests": [],
+      "type": "waypoint",
+      "challengeType": 2
+    }
+  ]
+}

@@ -5,7 +5,7 @@
   "helpRoom": "RPI",
   "challenges": [
     {
-      "id": "000fht10ag82ac40a18392jh",
+      "id": "57ce1c4a24a362c8c8f790c9",
       "title": "Course Website and Overview",
       "description": [
         [
@@ -23,7 +23,7 @@
       "challengeType": 7
     },
     {
-      "id": "001fht10ag82ac40a18392jh",
+      "id": "57ce1c3b24a362c8c8f790c8",
       "title": "Class 1: The Rise of Analytics",
       "description": [
         [
@@ -41,7 +41,7 @@
       "challengeType": 7
     },
     {
-      "id": "002fht10ag82ac40a18392jh",
+      "id": "57ce1c3b24a362c8c8f790c7",
       "title": "Class 2: Introduction to Python",
       "description": [
         [
@@ -59,7 +59,7 @@
       "challengeType": 7
     },
     {
-      "id": "003fht10ag82ac40a18392jh",
+      "id": "57ce1c3a24a362c8c8f790c6",
       "title": "Class 3: Introduction to Python (continued)",
       "description": [
         [
@@ -77,7 +77,7 @@
       "challengeType": 7
     },
     {
-      "id": "004fht10ag82ac40a18392jh",
+      "id": "57ce1c3a24a362c8c8f790c5",
       "title": "Class 4: Introduction to R",
       "description": [
         [
@@ -95,7 +95,7 @@
       "challengeType": 7
     },
     {
-      "id": "005fht10ag82ac40a18392jh",
+      "id": "57ce1c3924a362c8c8f790c4",
       "title": "Class 5: Introduction to R (continued)",
       "description": [
         [
@@ -113,8 +113,8 @@
       "challengeType": 7
     },
     {
-      "id": "006ht10ag82ac40a18392jh",
-      "title": "Class 6: Intro to Visualization with R and Python ",
+      "id": "57ce1c3824a362c8c8f790c3",
+      "title": "Class 6: Intro to Visualization with R and Python",
       "description": [
         [
           "//i.imgur.com/BdjOEGA.png",
@@ -131,7 +131,7 @@
       "challengeType": 7
     },
     {
-      "id": "007fht10ag82ac40a18392jh",
+      "id": "57ce1c3824a362c8c8f790c2",
       "title": "Class 7: Data Munging",
       "description": [
         [
@@ -149,7 +149,7 @@
       "challengeType": 7
     },
     {
-      "id": "008fht10ag82ac40a18392jh",
+      "id": "57ce1c3724a362c8c8f790c1",
       "title": "Class 8: Midterm and Intro to Model Evaluation",
       "description": [
         [
@@ -167,7 +167,7 @@
       "challengeType": 7
     },
     {
-      "id": "009fht10ag82ac40a18392jh",
+      "id": "57ce1c3724a362c8c8f790c0",
       "title": "Class 9: Introduction to Modeling I",
       "description": [
         [
@@ -185,7 +185,7 @@
       "challengeType": 7
     },
     {
-      "id": "010fht10ag82ac40a18392jh",
+      "id": "57ce1c3624a362c8c8f790bf",
       "title": "Class 10: Introduction to Modeling II",
       "description": [
         [
@@ -203,7 +203,7 @@
       "challengeType": 7
     },
     {
-      "id": "011fht10ag82ac40a18392jh",
+      "id": "57ce1c3624a362c8c8f790be",
       "title": "Class 11: Text Mining and Unstructured Data",
       "description": [
         [
@@ -221,7 +221,7 @@
       "challengeType": 7
     },
     {
-      "id": "012fht10ag82ac40a18392jh",
+      "id": "57ce1c3024a362c8c8f790bd",
       "title": "Class 12: Image Processing",
       "description": [
         [
@@ -239,7 +239,7 @@
       "challengeType": 7
     },
     {
-      "id": "013fht10ag82ac40a18392jh",
+      "id": "57ce1c2f24a362c8c8f790bc",
       "title": "Class 13: Introduction to Big Data with Spark",
       "description": [
         [
