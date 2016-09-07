@@ -1,0 +1,50 @@
+{
+  "name": "Anaconda Challenges",
+  "order": 6,
+  "time": "15 minutes",
+  "helpRoom": "Help",
+  "challenges": [
+    {
+      "id": "57cef3fd4b1914c606ac41de",
+      "title": "Anaconda Overview",
+      "description": [
+        [
+          "//i.imgur.com/eaXZoBl.jpg",
+          "An image of Anaconda",
+          "<a href='https://www.continuum.io'>Continuum Analytics</a> provides the most popular bundle of Python, Jupyter, and a number of other packages for data science: Ananconda. The <a href='https://docs.continuum.io/anaconda/' >documentation</a> describes Anaconda as an 'easy-to-install free package manager, environment manager, Python distribution, and collection of over 720 open source packages offering free community support.'  You can use Python 2, Python 3, and even R using Anaconda.  Anaconda also provides infrastructure for sharing both notebooks and packages through <a href='https://anaconda.org'>Anaconda Cloud</a>.",
+          "https://anaconda.org",
+          "",
+          ""
+        ],
+        [
+          "//i.imgur.com/jYJJtMd.png",
+          "An image of the Anaconda download screen .",
+          "To install Anaconda, you should first download it from the <a href='https://www.continuum.io/downloads'>Continuum Analytics website</a>.  For the work we will be doing, you should select Python 3. ",
+          "https://www.continuum.io/downloads",
+          "",
+          ""
+        ]
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "challengeType": 7
+    },
+    {
+      "id": "57cef1754b1914c606ac41dd",
+      "title": "Anaconda",
+      "description": [
+        "Make sure you have download and installed the Python 3 version of Anaconda from the <a href='https://www.continuum.io/downloads'>Continuum Analytics website</a>.",
+        "Open a terminal window within the AnalyticsDojo/materials directory.",
+        "Launch Jupyter with the command <i>jupyter notebook</i>",
+        "Open a web browser at <a href='http://localhost:8888'>http://localhost:8888</a> and verify that Jupyter is running and you have access to all of the folders.",
+        "Open a <a href = 'http://localhost:8888/notebooks/analyticsdojo/classes/01-overview/local-intro.ipynb'>local notebook (in analyticsdojo/classes/01-overview/local-intro.ipynb) </a> and verify you can upload data locally."
+
+      ],
+      "challengeSeed": [
+        "QW-CQjtiBZs"
+      ],
+      "tests": [],
+      "challengeType": 2
+    }
+  ]
+}
