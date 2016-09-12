@@ -1,0 +1,94 @@
+{
+  "name": "Intro to Python",
+  "order": 1,
+  "time": "20 minutes",
+  "helpRoom": "Help",
+  "challenges": [
+    {
+      "id": "57d037539e223ffc16a19d86",
+      "title": "Introduction to Python - Overview and Packages",
+      "description": [
+        "Make sure that you sync the Analyticsdojo/Materials repository to pull latest changes.",
+        "To execute locally:  Launch Anaconda/Docker and click link below.",
+        "To execute on Azure: Click <a href='https://studio.azureml.net'>here</a> to login.",
+        "<b>Links: </b><a href='http://localhost:8888/notebooks/classes/02-intro-python/intro-python-overview.ipynb'>local</a> <a href='https://github.com/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-overview.ipynb#/'>github</a> <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-overview.ipynb#/'>slides</a>"
+      ],
+      "challengeSeed": [
+      "rBaSRpXgYdw"
+      ],
+      "tests": [],
+      "challengeType": 2
+    },
+    {
+      "id": "57d037529e223ffc16a19d85",
+      "title": "Introduction to Python - Data structures and Variables",
+      "description": [
+        "Make sure that you sync the Analyticsdojo/Materials repository to pull latest changes.",
+        "To execute locally:  Launch Anaconda/Docker and click link below.",
+        "To execute on Azure: Click <a href='https://studio.azureml.net'>here</a> to login and then upload.",
+        "<b>Links: </b><a href='http://localhost:8888/notebooks/classes/02-intro-python/intro-python-datastructures.ipynb'>local</a> <a href='https://github.com/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-datastructures.ipynb#/'>github</a> <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-datastructures.ipynb#/'>slides</a>"
+      ],
+      "challengeSeed": [
+      "pQWd82dfibQ"
+      ],
+      "tests": [],
+      "challengeType": 2
+    },
+        {
+      "id": "57d037529e223ffc16a19d84",
+      "title": "Introduction to Python - Data structures and Lists",
+      "description": [
+        "Make sure that you sync the Analyticsdojo/Materials repository to pull latest changes.",
+        "To execute locally:  Launch Anaconda/Docker and click link below.",
+        "To execute on Azure: Click <a href='https://studio.azureml.net'>here</a> to login and then upload.",
+        "<b>Links: </b><a href='http://localhost:8888/notebooks/classes/02-intro-python/intro-python-datastructures.ipynb'>local</a> <a href='https://github.com/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-datastructures.ipynb#/'>github</a> <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-datastructures.ipynb#/'>slides</a>"
+      ],
+      "challengeSeed": [
+      "r7UDEWZ_LRQ"
+      ],
+      "tests": [],
+      "challengeType": 2
+    },
+        {
+      "id": "57d037529e223ffc16a19d83",
+      "title": "Introduction to Python - Data structures and Sets/Dictionaries",
+      "description": [
+        "Make sure that you sync the Analyticsdojo/Materials repository to pull latest changes.",
+        "To execute locally:  Launch Anaconda/Docker and click link below.",
+        "To execute on Azure: Click <a href='https://studio.azureml.net'>here</a> to login and then upload.",
+        "<b>Links: </b><a href='http://localhost:8888/notebooks/classes/02-intro-python/intro-python-datastructures.ipynb'>local</a> <a href='https://github.com/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-datastructures.ipynb#/'>github</a> <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-datastructures.ipynb#/'>slides</a>"
+      ],
+      "challengeSeed": [
+      "pQWd82dfibQ"
+      ],
+      "tests": [],
+      "challengeType": 2
+    },
+    {
+      "id": "57d037519e223ffc16a19d82",
+      "title": "Introduction to Python - Numpy",
+      "description": [
+        "Make sure that you sync the Analyticsdojo/Materials repository to pull latest changes.",
+        "To execute locally:  Launch Anaconda/Docker and click link below.",
+        "To execute on Azure: Click <a href='https://studio.azureml.net'>here</a> to login and then upload.",
+        "<b>Links: </b><a href='http://localhost:8888/notebooks/classes/02-intro-python/intro-python-numpy.ipynb'>local</a> <a href='https://github.com/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-numpy.ipynb#/'>github</a> <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-numpy.ipynb#/'>slides</a>"
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "challengeType": 2
+    },
+    {
+      "id": "57d037259e223ffc16a19d81",
+      "title": "Introduction to Python - Pandas",
+      "description": [
+        "Make sure that you sync the Analyticsdojo/Materials repository to pull latest changes.",
+        "To execute locally:  Launch Anaconda/Docker and click link below.",
+        "To execute on Azure: Click <a href='https://studio.azureml.net'>here</a> to login and then upload.",
+        "<b>Links: </b><a href='http://localhost:8888/notebooks/classes/02-intro-python/intro-python-pandas.ipynb'>local</a> <a href='https://github.com/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-pandas.ipynb#/'>github</a> <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-pandas.ipynb#/'>slides</a>"
+      ],
+      "challengeSeed": [],
+      "tests": [],
+      "challengeType": 2
+    }
+  ]
+}

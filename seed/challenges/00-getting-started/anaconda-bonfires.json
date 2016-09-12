@@ -34,14 +34,14 @@
       "title": "Anaconda",
       "description": [
         "Make sure you have download and installed the Python 3 version of Anaconda from the <a href='https://www.continuum.io/downloads'>Continuum Analytics website</a>.",
-        "Open a terminal window within the AnalyticsDojo/materials directory.",
+        "Open a terminal window within the <i>AnalyticsDojo/materials/analyticsdojo</i> directory.",
         "Launch Jupyter with the command <i>jupyter notebook</i>",
         "Open a web browser at <a href='http://localhost:8888'>http://localhost:8888</a> and verify that Jupyter is running and you have access to all of the folders.",
-        "Open a <a href = 'http://localhost:8888/notebooks/analyticsdojo/classes/01-overview/local-intro.ipynb'>local notebook (in analyticsdojo/classes/01-overview/local-intro.ipynb) </a> and verify you can upload data locally."
+        "Open a <a href = 'http://localhost:8888/notebooks/classes/01-overview/local-intro.ipynb'>local notebook (in analyticsdojo/classes/01-overview/local-intro.ipynb) </a> and verify you can upload data locally."
 
       ],
       "challengeSeed": [
-        "QW-CQjtiBZs"
+        "mVBgbs8RxSo"
       ],
       "tests": [],
       "challengeType": 2
