@@ -73,7 +73,9 @@
         "To execute on Azure: Click <a href='https://studio.azureml.net'>here</a> to login and then upload.",
         "<b>Links: </b><a href='http://localhost:8888/notebooks/classes/02-intro-python/intro-python-numpy.ipynb'>local</a> <a href='https://github.com/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-numpy.ipynb#/'>github</a> <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-numpy.ipynb#/'>slides</a>"
       ],
-      "challengeSeed": [],
+      "challengeSeed": [
+      "xrwhMfI8SXY"
+      ],
       "tests": [],
       "challengeType": 2
     },
@@ -86,7 +88,9 @@
         "To execute on Azure: Click <a href='https://studio.azureml.net'>here</a> to login and then upload.",
         "<b>Links: </b><a href='http://localhost:8888/notebooks/classes/02-intro-python/intro-python-pandas.ipynb'>local</a> <a href='https://github.com/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-pandas.ipynb#/'>github</a> <a href='http://nbviewer.jupyter.org/format/slides/github/AnalyticsDojo/materials/blob/master/analyticsdojo/classes/02-intro-python/intro-python-pandas.ipynb#/'>slides</a>"
       ],
-      "challengeSeed": [],
+      "challengeSeed": [
+      "KCxMGDbKqUU"
+      ],
       "tests": [],
       "challengeType": 2
     }
