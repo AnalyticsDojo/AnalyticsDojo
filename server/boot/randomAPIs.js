@@ -12,8 +12,8 @@ module.exports = function(app) {
   router.get('/twitch', twitch);
   router.get('/pmi-acp-agile-project-managers', agileProjectManagers);
   router.get('/pmi-acp-agile-project-managers-form', agileProjectManagersForm);
-  router.get('/nonprofits', nonprofits);
-  router.get('/nonprofits-form', nonprofitsForm);
+  router.get('/companies', companies);
+  router.get('/companies-form', companiesForm);
   router.get('/unsubscribe/:email', unsubscribeMonthly);
   router.get('/unsubscribe-notifications/:email', unsubscribeNotifications);
   router.get('/unsubscribe-quincy/:email', unsubscribeQuincy);
@@ -136,14 +136,14 @@ module.exports = function(app) {
     });
   }
 
-  function nonprofits(req, res) {
-    res.render('resources/nonprofits', {
+  function companies(req, res) {
+    res.render('resources/companies', {
       title: 'Your Nonprofit Can Get Pro Bono Code'
     });
   }
 
-  function nonprofitsForm(req, res) {
-    res.render('resources/nonprofits-form', {
+  function companiesForm(req, res) {
+    res.render('resources/companies-form', {
       title: 'Nonprofit Projects Proposal Form'
     });
   }
